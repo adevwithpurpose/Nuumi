@@ -1,0 +1,31 @@
+0:00 Hi Safir, so let me show you exactly what we have here, where we are at, and, uhm, e-commerce we need to, to build.
+0:10 So, right now, this is our shop. Obviously, this is just a placeholder. Uh, there's nothing here. There's nothing working here, so we need to create a homepage.
+0:20 And, uh, in order to do that, my, like, the best example is probably PetLab. Which, uh, is, uhm, like, you can take inspiration from, like, let's say, the, uhm, uh, the design.
+0:38 Not really the product pages and, uh, and the sections, because, uh, for example, we don't have, uh, category sections, since we are gonna just, uh, just add five products to the, to the account for now.
+0:52 But I really like, like, for example, this thing, uh, like the hero section. Um, I like the, um, the expert section here.
+1:04 We have. We have those, of course. And, uh, the FAQ, and there are a couple of things we can add for sure.
+1:14 So, just to give you an overview, so the, the product we want to, to add. Are, as I said, five.
+1:24 Now, the, the structure of the product page has to be, has to be this one. Now, this is the old logo, the POSO, this will be, we will put, uh, Numipath here.
+1:36 And, actually, I have to send you the updated logo, so, uhm, and email as well. So, this is, uh, our product page, so we have the classic images on the left, and then we have a headline here.
+1:52 Subheadline, bullet points, made this way, and then they can choose 1, 3, 6, and, uh, can choose one time, purchase, or sub and save.
+2:03 So this is, uhm, across all products, we'll keep this. It's, uh, format above the fold, except, of course, digital program.
+2:12 We also have one digital program, which is, uhm, uh, which is this one. I will explain you how to do that one.
+2:22 So, uh. We have, uh, this is a very short, uh, page, actually. We have some pages that are a little bit longer.
+2:35 I'm, I don't, I'm not a fan of this, uh, section. Can be greatly improved, obviously. And so you can take a look on how to improve it visually.
+2:47 But other than that, uh, we can keep this, uh, this format. Obviously, it's like, uh, it's a given, but they have to be well-looking on mobile.
+3:00 So that's the main thing, obviously. So, uhm, we keep this, uh, format for every product page. So, for example, this is, uh, uh, Enerkanis.
+3:12 We'll do the same for BuyBuck, which, uh, is, uh, this, uh, device. And we have this, uh, this text that simply will be here, right?
+3:25 So, and then we have this, the expert, and we can, uh, and also, uh, put him in the, uhm, in the, uh, e-com homepage, as I say.
+3:35 This thing as well, these badges, we can use across our product. And this is, uh, actually a much nicer product page that we have.
+3:43 So, Yeah, we can maybe try to keep the same vibe and colors across the, uh, across the whole website.
+3:56 I think we, it's gonna be, like, around this color. More, actually, leaning more toward blue. I will send you the logo and then you can work.
+4:06 Uh, this is another product, uh, actually, this is, uhm, is in Italian. But that shouldn't be a problem, of course, you can just translate.
+4:19 Same thing, we can, uh, create a product page, it's a color. Then, uh, uh, this is called, uh, Opoint, right?
+4:32 Uh, yeah, Opoint, and, uh, again, we have all the info. This is, uh, a video course, so this is digital, but not a big deal.
+4:46 We have, like, this, you can use it. Use this, uh, product image. We won't put the video in the product page.
+4:56 So we'll start from here. This is very ugly, but we will just try to put it, like, in a nicer way.
+5:04 And again, this will be different. I'll send up the, uh, info for you. I guess that's it. Again, we don't have to copy this.
+5:20 The same, because we don't have the categories, and, for example, I don't like the product page like this. Uh, it's different from what we want to do.
+5:29 But we can, uh, take inspiration for, uh, like, these. The Expert page. We don't have an app. It has to be very, very lean, right?
+5:43 Because we only have five products. So all of them have to appear, of course, in the homepage. Uhm, I guess that's it.
+5:50 Let me know if you need anything. I will send over the logo and the other info as soon as possible.
