@@ -1,0 +1,3 @@
+{
+  "note": "Do not commit live config/settings_data.json. Keep merchant-owned theme settings in Shopify and use this file only as a sanitized reference if needed."
+}
