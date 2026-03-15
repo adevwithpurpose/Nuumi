@@ -1,0 +1,18 @@
+{%- assign rating_value = rating | default: 5 -%}
+<div class="nuumi-rating" aria-label="{{ rating_value }} out of 5 stars">
+  <div class="nuumi-rating__stars" aria-hidden="true">
+    {%- for index in (1..5) -%}
+      <span class="nuumi-rating__star{% if index > rating_value %} is-muted{% endif %}">
+        {% render 'nuumi-icons', icon: 'spark' %}
+      </span>
+    {%- endfor -%}
+  </div>
+  {%- if label != blank or review_count != blank -%}
+    <span class="nuumi-rating__label">
+      {{ label }}
+      {%- if review_count != blank -%}
+        <strong>({{ review_count }})</strong>
+      {%- endif -%}
+    </span>
+  {%- endif -%}
+</div>

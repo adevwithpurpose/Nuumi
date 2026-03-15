@@ -1,0 +1,213 @@
+/* Nuumipet Premium Base Styles */
+:root {
+  --nuumi-blue: #0A2540; /* Clean, clinical premium deep blue */
+  --nuumi-blue-light: #F0F4F8; /* Soft clinical background */
+  --nuumi-blue-medium: #829AB1; /* Neutral muted blue for secondary text */
+  --nuumi-accent: #0066FF; /* Trustworthy clinical vibrant blue */
+  --nuumi-text: #243B53; /* Darker slate for readability */
+  --nuumi-white: #FFFFFF;
+}
+
+/* 
+  Nuumi Home Hero 
+*/
+.nuumi-hero {
+  position: relative;
+  background-color: var(--nuumi-blue-light);
+  overflow: hidden;
+}
+
+.nuumi-hero__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .nuumi-hero__grid {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.nuumi-hero__content {
+  flex: 1;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .nuumi-hero__content {
+    padding: 6rem 0 6rem 4rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+.nuumi-hero__heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--nuumi-blue);
+  margin: 0 0 1rem;
+}
+
+.nuumi-hero__subheading {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--nuumi-blue);
+  opacity: 0.8;
+  margin: 0 0 2rem;
+  max-width: 600px;
+}
+
+.nuumi-hero__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nuumi-blue);
+  color: var(--nuumi-white);
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 320px;
+}
+
+.nuumi-hero__button:hover {
+  background-color: var(--nuumi-accent);
+}
+
+@media screen and (min-width: 900px) {
+  .nuumi-hero__button {
+    width: auto;
+  }
+}
+
+.nuumi-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .nuumi-hero__badges {
+    justify-content: flex-start;
+  }
+}
+
+.nuumi-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--nuumi-white);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.nuumi-hero-badge__icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nuumi-blue);
+}
+
+.nuumi-hero-badge__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.nuumi-hero-badge__text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--nuumi-blue);
+}
+
+.nuumi-hero__media {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .nuumi-hero__media {
+    min-height: 600px;
+  }
+}
+
+.nuumi-hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+  Nuumi Trust Strip 
+*/
+.nuumi-trust-strip {
+  background-color: var(--nuumi-blue);
+  color: var(--nuumi-white);
+  overflow: hidden;
+  padding: 1.25rem 0;
+}
+
+.nuumi-trust-marquee {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nuumi-trust-marquee-track {
+  display: flex;
+  animation: nuumi-marquee linear infinite;
+}
+
+.nuumi-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 2rem;
+}
+
+.nuumi-trust-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.nuumi-trust-item-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.nuumi-trust-item-title {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@keyframes nuumi-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
