@@ -1,0 +1,561 @@
+.nuumi-product-page {
+  background: linear-gradient(180deg, #f9fbfd 0%, #eef4f9 100%);
+}
+
+.nuumi-product-hero {
+  padding: 2.4rem 0 3.2rem;
+}
+
+.nuumi-product-hero__grid,
+.nuumi-product-story__grid,
+.nuumi-product-proof__grid {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.nuumi-product-gallery {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.nuumi-product-gallery__stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2.4rem 5rem rgba(18, 36, 66, 0.08);
+  min-height: 34rem;
+}
+
+.nuumi-product-gallery__slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.nuumi-product-gallery__slide.is-active {
+  display: block;
+}
+
+.nuumi-product-gallery__image,
+.nuumi-product-gallery__video,
+.nuumi-product-story__image img,
+.nuumi-product-proof__expert-image img,
+.nuumi-product-proof-card__image img,
+.nuumi-sticky-atc__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nuumi-product-gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.nuumi-product-gallery__thumb {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(18, 36, 66, 0.08);
+  border-radius: 1.8rem;
+  background: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  padding: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.nuumi-product-gallery__thumb.is-active {
+  border-color: rgba(0, 118, 255, 0.4);
+  box-shadow: 0 1rem 2.4rem rgba(0, 118, 255, 0.12);
+}
+
+.nuumi-product-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nuumi-product-buybox {
+  display: grid;
+  gap: 1.6rem;
+  padding: 2.2rem;
+  border: 1px solid rgba(18, 36, 66, 0.08);
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 2rem 4rem rgba(18, 36, 66, 0.08);
+}
+
+.nuumi-product-buybox__badges,
+.nuumi-product-buybox__meta,
+.nuumi-product-buybox__trust-list,
+.nuumi-product-buybox__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nuumi-product-buybox__title {
+  margin: 0;
+  color: var(--nuumi-blue);
+  font-size: clamp(3rem, 4vw, 5.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.nuumi-product-buybox__subtitle,
+.nuumi-product-buybox__description,
+.nuumi-product-story__body,
+.nuumi-product-proof__intro,
+.nuumi-product-risk-free__intro {
+  margin: 0;
+  color: rgba(18, 36, 66, 0.76);
+  line-height: 1.65;
+}
+
+.nuumi-product-buybox__price-row {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.nuumi-product-buybox__price {
+  color: var(--nuumi-blue);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.nuumi-product-buybox__compare {
+  color: rgba(18, 36, 66, 0.45);
+  font-size: 1.7rem;
+  text-decoration: line-through;
+}
+
+.nuumi-product-buybox__trust-note,
+.nuumi-product-buybox__selection-summary {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  border-radius: 1.8rem;
+  background: rgba(18, 36, 66, 0.05);
+  color: var(--nuumi-blue);
+  font-size: 1.35rem;
+}
+
+.nuumi-product-buybox__bullet-list,
+.nuumi-product-proof__checks,
+.nuumi-product-risk-free__faq {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nuumi-product-buybox__bullet {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  color: rgba(18, 36, 66, 0.78);
+}
+
+.nuumi-product-buybox__bullet strong {
+  color: var(--nuumi-blue);
+}
+
+.nuumi-product-buybox__option-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.nuumi-product-buybox__label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--nuumi-blue);
+}
+
+.nuumi-choice-grid,
+.nuumi-option-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.nuumi-choice-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nuumi-option-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nuumi-choice-card,
+.nuumi-option-pill,
+.nuumi-variant-button {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid rgba(18, 36, 66, 0.1);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--nuumi-blue);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nuumi-choice-card.is-active,
+.nuumi-option-pill.is-active,
+.nuumi-variant-button.is-active {
+  border-color: rgba(0, 118, 255, 0.34);
+  box-shadow: 0 1.4rem 3rem rgba(0, 118, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.nuumi-option-pill[aria-disabled='true'] {
+  opacity: 0.62;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.nuumi-choice-card__eyebrow,
+.nuumi-option-pill__eyebrow {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(18, 36, 66, 0.5);
+}
+
+.nuumi-choice-card__title,
+.nuumi-option-pill__title,
+.nuumi-variant-button__value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.nuumi-choice-card__meta,
+.nuumi-option-pill__note,
+.nuumi-variant-button__label {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.25rem;
+  color: rgba(18, 36, 66, 0.65);
+}
+
+.nuumi-product-buybox__variant-groups {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.nuumi-variant-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.nuumi-product-buybox__actions {
+  display: grid;
+  gap: 1rem;
+}
+
+.nuumi-product-buybox__submit {
+  width: 100%;
+  justify-content: center;
+}
+
+.nuumi-product-buybox__submit[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.nuumi-product-story,
+.nuumi-product-benefits,
+.nuumi-product-proof,
+.nuumi-product-risk-free {
+  padding: 1.2rem 0 0;
+}
+
+.nuumi-product-story__image,
+.nuumi-product-proof__expert-image {
+  overflow: hidden;
+  border-radius: 3rem;
+  min-height: 32rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.nuumi-product-story__content,
+.nuumi-product-proof__content,
+.nuumi-product-risk-free__content {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.nuumi-product-story__cards,
+.nuumi-product-benefits__grid,
+.nuumi-product-proof__cards,
+.nuumi-product-risk-free__cards,
+.nuumi-product-risk-free__faq-grid {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.nuumi-product-story-card,
+.nuumi-product-benefit-card,
+.nuumi-product-proof-card,
+.nuumi-product-risk-card,
+.nuumi-product-faq-item {
+  padding: 2rem;
+  border: 1px solid rgba(18, 36, 66, 0.08);
+  border-radius: 2.4rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 1.4rem 3rem rgba(18, 36, 66, 0.06);
+}
+
+.nuumi-product-story-card,
+.nuumi-product-benefit-card,
+.nuumi-product-proof-card,
+.nuumi-product-risk-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.nuumi-product-story-card__eyebrow,
+.nuumi-product-benefit-card__eyebrow,
+.nuumi-product-proof-card__eyebrow,
+.nuumi-product-risk-card__eyebrow {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(18, 36, 66, 0.52);
+}
+
+.nuumi-product-story-card__title,
+.nuumi-product-benefit-card__title,
+.nuumi-product-proof-card__title,
+.nuumi-product-risk-card__title,
+.nuumi-product-faq-item__question,
+.nuumi-product-proof__quote-author {
+  margin: 0;
+  color: var(--nuumi-blue);
+}
+
+.nuumi-product-story-card__text,
+.nuumi-product-benefit-card__text,
+.nuumi-product-proof-card__text,
+.nuumi-product-risk-card__text,
+.nuumi-product-faq-item__answer,
+.nuumi-product-proof__quote,
+.nuumi-product-proof__quote-role {
+  margin: 0;
+  color: rgba(18, 36, 66, 0.74);
+  line-height: 1.6;
+}
+
+.nuumi-product-proof__expert {
+  display: grid;
+  gap: 1.6rem;
+  padding: 2.2rem;
+  border-radius: 2.8rem;
+  background: linear-gradient(135deg, #122442 0%, #17365f 100%);
+  color: #fff;
+}
+
+.nuumi-product-proof__expert .nuumi-kicker,
+.nuumi-product-proof__expert .nuumi-section-heading,
+.nuumi-product-proof__quote,
+.nuumi-product-proof__quote-role,
+.nuumi-product-proof__quote-author,
+.nuumi-product-proof__checks li {
+  color: #fff;
+}
+
+.nuumi-product-proof__expert .nuumi-kicker {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nuumi-product-proof__checks li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.nuumi-product-proof__expert-grid {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.nuumi-product-risk-free__faq-grid {
+  margin-top: 1rem;
+}
+
+.nuumi-product-faq-item[open] {
+  border-color: rgba(0, 118, 255, 0.2);
+}
+
+.nuumi-product-faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nuumi-product-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.nuumi-product-faq-item__toggle {
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(18, 36, 66, 0.06);
+  color: var(--nuumi-blue);
+}
+
+.nuumi-product-faq-item[open] .nuumi-product-faq-item__toggle {
+  transform: rotate(45deg);
+}
+
+.nuumi-sticky-atc {
+  position: fixed;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 35;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(1.6rem);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nuumi-sticky-atc.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nuumi-sticky-atc__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  background: rgba(18, 36, 66, 0.96);
+  color: #fff;
+  box-shadow: 0 1.4rem 3.2rem rgba(18, 36, 66, 0.28);
+}
+
+.nuumi-sticky-atc__left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.nuumi-sticky-atc__image {
+  width: 5.6rem;
+  height: 5.6rem;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  flex: 0 0 auto;
+}
+
+.nuumi-sticky-atc__title,
+.nuumi-sticky-atc__price,
+.nuumi-sticky-atc__compare {
+  display: block;
+}
+
+.nuumi-sticky-atc__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nuumi-sticky-atc__price {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nuumi-sticky-atc__compare {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+}
+
+.nuumi-sticky-atc__button {
+  min-width: 12.8rem;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-product-story__cards,
+  .nuumi-product-benefits__grid,
+  .nuumi-product-proof__cards,
+  .nuumi-product-risk-free__cards,
+  .nuumi-product-risk-free__faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-product-hero__grid,
+  .nuumi-product-story__grid,
+  .nuumi-product-proof__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .nuumi-product-buybox {
+    position: sticky;
+    top: 9rem;
+  }
+
+  .nuumi-product-benefits__grid,
+  .nuumi-product-proof__cards,
+  .nuumi-product-risk-free__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nuumi-product-story__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nuumi-product-proof__expert-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nuumi-product-risk-free__faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-sticky-atc {
+    display: none;
+  }
+}

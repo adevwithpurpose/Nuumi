@@ -1,0 +1,308 @@
+{%- liquid
+  assign current_subtitle = section.settings.subtitle
+  if current_subtitle == blank and product.metafields.custom.subtitle.value != blank
+    assign current_subtitle = product.metafields.custom.subtitle.value
+  endif
+
+  assign current_trust_note = section.settings.trust_note
+  if current_trust_note == blank and product.metafields.custom.trust_note.value != blank
+    assign current_trust_note = product.metafields.custom.trust_note.value
+  endif
+
+  assign badge_one = section.settings.badge_1
+  assign badge_two = section.settings.badge_2
+  if badge_one == blank and product.metafields.custom.badge_text.value != blank
+    assign badge_one = product.metafields.custom.badge_text.value
+  endif
+
+  assign metafield_bullets = product.metafields.custom.hero_bullets.value
+  assign selected_variant = product.selected_or_first_available_variant
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="nuumi-section nuumi-product-page nuumi-product-hero section-{{ section.id }}-padding"
+  data-nuumi-product-hero
+  data-product-id="{{ product.id }}"
+  data-product-title="{{ product.title | escape }}"
+>
+  <div class="page-width">
+    <div class="nuumi-product-hero__grid">
+      <div class="nuumi-product-gallery">
+        <div class="nuumi-product-gallery__stage">
+          {%- if product.media.size > 0 -%}
+            {%- for media in product.media -%}
+              <div class="nuumi-product-gallery__slide{% if forloop.first %} is-active{% endif %}" data-nuumi-media-slide="{{ media.id }}">
+                {%- case media.media_type -%}
+                  {%- when 'image' -%}
+                    {{
+                      media
+                      | image_url: width: 1600
+                      | image_tag:
+                        widths: '720, 960, 1200, 1600',
+                        sizes: '(min-width: 990px) 50vw, 100vw',
+                        loading: 'lazy',
+                        class: 'nuumi-product-gallery__image'
+                    }}
+                  {%- when 'video' -%}
+                    <div class="nuumi-product-gallery__video">
+                      {{ media | video_tag: controls: true, autoplay: false, loop: false, muted: false, playsinline: true }}
+                    </div>
+                  {%- when 'external_video' -%}
+                    <div class="nuumi-product-gallery__video">
+                      {{ media | external_video_url: autoplay: false, loop: false | external_video_tag }}
+                    </div>
+                  {%- else -%}
+                    {{ media | media_tag }}
+                {%- endcase -%}
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg nuumi-product-gallery__image' }}
+          {%- endif -%}
+        </div>
+
+        {%- if product.media.size > 1 -%}
+          <div class="nuumi-product-gallery__thumbs">
+            {%- for media in product.media -%}
+              <button
+                type="button"
+                class="nuumi-product-gallery__thumb{% if forloop.first %} is-active{% endif %}"
+                data-nuumi-media-thumb="{{ media.id }}"
+                aria-label="Show media {{ forloop.index }}"
+              >
+                {{
+                  media.preview_image
+                  | image_url: width: 240
+                  | image_tag:
+                    widths: '120, 180, 240',
+                    loading: 'lazy',
+                    sizes: '25vw',
+                    alt: media.alt
+                }}
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="nuumi-product-buybox" data-nuumi-buy-box>
+        <div class="nuumi-product-buybox__badges">
+          {%- if badge_one != blank -%}
+            <span class="nuumi-chip">{{ badge_one }}</span>
+          {%- endif -%}
+          {%- if badge_two != blank -%}
+            <span class="nuumi-chip">{{ badge_two }}</span>
+          {%- endif -%}
+        </div>
+
+        <div class="nuumi-product-buybox__meta">
+          {% render 'nuumi-rating-stars', label: section.settings.rating_label, review_count: section.settings.review_count, rating: 5 %}
+        </div>
+
+        <div>
+          <h1 class="nuumi-product-buybox__title">{{ product.title }}</h1>
+          {%- if current_subtitle != blank -%}
+            <p class="nuumi-product-buybox__subtitle">{{ current_subtitle }}</p>
+          {%- endif -%}
+        </div>
+
+        <div class="nuumi-product-buybox__price-row">
+          <span class="nuumi-product-buybox__price" data-nuumi-price>{{ selected_variant.price | money }}</span>
+          <span class="nuumi-product-buybox__compare" data-nuumi-compare-price{% if selected_variant.compare_at_price <= selected_variant.price %} hidden{% endif %}>
+            {{ selected_variant.compare_at_price | money }}
+          </span>
+        </div>
+
+        {%- if current_trust_note != blank -%}
+          <div class="nuumi-product-buybox__trust-note">
+            <span class="nuumi-proof-card__icon">{% render 'nuumi-icons', icon: 'shield' %}</span>
+            <span>{{ current_trust_note }}</span>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.description != blank or product.description != blank -%}
+          <div class="nuumi-product-buybox__description rte">
+            {{ section.settings.description | default: product.description | strip_html | truncatewords: 34 }}
+          </div>
+        {%- endif -%}
+
+        <ul class="nuumi-product-buybox__bullet-list" role="list">
+          {%- if metafield_bullets != blank and section.settings.bullet_1 == blank and section.settings.bullet_2 == blank and section.settings.bullet_3 == blank and section.settings.bullet_4 == blank -%}
+            {%- for bullet in metafield_bullets limit: 4 -%}
+              <li class="nuumi-product-buybox__bullet">
+                <span class="nuumi-proof-card__icon">{% render 'nuumi-icons', icon: 'check' %}</span>
+                <span>{{ bullet }}</span>
+              </li>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for index in (1..4) -%}
+              {%- capture key -%}bullet_{{ index }}{%- endcapture -%}
+              {%- assign bullet = section.settings[key] -%}
+              {%- if bullet != blank -%}
+                <li class="nuumi-product-buybox__bullet">
+                  <span class="nuumi-proof-card__icon">{% render 'nuumi-icons', icon: 'check' %}</span>
+                  <span>{{ bullet }}</span>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </ul>
+
+        <form method="post" action="{{ routes.cart_add_url }}" enctype="multipart/form-data" class="nuumi-product-buybox__actions">
+          <input type="hidden" name="id" value="{{ selected_variant.id }}" data-nuumi-variant-id>
+          <input type="hidden" name="quantity" value="1" data-nuumi-quantity-input>
+          <input type="hidden" name="properties[Pack]" value="{{ section.settings.qty_one_label }}" data-nuumi-pack-label>
+          <input type="hidden" name="properties[Purchase Option]" value="{{ section.settings.one_time_label }}" data-nuumi-purchase-label>
+
+          <div class="nuumi-product-buybox__option-group">
+            <div class="nuumi-product-buybox__label">
+              <span>{{ section.settings.purchase_heading }}</span>
+            </div>
+            <div class="nuumi-option-grid">
+              <button type="button" class="nuumi-option-pill is-active" data-nuumi-plan-option data-label="{{ section.settings.one_time_label }}">
+                <span class="nuumi-option-pill__eyebrow">{{ 'products.product.nuumi_purchase_label' | t }}</span>
+                <span class="nuumi-option-pill__title">{{ section.settings.one_time_label }}</span>
+                <span class="nuumi-option-pill__note">{{ section.settings.one_time_note }}</span>
+              </button>
+              <button type="button" class="nuumi-option-pill" data-nuumi-plan-option data-label="{{ section.settings.subscribe_label }}" aria-disabled="true">
+                <span class="nuumi-option-pill__eyebrow">{{ 'products.product.nuumi_subscribe_label' | t }}</span>
+                <span class="nuumi-option-pill__title">{{ section.settings.subscribe_label }}</span>
+                <span class="nuumi-option-pill__note">{{ section.settings.subscribe_note }}</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="nuumi-product-buybox__option-group">
+            <div class="nuumi-product-buybox__label">
+              <span>{{ section.settings.quantity_heading }}</span>
+            </div>
+            <div class="nuumi-choice-grid">
+              <button type="button" class="nuumi-choice-card is-active" data-nuumi-qty-option data-quantity="1" data-label="{{ section.settings.qty_one_label }}">
+                <span class="nuumi-choice-card__eyebrow">{{ 'products.product.nuumi_try_label' | t }}</span>
+                <span class="nuumi-choice-card__title">{{ section.settings.qty_one_label }}</span>
+                <span class="nuumi-choice-card__meta">{{ section.settings.qty_one_note }}</span>
+              </button>
+              <button type="button" class="nuumi-choice-card" data-nuumi-qty-option data-quantity="3" data-label="{{ section.settings.qty_three_label }}">
+                <span class="nuumi-choice-card__eyebrow">{{ 'products.product.nuumi_popular_label' | t }}</span>
+                <span class="nuumi-choice-card__title">{{ section.settings.qty_three_label }}</span>
+                <span class="nuumi-choice-card__meta">{{ section.settings.qty_three_note }}</span>
+              </button>
+              <button type="button" class="nuumi-choice-card" data-nuumi-qty-option data-quantity="6" data-label="{{ section.settings.qty_six_label }}">
+                <span class="nuumi-choice-card__eyebrow">{{ 'products.product.nuumi_best_value_label' | t }}</span>
+                <span class="nuumi-choice-card__title">{{ section.settings.qty_six_label }}</span>
+                <span class="nuumi-choice-card__meta">{{ section.settings.qty_six_note }}</span>
+              </button>
+            </div>
+          </div>
+
+          {%- unless product.has_only_default_variant -%}
+            <div class="nuumi-product-buybox__variant-groups">
+              {%- for option in product.options_with_values -%}
+                <div class="nuumi-product-buybox__option-group" data-nuumi-option-group>
+                  <div class="nuumi-product-buybox__label">
+                    <span>{{ option.name }}</span>
+                  </div>
+                  <div class="nuumi-variant-buttons">
+                    {%- for value in option.values -%}
+                      <button
+                        type="button"
+                        class="nuumi-variant-button{% if option.selected_value == value %} is-active{% endif %}"
+                        data-value="{{ value | escape }}"
+                      >
+                        <span class="nuumi-variant-button__value">{{ value }}</span>
+                        <span class="nuumi-variant-button__label">{{ 'products.product.nuumi_option_label' | t }}</span>
+                      </button>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endunless -%}
+
+          <p class="nuumi-product-buybox__selection-summary" data-nuumi-selection-summary>
+            {{ section.settings.one_time_label }} - {{ section.settings.qty_one_label }}
+          </p>
+
+          <button
+            type="submit"
+            class="nuumi-home-button nuumi-product-buybox__submit"
+            data-nuumi-submit
+            data-available-label="{{ 'products.product.add_to_cart' | t }}"
+            data-sold-out-label="{{ 'products.product.sold_out' | t }}"
+            {% unless selected_variant.available %}disabled{% endunless %}
+          >
+            <span data-nuumi-submit-label>
+              {% if selected_variant.available %}
+                {{ 'products.product.add_to_cart' | t }}
+              {% else %}
+                {{ 'products.product.sold_out' | t }}
+              {% endif %}
+            </span>
+          </button>
+
+          <div class="nuumi-product-buybox__footer">
+            <span class="nuumi-badge-list__item"><span class="nuumi-badge-list__icon">{% render 'nuumi-icons', icon: 'shipping' %}</span><span class="nuumi-badge-list__text">{{ section.settings.footer_trust_1 }}</span></span>
+            <span class="nuumi-badge-list__item"><span class="nuumi-badge-list__icon">{% render 'nuumi-icons', icon: 'heart' %}</span><span class="nuumi-badge-list__text">{{ section.settings.footer_trust_2 }}</span></span>
+          </div>
+        </form>
+
+        <script type="application/json" data-nuumi-variants-json>{{ product.variants | json }}</script>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Nuumi Product Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "badge_1", "label": "Badge 1", "default": "Vet-formulated" },
+    { "type": "text", "id": "badge_2", "label": "Badge 2", "default": "Daily wellness support" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle" },
+    { "type": "textarea", "id": "description", "label": "Description" },
+    { "type": "text", "id": "trust_note", "label": "Trust note", "default": "Clear ingredients, thoughtful formulation, and a calm premium routine." },
+    { "type": "text", "id": "rating_label", "label": "Rating label", "default": "Trusted by pet parents" },
+    { "type": "text", "id": "review_count", "label": "Review count", "default": "128" },
+    { "type": "inline_richtext", "id": "bullet_1", "label": "Bullet 1", "default": "<strong>Easy to understand</strong> before the customer ever hits the FAQ." },
+    { "type": "inline_richtext", "id": "bullet_2", "label": "Bullet 2", "default": "<strong>Merchant editable</strong> with dynamic source support for later refinement." },
+    { "type": "inline_richtext", "id": "bullet_3", "label": "Bullet 3", "default": "<strong>Mobile-first</strong> purchase flow with clear pack selection." },
+    { "type": "inline_richtext", "id": "bullet_4", "label": "Bullet 4" },
+    { "type": "text", "id": "purchase_heading", "label": "Purchase heading", "default": "Choose your purchase option" },
+    { "type": "text", "id": "one_time_label", "label": "One-time label", "default": "One-time purchase" },
+    { "type": "text", "id": "one_time_note", "label": "One-time note", "default": "Flexible, no commitment" },
+    { "type": "text", "id": "subscribe_label", "label": "Subscribe label", "default": "Subscribe & save" },
+    { "type": "text", "id": "subscribe_note", "label": "Subscribe note", "default": "UI shell for the future subscription flow" },
+    { "type": "text", "id": "quantity_heading", "label": "Quantity heading", "default": "Choose your quantity" },
+    { "type": "text", "id": "qty_one_label", "label": "1 pack label", "default": "1 jar" },
+    { "type": "text", "id": "qty_one_note", "label": "1 pack note", "default": "Try the daily ritual" },
+    { "type": "text", "id": "qty_three_label", "label": "3 pack label", "default": "3 jars" },
+    { "type": "text", "id": "qty_three_note", "label": "3 pack note", "default": "Most popular for consistency" },
+    { "type": "text", "id": "qty_six_label", "label": "6 pack label", "default": "6 jars" },
+    { "type": "text", "id": "qty_six_note", "label": "6 pack note", "default": "Best value for long-term routine" },
+    { "type": "text", "id": "footer_trust_1", "label": "Footer trust 1", "default": "Fast shipping" },
+    { "type": "text", "id": "footer_trust_2", "label": "Footer trust 2", "default": "30-day confidence guarantee" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top padding", "default": 36 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom padding", "default": 36 }
+  ],
+  "presets": [
+    { "name": "Nuumi Product Hero" }
+  ]
+}
+{% endschema %}

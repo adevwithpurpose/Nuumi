@@ -1,0 +1,92 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="nuumi-section nuumi-product-page nuumi-product-risk-free section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="nuumi-product-risk-free__content">
+      {%- if section.settings.eyebrow != blank -%}<p class="nuumi-kicker">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h2 class="nuumi-section-heading">{{ section.settings.heading }}</h2>
+      <div class="nuumi-product-risk-free__intro rte">{{ section.settings.intro }}</div>
+    </div>
+
+    <div class="nuumi-product-risk-free__cards">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'risk_card' -%}
+          <article class="nuumi-product-risk-card" {{ block.shopify_attributes }}>
+            <span class="nuumi-proof-card__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+            <span class="nuumi-product-risk-card__eyebrow">{{ block.settings.eyebrow }}</span>
+            <h3 class="nuumi-product-risk-card__title">{{ block.settings.title }}</h3>
+            <div class="nuumi-product-risk-card__text rte">{{ block.settings.text }}</div>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="nuumi-product-risk-free__faq-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'faq' -%}
+          <details class="nuumi-product-faq-item" data-nuumi-product-faq {{ block.shopify_attributes }}>
+            <summary>
+              <h3 class="nuumi-product-faq-item__question">{{ block.settings.question }}</h3>
+              <span class="nuumi-product-faq-item__toggle">+</span>
+            </summary>
+            <div class="nuumi-product-faq-item__answer rte">{{ block.settings.answer }}</div>
+          </details>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Nuumi Risk Free",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Guarantee and reassurance" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Close with guarantees, support clarity, and the final objections covered" },
+    { "type": "richtext", "id": "intro", "label": "Intro", "default": "<p>This final section should make the customer feel safe moving forward, even if they still have small practical questions.</p>" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top padding", "default": 12 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom padding", "default": 64 }
+  ],
+  "blocks": [
+    {
+      "type": "risk_card",
+      "name": "Risk card",
+      "limit": 4,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "shield", "label": "Shield" }, { "value": "shipping", "label": "Shipping" }, { "value": "heart", "label": "Heart" }, { "value": "check", "label": "Check" }], "default": "shield" },
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Guarantee" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Simple reassurance" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Use this card for guarantees, customer support promises, shipping clarity, or a simple risk-reversal message.</p>" }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "How should I use this product?" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Answer the practical concern directly and clearly, using the most confidence-building wording available.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Risk Free",
+      "blocks": [{ "type": "risk_card" }, { "type": "risk_card" }, { "type": "risk_card" }, { "type": "faq" }, { "type": "faq" }]
+    }
+  ]
+}
+{% endschema %}

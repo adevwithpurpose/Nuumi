@@ -1,0 +1,33 @@
+<section class="nuumi-sticky-atc" data-nuumi-sticky-atc>
+  <div class="nuumi-sticky-atc__inner">
+    <div class="nuumi-sticky-atc__left">
+      <div class="nuumi-sticky-atc__image">
+        {%- if product.featured_image != blank -%}
+          {{ product.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '100, 200', sizes: '64px' }}
+        {%- else -%}
+          {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+      <div>
+        <span class="nuumi-sticky-atc__title" data-nuumi-sticky-title>{{ product.title }}</span>
+        <span class="nuumi-sticky-atc__price" data-nuumi-sticky-price>{{ product.selected_or_first_available_variant.price | money }}</span>
+        <span class="nuumi-sticky-atc__compare" data-nuumi-sticky-compare{% if product.selected_or_first_available_variant.compare_at_price <= product.selected_or_first_available_variant.price %} hidden{% endif %}>{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+      </div>
+    </div>
+    <button type="button" class="nuumi-home-button nuumi-sticky-atc__button" data-nuumi-sticky-button>
+      {{ 'products.product.add_to_cart' | t }}
+    </button>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Nuumi Sticky ATC",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    { "name": "Nuumi Sticky ATC" }
+  ]
+}
+{% endschema %}
