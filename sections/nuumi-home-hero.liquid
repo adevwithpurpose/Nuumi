@@ -12,6 +12,28 @@
 {%- endstyle -%}
 
 <div class="nuumi-hero nuumi-section section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  {%- if section.settings.image != blank -%}
+    <div class="nuumi-hero__bg-image">
+      <img
+        srcset="
+          {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+        "
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        sizes="100vw"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="eager"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        class="nuumi-hero__image"
+      >
+    </div>
+  {%- endif -%}
+
   <div class="nuumi-hero__grid page-width">
     <div class="nuumi-hero__content nuumi-home-reveal">
       {%- if section.settings.rating_text != blank -%}
@@ -71,52 +93,23 @@
       {% render 'nuumi-badge-list', blocks: section.blocks, class: 'nuumi-hero__badges' %}
     </div>
 
-    <div class="nuumi-hero__media nuumi-home-reveal">
-      <div class="nuumi-hero__image-wrap">
-      {%- if section.settings.image != blank -%}
-        <img
-          srcset="
-            {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
-            {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
-            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
-          "
-          src="{{ section.settings.image | image_url: width: 1500 }}"
-          sizes="(min-width: 900px) 50vw, 100vw"
-          alt="{{ section.settings.image.alt | escape }}"
-          loading="eager"
-          width="{{ section.settings.image.width }}"
-          height="{{ section.settings.image.height }}"
-          class="nuumi-hero__image"
-        >
-      {%- else -%}
-        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg nuumi-hero__image' }}
-      {%- endif -%}
-
-      {%- if section.settings.callout_title != blank or section.settings.callout_text != blank -%}
-        <div class="nuumi-hero__callout">
-          <span class="nuumi-proof-card__icon">{% render 'nuumi-icons', icon: 'shield' %}</span>
-          <div>
-            {%- if section.settings.callout_label != blank -%}
-              <p class="nuumi-hero__callout-label">{{ section.settings.callout_label }}</p>
-            {%- endif -%}
-            {%- if section.settings.callout_title != blank -%}
-              <p class="nuumi-hero__callout-title">{{ section.settings.callout_title }}</p>
-            {%- endif -%}
-            {%- if section.settings.callout_text != blank -%}
-              <p class="nuumi-hero__callout-text">{{ section.settings.callout_text }}</p>
-            {%- endif -%}
-          </div>
+    {%- if section.settings.callout_title != blank or section.settings.callout_text != blank -%}
+      <div class="nuumi-hero__callout nuumi-home-reveal">
+        <span class="nuumi-proof-card__icon">{% render 'nuumi-icons', icon: 'shield' %}</span>
+        <div>
+          {%- if section.settings.callout_label != blank -%}
+            <p class="nuumi-hero__callout-label">{{ section.settings.callout_label }}</p>
+          {%- endif -%}
+          {%- if section.settings.callout_title != blank -%}
+            <p class="nuumi-hero__callout-title">{{ section.settings.callout_title }}</p>
+          {%- endif -%}
+          {%- if section.settings.callout_text != blank -%}
+            <p class="nuumi-hero__callout-text">{{ section.settings.callout_text }}</p>
+          {%- endif -%}
         </div>
-      {%- endif -%}
+      </div>
+    {%- endif -%}
 
-      <div class="nuumi-hero__floating-note">
-        <p class="nuumi-hero__floating-label">Designed for review</p>
-        <p class="nuumi-hero__floating-title">A calmer storefront that sells through clarity, not clutter</p>
-      </div>
-      </div>
-    </div>
   </div>
 </div>
 

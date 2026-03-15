@@ -120,36 +120,60 @@
 .nuumi-hero {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.96), transparent 32%),
-    radial-gradient(circle at 88% 18%, rgba(27, 92, 167, 0.12), transparent 26%),
-    linear-gradient(135deg, #eef3f8 0%, #d7e4f0 48%, #f8fbfd 100%);
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
 }
 
-.nuumi-hero::after {
+.nuumi-hero__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.nuumi-hero__bg-image::after {
   content: '';
   position: absolute;
-  inset: auto auto -10rem -8rem;
-  width: 28rem;
-  height: 28rem;
-  border-radius: 2rem;
-  background: linear-gradient(135deg, rgba(10, 37, 64, 0.08), rgba(0, 102, 255, 0.02));
-  transform: rotate(18deg);
-  filter: blur(8px);
+  inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 45%, transparent 100%);
+}
+
+@media screen and (max-width: 989px) {
+  .nuumi-hero__bg-image::after {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 55%, transparent 100%);
+  }
+  .nuumi-hero__bg-image img {
+    object-position: bottom right;
+  }
+  .nuumi-hero {
+    align-items: flex-start;
+  }
+}
+
+.nuumi-hero__bg-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
 }
 
 .nuumi-hero__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.6rem;
-  align-items: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
 .nuumi-hero__content {
   display: grid;
   gap: 2rem;
   align-items: start;
-  padding: 0.8rem 0;
+  padding: 4rem 0;
+  max-width: 58rem;
 }
 
 .nuumi-hero__heading {
@@ -208,31 +232,9 @@
   height: 100%;
 }
 
-.nuumi-hero__media {
-  position: relative;
-}
-
-.nuumi-hero__image-wrap {
-  position: relative;
-  overflow: hidden;
-  border-radius: 3.6rem;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 2.6rem 6rem rgba(18, 36, 66, 0.18);
-  min-height: 42rem;
-}
-
-.nuumi-hero__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .nuumi-hero__callout {
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-  max-width: 29rem;
+  margin-top: 3rem;
+  max-width: 32rem;
   display: flex;
   gap: 1.2rem;
   align-items: center;
@@ -699,7 +701,6 @@
 }
 
 @media screen and (min-width: 990px) {
-  .nuumi-hero__grid,
   .nuumi-expert-spotlight__grid,
   .nuumi-benefits-story__grid {
     grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
