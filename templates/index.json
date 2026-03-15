@@ -1,0 +1,359 @@
+{
+  "sections": {
+    "nuumi_home_hero": {
+      "type": "nuumi-home-hero",
+      "blocks": {
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Science-Backed Formulation"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "icon": "paw_print",
+            "text": "Over 1M+ Pets Helped"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2"
+      ],
+        "settings": {
+          "bg_color": "#EBF2F8",
+          "heading": "A calmer, more premium approach to daily pet wellness",
+          "subheading": "Nuumipet turns everyday dog care into a clear, confidence-building routine with formulas that feel thoughtful, modern, and easy to trust.",
+          "button_label": "Shop the collection",
+          "button_link": "shopify:\/\/collections\/all",
+          "secondary_button_label": "Why pet parents switch",
+          "secondary_button_link": "#shopify-section-template--188828713254__nuumi_expert_spotlight",
+          "callout_label": "Most useful first impression",
+          "callout_title": "A homepage that explains the range before it overwhelms",
+          "callout_text": "Built to feel closer to a premium wellness brand than a crowded supplement store.",
+          "padding_top": 36,
+          "padding_bottom": 44
+        }
+    },
+    "nuumi_trust_strip": {
+      "type": "nuumi-trust-strip",
+      "blocks": {
+        "trust_1": {
+          "type": "trust",
+          "settings": {
+            "icon": "truck",
+            "title": "FREE SHIPPING OVER $50"
+          }
+        },
+        "trust_2": {
+          "type": "trust",
+          "settings": {
+            "icon": "check_mark",
+            "title": "VET FORMULATED"
+          }
+        },
+        "trust_3": {
+          "type": "trust",
+          "settings": {
+            "icon": "return",
+            "title": "30-DAY GUARANTEE"
+          }
+        },
+        "trust_4": {
+          "type": "trust",
+          "settings": {
+            "icon": "heart",
+            "title": "MADE WITH LOVE"
+          }
+        }
+      },
+      "block_order": [
+        "trust_1",
+        "trust_2",
+        "trust_3",
+        "trust_4"
+      ],
+      "settings": {
+        "bg_color": "#122442",
+        "text_color": "#FFFFFF",
+        "marquee_speed": 30,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "nuumi_featured_products": {
+      "type": "nuumi-featured-products",
+      "blocks": {
+        "product_card_1": {
+          "type": "product_card",
+          "settings": {
+            "badge_text": "Daily ritual",
+            "summary": "Start with a simple, confidence-building product card that explains the outcome in a few clean lines.",
+            "rating_label": "Loved by pet parents",
+            "review_count": "128",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all",
+            "placeholder_title": "Daily wellness support",
+            "placeholder_price": "$49.00"
+          }
+        },
+        "product_card_2": {
+          "type": "product_card",
+          "settings": {
+            "badge_text": "Most gifted",
+            "summary": "Use each card to spotlight a distinct use case while keeping the launch assortment easy to compare.",
+            "rating_label": "Trusted formulation",
+            "review_count": "94",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all",
+            "placeholder_title": "Calm routine essential",
+            "placeholder_price": "$54.00"
+          }
+        },
+        "product_card_3": {
+          "type": "product_card",
+          "settings": {
+            "badge_text": "Best for starters",
+            "summary": "Keep the summary short, practical, and believable so the homepage feels premium instead of crowded.",
+            "rating_label": "Clear customer favorite",
+            "review_count": "76",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all",
+            "placeholder_title": "Digestive support blend",
+            "placeholder_price": "$44.00"
+          }
+        },
+        "product_card_4": {
+          "type": "product_card",
+          "settings": {
+            "badge_text": "Vet-led pick",
+            "summary": "Reserve this slot for a hero product, bundle, or the strongest proof-backed offer in the launch set.",
+            "rating_label": "Expert-approved",
+            "review_count": "152",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all",
+            "placeholder_title": "Mobility support formula",
+            "placeholder_price": "$59.00"
+          }
+        },
+        "product_card_5": {
+          "type": "product_card",
+          "settings": {
+            "badge_text": "Digital friendly",
+            "summary": "Use the fifth slot flexibly for the lighter digital offer or another product once the full launch set is loaded.",
+            "rating_label": "High-conviction choice",
+            "review_count": "65",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/all",
+            "placeholder_title": "Training support program",
+            "placeholder_price": "$39.00"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_1",
+        "product_card_2",
+        "product_card_3",
+        "product_card_4",
+        "product_card_5"
+      ],
+      "settings": {
+        "eyebrow": "All five products, one clear path",
+        "heading": "The full range, merchandised like a premium edit instead of a crowded grid",
+        "intro": "<p>Lead with the strongest hero offer, then let the rest of the assortment feel selective, purposeful, and easy to compare.</p>",
+        "button_label": "See all products",
+        "button_link": "shopify://collections/all",
+        "padding_top": 52,
+        "padding_bottom": 60
+      }
+    },
+    "nuumi_expert_spotlight": {
+      "type": "nuumi-expert-spotlight",
+      "blocks": {
+        "proof_1": {
+          "type": "proof_point",
+          "settings": {
+            "icon": "science",
+            "text": "Translate formulation details into simple language shoppers can actually trust."
+          }
+        },
+        "proof_2": {
+          "type": "proof_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Use this module to connect expertise, quality control, and the calm premium tone from the brief."
+          }
+        },
+        "proof_3": {
+          "type": "proof_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Add a real expert headshot, proof bullets, and one actionable CTA once final assets arrive."
+          }
+        }
+      },
+      "block_order": [
+        "proof_1",
+        "proof_2",
+        "proof_3"
+      ],
+      "settings": {
+        "eyebrow": "Expert-led trust",
+        "heading": "Built with more clarity, more restraint, and a stronger expert point of view",
+        "body": "<p>This section should make the brand feel human and informed at the same time. The goal is not to overload with claims, but to show that the range has a thoughtful professional backbone.</p>",
+        "quote": "The best wellness products do not just promise a result. They make the routine easier to understand and easier to trust.",
+        "name": "Dr. Nuumi Expert",
+        "role": "Veterinary Advisor",
+        "button_label": "Explore the approach",
+        "button_link": "shopify://pages/about",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "nuumi_benefits_story": {
+      "type": "nuumi-benefits-story",
+      "blocks": {
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "icon": "science",
+            "eyebrow": "Clean rationale",
+            "title": "Make the why easy to understand",
+            "text": "<p>Use short, confidence-building copy that explains the role each formula plays in a pet parent's routine.</p>"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "icon": "paw",
+            "eyebrow": "Routine friendly",
+            "title": "Keep the launch lean and easy to scan",
+            "text": "<p>Five products is a strength here. The section should help customers understand the full range without adding bloat.</p>"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "eyebrow": "Merchant editable",
+            "title": "Preserve structure while allowing content updates",
+            "text": "<p>Use settings and blocks for the copy, images, and proof items the client will want to update without code changes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3"
+      ],
+      "settings": {
+        "eyebrow": "Built for clarity",
+        "heading": "Make the range feel coherent, useful, and genuinely worth adopting",
+        "intro": "<p>Use this section to explain why the assortment is intentionally small, what role each formula plays, and why the overall routine feels easier to trust.</p>",
+        "padding_top": 48,
+        "padding_bottom": 56
+      }
+    },
+    "nuumi_proof_grid": {
+      "type": "nuumi-proof-grid",
+      "blocks": {
+        "proof_1": {
+          "type": "proof_card",
+          "settings": {
+            "icon": "shield",
+            "eyebrow": "Trust signal",
+            "title": "Clear guarantees near the decision point",
+            "text": "<p>Use guarantees, shipping promises, or support notes here so the homepage removes friction before the PDP.</p>"
+          }
+        },
+        "proof_2": {
+          "type": "proof_card",
+          "settings": {
+            "icon": "science",
+            "eyebrow": "Proof layer",
+            "title": "Science-backed without sounding sterile",
+            "text": "<p>Summarize lab standards, ingredient quality, or formulation credentials in a calm and readable way.</p>"
+          }
+        },
+        "proof_3": {
+          "type": "proof_card",
+          "settings": {
+            "icon": "shipping",
+            "eyebrow": "Operational confidence",
+            "title": "Practical reassurance still converts",
+            "text": "<p>Shipping speed, responsive support, and easy guarantees often matter as much as the claims themselves.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "proof_1",
+        "proof_2",
+        "proof_3"
+      ],
+      "settings": {
+        "eyebrow": "Proof that feels concrete",
+        "heading": "Reassure the shopper with proof, guarantees, and operational trust that actually feels specific",
+        "intro": "<p>The design should make these proof points feel grounded and useful, not like generic conversion filler.</p>",
+        "padding_top": 44,
+        "padding_bottom": 56
+      }
+    },
+    "nuumi_faq": {
+      "type": "nuumi-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What makes Nuumipet different from a generic supplement brand?",
+            "answer": "<p>Nuumipet is designed to feel more intentional and easier to understand, with a tighter product range, clearer storytelling, and a stronger trust-first structure.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Will all homepage content stay editable in Shopify Theme Editor?",
+            "answer": "<p>Yes. The custom Nuumipet sections use editable settings and blocks so the client can update headings, imagery, proof points, and FAQs without touching code.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can this structure expand once more product assets arrive?",
+            "answer": "<p>Yes. The homepage is designed as a reusable system that can absorb finalized product content, expert assets, and later PDP rollout without rewriting the entire theme.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Why show all five products on the homepage?",
+            "answer": "<p>The brief calls for a lean launch with only five products. Showing them up front helps customers understand the range quickly without forcing a category-heavy browsing flow.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "Frequently asked questions",
+        "heading": "Resolve the final questions without flattening the premium feel of the page",
+        "intro": "<p>Keep the answers short, useful, and confidence-building so the FAQ feels like support, not clutter.</p>",
+        "padding_top": 44,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "nuumi_home_hero",
+    "nuumi_trust_strip",
+    "nuumi_featured_products",
+    "nuumi_expert_spotlight",
+    "nuumi_benefits_story",
+    "nuumi_proof_grid",
+    "nuumi_faq"
+  ]
+}

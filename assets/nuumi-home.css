@@ -1,0 +1,761 @@
+.nuumi-section {
+  position: relative;
+}
+
+.nuumi-section .page-width {
+  position: relative;
+  z-index: 1;
+}
+
+.nuumi-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(18, 36, 66, 0.07);
+  color: var(--nuumi-blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nuumi-home-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.nuumi-home-button,
+.nuumi-home-button:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5rem;
+  padding: 1rem 2.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--nuumi-accent);
+  color: var(--nuumi-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 102, 255, 0.24);
+}
+
+.nuumi-home-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1.8rem 3.4rem rgba(18, 36, 66, 0.2);
+}
+
+.nuumi-home-button--secondary,
+.nuumi-home-button--secondary:visited {
+  border-color: rgba(18, 36, 66, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--nuumi-blue);
+  box-shadow: none;
+}
+
+.nuumi-home-button--ghost,
+.nuumi-home-button--ghost:visited {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+.nuumi-badge-list,
+.nuumi-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nuumi-badge-list__item,
+.nuumi-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  color: var(--nuumi-blue);
+  opacity: 0.85;
+}
+
+.nuumi-badge-list__icon,
+.nuumi-hero-badge__icon,
+.nuumi-proof-card__icon,
+.nuumi-benefit-card__icon,
+.nuumi-trust-item-icon,
+.nuumi-expert-spotlight__quote-mark {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+}
+
+.nuumi-badge-list__icon svg,
+.nuumi-hero-badge__icon svg,
+.nuumi-proof-card__icon svg,
+.nuumi-benefit-card__icon svg,
+.nuumi-trust-item-icon svg,
+.nuumi-expert-spotlight__quote-mark svg,
+.nuumi-rating__star svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nuumi-badge-list__text,
+.nuumi-hero-badge__text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.nuumi-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.96), transparent 32%),
+    radial-gradient(circle at 88% 18%, rgba(27, 92, 167, 0.12), transparent 26%),
+    linear-gradient(135deg, #eef3f8 0%, #d7e4f0 48%, #f8fbfd 100%);
+}
+
+.nuumi-hero::after {
+  content: '';
+  position: absolute;
+  inset: auto auto -10rem -8rem;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.08), rgba(0, 102, 255, 0.02));
+  transform: rotate(18deg);
+  filter: blur(8px);
+}
+
+.nuumi-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.6rem;
+  align-items: center;
+}
+
+.nuumi-hero__content {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  padding: 0.8rem 0;
+}
+
+.nuumi-hero__heading {
+  margin: 0;
+  color: var(--nuumi-blue);
+  max-width: 10ch;
+  font-size: clamp(4.2rem, 8vw, 7.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.nuumi-hero__subheading,
+.nuumi-featured-products__intro,
+.nuumi-expert-spotlight__body,
+.nuumi-benefits-story__intro,
+.nuumi-proof-grid__intro,
+.nuumi-faq__intro {
+  margin: 0;
+  max-width: 56rem;
+  color: rgba(18, 36, 66, 0.72);
+  font-size: 1.75rem;
+  line-height: 1.72;
+}
+
+.nuumi-hero__bullet-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nuumi-hero__bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--nuumi-blue);
+  line-height: 1.4;
+}
+
+.nuumi-hero__bullet-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #00A650; /* Trustworthy green check */
+  flex-shrink: 0;
+}
+
+.nuumi-hero__bullet-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nuumi-hero__media {
+  position: relative;
+}
+
+.nuumi-hero__image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3.6rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 2.6rem 6rem rgba(18, 36, 66, 0.18);
+  min-height: 42rem;
+}
+
+.nuumi-hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nuumi-hero__callout {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  max-width: 29rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 2.2rem;
+  background: rgba(18, 36, 66, 0.88);
+  color: var(--nuumi-white);
+  backdrop-filter: blur(14px);
+}
+
+.nuumi-hero__callout-label {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nuumi-hero__callout-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nuumi-hero__callout-text {
+  margin: 0.4rem 0 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.nuumi-hero__floating-note {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  max-width: 22rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(18, 36, 66, 0.06);
+  box-shadow: 0 1.6rem 3.2rem rgba(18, 36, 66, 0.12);
+}
+
+.nuumi-hero__floating-label {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(18, 36, 66, 0.48);
+}
+
+.nuumi-hero__floating-title {
+  margin: 0;
+  color: var(--nuumi-blue);
+  font-size: 1.45rem;
+  line-height: 1.4;
+}
+
+.nuumi-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nuumi-rating__stars {
+  display: inline-flex;
+  gap: 0.35rem;
+  color: #FFB300; /* Gold/Orange star color like Petlab */
+}
+
+.nuumi-rating__star {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.nuumi-rating__star.is-muted {
+  opacity: 0.35;
+}
+
+.nuumi-rating__label {
+  font-size: 1.3rem;
+  color: rgba(18, 36, 66, 0.7);
+}
+
+.nuumi-trust-strip {
+  overflow: hidden;
+  background: linear-gradient(90deg, #10223f 0%, #17355d 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nuumi-trust-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nuumi-trust-marquee-track {
+  display: inline-flex;
+  min-width: max-content;
+  align-items: center;
+  animation: nuumi-marquee linear infinite;
+}
+
+.nuumi-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  color: inherit;
+}
+
+.nuumi-trust-item-title {
+  font-size: 1.15rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+
+.nuumi-featured-products,
+.nuumi-benefits-story,
+.nuumi-proof-grid,
+.nuumi-faq {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(235, 242, 248, 0.45));
+}
+
+.nuumi-section-heading {
+  margin: 0;
+  color: var(--nuumi-blue);
+  max-width: 14ch;
+  font-size: clamp(3rem, 5vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.nuumi-section-header {
+  display: grid;
+  gap: 1.6rem;
+  margin-bottom: 3.4rem;
+}
+
+.nuumi-featured-products__header,
+.nuumi-proof-grid__header,
+.nuumi-faq__header {
+  align-items: start;
+}
+
+.nuumi-featured-products__grid,
+.nuumi-proof-grid__cards,
+.nuumi-faq__list,
+.nuumi-benefits-story__cards {
+  display: grid;
+  gap: 2rem;
+}
+
+.nuumi-featured-product-card {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(18, 36, 66, 0.07);
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2rem 5rem rgba(18, 36, 66, 0.07);
+}
+
+.nuumi-featured-product-card__media {
+  position: relative;
+  aspect-ratio: 0.95 / 1;
+  overflow: hidden;
+  background: linear-gradient(160deg, #d6e3ef, #f8fbfd);
+}
+
+.nuumi-featured-product-card__media img,
+.nuumi-benefits-story__media img,
+.nuumi-expert-spotlight__media img,
+.nuumi-proof-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nuumi-featured-product-card__content {
+  display: grid;
+  gap: 1.3rem;
+  padding: 2.2rem;
+}
+
+.nuumi-featured-product-card__index {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(18, 36, 66, 0.38);
+}
+
+.nuumi-chip {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(0, 118, 255, 0.1);
+  color: #0a4d8f;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nuumi-featured-product-card__title,
+.nuumi-proof-card__title,
+.nuumi-benefit-card__title,
+.nuumi-faq__question,
+.nuumi-expert-spotlight__name {
+  margin: 0;
+  color: var(--nuumi-blue);
+}
+
+.nuumi-featured-product-card__title {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.nuumi-featured-product-card__summary,
+.nuumi-proof-card__text,
+.nuumi-benefit-card__text,
+.nuumi-faq__answer,
+.nuumi-expert-spotlight__quote,
+.nuumi-expert-spotlight__role {
+  margin: 0;
+  color: rgba(18, 36, 66, 0.74);
+  line-height: 1.6;
+}
+
+.nuumi-featured-product-card__divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(18, 36, 66, 0.12), rgba(18, 36, 66, 0));
+}
+
+.nuumi-featured-product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.nuumi-featured-product-card__price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--nuumi-blue);
+}
+
+.nuumi-featured-product-card__compare {
+  margin-left: 0.7rem;
+  font-size: 1.4rem;
+  color: rgba(18, 36, 66, 0.48);
+  text-decoration: line-through;
+}
+
+.nuumi-expert-spotlight {
+  overflow: hidden;
+  background: linear-gradient(135deg, #10213b 0%, #173356 60%, #1d4775 100%);
+  color: #fff;
+}
+
+.nuumi-expert-spotlight__grid,
+.nuumi-benefits-story__grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nuumi-expert-spotlight__media,
+.nuumi-benefits-story__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3rem;
+  min-height: 32rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nuumi-expert-spotlight__content {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.nuumi-expert-spotlight .nuumi-kicker,
+.nuumi-expert-spotlight .nuumi-section-heading,
+.nuumi-expert-spotlight__body,
+.nuumi-expert-spotlight__quote,
+.nuumi-expert-spotlight__role,
+.nuumi-expert-spotlight .nuumi-home-button--ghost {
+  color: #fff;
+}
+
+.nuumi-expert-spotlight .nuumi-kicker {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nuumi-expert-spotlight__quote-card {
+  display: grid;
+  gap: 1.2rem;
+  padding: 2.2rem;
+  border-radius: 2.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.nuumi-expert-spotlight__quote {
+  font-size: 2rem;
+  line-height: 1.45;
+}
+
+.nuumi-expert-spotlight__proof-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nuumi-expert-spotlight__proof-item {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nuumi-benefits-story__content {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.nuumi-benefits-story__cards,
+.nuumi-proof-grid__cards {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.nuumi-benefit-card,
+.nuumi-proof-card,
+.nuumi-faq__item {
+  padding: 2.2rem;
+  border-radius: 2.4rem;
+  border: 1px solid rgba(18, 36, 66, 0.08);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1.6rem 3.4rem rgba(18, 36, 66, 0.06);
+}
+
+.nuumi-benefit-card,
+.nuumi-proof-card {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.nuumi-proof-card__eyebrow,
+.nuumi-benefit-card__eyebrow {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(18, 36, 66, 0.52);
+}
+
+.nuumi-proof-card__image {
+  overflow: hidden;
+  border-radius: 1.8rem;
+  aspect-ratio: 1.15 / 1;
+}
+
+.nuumi-faq__list {
+  grid-template-columns: 1fr;
+}
+
+.nuumi-faq__item {
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nuumi-faq__item[open] {
+  border-color: rgba(0, 118, 255, 0.2);
+  box-shadow: 0 2.2rem 4rem rgba(0, 118, 255, 0.08);
+}
+
+.nuumi-faq__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nuumi-faq__trigger::-webkit-details-marker {
+  display: none;
+}
+
+.nuumi-faq__question {
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.nuumi-faq__toggle {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(18, 36, 66, 0.06);
+  color: var(--nuumi-blue);
+  flex: 0 0 auto;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nuumi-faq__item[open] .nuumi-faq__toggle {
+  transform: rotate(45deg);
+  background: rgba(0, 118, 255, 0.12);
+}
+
+.nuumi-faq__answer {
+  padding-top: 1.4rem;
+  font-size: 1.5rem;
+}
+
+.nuumi-home-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.nuumi-home-enhanced .nuumi-home-reveal {
+  opacity: 0;
+  transform: translateY(1.4rem);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.nuumi-home-enhanced .nuumi-home-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes nuumi-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-featured-products__grid,
+  .nuumi-proof-grid__cards,
+  .nuumi-faq__list,
+  .nuumi-benefits-story__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-hero__grid,
+  .nuumi-expert-spotlight__grid,
+  .nuumi-benefits-story__grid {
+    grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+    gap: 4.8rem;
+  }
+
+  .nuumi-featured-products__header,
+  .nuumi-proof-grid__header,
+  .nuumi-faq__header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .nuumi-featured-products__grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .nuumi-featured-product-card {
+    grid-column: span 3;
+  }
+
+  .nuumi-featured-product-card.is-featured {
+    grid-column: span 6;
+    grid-row: span 2;
+  }
+
+  .nuumi-featured-product-card.is-featured .nuumi-featured-product-card__media {
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .nuumi-featured-product-card.is-featured .nuumi-featured-product-card__title {
+    font-size: 3.2rem;
+  }
+
+  .nuumi-featured-product-card.is-featured .nuumi-featured-product-card__content {
+    padding: 2.8rem;
+  }
+
+  .nuumi-proof-grid__cards,
+  .nuumi-benefits-story__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nuumi-faq__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nuumi-hero__floating-note {
+    right: -1rem;
+    top: 3rem;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .nuumi-hero__floating-note {
+    display: none;
+  }
+}
