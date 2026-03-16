@@ -29,7 +29,7 @@ Derived and aggregated product data from reference funnels for the Nuumipet bran
 ## Product 4: PawPoint Ear Wipes
 
 - **Original Reference:** pdp-pawpoint
-- **Description:** Finger-control ear wipes designed to reach hidden folds that trap debris standard tools miss. 
+- **Description:** Finger-control ear wipes designed to reach hidden folds that trap debris standard tools miss.
 - **Benefits:** Reaches every curve to clean effectively and help prevent recurring ear problems before they begin.
 - **Suggested Price:** $24.00
 - **Badge:** Top Rated

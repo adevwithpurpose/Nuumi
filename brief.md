@@ -101,10 +101,17 @@ All initial references are stored in `D:/antigravity/Projects/Nuumipet/design-id
 - any expert assets, certifications, badges, or guarantee language
 - final brand email and support details
 
+## Current Progress (Updated Mar 16, 2026)
+
+- **Homepage Design & Build:** Restructured `index.json` to feature the new, premium PetLab-inspired flow, replacing generic Dawn components with bespoke `nuumi-*` sections (Hero, Featured Products, Expert Spotlight, Proof Grid, etc.).
+- **Vibe Evolution:** Integrated deeper clinical blues, soft pinks, and aggressive gold CTAs with custom hover micro-animations into `nuumi-base.css` and `nuumi-home.css`.
+- **Theme Configuration:** Manually mapped five brand-new color schemes into both `settings_schema.json` and `settings_data.json` to correctly render the UI and eliminate Shopify preview errors.
+- **Data Scraping & Seeding:** Scraped reference URLs using `crawl4ai` and extracted product data for 4 main products, drafting a 5th bundle item. This dummy data is now safely stored in `docs/product-data.md` and currently populates the homepage placeholders.
+
 ## Phase 1 Deliverables
 
-- project brief
-- implementation plan
-- homepage design/build framework
-- first reusable PDP design/build framework
-- editable Dawn-based theme architecture for later rollout across remaining products
+- [x] project brief
+- [x] implementation plan
+- [x] homepage design/build framework
+- [ ] first reusable PDP design/build framework
+- [ ] editable Dawn-based theme architecture for later rollout across remaining products
