@@ -33,28 +33,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 5.4rem;
-  padding: 1.2rem 3.4rem;
+  min-height: 5.2rem;
+  padding: 1.2rem 3.2rem;
   border-radius: 999px;
   border: none;
-  background: var(--nuumi-gold);
-  color: var(--nuumi-blue);
-  font-size: 1.6rem;
-  font-weight: 800;
+  background: linear-gradient(135deg, #0055e6 0%, #0044bf 100%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background 0.2s ease;
-  box-shadow: 0 1.2rem 2.4rem rgba(255, 193, 7, 0.35), 0 0 0 0 rgba(255, 193, 7, 0.5);
+  box-shadow: 0 0.8rem 2rem rgba(0, 85, 230, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
   position: relative;
   overflow: hidden;
 }
 
 .nuumi-home-button:hover {
-  transform: translateY(-4px) scale(1.02);
-  background: var(--nuumi-gold-hover);
-  box-shadow: 0 1.6rem 3.2rem rgba(255, 193, 7, 0.45);
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #0066ff 0%, #0055e6 100%);
+  box-shadow: 0 1.2rem 2.8rem rgba(0, 85, 230, 0.5);
+  color: #ffffff;
 }
 
 .nuumi-home-button::after {
@@ -64,9 +65,9 @@
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
   transform: skewX(-25deg);
-  animation: nuumi-shine 4s infinite;
+  animation: nuumi-shine 5s infinite;
 }
 
 @keyframes nuumi-shine {
@@ -77,18 +78,28 @@
 
 .nuumi-home-button--secondary,
 .nuumi-home-button--secondary:visited {
-  border-color: rgba(18, 36, 66, 0.16);
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--nuumi-blue);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--nuumi-white);
   box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nuumi-home-button--secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .nuumi-home-button--ghost,
 .nuumi-home-button--ghost:visited {
-  border-color: rgba(255, 255, 255, 0.24);
-  background: transparent;
-  color: inherit;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.nuumi-home-button--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
 }
 
 .nuumi-badge-list,
@@ -161,7 +172,13 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 50%, rgba(255, 133, 162, 0.1) 0%, rgba(0, 102, 255, 0.05) 50%, rgba(255,255,255,0.95) 100%);
+  background: linear-gradient(to right,
+    rgba(231, 243, 241, 0.97) 0%,
+    rgba(231, 243, 241, 0.88) 25%,
+    rgba(231, 243, 241, 0.5) 50%,
+    rgba(231, 243, 241, 0.1) 70%,
+    rgba(231, 243, 241, 0) 100%
+  );
 }
 
 @media screen and (max-width: 989px) {
@@ -376,15 +393,23 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   color: inherit;
 }
 
+.nuumi-trust-item + .nuumi-trust-item::before {
+  content: '·';
+  margin-right: 1rem;
+  opacity: 0.35;
+  font-size: 1.6rem;
+}
+
 .nuumi-trust-item-title {
-  font-size: 1.15rem;
-  letter-spacing: 0.14em;
+  font-size: 1.1rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  opacity: 0.88;
+  opacity: 0.9;
+  font-weight: 600;
 }
 
 .nuumi-benefits-story,
@@ -394,7 +419,7 @@
 }
 
 .nuumi-featured-products {
-  background-color: #38bdf8; /* Bright energetic sky blue like PetLab */
+  background: linear-gradient(160deg, #0d1f3c 0%, #122442 60%, #163055 100%);
 }
 
 .nuumi-featured-products .nuumi-section-heading,
@@ -402,9 +427,14 @@
   color: var(--nuumi-white);
 }
 
+.nuumi-featured-products .nuumi-featured-products__intro {
+  color: rgba(255,255,255,0.72);
+}
+
 .nuumi-featured-products .nuumi-kicker {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--nuumi-white);
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .nuumi-section-heading {
@@ -441,16 +471,16 @@
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 2rem;
   background: var(--nuumi-white);
-  box-shadow: 0 1.2rem 3.6rem rgba(10, 27, 50, 0.12);
+  box-shadow: 0 0.8rem 2.4rem rgba(10, 27, 50, 0.14), 0 0.2rem 0.4rem rgba(10,27,50,0.06);
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
 }
 
 .nuumi-featured-product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 2rem 4rem rgba(10, 27, 50, 0.18);
+  transform: translateY(-6px);
+  box-shadow: 0 1.6rem 3.6rem rgba(10, 27, 50, 0.22);
 }
 
 .nuumi-featured-product-card__media {
@@ -505,11 +535,13 @@
 .nuumi-expert-spotlight__name {
   margin: 0;
   color: var(--nuumi-blue);
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
 }
 
 .nuumi-featured-product-card__title {
-  font-size: 2.4rem;
-  line-height: 1;
+  font-size: 2.8rem;
+  line-height: 1.05;
 }
 
 .nuumi-featured-product-card__summary,
@@ -765,29 +797,30 @@
   }
 
   .nuumi-featured-products__grid {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
   }
 
   .nuumi-featured-product-card {
-    grid-column: span 3;
+    grid-column: span 1;
   }
 
+  /* Remove the oversized featured first card */
   .nuumi-featured-product-card.is-featured {
-    grid-column: span 6;
-    grid-row: span 2;
+    grid-column: span 1;
+    grid-row: span 1;
   }
 
   .nuumi-featured-product-card.is-featured .nuumi-featured-product-card__media {
-    aspect-ratio: 1.2 / 1;
+    aspect-ratio: 0.95 / 1;
   }
 
   .nuumi-featured-product-card.is-featured .nuumi-featured-product-card__title {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
 
   .nuumi-featured-product-card.is-featured .nuumi-featured-product-card__content {
-    padding: 3.2rem;
+    padding: 2.2rem;
   }
 
   .nuumi-proof-grid__cards,
