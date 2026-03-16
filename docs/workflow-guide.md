@@ -1,143 +1,163 @@
 # Nuumipet Workflow Guide
 
+Last updated: 2026-03-16
+
 ## Connected Services
 
-- Shopify store: `evsedm-j1.myshopify.com`
-- GitHub repository: `git@github.com:adevwithpurpose/Nuumi.git`
-- Local project root: `D:/antigravity/Projects/Nuumipet`
+| Item | Value |
+|-----|-------|
+| Shopify store | `evsedm-j1.myshopify.com` |
+| GitHub repository | `git@github.com:adevwithpurpose/Nuumi.git` |
+| Local project root | `D:/antigravity/Projects/Nuumipet` |
+| Dev theme ID | `#188828713254` (Development 6a5c78-G5) |
+| Live theme ID | `#188169552166` (Atlas Theme 3) |
+| Preview URL | `https://xxcgzzgd45ey3v9h-100266803494.shopifypreview.com` |
 
-## Shopify Preview Links
+---
 
-### Option 1: Active development preview
+## Deployment Model
 
-Use this when you are actively editing the theme and want hot reload while the CLI is running.
+This project uses the **Shopify GitHub integration** as its primary deployment path.
 
-Run from the repository root:
+- All commits pushed to `main` are automatically deployed to the connected development theme.
+- Wait **~2 minutes** after a push before checking the Shopify preview.
+- `config/settings_data.json` is now **tracked in git** (removed from `.gitignore`).
+
+### Critical: settings_data.json format rules
+
+Shopify enforces strict format rules on `config/settings_data.json`:
+
+- `color_schemes` **must be an object** (`{ "scheme-1": { "settings": {...} } }`)
+- Using an array (`[...]`) causes a validation error and the file is rejected
+- This is the **opposite** of `settings_schema.json` which uses an array format for defaults
+
+The `settings_schema.json` defaults array (with `id` fields) is only used as a fallback when no `settings_data.json` exists. The live `settings_data.json` always uses the object keyed format.
+
+> **Warning:** Any changes made in the Shopify Theme Editor to global settings will be
+> overwritten on the next `git push` that includes `settings_data.json`. Pull from the
+> Shopify Admin or use `shopify theme pull` if editor changes need to be preserved first.
+
+---
+
+## Shopify Preview Options
+
+### Option 1: Active development preview (hot reload)
 
 ```bash
 shopify theme dev --store evsedm-j1.myshopify.com
 ```
 
-What this does:
+Best for rapid iteration — syncs changes live while the command runs.
 
-- uploads the current theme as a development theme
-- starts the local preview server
-- prints a local preview URL, a Shopify preview link, and a theme editor link
-- keeps syncing changes while the command stays running
-
-Use this when:
-
-- you are actively developing or checking changes quickly
-- you want hot reload for CSS and section changes
-- you want to inspect the theme against real store data
-
-Important note for this project:
-
-- if Shopify CLI reports a reconciliation prompt because the local theme and remote development theme differ, the command may need interactive input before it can continue
-
-### Option 2: Shareable preview snapshot
-
-Use this when you want a stable preview link without keeping a dev server running.
-
-Run from the repository root:
+### Option 2: Shareable snapshot
 
 ```bash
 shopify theme share --store evsedm-j1.myshopify.com
 ```
 
-What this does:
+Creates a stable preview link without keeping the CLI running.
 
-- uploads the local theme as a new unpublished theme with a generated name
-- prints a shareable preview link
-- leaves the uploaded theme in the Shopify theme library until it is deleted manually
-
-Use this when:
-
-- you need to send a preview to a client or stakeholder
-- `shopify theme dev` is blocked by reconciliation or you do not need live reload
-- you want a reviewable snapshot of the current local code
-
-### Before creating a preview link
-
-1. Open a terminal in `D:/antigravity/Projects/Nuumipet`.
-2. Confirm Shopify CLI is installed:
+### Validation before sharing
 
 ```bash
-shopify version
+shopify version       # confirm CLI installed
+shopify theme check   # catch liquid errors before sharing
 ```
 
-3. Make sure Shopify CLI is authenticated to the correct store.
-4. Validate the theme before sharing progress:
-
-```bash
-shopify theme check
-```
+---
 
 ## GitHub Push Workflow
 
-This project uses GitHub as the source of truth for store-connected theme deployment.
-
-### Rule for this repo
-
-Always pull remote changes before pushing local work.
-
-### Standard workflow
-
-1. Open a terminal in `D:/antigravity/Projects/Nuumipet`.
-2. Check what changed:
+Always pull before pushing to avoid overwriting remote changes.
 
 ```bash
+# 1. Check status
 git status -sb
-git diff --stat
-```
 
-3. Pull first:
-
-```bash
+# 2. Pull remote first
 git pull --rebase --autostash origin main
-```
 
-4. Review the updated state again if needed.
-5. Stage the files you want to publish:
-
-```bash
+# 3. Stage changes
 git add <file-paths>
+
+# 4. Commit
+git commit -m "Brief plain-English description"
+
+# 5. Push
+git push origin main
+
+# 6. Confirm clean
+git status -sb
 ```
 
-6. Commit with a plain English message that matches the existing repo style:
+### Typical homepage push
 
 ```bash
-git commit -m "Describe the change clearly"
-```
-
-7. Push to GitHub:
-
-```bash
+git add assets/nuumi-home.css assets/nuumi-base.css templates/index.json config/settings_data.json
+git commit -m "Polish homepage hero — update color tokens and spacing"
 git push origin main
 ```
 
-8. Confirm the branch is clean and synced:
+---
 
-```bash
-git status -sb
+## Files Under Git Control
+
+| File | Tracked | Notes |
+|------|---------|-------|
+| `sections/*.liquid` | Yes | Custom nuumi-\* sections |
+| `assets/nuumi-*.css` | Yes | All Nuumipet styles |
+| `assets/nuumi-*.js` | Yes | All Nuumipet scripts |
+| `templates/*.json` | Yes | `index.json`, `product.json` |
+| `config/settings_schema.json` | Yes | Theme editor UI schema |
+| `config/settings_data.json` | Yes | Brand color schemes — object format required |
+| `layout/theme.liquid` | Yes | Font and CSS injection |
+| `.gitignore` | Yes | |
+| `.shopify/` | No | Local CLI session state only |
+
+---
+
+## Design System Reference
+
+### Font Trio (FontTrio convention)
+
+| Role | Font | Variable |
+|------|------|----------|
+| Display / Headings | DM Serif Display | `--font-heading` |
+| Body / UI | Plus Jakarta Sans | `--font-body` |
+| Mono / Labels | Fira Code | `--font-mono` |
+
+Imported via Google Fonts in `assets/nuumi-base.css`.
+
+### Color Schemes
+
+| Scheme | Background | Use |
+|--------|-----------|-----|
+| scheme-1 | `#FFFFFF` | Default white sections |
+| scheme-2 | `#F4F8FC` | Light blue-grey sections |
+| scheme-3 | `#0A1B32` | Dark navy sections (expert, footer) |
+| scheme-4 | `#E7F3F1` | Soft mint sections |
+| scheme-5 | `#0D9488` | Teal accent sections |
+
+### Brand Tokens (nuumi-base.css)
+
+```css
+--nuumi-navy:        #0A1B32   /* dark headlines, trust strip bg */
+--nuumi-accent:      #0055E6   /* primary CTA blue */
+--nuumi-teal:        #0D9488   /* science/health accent, icons */
+--nuumi-green:       #059669   /* success, check marks */
+--nuumi-gold:        #F59E0B   /* star ratings */
+--font-heading:      'DM Serif Display'
+--font-body:         'Plus Jakarta Sans'
+--font-mono:         'Fira Code'
 ```
 
-### Example push flow
-
-```bash
-git status -sb
-git pull --rebase --autostash origin main
-shopify theme check
-git add sections/nuumi-home-hero.liquid assets/nuumi-home.css
-git commit -m "Refine the Nuumipet homepage hero layout"
-git push origin main
-git status -sb
-```
+---
 
 ## Project-Specific Reminders
 
-- Do not commit live `config/settings_data.json`.
-- Prefer durable theme code changes in `sections/`, `snippets/`, `assets/`, `templates/`, and `config/settings_schema.json`.
-- Keep theme work at the repository root so Shopify CLI and GitHub stay aligned.
-- Use `shopify theme share` when you need a stable preview link quickly.
-- Use `shopify theme dev` when you need live iteration and hot reload.
+- After a `git push`, allow **~2 min** before checking the preview for changes.
+- `shopify theme check` should return zero errors before any client demo.
+- Do not rename section files without updating `templates/index.json`.
+- Homepage uses custom `nuumi-*` sections only — Dawn defaults are not used.
+- PDP uses custom `nuumi-*` sections only — Dawn defaults are replaced.
+- `config/settings_data.json` must always use **object format** for `color_schemes`, never array.
