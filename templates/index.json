@@ -103,7 +103,7 @@
         "product_card_1": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "enercanis",
             "badge_text": "Vet-Formulated",
             "summary": "Pharmaceutical-grade gut-healing supplement. Seals, soothes, and restores with L-Glutamine and Collagen.",
             "rating_label": "Trusted by Pet Parents",
@@ -117,7 +117,7 @@
         "product_card_2": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "calmicollar",
             "badge_text": "Best Seller",
             "summary": "Smart ultrasonic bark control. Instantly quiet frantic barking, jumping, and fence fighting without harm.",
             "rating_label": "Immediate Results",
@@ -131,7 +131,7 @@
         "product_card_3": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "50-shades-of-fun",
             "badge_text": "Clinically Proven",
             "summary": "Veterinarian recommended calming collar with soothing maternal pheromones to alleviate anxiety.",
             "rating_label": "Anxiety Relief",
@@ -145,7 +145,7 @@
         "product_card_4": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "wonderleash",
             "badge_text": "Top Rated",
             "summary": "Finger-control wipes designed to reach hidden folds and prevent recurring ear problems before they begin.",
             "rating_label": "Clean & Soothing",
@@ -159,7 +159,7 @@
         "product_card_5": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "the-four-leaf-dog-training",
             "badge_text": "Best Value",
             "summary": "The ultimate 360-degree care package featuring our top essentials for a calmer, happier pet.",
             "rating_label": "Complete Care",
