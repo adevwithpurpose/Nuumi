@@ -1,10 +1,13 @@
 /* Nuumipet Premium Base Styles */
 :root {
-  --nuumi-blue: #0A2540; /* Clean, clinical premium deep blue */
-  --nuumi-blue-light: #F0F4F8; /* Soft clinical background */
-  --nuumi-blue-medium: #829AB1; /* Neutral muted blue for secondary text */
+  --nuumi-blue: #0A1B32; /* Deeper clinical premium blue */
+  --nuumi-blue-light: #F2F7FA; /* Soft, clean background */
+  --nuumi-blue-medium: #6A85A3; /* Neutral muted blue for secondary text */
   --nuumi-accent: #0066FF; /* Trustworthy clinical vibrant blue */
-  --nuumi-text: #243B53; /* Darker slate for readability */
+  --nuumi-gold: #FFC107; /* Energetic gold for primary CTAs like PetLab */
+  --nuumi-gold-hover: #E0A800; /* Hover state for gold */
+  --nuumi-pink: #FF85A2; /* Playful soft pink for accent shapes */
+  --nuumi-text: #1E2D3D; /* Darker slate for readability */
   --nuumi-white: #FFFFFF;
 }
 
