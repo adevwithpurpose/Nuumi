@@ -134,7 +134,69 @@
           "secondary_button": "background",
           "on_secondary_button": "secondary_button_label",
           "secondary_button_border": "secondary_button_label"
-        }
+        },
+        "default": [
+          {
+            "id": "scheme-1",
+            "settings": {
+              "background": "#FFFFFF",
+              "background_gradient": "",
+              "text": "#362D26",
+              "button": "#3ADAD4",
+              "button_label": "#FFFFFF",
+              "secondary_button_label": "#362D26",
+              "shadow": "#362D26"
+            }
+          },
+          {
+            "id": "scheme-2",
+            "settings": {
+              "background": "#E7F3F1",
+              "background_gradient": "",
+              "text": "#362D26",
+              "button": "#3B72AF",
+              "button_label": "#FFFFFF",
+              "secondary_button_label": "#362D26",
+              "shadow": "#362D26"
+            }
+          },
+          {
+            "id": "scheme-3",
+            "settings": {
+              "background": "#362D26",
+              "background_gradient": "",
+              "text": "#E7F3F1",
+              "button": "#3ADAD4",
+              "button_label": "#362D26",
+              "secondary_button_label": "#E7F3F1",
+              "shadow": "#121212"
+            }
+          },
+          {
+            "id": "scheme-4",
+            "settings": {
+              "background": "#3ADAD4",
+              "background_gradient": "",
+              "text": "#362D26",
+              "button": "#362D26",
+              "button_label": "#3ADAD4",
+              "secondary_button_label": "#362D26",
+              "shadow": "#362D26"
+            }
+          },
+          {
+            "id": "scheme-5",
+            "settings": {
+              "background": "#3B72AF",
+              "background_gradient": "",
+              "text": "#FFFFFF",
+              "button": "#3ADAD4",
+              "button_label": "#362D26",
+              "secondary_button_label": "#FFFFFF",
+              "shadow": "#362D26"
+            }
+          }
+        ]
       }
     ]
   },
