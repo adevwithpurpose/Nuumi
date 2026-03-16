@@ -9,5 +9,5 @@ ehthumbs.db
 Thumbs.db
 .shopify
 
-# Local Shopify state
-config/settings_data.json
+# settings_data.json is intentionally tracked so color schemes
+# and brand settings deploy correctly via git integration.
