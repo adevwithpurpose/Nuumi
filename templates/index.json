@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "nuumi_home_hero": {
@@ -22,20 +31,25 @@
         "badge_1",
         "badge_2"
       ],
-        "settings": {
-          "bg_color": "#E7F3F1",
-          "heading": "The <strong>smartest</strong> approach to daily pet wellness",
-          "subheading": "Nuumipet provides veterinary-approved solutions that target root causes, giving you and your dog immediate relief and lasting health.",
-          "button_label": "Shop the collection",
-          "button_link": "shopify:\/\/collections\/all",
-          "secondary_button_label": "Why pet parents switch",
-          "secondary_button_link": "#shopify-section-template--188828713254__nuumi_expert_spotlight",
-          "callout_label": "Scientifically Formulated",
-          "callout_title": "A cleaner approach to pet health",
-          "callout_text": "Built on veterinary science, offering real relief without a crowded medicine cabinet.",
-          "padding_top": 36,
-          "padding_bottom": 44
-        }
+      "settings": {
+        "eyebrow": "Premium everyday pet wellness",
+        "bg_color": "#e7f3f1",
+        "image": "shopify://shop_images/Gemini_Generated_Image_bru0prbru0prbru0.webp",
+        "heading": "The smartest approach to daily pet wellness",
+        "subheading": "Nuumipet provides veterinary-approved solutions that target root causes, giving you and your dog immediate relief and lasting health.",
+        "rating_text": "Trusted by 10,000+ Pet Parents",
+        "bullet_1": "Vet-informed formulas",
+        "bullet_2": "Made for everyday routines",
+        "bullet_3": "Premium, clean ingredients",
+        "button_label": "Shop the collection",
+        "button_link": "shopify://collections/all",
+        "secondary_button_link": "#shopify-section-template--188828713254__nuumi_expert_spotlight",
+        "callout_label": "Scientifically Formulated",
+        "callout_title": "A cleaner approach to pet health",
+        "callout_text": "Built on veterinary science, offering real relief without a crowded medicine cabinet.",
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
     },
     "nuumi_trust_strip": {
       "type": "nuumi-trust-strip",
@@ -77,7 +91,7 @@
       ],
       "settings": {
         "bg_color": "#122442",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "marquee_speed": 30,
         "padding_top": 20,
         "padding_bottom": 20
@@ -89,6 +103,7 @@
         "product_card_1": {
           "type": "product_card",
           "settings": {
+            "product": "enercanis",
             "badge_text": "Vet-Formulated",
             "summary": "Pharmaceutical-grade gut-healing supplement. Seals, soothes, and restores with L-Glutamine and Collagen.",
             "rating_label": "Trusted by Pet Parents",
@@ -102,6 +117,7 @@
         "product_card_2": {
           "type": "product_card",
           "settings": {
+            "product": "calmicollar",
             "badge_text": "Best Seller",
             "summary": "Smart ultrasonic bark control. Instantly quiet frantic barking, jumping, and fence fighting without harm.",
             "rating_label": "Immediate Results",
@@ -115,6 +131,7 @@
         "product_card_3": {
           "type": "product_card",
           "settings": {
+            "product": "50-shades-of-fun",
             "badge_text": "Clinically Proven",
             "summary": "Veterinarian recommended calming collar with soothing maternal pheromones to alleviate anxiety.",
             "rating_label": "Anxiety Relief",
@@ -128,6 +145,7 @@
         "product_card_4": {
           "type": "product_card",
           "settings": {
+            "product": "wonderleash",
             "badge_text": "Top Rated",
             "summary": "Finger-control wipes designed to reach hidden folds and prevent recurring ear problems before they begin.",
             "rating_label": "Clean & Soothing",
@@ -141,6 +159,7 @@
         "product_card_5": {
           "type": "product_card",
           "settings": {
+            "product": "the-four-leaf-dog-training",
             "badge_text": "Best Value",
             "summary": "The ultimate 360-degree care package featuring our top essentials for a calmer, happier pet.",
             "rating_label": "Complete Care",
