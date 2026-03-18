@@ -12,7 +12,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup & Theme Foundation | 0/2 | Not started | - |
-| 2. Homepage Sections | 0/0 | Not started | - |
+| 2. Homepage Sections | 0/5 | Not started | - |
 | 3. Product Detail Page (PDP) Sections | 0/0 | Not started | - |
 | 4. Theme Finalization & Merchant Enablement | 0/0 | Not started | - |
 
@@ -41,7 +41,12 @@
   2. A non-developer can go to the Shopify Theme Editor for the homepage and edit the text and images for every section.
   3. A non-developer can reorder the sections on the homepage (e.g., move the FAQ section above the Expert section) using the Theme Editor.
   4. All sections are styled according to the brand's mobile-first design direction.
-**Plans**: TBD
+**Plans**: 5 plans
+- [ ] `02-01-PLAN.md` — Phase 2 Foundation & Core Styling.
+- [ ] `02-02-PLAN.md` — Hero & Announcement Bar Implementation.
+- [ ] `02-03-PLAN.md` — Social Proof & Trust Reinforcement.
+- [ ] `02-04-PLAN.md` — Product Showcase & Expert Spotlight.
+- [ ] `02-05-PLAN.md` — Information, Storytelling & Conversion Closure.
 
 ### Phase 3: Product Detail Page (PDP) Sections
 **Goal**: A complete, reusable Product Detail Page template is created, providing a high-conversion experience for all physical products.
