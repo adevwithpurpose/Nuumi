@@ -11,7 +11,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup & Theme Foundation | 0/0 | Not started | - |
+| 1. Project Setup & Theme Foundation | 0/2 | Not started | - |
 | 2. Homepage Sections | 0/0 | Not started | - |
 | 3. Product Detail Page (PDP) Sections | 0/0 | Not started | - |
 | 4. Theme Finalization & Merchant Enablement | 0/0 | Not started | - |
@@ -28,7 +28,9 @@
   1. A developer can pull the GitHub repository and run `shopify theme dev` to launch a local development server with the Dawn theme.
   2. The GitHub repository is connected to the target Shopify store, allowing for theme pushes and version control.
   3. The base Dawn theme is installed and ready for section development.
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] `01-01-PLAN.md` — Initialize Shopify theme and connect to local development server.
+- [ ] `01-02-PLAN.md` — Set up Git, connect to GitHub, and clean up default theme files.
 
 ### Phase 2: Homepage Sections
 **Goal**: The store's homepage is fully built with all required content sections, which are reusable and editable through the Shopify admin.
