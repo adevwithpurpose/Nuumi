@@ -42,6 +42,28 @@
 
 # Traceability
 
-| Requirement ID | Mapped to Phase |
-|---|---|
-| | |
+| Requirement ID | Mapped to Phase | Status |
+|---|---|---|
+| HOME-01 | 2 | Pending |
+| HOME-02 | 2 | Pending |
+| HOME-03 | 2 | Pending |
+| HOME-04 | 2 | Pending |
+| HOME-05 | 2 | Pending |
+| HOME-06 | 2 | Pending |
+| HOME-07 | 2 | Pending |
+| HOME-08 | 2 | Pending |
+| HOME-09 | 2 | Pending |
+| PDP-01 | 3 | Pending |
+| PDP-02 | 3 | Pending |
+| PDP-03 | 3 | Pending |
+| PDP-04 | 3 | Pending |
+| PDP-05 | 3 | Pending |
+| PDP-06 | 3 | Pending |
+| PDP-07 | 3 | Pending |
+| PDP-08 | 3 | Pending |
+| THEME-01 | 4 | Pending |
+| THEME-02 | 4 | Pending |
+| THEME-03 | 1 | Pending |
+| THEME-04 | 1 | Pending |
+| THEME-05 | 1 | Pending |
+
