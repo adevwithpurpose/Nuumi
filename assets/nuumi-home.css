@@ -82,3 +82,57 @@
   border-radius: 12px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+
+/* Trust Strip Marquee */
+.nuumi-trust-strip {
+  background-color: var(--nuumi-deep-blue);
+  color: #FFFFFF;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nuumi-trust-strip__marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.nuumi-trust-strip__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: nuumi-marquee linear infinite;
+}
+
+.nuumi-trust-strip__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+  gap: 1rem;
+}
+
+.nuumi-trust-strip__icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--nuumi-gold);
+}
+
+.nuumi-trust-strip__text {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@keyframes nuumi-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
