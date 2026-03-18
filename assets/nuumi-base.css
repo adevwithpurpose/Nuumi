@@ -1,377 +1,69 @@
-/*
- * ─────────────────────────────────────────────────────────────
- *  NUUMIPET — Premium Base Styles
- *  Font Trio:
- *    Display  → DM Serif Display   (editorial headings, hero H1)
- *    UI/Body  → Plus Jakarta Sans  (all body copy, labels, CTAs)
- *    Mono     → Fira Code           (stats, numbers, eyebrow — optional)
- * ─────────────────────────────────────────────────────────────
- */
-
-/* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-/* ── Design tokens ── */
 :root {
-  /* Brand palette */
-  --nuumi-navy:         #0A1B32;   /* deepest dark — headlines, footer bg */
-  --nuumi-navy-mid:     #122442;   /* trust strip, deep dark sections     */
-  --nuumi-navy-light:   #1a3360;   /* hover backgrounds on dark sections  */
-  --nuumi-blue:         #0A1B32;   /* alias kept for legacy refs          */
-  --nuumi-blue-light:   #EBF5FB;   /* section backgrounds, card fills     */
-  --nuumi-blue-pale:    #F4F8FC;   /* hero/proof bg                       */
-  --nuumi-sky:          #D6EAF8;   /* accent fill in hero                 */
-  --nuumi-accent:       #0055E6;   /* primary CTA blue                    */
-  --nuumi-accent-light: #EEF4FF;   /* chip / badge fill                   */
-  --nuumi-accent-hover: #0044BF;   /* CTA hover                           */
-  --nuumi-teal:         #0D9488;   /* "science" accent — icons, highlights */
-  --nuumi-green:        #059669;   /* check / success green               */
-  --nuumi-gold:         #F59E0B;   /* star ratings                        */
-  --nuumi-rose:         #FB7185;   /* playful accent — currently unused   */
+  /* Brand Colors */
+  --nuumi-gold: #F59E0B;
+  --nuumi-gold-dark: #D97706;
+  --nuumi-off-white: #F9FAFB;
+  --nuumi-deep-blue: #1E3A8A;
+  
+  /* Fonts */
+  --font-heading-family: "DM Serif Display", serif;
+  --font-body-family: "Plus Jakarta Sans", sans-serif;
 
-  /* Neutrals */
-  --nuumi-white:        #FFFFFF;
-  --nuumi-off-white:    #FAFBFC;
-  --nuumi-gray-50:      #F8F9FA;
-  --nuumi-gray-100:     #EEF0F2;
-  --nuumi-gray-200:     #D8DCE0;
-  --nuumi-gray-400:     #9BA8B6;
-  --nuumi-gray-600:     #5C6D7E;
-  --nuumi-text:         #111827;   /* primary body text */
-  --nuumi-text-muted:   rgba(10, 27, 50, 0.62);
-
-  /* Typography (FontTrio Convention) */
-  --font-heading: 'DM Serif Display', Georgia, serif;
-  --font-body:    'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-mono:    'Fira Code', 'JetBrains Mono', monospace;
-
-  /* Border radius */
-  --r-sm:   0.8rem;
-  --r-md:   1.6rem;
-  --r-lg:   2.4rem;
-  --r-xl:   3.2rem;
-  --r-pill: 999px;
-
-  /* Shadows */
-  --shadow-sm:   0 0.2rem 0.8rem rgba(10, 27, 50, 0.08);
-  --shadow-md:   0 0.6rem 1.8rem rgba(10, 27, 50, 0.10);
-  --shadow-lg:   0 1.2rem 3.2rem rgba(10, 27, 50, 0.14);
-  --shadow-xl:   0 2rem 5rem   rgba(10, 27, 50, 0.18);
-
-  /* Transitions */
-  --ease-standard: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
-  --dur-fast:   150ms;
-  --dur-normal: 280ms;
-  --dur-slow:   400ms;
+  /* Button Shadows */
+  --nuumi-button-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
 }
 
-/* ── Font application ── */
-.nuumi-section,
-.nuumi-section * {
-  font-family: var(--font-body);
-}
-
-.nuumi-hero__heading,
-.nuumi-section-heading {
-  font-family: var(--font-heading);
-  font-style: normal;
-}
-
-/* Mono accents */
-.nuumi-kicker,
-.nuumi-featured-product-card__index,
-.nuumi-proof-card__eyebrow,
-.nuumi-benefit-card__eyebrow {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-}
-
-/* ── Global nuumi reset helpers ── */
-.nuumi-section img { display: block; max-width: 100%; }
-.nuumi-section ul,
-.nuumi-section ol { margin: 0; padding: 0; list-style: none; }
-.nuumi-section p  { margin: 0; }
-.nuumi-section a  { text-decoration: none; }
-
-/*
- * ─────────────────────────────────────────────────────────────
- *  TRUST STRIP (base — moved from nuumi-home.css for clarity)
- * ─────────────────────────────────────────────────────────────
- */
-.nuumi-trust-strip {
+/* Gold CTA Button styling */
+.nuumi-button--gold {
   position: relative;
-  background: linear-gradient(90deg, #0A1B32 0%, #122442 100%);
   overflow: hidden;
-  padding: 1.4rem 0;
-  border-top:    1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-.nuumi-trust-marquee {
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.nuumi-trust-marquee-track {
-  display: inline-flex;
-  min-width: max-content;
-  align-items: center;
-  animation: nuumi-marquee linear infinite;
-}
-
-.nuumi-trust-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0 2.4rem;
-  color: var(--nuumi-white);
-}
-
-.nuumi-trust-item-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.8rem;
-  height: 1.8rem;
-  color: var(--nuumi-teal);
-  flex-shrink: 0;
-}
-
-.nuumi-trust-item-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
-
-.nuumi-trust-item-title {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
+  padding: 1.2rem 3.2rem;
+  font-family: var(--font-body-family);
   font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-}
-
-/* dot separator */
-.nuumi-trust-item::after {
-  content: '·';
-  margin-left: 2.4rem;
-  opacity: 0.3;
   font-size: 1.6rem;
-  line-height: 1;
-}
-
-.nuumi-trust-item:last-child::after { display: none; }
-
-@keyframes nuumi-marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-
-/* 
-  Nuumi Home Hero 
-*/
-.nuumi-hero {
-  position: relative;
-  background-color: var(--nuumi-blue-light);
-  overflow: hidden;
-}
-
-.nuumi-hero__grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-@media screen and (min-width: 900px) {
-  .nuumi-hero__grid {
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
-  }
-}
-
-.nuumi-hero__content {
-  flex: 1;
-  padding: 3rem 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 900px) {
-  .nuumi-hero__content {
-    padding: 6rem 0 6rem 4rem;
-    text-align: left;
-    align-items: flex-start;
-  }
-}
-
-.nuumi-hero__heading {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.1;
-  font-weight: 700;
-  color: var(--nuumi-blue);
-  margin: 0 0 1rem;
-}
-
-.nuumi-hero__subheading {
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
-  line-height: 1.5;
-  color: var(--nuumi-blue);
-  opacity: 0.8;
-  margin: 0 0 2rem;
-  max-width: 600px;
-}
-
-.nuumi-hero__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--nuumi-blue);
-  color: var(--nuumi-white);
-  padding: 1rem 2.5rem;
-  border-radius: 4px;
-  font-weight: 600;
+  color: #FFFFFF;
   text-decoration: none;
-  font-size: 1.125rem;
-  transition: background-color 0.2s ease;
-  width: 100%;
-  max-width: 320px;
+  background: linear-gradient(135deg, var(--nuumi-gold) 0%, var(--nuumi-gold-dark) 100%);
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--nuumi-button-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.nuumi-hero__button:hover {
-  background-color: var(--nuumi-accent);
+.nuumi-button--gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 10px 10px -5px rgba(245, 158, 11, 0.1);
 }
 
-@media screen and (min-width: 900px) {
-  .nuumi-hero__button {
-    width: auto;
-  }
+.nuumi-button--gold:active {
+  transform: translateY(0);
 }
 
-.nuumi-hero__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  justify-content: center;
-}
-
-@media screen and (min-width: 900px) {
-  .nuumi-hero__badges {
-    justify-content: flex-start;
-  }
-}
-
-.nuumi-hero-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--nuumi-white);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.nuumi-hero-badge__icon {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--nuumi-blue);
-}
-
-.nuumi-hero-badge__icon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
-
-.nuumi-hero-badge__text {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--nuumi-blue);
-}
-
-.nuumi-hero__media {
-  flex: 1;
-  position: relative;
-  min-height: 400px;
-  width: 100%;
-}
-
-@media screen and (min-width: 900px) {
-  .nuumi-hero__media {
-    min-height: 600px;
-  }
-}
-
-.nuumi-hero__image {
+/* Premium Shine Effect */
+.nuumi-button--gold::after {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: nuumi-shine 3s infinite;
 }
 
-/* 
-  Nuumi Trust Strip 
-*/
-.nuumi-trust-strip {
-  background-color: var(--nuumi-blue);
-  color: var(--nuumi-white);
-  overflow: hidden;
-  padding: 1.25rem 0;
-}
-
-.nuumi-trust-marquee {
-  display: flex;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.nuumi-trust-marquee-track {
-  display: flex;
-  animation: nuumi-marquee linear infinite;
-}
-
-.nuumi-trust-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0 2rem;
-}
-
-.nuumi-trust-item-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-}
-
-.nuumi-trust-item-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
-
-.nuumi-trust-item-title {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-@keyframes nuumi-marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes nuumi-shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  20%, 100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }

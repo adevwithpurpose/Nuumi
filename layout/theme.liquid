@@ -7,6 +7,10 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -256,6 +260,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'nuumi-base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -289,18 +294,6 @@
         media="print"
         onload="this.media='all'"
       >
-    {%- endif -%}
-
-    {%- if template.name == 'index' -%}
-      {{ 'nuumi-base.css' | asset_url | stylesheet_tag }}
-      {{ 'nuumi-home.css' | asset_url | stylesheet_tag }}
-      <script src="{{ 'nuumi-home.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
-    {%- if template.name == 'product' -%}
-      {{ 'nuumi-base.css' | asset_url | stylesheet_tag }}
-      {{ 'nuumi-product.css' | asset_url | stylesheet_tag }}
-      <script src="{{ 'nuumi-product.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
     <script>
