@@ -1,393 +1,206 @@
 {
   "sections": {
+    "nuumi_announcement_bar": {
+      "type": "nuumi-announcement-bar",
+      "settings": {
+        "text": "Free Shipping on Orders Over $75",
+        "bg_color": "#0A1B32"
+      }
+    },
     "nuumi_home_hero": {
       "type": "nuumi-home-hero",
+      "settings": {
+        "title": "Authority and trust, but cleaner",
+        "subtitle": "The #1 Choice for Pet Wellness",
+        "button_label": "Shop Now",
+        "button_link": "shopify://collections/all"
+      },
       "blocks": {
-        "badge_1": {
-          "type": "badge",
+        "bullet_1": {
+          "type": "bullet",
           "settings": {
-            "icon": "check_mark",
-            "text": "Science-Backed Formulas"
+            "text": "Veterinarian Formulated"
           }
         },
-        "badge_2": {
-          "type": "badge",
+        "bullet_2": {
+          "type": "bullet",
           "settings": {
-            "icon": "paw_print",
-            "text": "10,000+ Happy Pet Parents"
+            "text": "Premium Clean Ingredients"
+          }
+        },
+        "bullet_3": {
+          "type": "bullet",
+          "settings": {
+            "text": "Trusted by 10,000+ Pet Parents"
           }
         }
       },
       "block_order": [
-        "badge_1",
-        "badge_2"
+        "bullet_1",
+        "bullet_2",
+        "bullet_3"
+      ]
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
       ],
       "settings": {
-        "eyebrow": "Premium everyday pet wellness",
-        "bg_color": "#e7f3f1",
-        "image": "shopify://shop_images/Gemini_Generated_Image_bru0prbru0prbru0.webp",
-        "heading": "The smartest approach to daily pet wellness",
-        "subheading": "Veterinary-approved solutions that target root causes — giving your dog immediate relief and lasting health.",
-        "rating_text": "Trusted by 10,000+ Pet Parents",
-        "bullet_1": "Vet-informed, clinically-tested formulas",
-        "bullet_2": "Made for simple, everyday routines",
-        "bullet_3": "Clean ingredients. Zero unnecessary fillers.",
-        "button_label": "Shop the collection",
-        "button_link": "shopify://collections/all",
-        "secondary_button_link": "",
-        "callout_label": "30-Day Guarantee",
-        "callout_title": "Love it or your money back",
-        "callout_text": "Every Nuumipet order is backed by our no-hassle 30-day money-back guarantee.",
-        "padding_top": 0,
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
-    "nuumi_trust_strip": {
-      "type": "nuumi-trust-strip",
-      "blocks": {
-        "trust_1": {
-          "type": "trust",
-          "settings": {
-            "icon": "truck",
-            "title": "FREE SHIPPING OVER $50"
-          }
-        },
-        "trust_2": {
-          "type": "trust",
-          "settings": {
-            "icon": "check_mark",
-            "title": "VET FORMULATED"
-          }
-        },
-        "trust_3": {
-          "type": "trust",
-          "settings": {
-            "icon": "return",
-            "title": "30-DAY MONEY-BACK GUARANTEE"
-          }
-        },
-        "trust_4": {
-          "type": "trust",
-          "settings": {
-            "icon": "heart",
-            "title": "MADE WITH CLEAN INGREDIENTS"
-          }
-        },
-        "trust_5": {
-          "type": "trust",
-          "settings": {
-            "icon": "leaf",
-            "title": "NO HARMFUL FILLERS"
-          }
-        }
-      },
-      "block_order": [
-        "trust_1",
-        "trust_2",
-        "trust_3",
-        "trust_4",
-        "trust_5"
-      ],
+    "featured_collection": {
+      "type": "featured-collection",
       "settings": {
-        "bg_color": "#0A1B32",
-        "text_color": "#ffffff",
-        "marquee_speed": 35,
-        "padding_top": 16,
-        "padding_bottom": 16
+        "title": "Featured products",
+        "heading_size": "h2",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 36
       }
     },
-    "nuumi_featured_products": {
-      "type": "nuumi-featured-products",
+    "collage": {
+      "type": "collage",
       "blocks": {
-        "product_card_1": {
-          "type": "product_card",
+        "collection-0": {
+          "type": "collection",
           "settings": {
-            "product": "enercanis",
-            "badge_text": "Vet-Formulated",
-            "summary": "Pharmaceutical-grade gut-healing formula. Seals and soothes with L-Glutamine and Hydrolyzed Collagen for lasting digestive relief.",
-            "rating_label": "Pet Parents Love It",
-            "review_count": "2,743",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/all",
-            "placeholder_title": "EnerCanis Gut Supplement",
-            "placeholder_price": "$39.00"
+            "collection": ""
           }
         },
-        "product_card_2": {
-          "type": "product_card",
+        "product": {
+          "type": "product",
           "settings": {
-            "product": "calmicollar",
-            "badge_text": "Best Seller",
-            "summary": "Smart ultrasonic bark control that instantly quiets frantic barking and fence-fighting — safely, without harm.",
-            "rating_label": "Immediate Results",
-            "review_count": "528",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/all",
-            "placeholder_title": "ByeBark Device",
-            "placeholder_price": "$49.00"
+            "product": "",
+            "second_image": false
           }
         },
-        "product_card_3": {
-          "type": "product_card",
+        "collection-1": {
+          "type": "collection",
           "settings": {
-            "product": "50-shades-of-fun",
-            "badge_text": "Clinically Proven",
-            "summary": "Veterinarian-recommended collar with soothing maternal pheromones. Continuous 30-day anxiety relief.",
-            "rating_label": "Anxiety Relief",
-            "review_count": "219",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/all",
-            "placeholder_title": "CalmiCollar",
-            "placeholder_price": "$29.00"
-          }
-        },
-        "product_card_4": {
-          "type": "product_card",
-          "settings": {
-            "product": "wonderleash",
-            "badge_text": "Top Rated",
-            "summary": "Precision finger-grip ear wipes that reach hidden folds and stop recurring ear problems before they start.",
-            "rating_label": "Clean & Soothing",
-            "review_count": "1,540",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/all",
-            "placeholder_title": "PawPoint Ear Wipes",
-            "placeholder_price": "$24.00"
-          }
-        },
-        "product_card_5": {
-          "type": "product_card",
-          "settings": {
-            "product": "the-four-leaf-dog-training",
-            "badge_text": "Best Value",
-            "summary": "Our complete 360° care bundle — every Nuumipet essential in one box for a calmer, healthier, happier pet.",
-            "rating_label": "Complete Care",
-            "review_count": "89",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/all",
-            "placeholder_title": "Nuumipet Wellness Bundle",
-            "placeholder_price": "$119.00"
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "product_card_1",
-        "product_card_2",
-        "product_card_3",
-        "product_card_4",
-        "product_card_5"
+        "collection-0",
+        "product",
+        "collection-1"
       ],
       "settings": {
-        "eyebrow": "Five targeted solutions",
-        "heading": "Discover Nuumipet's essential wellness collection",
-        "intro": "<p>Every formula is backed by veterinary science and designed for one thing: real, lasting results for your dog.</p>",
-        "button_label": "See all products",
-        "button_link": "shopify://collections/all",
-        "padding_top": 64,
-        "padding_bottom": 60
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "nuumi_expert_spotlight": {
-      "type": "nuumi-expert-spotlight",
-      "blocks": {
-        "proof_1": {
-          "type": "proof_point",
-          "settings": {
-            "icon": "science",
-            "text": "Every formula is developed with veterinary insight, targeting root causes rather than masking symptoms."
-          }
-        },
-        "proof_2": {
-          "type": "proof_point",
-          "settings": {
-            "icon": "shield",
-            "text": "Pharmaceutical-grade ingredients tested at every stage — no harmful fillers, no shortcuts."
-          }
-        },
-        "proof_3": {
-          "type": "proof_point",
-          "settings": {
-            "icon": "heart",
-            "text": "Built for simplicity: routines your dog will accept and results pet parents actually notice."
-          }
-        }
-      },
-      "block_order": [
-        "proof_1",
-        "proof_2",
-        "proof_3"
-      ],
+    "video": {
+      "type": "video",
       "settings": {
-        "eyebrow": "Expert-led trust",
-        "heading": "Built with clinical rigor and veterinary expertise",
-        "body": "<p>Nuumipet was founded on one belief: pet parents deserve transparency. Every formula starts with peer-reviewed science, refined by veterinary advisors, and tested for safety and efficacy before it reaches your door.</p>",
-        "quote": "When pet parents understand what they're giving their dog — and why it works — trust follows naturally. Root-cause solutions are what bring long-term relief.",
-        "name": "Dr. Sarah Jenkins, DVM",
-        "role": "Chief Veterinary Advisor",
-        "button_label": "Our approach to pet health",
-        "button_link": "shopify://pages/about",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "heading": "",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "heading_size": "h1",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "nuumi_benefits_story": {
-      "type": "nuumi-benefits-story",
+    "multicolumn": {
+      "type": "multicolumn",
       "blocks": {
-        "benefit_1": {
-          "type": "benefit",
+        "column1": {
+          "type": "column",
           "settings": {
-            "icon": "science",
-            "eyebrow": "Science-backed",
-            "title": "Formulas grounded in veterinary research",
-            "text": "<p>Each Nuumipet supplement is developed using peer-reviewed science, with ingredients chosen for proven efficacy — not marketing appeal.</p>"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "benefit_2": {
-          "type": "benefit",
+        "column2": {
+          "type": "column",
           "settings": {
-            "icon": "paw",
-            "eyebrow": "Routine-friendly",
-            "title": "Simple enough for daily use",
-            "text": "<p>No complicated schedules. Every formula is designed to slot seamlessly into your existing routine — added to food, worn, or applied in seconds.</p>"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "benefit_3": {
-          "type": "benefit",
+        "column3": {
+          "type": "column",
           "settings": {
-            "icon": "shield",
-            "eyebrow": "Clean ingredients",
-            "title": "No fillers. No compromises.",
-            "text": "<p>We refuse to cut costs on ingredient quality. Every batch is tested for purity so you always know exactly what your dog is getting.</p>"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "benefit_1",
-        "benefit_2",
-        "benefit_3"
+        "column1",
+        "column2",
+        "column3"
       ],
       "settings": {
-        "eyebrow": "Why pet parents choose Nuumipet",
-        "heading": "Premium care shouldn't require a PhD to understand",
-        "intro": "<p>Effective, transparent, and simple. That's the Nuumipet standard — because your pet deserves better than guesswork.</p>",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "nuumi_proof_grid": {
-      "type": "nuumi-proof-grid",
-      "blocks": {
-        "proof_1": {
-          "type": "proof_card",
-          "settings": {
-            "icon": "shield",
-            "eyebrow": "Risk-Free",
-            "title": "30-Day Money-Back Guarantee",
-            "text": "<p>Not happy? We make it right — no hoops, no questions. Return any order within 30 days for a full refund.</p>"
-          }
-        },
-        "proof_2": {
-          "type": "proof_card",
-          "settings": {
-            "icon": "science",
-            "eyebrow": "Clinically Formulated",
-            "title": "Pharmaceutical-Grade Standards",
-            "text": "<p>Every ingredient is chosen for clinical efficacy, tested for safety, and manufactured under strict quality controls.</p>"
-          }
-        },
-        "proof_3": {
-          "type": "proof_card",
-          "settings": {
-            "icon": "shipping",
-            "eyebrow": "Fast Delivery",
-            "title": "Free Shipping on Orders Over $50",
-            "text": "<p>Orders ship within 1–2 business days. Track your package every step of the way with real-time updates.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "proof_1",
-        "proof_2",
-        "proof_3"
-      ],
-      "settings": {
-        "eyebrow": "Our promise to you",
-        "heading": "Trusted by thousands of pet parents — here's why",
-        "intro": "<p>From formulation to your front door, every decision we make is built around your confidence and your pet's wellbeing.</p>",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "nuumi_faq": {
-      "type": "nuumi-faq",
-      "blocks": {
-        "faq_1": {
-          "type": "faq",
-          "settings": {
-            "question": "How does EnerCanis improve my dog's gut health?",
-            "answer": "<p>EnerCanis uses pharmaceutical-grade L-Glutamine and Hydrolyzed Collagen to repair the intestinal barrier, sealing and soothing the gut lining. Most pet parents notice a visible improvement in digestion, stool quality, and energy levels within 2–3 weeks of daily use.</p>"
-          }
-        },
-        "faq_2": {
-          "type": "faq",
-          "settings": {
-            "question": "Is the ByeBark ultrasonic device safe?",
-            "answer": "<p>Absolutely. ByeBark uses safe, high-frequency sound waves that disrupt unwanted behavior — like frantic barking, jumping, and fence-fighting — without causing any pain or distress. It's a humane, drug-free solution recommended by trainers and vets alike.</p>"
-          }
-        },
-        "faq_3": {
-          "type": "faq",
-          "settings": {
-            "question": "How long does a CalmiCollar last?",
-            "answer": "<p>Each CalmiCollar releases soothing maternal pheromones continually for up to 30 days. It's ideal for ongoing separation anxiety, travel stress, or post-rescue adjustment periods. Simply replace at the end of the month for uninterrupted comfort.</p>"
-          }
-        },
-        "faq_4": {
-          "type": "faq",
-          "settings": {
-            "question": "Why are PawPoint ear wipes better than liquid drops?",
-            "answer": "<p>Standard liquid drops tend to push wax and debris deeper into the ear canal. PawPoint's precision finger-grip design lets you physically reach hidden folds and crevices that trap debris — preventing the recurring infections that liquid solutions miss.</p>"
-          }
-        },
-        "faq_5": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I use multiple Nuumipet products together?",
-            "answer": "<p>Yes — our products are designed to complement one another. For example, pairing EnerCanis (gut health) with CalmiCollar (anxiety relief) addresses both physical and behavioural wellbeing simultaneously. If you have specific health concerns, always consult your vet first.</p>"
-          }
-        },
-        "faq_6": {
-          "type": "faq",
-          "settings": {
-            "question": "What is your return policy?",
-            "answer": "<p>We offer a full 30-day money-back guarantee on every order, no questions asked. If you're not completely satisfied, simply contact our support team and we'll arrange a prompt refund or exchange.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6"
-      ],
-      "settings": {
-        "eyebrow": "Frequently asked questions",
-        "heading": "Get the answers you need before you buy",
-        "intro": "<p>Still have questions? Our support team is always available — reach us anytime at hello@nuumipet.com.</p>",
-        "padding_top": 56,
-        "padding_bottom": 80
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
+    "nuumi_announcement_bar",
     "nuumi_home_hero",
-    "nuumi_trust_strip",
-    "nuumi_featured_products",
-    "nuumi_expert_spotlight",
-    "nuumi_benefits_story",
-    "nuumi_proof_grid",
-    "nuumi_faq"
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "video",
+    "multicolumn"
   ]
 }
