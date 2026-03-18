@@ -11,8 +11,8 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup & Theme Foundation | 0/2 | Not started | - |
-| 2. Homepage Sections | 0/5 | Not started | - |
+| 1. Project Setup & Theme Foundation | 2/2 | Complete | 2026-03-18 |
+| 2. Homepage Sections | 1/5 | In Progress | - |
 | 3. Product Detail Page (PDP) Sections | 0/0 | Not started | - |
 | 4. Theme Finalization & Merchant Enablement | 0/0 | Not started | - |
 
@@ -29,8 +29,8 @@
   2. The GitHub repository is connected to the target Shopify store, allowing for theme pushes and version control.
   3. The base Dawn theme is installed and ready for section development.
 **Plans**: 2 plans
-- [ ] `01-01-PLAN.md` — Initialize Shopify theme and connect to local development server.
-- [ ] `01-02-PLAN.md` — Set up Git, connect to GitHub, and clean up default theme files.
+- [x] `01-01-PLAN.md` — Initialize Shopify theme and connect to local development server.
+- [x] `01-02-PLAN.md` — Set up Git, connect to GitHub, and clean up default theme files.
 
 ### Phase 2: Homepage Sections
 **Goal**: The store's homepage is fully built with all required content sections, which are reusable and editable through the Shopify admin.
@@ -42,7 +42,7 @@
   3. A non-developer can reorder the sections on the homepage (e.g., move the FAQ section above the Expert section) using the Theme Editor.
   4. All sections are styled according to the brand's mobile-first design direction.
 **Plans**: 5 plans
-- [ ] `02-01-PLAN.md` — Phase 2 Foundation & Core Styling.
+- [x] `02-01-PLAN.md` — Phase 2 Foundation & Core Styling.
 - [ ] `02-02-PLAN.md` — Hero & Announcement Bar Implementation.
 - [ ] `02-03-PLAN.md` — Social Proof & Trust Reinforcement.
 - [ ] `02-04-PLAN.md` — Product Showcase & Expert Spotlight.
