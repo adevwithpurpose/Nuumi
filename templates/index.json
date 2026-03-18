@@ -41,6 +41,87 @@
         "bullet_3"
       ]
     },
+    "nuumi_trust_strip": {
+      "type": "nuumi-trust-strip",
+      "blocks": {
+        "item_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "science",
+            "text": "VET FORMULATED"
+          }
+        },
+        "item_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "MADE IN THE USA"
+          }
+        },
+        "item_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "return",
+            "text": "30-DAY GUARANTEE"
+          }
+        },
+        "item_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "text": "5-STAR RATED"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "speed": 30
+      }
+    },
+    "nuumi_proof_grid": {
+      "type": "nuumi-proof-grid",
+      "settings": {
+        "title": "Why Choose Nuumi?",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "proof_1": {
+          "type": "proof_item",
+          "settings": {
+            "icon": "science",
+            "title": "VET FORMULATED",
+            "description": "Expertly crafted for optimal pet health and longevity."
+          }
+        },
+        "proof_2": {
+          "type": "proof_item",
+          "settings": {
+            "icon": "shield",
+            "title": "MADE IN THE USA",
+            "description": "Manufactured in FDA-registered facilities with premium ingredients."
+          }
+        },
+        "proof_3": {
+          "type": "proof_item",
+          "settings": {
+            "icon": "return",
+            "title": "30-DAY GUARANTEE",
+            "description": "Love it or your money back. No questions asked."
+          }
+        }
+      },
+      "block_order": [
+        "proof_1",
+        "proof_2",
+        "proof_3"
+      ]
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -197,6 +278,8 @@
   "order": [
     "nuumi_announcement_bar",
     "nuumi_home_hero",
+    "nuumi_trust_strip",
+    "nuumi_proof_grid",
     "rich_text",
     "featured_collection",
     "collage",
