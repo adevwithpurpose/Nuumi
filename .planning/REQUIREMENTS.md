@@ -2,7 +2,7 @@
 
 ## Homepage
 
-- [ ] **HOME-01**: Implement an authority-first hero section.
+- [x] **HOME-01**: Implement an authority-first hero section.
 - [ ] **HOME-02**: Create a trust strip section.
 - [ ] **HOME-03**: Develop an all-products showcase section.
 - [ ] **HOME-04**: Build an expert section.
@@ -10,7 +10,7 @@
 - [ ] **HOME-06**: Create a proof/trust badges section.
 - [ ] **HOME-07**: Develop an FAQ section.
 - [ ] **HOME-08**: Implement a footer or email capture section.
-- [ ] **HOME-09**: Add an announcement or offer bar.
+- [x] **HOME-09**: Add an announcement or offer bar.
 
 ## Product Detail Page (PDP)
 
@@ -44,7 +44,7 @@
 
 | Requirement ID | Mapped to Phase | Status |
 |---|---|---|
-| HOME-01 | 2 | Pending |
+| HOME-01 | 2 | Complete |
 | HOME-02 | 2 | Pending |
 | HOME-03 | 2 | Pending |
 | HOME-04 | 2 | Pending |
@@ -52,7 +52,7 @@
 | HOME-06 | 2 | Pending |
 | HOME-07 | 2 | Pending |
 | HOME-08 | 2 | Pending |
-| HOME-09 | 2 | Pending |
+| HOME-09 | 2 | Complete |
 | PDP-01 | 3 | Pending |
 | PDP-02 | 3 | Pending |
 | PDP-03 | 3 | Pending |
