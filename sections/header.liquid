@@ -13,6 +13,42 @@
 
 
 <style>
+  /* --- Nuumipet Premium Clinical Header Overrides --- */
+  .header-wrapper {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header {
+      display: grid !important;
+      grid-template-columns: 1fr auto 1fr !important;
+      align-items: center;
+      max-width: 1180px !important;
+      margin: 0 auto;
+    }
+    .header__heading, .header__heading-link {
+      justify-self: start !important;
+      margin: 0 !important;
+    }
+    .header__inline-menu {
+      justify-self: center !important;
+    }
+    .header__icons {
+      justify-self: end !important;
+    }
+    .list-menu__item--link {
+      color: #4A5568 !important; /* Slate nav links */
+      font-weight: 600 !important;
+      font-size: 1.5rem;
+      transition: color 0.2s ease;
+    }
+    .list-menu__item--link:hover {
+      color: #1A2B4C !important; /* Navy on hover */
+    }
+  }
+  /* ------------------------------------------------ */
+
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;

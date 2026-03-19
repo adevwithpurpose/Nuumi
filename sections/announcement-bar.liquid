@@ -1,6 +1,32 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
+<style>
+  /* --- Nuumipet Premium Clinical Announcement Bar --- */
+  .utility-bar {
+    background-color: #1A2B4C !important; /* Clinical Navy */
+    color: #ffffff !important;
+    border-bottom: none !important;
+  }
+  .utility-bar .announcement-bar__message {
+    color: #ffffff !important;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-size: 1.4rem;
+  }
+  .utility-bar .page-width {
+    max-width: 1180px !important;
+    margin: 0 auto;
+  }
+  .utility-bar .icon-arrow {
+    color: #ffffff !important;
+  }
+  .utility-bar .slider-button {
+    color: #ffffff !important;
+  }
+  /* -------------------------------------------------- */
+</style>
+
 {%- liquid
   assign social_icons = true
   if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank

@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "nuumi_announcement_bar": {
-      "type": "nuumi-announcement-bar",
-      "disabled": true,
-      "settings": {
-        "use_global_content": true,
-        "text": "Free Shipping on Orders Over $75",
-        "link": "",
-        "bg_color": "#0a1b32"
-      }
-    },
     "nuumi_home_hero": {
       "type": "nuumi-home-hero",
       "blocks": {
@@ -52,16 +42,6 @@
         "image": "shopify://shop_images/Gemini_Generated_Image_bru0prbru0prbru0.webp",
         "button_label": "Shop Now",
         "button_link": "shopify://collections/all"
-      }
-    },
-    "custom_liquid_PjrAKd": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<style>\n/* --- Nuumipet Home Hero Section --- */\n\n.nuumi-home-hero {\n  /* Soft, icy blue background for a premium, clean feel */\n  background: linear-gradient(180deg, #F0F4F8 0%, #FFFFFF 100%);\n  padding: 4rem 2rem 6rem;\n  text-align: center;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif; /* Fallback, assume Dawn handles base font */\n}\n\n.nuumi-home-hero__content {\n  max-width: 900px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n/* Authoritative, Deep Navy Title */\n.nuumi-home-hero__title {\n  color: #1A2B4C; /* ByeBark Navy */\n  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive sizing */\n  font-weight: 800;\n  line-height: 1.1;\n  margin-bottom: 1rem;\n  letter-spacing: -0.02em;\n}\n\n.nuumi-home-hero__subtitle {\n  color: #4A5568; /* Slate gray for readability */\n  font-size: clamp(1.1rem, 2vw, 1.4rem);\n  font-weight: 400;\n  margin-bottom: 2.5rem;\n  max-width: 600px;\n}\n\n/* Trust Bullets - Horizontal Layout */\n.nuumi-home-hero__bullets {\n  list-style: none;\n  padding: 0;\n  margin: 0 0 3rem 0;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 1.5rem;\n}\n\n.nuumi-home-hero__bullet {\n  display: flex;\n  align-items: center;\n  gap: 0.5rem;\n  font-size: 1rem;\n  font-weight: 600;\n  color: #2D3748;\n  background-color: #ffffff;\n  padding: 0.5rem 1rem;\n  border-radius: 50px; /* Pill shape for individual bullets */\n  box-shadow: 0 2px 4px rgba(0,0,0,0.04);\n}\n\n/* Green Checkmarks */\n.nuumi-home-hero__bullet .nuumi-icon {\n  width: 20px;\n  height: 20px;\n  color: #22C55E; /* Trustworthy Green */\n}\n\n/* The CTA Button - Vibrant Blue */\n.nuumi-home-hero__cta {\n  margin-bottom: 4rem;\n  width: 100%;\n}\n\n.nuumi-button--gold {\n  /* Renaming class in HTML to .nuumi-button--primary is recommended, \n     but overriding here for immediate effect */\n  display: inline-block;\n  background-color: #0066FF; /* High-converting vibrant blue */\n  color: #ffffff;\n  font-size: 1.125rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  padding: 1.2rem 3rem;\n  border-radius: 50px; /* Pill shape */\n  text-decoration: none;\n  transition: all 0.2s ease;\n  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3); /* Blue glow */\n  border: none;\n  cursor: pointer;\n}\n\n.nuumi-button--gold:hover {\n  background-color: #0052CC;\n  transform: translateY(-2px);\n  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);\n}\n\n/* Floating Image Container */\n.nuumi-home-hero__image-container {\n  width: 100%;\n  max-width: 800px;\n  margin: 0 auto;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Deep soft shadow */\n}\n\n.nuumi-home-hero__image {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n\n/* Mobile Adjustments */\n@media (max-width: 768px) {\n  .nuumi-home-hero__bullets {\n    flex-direction: column;\n    align-items: flex-start; /* Stack them neatly on mobile */\n    gap: 1rem;\n  }\n  \n  .nuumi-home-hero__bullet {\n    width: 100%;\n    justify-content: flex-start;\n  }\n  \n  .nuumi-button--gold {\n    width: 100%; /* Full width button on mobile */\n    box-sizing: border-box;\n  }\n}\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "nuumi_trust_strip": {
@@ -370,8 +350,6 @@
     }
   },
   "order": [
-    "nuumi_announcement_bar",
-    "custom_liquid_PjrAKd",
     "nuumi_home_hero",
     "nuumi_trust_strip",
     "nuumi_proof_grid",
