@@ -1,8 +1,8 @@
 ## Phases
 
 - [ ] **Phase 1: Project Setup & Theme Foundation** - Establish the development workflow and prepare the base theme for customization.
-- [ ] **Phase 2: Homepage Sections** - Build all modular and editable sections for the main homepage.
-- [ ] **Phase 3: Product Detail Page (PDP) Sections** - Construct the complete, reusable product page template.
+- [x] **Phase 2: Homepage Sections** - Build all modular and editable sections for the main homepage.
+- [x] **Phase 3: Product Detail Page (PDP) Sections** - Construct the complete, reusable product page template.
 - [ ] **Phase 4: Theme Finalization & Merchant Enablement** - Polish the theme and ensure all content is manageable by the client via the Shopify Theme Editor.
 
 ---
@@ -12,8 +12,8 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup & Theme Foundation | 2/2 | Complete | 2026-03-18 |
-| 2. Homepage Sections | 1/5 | In Progress | - |
-| 3. Product Detail Page (PDP) Sections | 0/0 | Not started | - |
+| 2. Homepage Sections | 5/5 | Complete | 2026-03-18 |
+| 3. Product Detail Page (PDP) Sections | 4/4 | Complete | 2026-03-18 |
 | 4. Theme Finalization & Merchant Enablement | 0/0 | Not started | - |
 
 ---
@@ -43,10 +43,10 @@
   4. All sections are styled according to the brand's mobile-first design direction.
 **Plans**: 5 plans
 - [x] `02-01-PLAN.md` — Phase 2 Foundation & Core Styling.
-- [ ] `02-02-PLAN.md` — Hero & Announcement Bar Implementation.
-- [ ] `02-03-PLAN.md` — Social Proof & Trust Reinforcement.
-- [ ] `02-04-PLAN.md` — Product Showcase & Expert Spotlight.
-- [ ] `02-05-PLAN.md` — Information, Storytelling & Conversion Closure.
+- [x] `02-02-PLAN.md` — Hero & Announcement Bar Implementation.
+- [x] `02-03-PLAN.md` — Social Proof & Trust Reinforcement.
+- [x] `02-04-PLAN.md` — Product Showcase & Expert Spotlight.
+- [x] `02-05-PLAN.md` — Information, Storytelling & Conversion Closure.
 
 ### Phase 3: Product Detail Page (PDP) Sections
 **Goal**: A complete, reusable Product Detail Page template is created, providing a high-conversion experience for all physical products.
@@ -57,7 +57,11 @@
   2. The "Add to Cart" button remains visible on mobile screens as the user scrolls down the page.
   3. A non-developer can customize the content of the PDP sections (e.g., change benefit storytelling text, update expert endorsements) using the Theme Editor.
   4. The reusable FAQ section can be populated with different Q&As for different products.
-**Plans**: TBD
+**Plans**: 4 plans
+- [x] `03-01-SUMMARY.md` — PDP above-the-fold conversion foundation and mobile sticky CTA.
+- [x] `03-02-SUMMARY.md` — PDP trust strip and guarantee reinforcement sections.
+- [x] `03-03-SUMMARY.md` — PDP storytelling and comparison/proof sections.
+- [x] `03-04-SUMMARY.md` — PDP expert endorsement and reusable FAQ sections.
 
 ### Phase 4: Theme Finalization & Merchant Enablement
 **Goal**: The theme is polished, and all content management is streamlined through the Shopify Theme Editor, empowering the client to manage their store independently.

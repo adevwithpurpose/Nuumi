@@ -2,44 +2,45 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 2
-current_plan: 02
-status: executing
-last_updated: "2026-03-18T10:15:00.000Z"
+current_phase: 4
+current_plan: null
+status: ready_for_execution
+last_updated: "2026-03-18T13:10:00.000Z"
 progress:
   total_phases: 4
-  completed_phases: 1
-  total_plans: 7
-  completed_plans: 5
-  percent: 71
+  completed_phases: 3
+  total_plans: 11
+  completed_plans: 11
+  percent: 75
 ---
 
 # Project State
 
 ## Project Reference
 **Core value:** To create a Shopify theme that is both visually stunning and easy for the client to manage.
-**Current focus:** Phase 2: Homepage Sections Implementation
+**Current focus:** Phase 4: Theme Finalization & Merchant Enablement
 
 ## Current Position
-*   **Current Phase:** 2
-*   **Current Plan:** 02
-*   **Status:** In Progress
+*   **Current Phase:** 4
+*   **Current Plan:** Not started
+*   **Status:** Ready
 *   **Progress:**
-    [███████░░░] 71%
+    [████████░░] 75%
     *   Phase 1: ✅
-    *   Phase 2: ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 40%
-    *   Phase 3: ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+    *   Phase 2: ✅
+    *   Phase 3: ✅
     *   Phase 4: ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 
 ## Performance Metrics
 | Metric | Value |
 | --- | --- |
 | **Total requirements** | 22 |
-| **Requirements complete** | 2 |
-| **% complete** | 9% |
-| **Phases complete** | 1/4 |
-| **Plans complete** | 5/7 |
-| Phase 02 P02 | 15 | 3 tasks | 4 files |
+| **Requirements complete** | 19 |
+| **% complete** | 86% |
+| **Phases complete** | 3/4 |
+| **Plans complete** | 11/11 |
+| Phase 02 | 5 plans | Homepage complete | Verified |
+| Phase 03 | 4 slices | PDP stack complete | Verified |
 
 ## Accumulated Context
 
@@ -50,14 +51,20 @@ progress:
 *   **[2026-03-18]** Use Google Fonts for brand typography (DM Serif Display, Plus Jakarta Sans).
 *   **[2026-03-18]** Centralized brand SVG registry in nuumi-icons.liquid for performance and reusability.
 *   **[2026-03-18]** Use blocks for hero bullets to provide merchant flexibility for value propositions.
+*   **[2026-03-18]** Continue phases manually without GSD automation wrappers; `.planning` files are the source of truth.
+*   **[2026-03-18]** Homepage custom sections are complete and verified locally using direct file checks plus planning artifacts.
+*   **[2026-03-18]** PDP stack is complete in four manual slices: conversion foundation, trust layer, storytelling/proof, and expert/FAQ.
+*   **[2026-03-18]** Shopify CLI/GitHub connection remains a non-code verification gap, so `THEME-04` and `THEME-05` stay pending despite code progress.
+*   **[2026-03-18]** Nuumi brand colors are now exposed as global theme settings and wired through theme-level CSS variables.
+*   **[2026-03-18]** The homepage announcement bar can now use global Theme Editor content, and generic Dawn filler sections were removed from the PDP template.
 
 ### Todos
-*   Complete Phase 2 homepage sections.
+*   Continue Phase 4 with broader merchant enablement and live Theme Editor QA.
 
 ### Blockers
-*   None.
+*   Shopify auth/live preview is still needed for full browser verification and theme-editor QA.
+*   Global settings coverage for colors/typography/announcement content may still be incomplete and needs inspection.
 
 ## Session Continuity
-*   **Last session:** 2026-03-18T10:15:00.000Z
-*   **Next step:** Execute plan 02-03 (Proof & Trust Stripes).
-
+*   **Last session:** 2026-03-18T13:10:00.000Z
+*   **Next step:** Run live Shopify/theme-editor QA and decide whether to expose typography/button styling as additional global Nuumi merchant controls.
