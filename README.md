@@ -1,71 +1,91 @@
-# Nuumipet Theme Workspace
+# Nuumipet Theme
 
-Nuumipet is a Dawn-based Shopify storefront project for a lean pet wellness brand. This repository keeps the Shopify theme code at the root so it can connect cleanly to Shopify and GitHub, while project documentation and inspiration material stay alongside it for local planning work.
+Nuumipet is a custom Shopify Dawn-based storefront for a lean pet wellness brand. This repo is no longer a stock Dawn starter; it now contains a custom homepage system, a reusable PDP system, and the first round of merchant-enablement work for Theme Editor control.
 
-## Workspace Structure
+## Current state
 
-- `assets/`, `config/`, `layout/`, `locales/`, `sections/`, `snippets/`, `templates/`: Shopify theme source
-- `brief.md`: approved project brief
-- `design-ideas-study/`: saved screenshots, transcript, and visual references
-- `docs/`: implementation plans and supporting project documentation
+- Homepage: custom Nuumi section stack is implemented
+- PDP: custom Nuumi product-page stack is implemented
+- Phase 4: merchant-enablement work is in progress
+- Live Shopify preview and Theme Editor QA still require Shopify auth
 
-## Local Workflow
+## Implemented custom systems
 
-Connected services for this project:
-- GitHub repository: `git@github.com:adevwithpurpose/Nuumi.git`
-- Shopify store: `evsedm-j1.myshopify.com`
+### Homepage
 
-1. Authenticate Shopify CLI against the correct client store.
-2. Run local development from the repository root:
+- `sections/nuumi-announcement-bar.liquid`
+- `sections/nuumi-home-hero.liquid`
+- `sections/nuumi-trust-strip.liquid`
+- `sections/nuumi-proof-grid.liquid`
+- `sections/nuumi-featured-products.liquid`
+- `sections/nuumi-expert-spotlight.liquid`
+- `sections/nuumi-benefits-story.liquid`
+- `sections/nuumi-faq.liquid`
+- `templates/index.json`
 
-```bash
-shopify theme dev --store evsedm-j1.myshopify.com
-```
+### PDP
 
-3. Validate theme changes before claiming progress:
+- `sections/nuumi-main-product.liquid`
+- `sections/nuumi-pdp-trust-strip.liquid`
+- `sections/nuumi-pdp-guarantee.liquid`
+- `sections/nuumi-pdp-story.liquid`
+- `sections/nuumi-pdp-comparison.liquid`
+- `sections/nuumi-pdp-expert.liquid`
+- `sections/nuumi-pdp-faq.liquid`
+- `templates/product.json`
 
-```bash
-shopify theme check
-```
+### Shared styling
 
-## GitHub and Store Sync Rules
+- `assets/nuumi-base.css`
+- `assets/nuumi-home.css`
+- `assets/nuumi-pdp.css`
+- `snippets/nuumi-icons.liquid`
+- `snippets/nuumi-rating-stars.liquid`
 
-- Keep theme source at repository root for straightforward Shopify and GitHub integration.
-- Do not commit live `config/settings_data.json`; use Theme Editor for merchant-owned settings and keep local examples in `config/settings_data.json.example` if needed.
-- Keep planning documents and reference captures out of theme uploads via `.shopifyignore`.
-- Make durable changes in Liquid, assets, sections, snippets, templates, and `config/settings_schema.json`.
-- Use Shopify CLI preview for testing and review: `shopify theme dev --store evsedm-j1.myshopify.com`.
-- Use Git-based store sync for deployment so the GitHub repo remains the source of truth and version history stays intact.
-- Repository remote for deployment-connected workflow: `git@github.com:adevwithpurpose/Nuumi.git`.
+## Merchant-editable controls
 
-## Current Build Scope
+The theme currently supports merchant editing through section settings/blocks for the homepage and PDP stack.
 
-Phase 1 covers:
-- custom homepage
-- first reusable PDP system
-- editable section architecture for future rollout to the remaining products
+Recent global controls added in Theme Editor:
 
-Implemented custom section system:
-- Homepage: `nuumi-home-hero`, `nuumi-trust-strip`, `nuumi-featured-products`, `nuumi-expert-spotlight`, `nuumi-benefits-story`, `nuumi-proof-grid`, `nuumi-faq`
-- PDP: `nuumi-product-hero`, `nuumi-sticky-atc`, `nuumi-product-story`, `nuumi-product-benefits`, `nuumi-product-proof`, `nuumi-risk-free`
+- Nuumi brand colors in `config/settings_schema.json`
+- Global Nuumi announcement settings in `config/settings_schema.json`
+- Theme-level CSS variable wiring in `layout/theme.liquid`
 
-Key planning files:
+## Planning docs
+
+The current source of truth for project planning is under `.planning/`.
+
+- `.planning/PROJECT.md`
+- `.planning/ROADMAP.md`
+- `.planning/REQUIREMENTS.md`
+- `.planning/STATE.md`
+
+Phase slice summaries live under:
+
+- `.planning/phases/02-homepage-sections/`
+- `.planning/phases/03-pdp-sections/`
+
+## Remaining work
+
+Primary remaining items:
+
+- complete Phase 4 merchant enablement
+- run live Shopify/theme-editor QA
+- verify Shopify CLI workflow and GitHub/store connection
+- decide whether to expose additional global controls for typography and button treatment
+
+## Local workflow notes
+
+- Dawn remains the base theme architecture
+- Custom Nuumi work should preserve Shopify section/block editability
+- `.planning/` reflects the manual workflow after removal of the old GSD wrappers
+- `config/settings_data.json` is tracked and must stay valid Shopify JSON
+
+## Reference docs
+
 - `brief.md`
-- `docs/superpowers/plans/2026-03-15-nuumipet-storefront.md`
-
-## Design Direction
-
-- Base: Dawn, heavily customized
-- Tone: premium, clinical-but-friendly, mobile-first
-- Visual model: PetLab authority with cleaner, calmer, more premium execution
-- System goal: strong conversion surfaces without category-heavy bloat
-
-## Handoff Notes
-
-- Homepage-only logic lives in `assets/nuumi-home.css` and `assets/nuumi-home.js`
-- PDP-only logic lives in `assets/nuumi-product.css` and `assets/nuumi-product.js`
-- Shared Nuumipet tokens and primitives live in `assets/nuumi-base.css`
-- `layout/theme.liquid` conditionally loads Nuumipet assets on `index` and `product` templates
-- Keep deployment branch and connected Shopify store explicit before using GitHub sync or `shopify theme push`
-- Testing path: Shopify CLI preview against `evsedm-j1.myshopify.com`
-- Deployment path: push changes through Git to `git@github.com:adevwithpurpose/Nuumi.git`, with the store connected to that repo for version-controlled rollout
+- `docs/workflow-guide.md`
+- `docs/reference-map.md`
+- `docs/product-data.md`
+- `release-notes.md`

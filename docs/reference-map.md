@@ -56,28 +56,32 @@ Use for:
 - Workflow: use Shopify CLI preview for testing, and Git-based store sync for deployment/version control
 
 ### Homepage system
+- `sections/nuumi-announcement-bar.liquid`
 - `sections/nuumi-home-hero.liquid`
 - `sections/nuumi-trust-strip.liquid`
+- `sections/nuumi-proof-grid.liquid`
 - `sections/nuumi-featured-products.liquid`
 - `sections/nuumi-expert-spotlight.liquid`
 - `sections/nuumi-benefits-story.liquid`
-- `sections/nuumi-proof-grid.liquid`
 - `sections/nuumi-faq.liquid`
+- `templates/index.json`
 
 ### PDP system
-- `sections/nuumi-product-hero.liquid`
-- `sections/nuumi-sticky-atc.liquid`
-- `sections/nuumi-product-story.liquid`
-- `sections/nuumi-product-benefits.liquid`
-- `sections/nuumi-product-proof.liquid`
-- `sections/nuumi-risk-free.liquid`
+- `sections/nuumi-main-product.liquid`
+- `sections/nuumi-pdp-trust-strip.liquid`
+- `sections/nuumi-pdp-guarantee.liquid`
+- `sections/nuumi-pdp-story.liquid`
+- `sections/nuumi-pdp-comparison.liquid`
+- `sections/nuumi-pdp-expert.liquid`
+- `sections/nuumi-pdp-faq.liquid`
+- `templates/product.json`
 
 ### Shared assets
 - `assets/nuumi-base.css`
 - `assets/nuumi-home.css`
-- `assets/nuumi-home.js`
-- `assets/nuumi-product.css`
-- `assets/nuumi-product.js`
+- `assets/nuumi-pdp.css`
+- `snippets/nuumi-icons.liquid`
+- `snippets/nuumi-rating-stars.liquid`
 
 ### `D:/antigravity/Projects/amanotte/sections/velo-trust-strip.liquid`
 Use for:

@@ -1,6 +1,6 @@
 # Nuumipet Workflow Guide
 
-Last updated: 2026-03-16
+Last updated: 2026-03-18
 
 ## Connected Services
 
@@ -9,155 +9,186 @@ Last updated: 2026-03-16
 | Shopify store | `evsedm-j1.myshopify.com` |
 | GitHub repository | `git@github.com:adevwithpurpose/Nuumi.git` |
 | Local project root | `D:/antigravity/Projects/Nuumipet` |
-| Dev theme ID | `#188828713254` (Development 6a5c78-G5) |
-| Live theme ID | `#188169552166` (Atlas Theme 3) |
-| Preview URL | `https://xxcgzzgd45ey3v9h-100266803494.shopifypreview.com` |
+| Theme config file | `shopify.theme.toml` |
 
----
+## Current Workflow Model
 
-## Deployment Model
+This project is now run manually.
 
-This project uses the **Shopify GitHub integration** as its primary deployment path.
+- `.planning/` is the source of truth for roadmap, requirements, and project state.
+- The old GSD wrapper flow is no longer the active operating model.
+- Shopify CLI is the intended local preview path.
+- Live preview and Theme Editor QA still require Shopify auth on the machine running the commands.
 
-- All commits pushed to `main` are automatically deployed to the connected development theme.
-- Wait **~2 minutes** after a push before checking the Shopify preview.
-- `config/settings_data.json` is now **tracked in git** (removed from `.gitignore`).
+Primary planning files:
 
-### Critical: settings_data.json format rules
+- `.planning/PROJECT.md`
+- `.planning/ROADMAP.md`
+- `.planning/REQUIREMENTS.md`
+- `.planning/STATE.md`
 
-Shopify enforces strict format rules on `config/settings_data.json`:
+## Theme Structure In Use
 
-- `color_schemes` **must be an object** (`{ "scheme-1": { "settings": {...} } }`)
-- Using an array (`[...]`) causes a validation error and the file is rejected
-- This is the **opposite** of `settings_schema.json` which uses an array format for defaults
+Homepage stack:
 
-The `settings_schema.json` defaults array (with `id` fields) is only used as a fallback when no `settings_data.json` exists. The live `settings_data.json` always uses the object keyed format.
+- `sections/nuumi-announcement-bar.liquid`
+- `sections/nuumi-home-hero.liquid`
+- `sections/nuumi-trust-strip.liquid`
+- `sections/nuumi-proof-grid.liquid`
+- `sections/nuumi-featured-products.liquid`
+- `sections/nuumi-expert-spotlight.liquid`
+- `sections/nuumi-benefits-story.liquid`
+- `sections/nuumi-faq.liquid`
+- `templates/index.json`
 
-> **Warning:** Any changes made in the Shopify Theme Editor to global settings will be
-> overwritten on the next `git push` that includes `settings_data.json`. Pull from the
-> Shopify Admin or use `shopify theme pull` if editor changes need to be preserved first.
+PDP stack:
 
----
+- `sections/nuumi-main-product.liquid`
+- `sections/nuumi-pdp-trust-strip.liquid`
+- `sections/nuumi-pdp-guarantee.liquid`
+- `sections/nuumi-pdp-story.liquid`
+- `sections/nuumi-pdp-comparison.liquid`
+- `sections/nuumi-pdp-expert.liquid`
+- `sections/nuumi-pdp-faq.liquid`
+- `templates/product.json`
 
-## Shopify Preview Options
+Shared styling and helpers:
 
-### Option 1: Active development preview (hot reload)
+- `assets/nuumi-base.css`
+- `assets/nuumi-home.css`
+- `assets/nuumi-pdp.css`
+- `snippets/nuumi-icons.liquid`
+- `snippets/nuumi-rating-stars.liquid`
+- `layout/theme.liquid`
+
+## Local Shopify Commands
+
+Use Shopify CLI from the repo root:
 
 ```bash
+shopify version
+shopify theme check
 shopify theme dev --store evsedm-j1.myshopify.com
 ```
 
-Best for rapid iteration — syncs changes live while the command runs.
-
-### Option 2: Shareable snapshot
+If you need a fixed local port:
 
 ```bash
-shopify theme share --store evsedm-j1.myshopify.com
+shopify theme dev --store evsedm-j1.myshopify.com --host 127.0.0.1 --port 9292
 ```
 
-Creates a stable preview link without keeping the CLI running.
-
-### Validation before sharing
+If the machine is not authenticated yet, run:
 
 ```bash
-shopify version       # confirm CLI installed
-shopify theme check   # catch liquid errors before sharing
+shopify auth login
 ```
 
----
+Notes:
 
-## GitHub Push Workflow
+- `shopify theme dev` is the preferred local preview workflow.
+- The preview will not come up until Shopify auth is connected to the store.
+- `shopify theme share` can be used later for a stable share link, but local dev is the main operator path.
 
-Always pull before pushing to avoid overwriting remote changes.
+## Deployment And Sync Guidance
+
+Git is still the source-controlled workflow for code changes, but deployment verification should not assume automatic success on the Shopify side until the store connection is confirmed.
+
+Recommended sequence:
 
 ```bash
-# 1. Check status
 git status -sb
-
-# 2. Pull remote first
 git pull --rebase --autostash origin main
-
-# 3. Stage changes
 git add <file-paths>
-
-# 4. Commit
 git commit -m "Brief plain-English description"
-
-# 5. Push
 git push origin main
+```
 
-# 6. Confirm clean
+Then verify with one of:
+
+- `shopify theme dev --store evsedm-j1.myshopify.com`
+- Shopify admin Theme Editor on the connected theme
+
+If Theme Editor changes were made directly in Shopify, be careful before overwriting tracked settings files from git.
+
+## Theme Editor Controls
+
+The current merchant-editable model has two layers:
+
+- Section-level controls on homepage and PDP sections
+- Global Nuumi controls in theme settings
+
+### Global Nuumi settings
+
+Defined in `config/settings_schema.json` and persisted in `config/settings_data.json`.
+
+Current global Nuumi settings include:
+
+- `nuumi_color_gold`
+- `nuumi_color_gold_dark`
+- `nuumi_color_deep_blue`
+- `nuumi_color_off_white`
+- `nuumi_announcement_enabled`
+- `nuumi_announcement_text`
+- `nuumi_announcement_link`
+- `nuumi_announcement_bg`
+- `nuumi_announcement_use_global`
+
+These are wired into the theme through `layout/theme.liquid` as CSS variables:
+
+- `--nuumi-gold`
+- `--nuumi-gold-dark`
+- `--nuumi-deep-blue`
+- `--nuumi-off-white`
+
+### Announcement bar behavior
+
+`sections/nuumi-announcement-bar.liquid` supports both local section content and global content.
+
+- When `use_global_content` is enabled on the section and `nuumi_announcement_use_global` is enabled in theme settings, the bar pulls from the global Nuumi announcement fields.
+- Otherwise, the section uses its own local text, link, and background color settings.
+
+### Template ownership
+
+- `templates/index.json` contains the custom homepage section stack.
+- `templates/product.json` contains the custom Nuumi PDP stack plus `related-products`.
+- The PDP template has already had leftover generic Dawn filler removed.
+
+## Settings File Rules
+
+`config/settings_data.json` is tracked and must remain valid Shopify JSON.
+
+Important rule:
+
+- `color_schemes` in `config/settings_data.json` must remain an object, not an array.
+
+If merchant changes were made in Shopify before a pull, avoid blindly overwriting the file.
+
+## Working Rules For Changes
+
+- Preserve Shopify section and block editability.
+- Prefer updating existing Nuumi sections over adding duplicate patterns.
+- Keep homepage and PDP references aligned with `templates/index.json` and `templates/product.json`.
+- Update documentation when workflow, store linkage, or merchant controls change.
+
+## Verification Checklist
+
+Before handing off theme changes:
+
+```bash
+shopify theme check
 git status -sb
 ```
 
-### Typical homepage push
+Then confirm all of the following:
 
-```bash
-git add assets/nuumi-home.css assets/nuumi-base.css templates/index.json config/settings_data.json
-git commit -m "Polish homepage hero — update color tokens and spacing"
-git push origin main
-```
+- referenced section files exist
+- template JSON points at the intended sections
+- global settings added to `config/settings_schema.json` also have usable values in `config/settings_data.json`
+- any new CSS variables wired in `layout/theme.liquid` are actually consumed by the theme
 
----
+## Remaining Known Gaps
 
-## Files Under Git Control
-
-| File | Tracked | Notes |
-|------|---------|-------|
-| `sections/*.liquid` | Yes | Custom nuumi-\* sections |
-| `assets/nuumi-*.css` | Yes | All Nuumipet styles |
-| `assets/nuumi-*.js` | Yes | All Nuumipet scripts |
-| `templates/*.json` | Yes | `index.json`, `product.json` |
-| `config/settings_schema.json` | Yes | Theme editor UI schema |
-| `config/settings_data.json` | Yes | Brand color schemes — object format required |
-| `layout/theme.liquid` | Yes | Font and CSS injection |
-| `.gitignore` | Yes | |
-| `.shopify/` | No | Local CLI session state only |
-
----
-
-## Design System Reference
-
-### Font Trio (FontTrio convention)
-
-| Role | Font | Variable |
-|------|------|----------|
-| Display / Headings | DM Serif Display | `--font-heading` |
-| Body / UI | Plus Jakarta Sans | `--font-body` |
-| Mono / Labels | Fira Code | `--font-mono` |
-
-Imported via Google Fonts in `assets/nuumi-base.css`.
-
-### Color Schemes
-
-| Scheme | Background | Use |
-|--------|-----------|-----|
-| scheme-1 | `#FFFFFF` | Default white sections |
-| scheme-2 | `#F4F8FC` | Light blue-grey sections |
-| scheme-3 | `#0A1B32` | Dark navy sections (expert, footer) |
-| scheme-4 | `#E7F3F1` | Soft mint sections |
-| scheme-5 | `#0D9488` | Teal accent sections |
-
-### Brand Tokens (nuumi-base.css)
-
-```css
---nuumi-navy:        #0A1B32   /* dark headlines, trust strip bg */
---nuumi-accent:      #0055E6   /* primary CTA blue */
---nuumi-teal:        #0D9488   /* science/health accent, icons */
---nuumi-green:       #059669   /* success, check marks */
---nuumi-gold:        #F59E0B   /* star ratings */
---font-heading:      'DM Serif Display'
---font-body:         'Plus Jakarta Sans'
---font-mono:         'Fira Code'
-```
-
----
-
-## Project-Specific Reminders
-
-- After a `git push`, allow **~2 min** before checking the preview for changes.
-- `shopify theme check` should return zero errors before any client demo.
-- Do not rename section files without updating `templates/index.json`.
-- Homepage uses custom `nuumi-*` sections only — Dawn defaults are not used.
-- PDP uses custom `nuumi-*` sections only — Dawn defaults are replaced.
-- `config/settings_data.json` must always use **object format** for `color_schemes`, never array.
+- Live Shopify preview still depends on successful auth for `evsedm-j1.myshopify.com`.
+- Full Theme Editor QA is still pending.
+- Shopify CLI workflow and GitHub/store integration still need final verification.
+- Additional global merchant controls for typography or button treatment are still optional future work.
