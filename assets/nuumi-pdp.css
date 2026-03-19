@@ -1,0 +1,902 @@
+.nuumi-pdp {
+  background-color: var(--nuumi-off-white);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.nuumi-pdp__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-pdp__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+.nuumi-pdp__info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.nuumi-pdp__title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.nuumi-pdp__title {
+  font-family: var(--font-heading-family);
+  font-size: 3.6rem;
+  color: var(--nuumi-deep-blue);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.nuumi-pdp__subtitle {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  color: #6B7280;
+  margin: 0;
+  font-weight: 500;
+}
+
+.nuumi-pdp__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nuumi-pdp__bullets li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-family: var(--font-body-family);
+  font-size: 1.5rem;
+  color: #4B5563;
+}
+
+.nuumi-pdp__bullet-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-radius: 50%;
+  color: var(--nuumi-gold);
+}
+
+.nuumi-pdp__bullet-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.nuumi-pdp__quantity-packs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nuumi-pdp__label {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+  margin: 0;
+}
+
+.nuumi-pdp__pack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.nuumi-pdp__pack-option {
+  position: relative;
+  border: 2px solid #E5E7EB;
+  border-radius: 1.2rem;
+  padding: 1.6rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #FFFFFF;
+  text-align: center;
+}
+
+.nuumi-pdp__pack-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.nuumi-pdp__pack-option--selected {
+  border-color: var(--nuumi-gold);
+  background-color: rgba(245, 158, 11, 0.05);
+}
+
+.nuumi-pdp__pack-badge {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--nuumi-gold);
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nuumi-pdp__pack-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nuumi-pdp__pack-title {
+  font-family: var(--font-body-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pdp__pack-subtitle {
+  font-family: var(--font-body-family);
+  font-size: 1.2rem;
+  color: #6B7280;
+}
+
+.nuumi-pdp__purchase-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nuumi-pdp__mode-option {
+  border: 2px solid #E5E7EB;
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #FFFFFF;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.nuumi-pdp__mode-option input[type="radio"] {
+  margin-top: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  accent-color: var(--nuumi-gold);
+}
+
+.nuumi-pdp__mode-option--active {
+  border-color: var(--nuumi-deep-blue);
+  background-color: rgba(30, 58, 138, 0.02);
+}
+
+.nuumi-pdp__mode-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nuumi-pdp__mode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nuumi-pdp__mode-title {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pdp__mode-price {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pdp__mode-desc {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.nuumi-pdp__guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  color: #4B5563;
+  margin-top: 1.6rem;
+}
+
+.nuumi-pdp__guarantee-icon {
+  color: var(--nuumi-gold);
+  display: flex;
+}
+
+.nuumi-pdp__guarantee-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.nuumi-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.6rem 0;
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nuumi-sticky-cta--visible {
+  transform: translateY(0);
+}
+
+.nuumi-sticky-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.nuumi-sticky-cta__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.nuumi-sticky-cta__title {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.nuumi-sticky-cta__price {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  color: #6B7280;
+}
+
+.nuumi-sticky-cta__button {
+  padding: 1.2rem 2.4rem;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-sticky-cta {
+    display: none;
+  }
+}
+
+/* Trust Strip */
+.nuumi-trust-strip {
+  padding: 2.4rem 0;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.nuumi-trust-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-trust-strip__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+  }
+}
+
+.nuumi-trust-strip__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.nuumi-trust-strip__icon {
+  color: var(--nuumi-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuumi-trust-strip__icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nuumi-trust-strip__text {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--nuumi-deep-blue);
+  line-height: 1.2;
+}
+
+/* Guarantee Section */
+.nuumi-guarantee {
+  padding: 4.8rem 0;
+  color: #FFFFFF;
+}
+
+.nuumi-guarantee__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.4rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-guarantee__container {
+    flex-direction: row;
+    text-align: left;
+    gap: 3.2rem;
+    max-width: 80rem;
+  }
+}
+
+.nuumi-guarantee__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nuumi-guarantee__icon-wrapper svg {
+  width: 4rem;
+  height: 4rem;
+  color: var(--nuumi-gold);
+}
+
+.nuumi-guarantee__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nuumi-guarantee__title {
+  font-family: var(--font-heading-family);
+  font-size: 3.2rem;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.nuumi-guarantee__text {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.nuumi-guarantee__text p {
+  margin: 0;
+}
+
+/* Story Section */
+.nuumi-story {
+  padding: 4.8rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-story {
+    padding: 7.2rem 0;
+  }
+}
+
+.nuumi-story__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-story__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+  
+  .nuumi-story__grid--reverse .nuumi-story__image-wrapper {
+    order: 2;
+  }
+  
+  .nuumi-story__grid--reverse .nuumi-story__content {
+    order: 1;
+  }
+}
+
+.nuumi-story__image-wrapper {
+  border-radius: 2.4rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.nuumi-story__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+
+.nuumi-story__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nuumi-story__subtitle {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nuumi-gold);
+}
+
+.nuumi-story__title {
+  font-family: var(--font-heading-family);
+  font-size: 3.6rem;
+  color: var(--nuumi-deep-blue);
+  margin: 0;
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-story__title {
+    font-size: 4.8rem;
+  }
+}
+
+.nuumi-story__text {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  color: #4B5563;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.nuumi-story__text p {
+  margin: 0;
+}
+
+.nuumi-story__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 1.6rem;
+}
+
+.nuumi-story__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.nuumi-story__benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: rgba(30, 58, 138, 0.05);
+  border-radius: 50%;
+  color: var(--nuumi-deep-blue);
+  flex-shrink: 0;
+}
+
+.nuumi-story__benefit-icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nuumi-story__benefit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nuumi-story__benefit-title {
+  font-family: var(--font-body-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+  margin: 0;
+}
+
+.nuumi-story__benefit-desc {
+  font-family: var(--font-body-family);
+  font-size: 1.5rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.nuumi-story__benefit-desc p {
+  margin: 0;
+}
+
+/* Comparison Section */
+.nuumi-comparison {
+  padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-comparison {
+    padding: 9.6rem 0;
+  }
+}
+
+.nuumi-comparison__header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nuumi-comparison__subtitle {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nuumi-gold);
+}
+
+.nuumi-comparison__title {
+  font-family: var(--font-heading-family);
+  font-size: 3.6rem;
+  color: var(--nuumi-deep-blue);
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-comparison__title {
+    font-size: 4.8rem;
+  }
+}
+
+.nuumi-comparison__table-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 2.4rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  overflow: hidden;
+}
+
+.nuumi-comparison__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.nuumi-comparison__table th,
+.nuumi-comparison__table td {
+  padding: 2rem 1.6rem;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.nuumi-comparison__table tr:last-child td {
+  border-bottom: none;
+}
+
+.nuumi-comparison__th-feature,
+.nuumi-comparison__td-feature {
+  text-align: left;
+  width: 50%;
+  padding-left: 2.4rem !important;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-comparison__th-feature,
+  .nuumi-comparison__td-feature {
+    padding-left: 4rem !important;
+  }
+}
+
+.nuumi-comparison__th-nuumi,
+.nuumi-comparison__td-nuumi {
+  width: 25%;
+  background-color: rgba(30, 58, 138, 0.02);
+  border-left: 1px solid #F3F4F6;
+  border-right: 1px solid #F3F4F6;
+}
+
+.nuumi-comparison__th-others,
+.nuumi-comparison__td-others {
+  width: 25%;
+}
+
+.nuumi-comparison__th-nuumi {
+  padding-top: 3.2rem !important;
+}
+
+.nuumi-comparison__th-others {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #6B7280;
+  padding-top: 3.2rem !important;
+}
+
+.nuumi-comparison__brand-name {
+  font-family: var(--font-heading-family);
+  font-size: 2.4rem;
+  color: var(--nuumi-deep-blue);
+  line-height: 1;
+}
+
+.nuumi-comparison__logo {
+  max-width: 12rem;
+  height: auto;
+}
+
+.nuumi-comparison__td-feature {
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--nuumi-deep-blue);
+}
+
+.nuumi-comparison__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: var(--nuumi-deep-blue);
+  color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.nuumi-comparison__check svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.nuumi-comparison__check--muted {
+  background-color: #E5E7EB;
+  color: #9CA3AF;
+}
+
+.nuumi-comparison__cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #9CA3AF;
+}
+
+.nuumi-comparison__cross svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* Expert Section */
+.nuumi-expert {
+  padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-expert {
+    padding: 9.6rem 0;
+  }
+}
+
+.nuumi-expert__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-expert__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+}
+
+.nuumi-expert__image-wrapper {
+  border-radius: 2.4rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.nuumi-expert__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.nuumi-expert__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.nuumi-expert__badge {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nuumi-gold);
+  margin-bottom: 2.4rem;
+}
+
+.nuumi-expert__quote {
+  font-family: var(--font-heading-family);
+  font-size: 2.8rem;
+  color: var(--nuumi-deep-blue);
+  margin: 0 0 3.2rem 0;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-expert__quote {
+    font-size: 3.6rem;
+  }
+}
+
+.nuumi-expert__author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 2.4rem;
+  border-left: 4px solid var(--nuumi-gold);
+}
+
+.nuumi-expert__name {
+  font-family: var(--font-body-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+}
+
+.nuumi-expert__credentials {
+  font-family: var(--font-body-family);
+  font-size: 1.5rem;
+  color: #6B7280;
+}
+
+/* FAQ Section */
+.nuumi-faq {
+  padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-faq {
+    padding: 9.6rem 0;
+  }
+}
+
+.nuumi-faq__header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.nuumi-faq__title {
+  font-family: var(--font-heading-family);
+  font-size: 3.6rem;
+  color: var(--nuumi-deep-blue);
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-faq__title {
+    font-size: 4.8rem;
+  }
+}
+
+.nuumi-faq__accordion {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nuumi-faq__item {
+  background: #FFFFFF;
+  border-radius: 1.6rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.nuumi-faq__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-body-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+  gap: 2.4rem;
+}
+
+.nuumi-faq__summary::-webkit-details-marker {
+  display: none;
+}
+
+.nuumi-faq__icon {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--nuumi-gold);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuumi-faq__item[open] .nuumi-faq__icon {
+  transform: rotate(180deg);
+}
+
+.nuumi-faq__answer {
+  padding: 0 2.4rem 2.4rem;
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+.nuumi-faq__answer p {
+  margin: 0;
+}

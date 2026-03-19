@@ -1,0 +1,65 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-guarantee section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-guarantee__container">
+      <div class="nuumi-guarantee__icon-wrapper">
+        {% render 'nuumi-icons', icon: section.settings.icon %}
+      </div>
+      <div class="nuumi-guarantee__content">
+        <h2 class="nuumi-guarantee__title">{{ section.settings.title }}</h2>
+        <div class="nuumi-guarantee__text">{{ section.settings.text }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Guarantee",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#1E3A8A"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "Icon",
+      "options": [
+        { "value": "paw", "label": "Paw" },
+        { "value": "science", "label": "Science" },
+        { "value": "shield", "label": "Shield" },
+        { "value": "check_mark", "label": "Check Mark" },
+        { "value": "star", "label": "Star" },
+        { "value": "truck", "label": "Truck" },
+        { "value": "return", "label": "Return" },
+        { "value": "leaf", "label": "Leaf" },
+        { "value": "heart", "label": "Heart" }
+      ],
+      "default": "shield"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Our 90-Day Promise"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>If you or your pet aren't 100% satisfied with the results, we'll refund your purchase. No questions asked.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Guarantee"
+    }
+  ]
+}
+{% endschema %}

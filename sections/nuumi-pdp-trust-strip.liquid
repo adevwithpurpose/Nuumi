@@ -1,0 +1,75 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-trust-strip section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-trust-strip__grid">
+      {%- for block in section.blocks -%}
+        <div class="nuumi-trust-strip__item" {{ block.shopify_attributes }}>
+          <div class="nuumi-trust-strip__icon">
+            {% render 'nuumi-icons', icon: block.settings.icon %}
+          </div>
+          <span class="nuumi-trust-strip__text">{{ block.settings.text }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Trust Strip",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9FAFB"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Trust Item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "paw", "label": "Paw" },
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "check_mark", "label": "Check Mark" },
+            { "value": "star", "label": "Star" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "return", "label": "Return" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "heart", "label": "Heart" }
+          ],
+          "default": "shield"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Trust Point"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Trust Strip",
+      "blocks": [
+        { "type": "trust_item", "settings": { "icon": "truck", "text": "Free US Shipping" } },
+        { "type": "trust_item", "settings": { "icon": "science", "text": "Vet Formulated" } },
+        { "type": "trust_item", "settings": { "icon": "shield", "text": "90-Day Guarantee" } },
+        { "type": "trust_item", "settings": { "icon": "leaf", "text": "All Natural" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,99 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-faq section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-faq__header">
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-faq__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+    </div>
+    
+    {%- if section.blocks.size > 0 -%}
+      <div class="nuumi-faq__accordion">
+        {%- for block in section.blocks -%}
+          <details class="nuumi-faq__item" {{ block.shopify_attributes }}>
+            <summary class="nuumi-faq__summary">
+              <span class="nuumi-faq__question">{{ block.settings.question }}</span>
+              <span class="nuumi-faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </summary>
+            <div class="nuumi-faq__answer">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi FAQ",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How long until I see results?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Most pet parents notice a difference in their dog's mobility and energy levels within 3-4 weeks of consistent daily use.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi FAQ",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long until I see results?",
+            "answer": "<p>Most pet parents notice a difference in their dog's mobility and energy levels within 3-4 weeks of consistent daily use.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this safe for puppies?",
+            "answer": "<p>Yes, our formula is safe for dogs of all ages, breeds, and sizes. For puppies under 12 weeks, we recommend consulting your veterinarian.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do I need to refrigerate it?",
+            "answer": "<p>No refrigeration is required. Store in a cool, dry place away from direct sunlight.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

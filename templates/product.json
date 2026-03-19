@@ -1,106 +1,243 @@
 {
   "sections": {
-    "nuumi_product_hero": {
-      "type": "nuumi-product-hero",
+    "main": {
+      "type": "nuumi-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subtitle": "Veterinarian Formulated"
+          }
+        },
+        "price": {
+          "type": "price"
+        },
+        "bullets": {
+          "type": "bullets",
+          "settings": {
+            "bullet_1": "Clinically proven ingredients",
+            "bullet_2": "Made in the USA",
+            "bullet_3": "100% Satisfaction Guarantee"
+          }
+        },
+        "quantity_packs": {
+          "type": "quantity_packs",
+          "settings": {
+            "heading": "Choose your supply"
+          }
+        },
+        "purchase_mode": {
+          "type": "purchase_mode"
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_guarantee": true,
+            "guarantee_text": "90-Day Money Back Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "bullets",
+        "quantity_packs",
+        "purchase_mode",
+        "buy_buttons"
+      ],
       "settings": {
-        "badge_1": "Vet-formulated",
-        "badge_2": "Daily wellness support",
-        "subtitle": "A calmer, cleaner PDP built for the first review pass.",
-        "description": "Create a credible, premium product narrative here while leaving room for final merchant copy and dynamic metafields.",
-        "trust_note": "Built to communicate trust before complexity, with room for final product-specific proof.",
-        "rating_label": "Trusted by pet parents",
-        "review_count": "128",
-        "bullet_1": "<strong>Premium above the fold</strong> without a crowded supplement-store feel.",
-        "bullet_2": "<strong>Dynamic-source ready</strong> for subtitle, badges, trust note, and bullets.",
-        "bullet_3": "<strong>Clear quantity framing</strong> for 1, 3, and 6 unit selection.",
-        "bullet_4": "<strong>Subscription shell included</strong> so the future flow has a visible home.",
-        "purchase_heading": "Choose your purchase option",
-        "one_time_label": "One-time purchase",
-        "one_time_note": "Flexible, no commitment",
-        "subscribe_label": "Subscribe & save",
-        "subscribe_note": "UI shell for the future subscription flow",
-        "quantity_heading": "Choose your quantity",
-        "qty_one_label": "1 jar",
-        "qty_one_note": "Try the daily ritual",
-        "qty_three_label": "3 jars",
-        "qty_three_note": "Most popular for consistency",
-        "qty_six_label": "6 jars",
-        "qty_six_note": "Best value for long-term routine",
-        "footer_trust_1": "Fast shipping",
-        "footer_trust_2": "30-day confidence guarantee",
-        "padding_top": 36,
-        "padding_bottom": 16
+        "enable_sticky_cta": true
       }
     },
-    "nuumi_product_story": {
-      "type": "nuumi-product-story",
+    "trust_strip": {
+      "type": "nuumi-pdp-trust-strip",
       "blocks": {
-        "story_card_1": { "type": "story_card", "settings": { "eyebrow": "Problem", "title": "What the customer feels first", "text": "<p>Use this first card to mirror the real concern the product is meant to address in a calm, non-hype way.</p>" } },
-        "story_card_2": { "type": "story_card", "settings": { "eyebrow": "Solution", "title": "How the product fits the routine", "text": "<p>Use this second card to show how the formulation helps and why it belongs in the customer's daily pattern.</p>" } }
+        "item_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "truck",
+            "text": "Free US Shipping"
+          }
+        },
+        "item_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "science",
+            "text": "Vet Formulated"
+          }
+        },
+        "item_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "90-Day Guarantee"
+          }
+        },
+        "item_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "leaf",
+            "text": "All Natural"
+          }
+        }
       },
-      "block_order": ["story_card_1", "story_card_2"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
       "settings": {
-        "eyebrow": "Problem and promise",
-        "heading": "Explain the problem, the product role, and the calmer routine it supports",
-        "body": "<p>This section should bridge the emotional need and the practical product role, giving the customer a reason to keep reading without stuffing the page.</p>",
-        "padding_top": 24,
-        "padding_bottom": 48
+        "bg_color": "#F9FAFB"
       }
     },
-    "nuumi_product_benefits": {
-      "type": "nuumi-product-benefits",
-      "blocks": {
-        "benefit_1": { "type": "benefit", "settings": { "icon": "science", "eyebrow": "Formula", "title": "Explain the rationale simply", "text": "<p>Use ingredient or formulation language that feels credible but still easy for a shopper to understand at a glance.</p>" } },
-        "benefit_2": { "type": "benefit", "settings": { "icon": "heart", "eyebrow": "Routine", "title": "Show how the product fits daily life", "text": "<p>Focus on how this supports a routine customers can imagine themselves maintaining consistently.</p>" } },
-        "benefit_3": { "type": "benefit", "settings": { "icon": "shield", "eyebrow": "Trust", "title": "Support the premium story", "text": "<p>Use this card to reinforce quality, support, testing, or the specific trust signal that matters most.</p>" } }
-      },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+    "guarantee": {
+      "type": "nuumi-pdp-guarantee",
       "settings": {
-        "eyebrow": "Benefits and features",
-        "heading": "Turn the formulation into clear, believable customer benefits",
-        "intro": "<p>These cards should help the customer understand the product quickly, while staying consistent with the calmer premium direction.</p>",
-        "padding_top": 12,
-        "padding_bottom": 48
+        "bg_color": "#1E3A8A",
+        "icon": "shield",
+        "title": "Our 90-Day Promise",
+        "text": "<p>If you or your pet aren't 100% satisfied with the results, we'll refund your purchase. No questions asked.</p>"
       }
     },
-    "nuumi_product_proof": {
-      "type": "nuumi-product-proof",
+    "story": {
+      "type": "nuumi-pdp-story",
       "blocks": {
-        "proof_card_1": { "type": "proof_card", "settings": { "eyebrow": "Social proof", "title": "Use one strong proof layer", "text": "<p>Show one concise proof card for testimonials, results language, or category trust without overloading the layout.</p>" } },
-        "proof_card_2": { "type": "proof_card", "settings": { "eyebrow": "Operational trust", "title": "Support still converts", "text": "<p>Shipping reliability, customer support, and guarantee clarity can matter as much as the formula itself.</p>" } },
-        "proof_card_3": { "type": "proof_card", "settings": { "eyebrow": "Expert reassurance", "title": "Keep the authority human", "text": "<p>Use this card for the scientific or expert layer that makes the product feel responsibly built, not overmarketed.</p>" } }
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "icon": "science",
+            "title": "Clinically Studied",
+            "text": "<p>Backed by science and formulated by leading veterinarians.</p>"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "icon": "leaf",
+            "title": "100% Natural",
+            "text": "<p>No artificial fillers, preservatives, or synthetic colors.</p>"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "icon": "heart",
+            "title": "Picky Eater Approved",
+            "text": "<p>Delicious natural flavor that dogs actually love to eat.</p>"
+          }
+        }
       },
-      "block_order": ["proof_card_1", "proof_card_2", "proof_card_3"],
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3"
+      ],
       "settings": {
-        "eyebrow": "Proof and trust",
-        "heading": "Layer in expert reassurance, proof, and customer confidence",
-        "intro": "<p>This section should feel like the strongest credibility layer on the PDP.</p>",
-        "quote": "The clearest product pages do not just sell the product. They reduce uncertainty and help the customer feel safe buying it.",
-        "expert_name": "Dr. Nuumi Expert",
-        "expert_role": "Veterinary Advisor",
-        "check_1": "Use this for scientific rationale or formulation clarity.",
-        "check_2": "Use this for quality, sourcing, or support reassurance.",
-        "check_3": "Use this for customer confidence or routine fit.",
-        "padding_top": 12,
-        "padding_bottom": 48
+        "bg_color": "#FFFFFF",
+        "layout": "image_first",
+        "subtitle": "The Nuumi Difference",
+        "title": "Formulated for real results.",
+        "text": "<p>We believe your pet deserves the same quality of care as the rest of your family. That's why we use clinically proven ingredients at their effective doses.</p>"
       }
     },
-    "nuumi_risk_free": {
-      "type": "nuumi-risk-free",
+    "comparison": {
+      "type": "nuumi-pdp-comparison",
       "blocks": {
-        "risk_card_1": { "type": "risk_card", "settings": { "icon": "shield", "eyebrow": "Guarantee", "title": "Confidence-first guarantee", "text": "<p>Use a concise, readable risk-reversal message here so customers feel safe moving forward.</p>" } },
-        "risk_card_2": { "type": "risk_card", "settings": { "icon": "shipping", "eyebrow": "Shipping", "title": "Clear delivery expectation", "text": "<p>Use practical shipping and support copy here instead of leaving that reassurance buried in generic theme sections.</p>" } },
-        "risk_card_3": { "type": "risk_card", "settings": { "icon": "heart", "eyebrow": "Support", "title": "Simple customer care promise", "text": "<p>Use this card for the final emotional reassurance layer after proof and product education.</p>" } },
-        "faq_1": { "type": "faq", "settings": { "question": "How should I use this product?", "answer": "<p>Use this FAQ for the clearest daily-use instruction or starter guidance available at review time.</p>" } },
-        "faq_2": { "type": "faq", "settings": { "question": "When should I expect to notice a difference?", "answer": "<p>Use this FAQ to set practical expectations and reduce hesitation before purchase.</p>" } }
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Veterinarian Formulated",
+            "others_has_feature": false
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "title": "Clinically Proven Ingredients",
+            "others_has_feature": false
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "title": "No Artificial Fillers",
+            "others_has_feature": false
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "title": "Made in the USA",
+            "others_has_feature": true
+          }
+        },
+        "feature_5": {
+          "type": "feature",
+          "settings": {
+            "title": "90-Day Guarantee",
+            "others_has_feature": false
+          }
+        }
       },
-      "block_order": ["risk_card_1", "risk_card_2", "risk_card_3", "faq_1", "faq_2"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5"
+      ],
       "settings": {
-        "eyebrow": "Guarantee and reassurance",
-        "heading": "Close with guarantees, support clarity, and the final objections covered",
-        "intro": "<p>This final section should help the customer feel safe completing the purchase.</p>",
-        "padding_top": 12,
-        "padding_bottom": 64
+        "bg_color": "#F9FAFB",
+        "subtitle": "Why Choose Us",
+        "title": "The Nuumi Standard",
+        "nuumi_name": "Nuumi",
+        "others_name": "Other Brands"
+      }
+    },
+    "expert": {
+      "type": "nuumi-pdp-expert",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "badge_text": "Veterinarian Approved",
+        "quote": "Nuumi represents a new standard in pet care. The clinical doses of active ingredients provide real, measurable results for joint health and mobility.",
+        "name": "Dr. Sarah Jenkins",
+        "credentials": "DVM, Chief Veterinary Officer"
+      }
+    },
+    "faq": {
+      "type": "nuumi-pdp-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long until I see results?",
+            "answer": "<p>Most pet parents notice a difference in their dog's mobility and energy levels within 3-4 weeks of consistent daily use.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this safe for puppies?",
+            "answer": "<p>Yes, our formula is safe for dogs of all ages, breeds, and sizes. For puppies under 12 weeks, we recommend consulting your veterinarian.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do I need to refrigerate it?",
+            "answer": "<p>No refrigeration is required. Store in a cool, dry place away from direct sunlight.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "bg_color": "#F9FAFB",
+        "title": "Frequently Asked Questions"
       }
     },
     "related-products": {
@@ -118,19 +255,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "nuumi_sticky_atc": {
-      "type": "nuumi-sticky-atc",
-      "settings": {}
     }
   },
   "order": [
-    "nuumi_product_hero",
-    "nuumi_product_story",
-    "nuumi_product_benefits",
-    "nuumi_product_proof",
-    "nuumi_risk_free",
-    "related-products",
-    "nuumi_sticky_atc"
+    "main",
+    "trust_strip",
+    "guarantee",
+    "story",
+    "comparison",
+    "expert",
+    "faq",
+    "related-products"
   ]
 }

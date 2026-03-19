@@ -1,0 +1,88 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-expert section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-expert__grid">
+      <div class="nuumi-expert__image-wrapper">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1000 | image_tag:
+            loading: 'lazy',
+            class: 'nuumi-expert__image',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            widths: '375, 550, 750, 1000'
+          }}
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-expert__image' }}
+        {%- endif -%}
+      </div>
+      <div class="nuumi-expert__content">
+        {%- if section.settings.badge_text != blank -%}
+          <div class="nuumi-expert__badge">{{ section.settings.badge_text }}</div>
+        {%- endif -%}
+        
+        {%- if section.settings.quote != blank -%}
+          <blockquote class="nuumi-expert__quote">"{{ section.settings.quote }}"</blockquote>
+        {%- endif -%}
+        
+        <div class="nuumi-expert__author">
+          {%- if section.settings.name != blank -%}
+            <span class="nuumi-expert__name">{{ section.settings.name }}</span>
+          {%- endif -%}
+          {%- if section.settings.credentials != blank -%}
+            <span class="nuumi-expert__credentials">{{ section.settings.credentials }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Expert",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Expert Image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Veterinarian Approved"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Nuumi represents a new standard in pet care. The clinical doses of active ingredients provide real, measurable results for joint health and mobility."
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Expert Name",
+      "default": "Dr. Sarah Jenkins"
+    },
+    {
+      "type": "text",
+      "id": "credentials",
+      "label": "Credentials",
+      "default": "DVM, Chief Veterinary Officer"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Expert"
+    }
+  ]
+}
+{% endschema %}

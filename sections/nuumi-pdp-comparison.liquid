@@ -1,0 +1,162 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-comparison section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-comparison__header">
+      {%- if section.settings.subtitle != blank -%}
+        <span class="nuumi-comparison__subtitle">{{ section.settings.subtitle }}</span>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-comparison__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-comparison__table-wrapper">
+      <table class="nuumi-comparison__table">
+        <thead>
+          <tr>
+            <th class="nuumi-comparison__th-feature"></th>
+            <th class="nuumi-comparison__th-nuumi">
+              {%- if section.settings.nuumi_logo != blank -%}
+                {{ section.settings.nuumi_logo | image_url: width: 200 | image_tag: class: 'nuumi-comparison__logo' }}
+              {%- else -%}
+                <span class="nuumi-comparison__brand-name">{{ section.settings.nuumi_name }}</span>
+              {%- endif -%}
+            </th>
+            <th class="nuumi-comparison__th-others">{{ section.settings.others_name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr {{ block.shopify_attributes }}>
+              <td class="nuumi-comparison__td-feature">{{ block.settings.title }}</td>
+              <td class="nuumi-comparison__td-nuumi">
+                <div class="nuumi-comparison__check">
+                  {% render 'nuumi-icons', icon: 'check_mark' %}
+                </div>
+              </td>
+              <td class="nuumi-comparison__td-others">
+                {%- if block.settings.others_has_feature -%}
+                  <div class="nuumi-comparison__check nuumi-comparison__check--muted">
+                    {% render 'nuumi-icons', icon: 'check_mark' %}
+                  </div>
+                {%- else -%}
+                  <div class="nuumi-comparison__cross">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                {%- endif -%}
+              </td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Comparison",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Why Choose Us"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "The Nuumi Standard"
+    },
+    {
+      "type": "image_picker",
+      "id": "nuumi_logo",
+      "label": "Nuumi Logo (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "nuumi_name",
+      "label": "Brand Name (If no logo)",
+      "default": "Nuumi"
+    },
+    {
+      "type": "text",
+      "id": "others_name",
+      "label": "Competitor Name",
+      "default": "Other Brands"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Name",
+          "default": "Vet Formulated"
+        },
+        {
+          "type": "checkbox",
+          "id": "others_has_feature",
+          "label": "Competitor has this feature?",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Comparison",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Veterinarian Formulated",
+            "others_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Clinically Proven Ingredients",
+            "others_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "No Artificial Fillers",
+            "others_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Made in the USA",
+            "others_has_feature": true
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "90-Day Guarantee",
+            "others_has_feature": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

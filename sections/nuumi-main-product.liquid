@@ -1,0 +1,341 @@
+<product-info
+  id="MainProduct-{{ section.id }}"
+  class="nuumi-pdp section-{{ section.id }}-padding"
+  data-section="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-update-url="true"
+  data-url="{{ product.url }}"
+>
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+
+  <div class="page-width">
+    <div class="nuumi-pdp__grid">
+      <!-- Media Gallery -->
+      <div class="nuumi-pdp__media-wrapper">
+        {% render 'product-media-gallery', variant_images: variant_images %}
+      </div>
+
+      <!-- Product Info -->
+      <div class="nuumi-pdp__info-wrapper">
+        <section id="ProductInfo-{{ section.id }}" class="nuumi-pdp__info-container">
+          {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+              
+              {%- when 'title' -%}
+                <div class="nuumi-pdp__title-block" {{ block.shopify_attributes }}>
+                  <h1 class="nuumi-pdp__title">{{ product.title | escape }}</h1>
+                  {%- if block.settings.subtitle != blank -%}
+                    <p class="nuumi-pdp__subtitle">{{ block.settings.subtitle }}</p>
+                  {%- endif -%}
+                </div>
+
+              {%- when 'price' -%}
+                <div class="nuumi-pdp__price-block" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                </div>
+
+              {%- when 'bullets' -%}
+                <ul class="nuumi-pdp__bullets" {{ block.shopify_attributes }}>
+                  {%- if block.settings.bullet_1 != blank -%}
+                    <li>
+                      <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                      {{ block.settings.bullet_1 }}
+                    </li>
+                  {%- endif -%}
+                  {%- if block.settings.bullet_2 != blank -%}
+                    <li>
+                      <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                      {{ block.settings.bullet_2 }}
+                    </li>
+                  {%- endif -%}
+                  {%- if block.settings.bullet_3 != blank -%}
+                    <li>
+                      <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                      {{ block.settings.bullet_3 }}
+                    </li>
+                  {%- endif -%}
+                </ul>
+
+              {%- when 'quantity_packs' -%}
+                <div class="nuumi-pdp__quantity-packs" {{ block.shopify_attributes }}>
+                  <p class="nuumi-pdp__label">{{ block.settings.heading }}</p>
+                  <div class="nuumi-pdp__pack-grid">
+                    <label class="nuumi-pdp__pack-option nuumi-pdp__pack-option--selected">
+                      <input type="radio" name="quantity_pack" value="1" checked>
+                      <div class="nuumi-pdp__pack-content">
+                        <span class="nuumi-pdp__pack-title">1 Pack</span>
+                        <span class="nuumi-pdp__pack-subtitle">30 Day Supply</span>
+                      </div>
+                    </label>
+                    <label class="nuumi-pdp__pack-option nuumi-pdp__pack-option--popular">
+                      <div class="nuumi-pdp__pack-badge">Most Popular</div>
+                      <input type="radio" name="quantity_pack" value="3">
+                      <div class="nuumi-pdp__pack-content">
+                        <span class="nuumi-pdp__pack-title">3 Packs</span>
+                        <span class="nuumi-pdp__pack-subtitle">90 Day Supply</span>
+                      </div>
+                    </label>
+                    <label class="nuumi-pdp__pack-option">
+                      <input type="radio" name="quantity_pack" value="6">
+                      <div class="nuumi-pdp__pack-content">
+                        <span class="nuumi-pdp__pack-title">6 Packs</span>
+                        <span class="nuumi-pdp__pack-subtitle">180 Day Supply</span>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Hidden actual quantity input for Dawn's form -->
+                  <input type="hidden" name="quantity" value="1" form="{{ product_form_id }}" id="Quantity-{{ section.id }}">
+                </div>
+
+              {%- when 'purchase_mode' -%}
+                <div class="nuumi-pdp__purchase-mode" {{ block.shopify_attributes }}>
+                  <label class="nuumi-pdp__mode-option nuumi-pdp__mode-option--active">
+                    <input type="radio" name="purchase_mode" value="subscribe" checked>
+                    <div class="nuumi-pdp__mode-content">
+                      <div class="nuumi-pdp__mode-header">
+                        <span class="nuumi-pdp__mode-title">Subscribe & Save 20%</span>
+                        <span class="nuumi-pdp__mode-price">{{ product.price | times: 0.8 | money }}</span>
+                      </div>
+                      <p class="nuumi-pdp__mode-desc">Cancel anytime. Free shipping.</p>
+                    </div>
+                  </label>
+                  <label class="nuumi-pdp__mode-option">
+                    <input type="radio" name="purchase_mode" value="onetime">
+                    <div class="nuumi-pdp__mode-content">
+                      <div class="nuumi-pdp__mode-header">
+                        <span class="nuumi-pdp__mode-title">One-Time Purchase</span>
+                        <span class="nuumi-pdp__mode-price">{{ product.price | money }}</span>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+              {%- when 'buy_buttons' -%}
+                <div class="nuumi-pdp__buy-buttons" {{ block.shopify_attributes }}>
+                  <product-form class="product-form" data-section-id="{{ section.id }}">
+                    <div class="product-form__error-message-wrapper" role="alert" hidden>
+                      <span class="svg-wrapper">
+                        {{- 'icon-error.svg' | inline_asset_content -}}
+                      </span>
+                      <span class="product-form__error-message"></span>
+                    </div>
+
+                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="product-variant-id">
+                      <div class="product-form__buttons">
+                        <button
+                          type="submit"
+                          name="add"
+                          class="nuumi-button--gold product-form__submit button--full-width"
+                          {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        >
+                          <span>
+                            {%- if product.selected_or_first_available_variant.available == false -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- else -%}
+                              Add to Cart — {{ product.price | money }}
+                            {%- endif -%}
+                          </span>
+                          {%- render 'loading-spinner' -%}
+                        </button>
+                      </div>
+                    {%- endform -%}
+                  </product-form>
+                </div>
+                
+                {%- if block.settings.show_guarantee -%}
+                  <div class="nuumi-pdp__guarantee">
+                    <span class="nuumi-pdp__guarantee-icon">{% render 'nuumi-icons', icon: 'shield' %}</span>
+                    <span>{{ block.settings.guarantee_text }}</span>
+                  </div>
+                {%- endif -%}
+
+            {%- endcase -%}
+          {%- endfor -%}
+        </section>
+      </div>
+    </div>
+  </div>
+</product-info>
+
+<!-- Sticky Mobile CTA -->
+{%- if section.settings.enable_sticky_cta -%}
+  <div class="nuumi-sticky-cta">
+    <div class="nuumi-sticky-cta__inner page-width">
+      <div class="nuumi-sticky-cta__info">
+        <span class="nuumi-sticky-cta__title">{{ product.title }}</span>
+        <span class="nuumi-sticky-cta__price">{{ product.price | money }}</span>
+      </div>
+      <button type="button" class="nuumi-button--gold nuumi-sticky-cta__button" onclick="document.querySelector('#ProductSubmitButton-{{ section.id }}, .nuumi-pdp__buy-buttons button[type=\'submit\']').click();">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+{%- endif -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Quantity Pack Logic
+    const packRadios = document.querySelectorAll('input[name="quantity_pack"]');
+    const hiddenQuantityInput = document.getElementById('Quantity-{{ section.id }}');
+    
+    packRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.checked) {
+          hiddenQuantityInput.value = this.value;
+          
+          // Update styling
+          document.querySelectorAll('.nuumi-pdp__pack-option').forEach(opt => opt.classList.remove('nuumi-pdp__pack-option--selected'));
+          this.closest('.nuumi-pdp__pack-option').classList.add('nuumi-pdp__pack-option--selected');
+        }
+      });
+    });
+
+    // Purchase Mode Logic
+    const modeRadios = document.querySelectorAll('input[name="purchase_mode"]');
+    modeRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.checked) {
+          document.querySelectorAll('.nuumi-pdp__mode-option').forEach(opt => opt.classList.remove('nuumi-pdp__mode-option--active'));
+          this.closest('.nuumi-pdp__mode-option').classList.add('nuumi-pdp__mode-option--active');
+        }
+      });
+    });
+
+    // Sticky CTA Logic
+    const stickyCta = document.querySelector('.nuumi-sticky-cta');
+    const buyButtons = document.querySelector('.nuumi-pdp__buy-buttons');
+    
+    if (stickyCta && buyButtons) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+            stickyCta.classList.add('nuumi-sticky-cta--visible');
+          } else {
+            stickyCta.classList.remove('nuumi-sticky-cta--visible');
+          }
+        });
+      }, { threshold: 0 });
+      
+      observer.observe(buyButtons);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Nuumi Main Product",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_cta",
+      "label": "Enable mobile sticky CTA",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "Title & Subtitle",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Veterinarian Formulated"
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1
+    },
+    {
+      "type": "bullets",
+      "name": "Benefit Bullets",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "bullet_1",
+          "label": "Bullet 1",
+          "default": "Clinically proven ingredients"
+        },
+        {
+          "type": "text",
+          "id": "bullet_2",
+          "label": "Bullet 2",
+          "default": "Made in the USA"
+        },
+        {
+          "type": "text",
+          "id": "bullet_3",
+          "label": "Bullet 3",
+          "default": "100% Satisfaction Guarantee"
+        }
+      ]
+    },
+    {
+      "type": "quantity_packs",
+      "name": "Quantity Packs",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Choose your supply"
+        }
+      ]
+    },
+    {
+      "type": "purchase_mode",
+      "name": "Purchase Mode",
+      "limit": 1
+    },
+    {
+      "type": "buy_buttons",
+      "name": "Buy Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_guarantee",
+          "label": "Show Guarantee",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "guarantee_text",
+          "label": "Guarantee Text",
+          "default": "90-Day Money Back Guarantee"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Main Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,171 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-story section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-story__grid {% if section.settings.layout == 'text_first' %}nuumi-story__grid--reverse{% endif %}">
+      <div class="nuumi-story__image-wrapper">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1500 | image_tag:
+            loading: 'lazy',
+            class: 'nuumi-story__image',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            widths: '375, 550, 750, 1100, 1500'
+          }}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg nuumi-story__image' }}
+        {%- endif -%}
+      </div>
+      <div class="nuumi-story__content">
+        {%- if section.settings.subtitle != blank -%}
+          <span class="nuumi-story__subtitle">{{ section.settings.subtitle }}</span>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="nuumi-story__title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="nuumi-story__text">{{ section.settings.text }}</div>
+        {%- endif -%}
+        
+        {%- if section.blocks.size > 0 -%}
+          <div class="nuumi-story__benefits">
+            {%- for block in section.blocks -%}
+              <div class="nuumi-story__benefit" {{ block.shopify_attributes }}>
+                <div class="nuumi-story__benefit-icon">
+                  {% render 'nuumi-icons', icon: block.settings.icon %}
+                </div>
+                <div class="nuumi-story__benefit-text">
+                  <h3 class="nuumi-story__benefit-title">{{ block.settings.title }}</h3>
+                  <div class="nuumi-story__benefit-desc">{{ block.settings.text }}</div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Story",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Desktop Layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Text first"
+        }
+      ],
+      "default": "image_first"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "The Nuumi Difference"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Formulated for real results."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>We believe your pet deserves the same quality of care as the rest of your family. That's why we use clinically proven ingredients at their effective doses.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "paw", "label": "Paw" },
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "check_mark", "label": "Check Mark" },
+            { "value": "star", "label": "Star" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "return", "label": "Return" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "heart", "label": "Heart" }
+          ],
+          "default": "science"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Clinically Studied"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Backed by science and formulated by leading veterinarians.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Story",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "science",
+            "title": "Clinically Studied",
+            "text": "<p>Backed by science and formulated by leading veterinarians.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "leaf",
+            "title": "100% Natural",
+            "text": "<p>No artificial fillers, preservatives, or synthetic colors.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "heart",
+            "title": "Picky Eater Approved",
+            "text": "<p>Delicious natural flavor that dogs actually love to eat.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
