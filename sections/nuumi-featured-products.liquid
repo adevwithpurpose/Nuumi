@@ -1,102 +1,91 @@
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+{{ 'nuumi-home.css' | asset_url | stylesheet_tag }}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<section class="nuumi-section nuumi-featured-products section-{{ section.id }}-padding">
-  <div class="page-width nuumi-home-reveal">
-    <div class="nuumi-section-header nuumi-featured-products__header">
-      <div>
-        {%- if section.settings.eyebrow != blank -%}
-          <p class="nuumi-kicker">{{ section.settings.eyebrow }}</p>
-        {%- endif -%}
-        {%- if section.settings.heading != blank -%}
-          <h2 class="nuumi-section-heading">{{ section.settings.heading }}</h2>
-        {%- endif -%}
-        {%- if section.settings.intro != blank -%}
-          <div class="nuumi-featured-products__intro rte">{{ section.settings.intro }}</div>
-        {%- endif -%}
-      </div>
-
-      {%- if section.settings.button_label != blank -%}
-        <a class="nuumi-home-button nuumi-home-button--secondary" href="{{ section.settings.button_link | default: '#' }}">
-          {{ section.settings.button_label }}
-        </a>
+<section class="nuumi-featured-products section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="nuumi-featured-products__header center">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-featured-products__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="nuumi-featured-products__heading">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="nuumi-featured-products__description rte">{{ section.settings.description }}</div>
       {%- endif -%}
     </div>
 
     <div class="nuumi-featured-products__grid">
       {%- for block in section.blocks -%}
-        {%- assign product = block.settings.product -%}
-        <article class="nuumi-featured-product-card{% if forloop.first %} is-featured{% endif %}" {{ block.shopify_attributes }}>
-          <div class="nuumi-featured-product-card__media">
-            {%- if product != blank and product.featured_media != blank -%}
-              {{
-                product.featured_media
-                | image_url: width: 900
-                | image_tag:
-                  widths: '360, 533, 720, 900',
-                  loading: 'lazy',
-                  sizes: '(min-width: 990px) 20vw, (min-width: 750px) 45vw, 90vw',
-                  class: 'nuumi-featured-product-card__image'
+        {%- assign product_card = block.settings.product -%}
+        {%- assign card_title = block.settings.title -%}
+        {%- if card_title == blank and product_card != blank -%}
+          {%- assign card_title = product_card.title -%}
+        {%- endif -%}
+        {%- assign card_benefit = block.settings.benefit -%}
+        {%- assign card_price = block.settings.price -%}
+        {%- if card_price == blank and product_card != blank -%}
+          {%- assign card_price = product_card.price | money -%}
+        {%- endif -%}
+        {%- assign card_url = block.settings.link -%}
+        {%- if card_url == blank and product_card != blank -%}
+          {%- assign card_url = product_card.url -%}
+        {%- endif -%}
+
+        <article class="nuumi-featured-products__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-featured-products__media">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 900 | image_tag:
+                class: 'nuumi-featured-products__image',
+                loading: 'lazy',
+                widths: '320, 480, 720, 900',
+                alt: card_title | escape
+              }}
+            {%- elsif product_card != blank and product_card.featured_image != blank -%}
+              {{ product_card.featured_image | image_url: width: 900 | image_tag:
+                class: 'nuumi-featured-products__image',
+                loading: 'lazy',
+                widths: '320, 480, 720, 900',
+                alt: product_card.featured_image.alt | escape
               }}
             {%- else -%}
-              {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg nuumi-featured-product-card__image' }}
+              <div class="nuumi-featured-products__image-placeholder">
+                {% render 'nuumi-icons', icon: 'paw', class: 'nuumi-featured-products__placeholder-icon' %}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.badge != blank -%}
+              <span class="nuumi-featured-products__badge">{{ block.settings.badge | escape }}</span>
             {%- endif -%}
           </div>
 
-          <div class="nuumi-featured-product-card__content">
-            {%- if block.settings.badge_text != blank -%}
-              <span class="nuumi-chip">{{ block.settings.badge_text }}</span>
-            {%- endif -%}
-
-            <span class="nuumi-featured-product-card__index">0{{ forloop.index }}</span>
-
-            <div>
-              <h3 class="nuumi-featured-product-card__title">
-                {%- if product != blank -%}
-                  {{ product.title }}
-                {%- else -%}
-                  {{ block.settings.placeholder_title }}
+          <div class="nuumi-featured-products__body">
+            <div class="nuumi-featured-products__meta">
+              <div>
+                {%- if card_title != blank -%}
+                  <h3 class="nuumi-featured-products__title">{{ card_title | escape }}</h3>
                 {%- endif -%}
-              </h3>
-
-              {%- if block.settings.summary != blank -%}
-                <p class="nuumi-featured-product-card__summary">{{ block.settings.summary }}</p>
-              {%- elsif product != blank and product.description != blank -%}
-                <p class="nuumi-featured-product-card__summary">{{ product.description | strip_html | truncatewords: 18 }}</p>
+                {%- if card_benefit != blank -%}
+                  <p class="nuumi-featured-products__benefit">{{ card_benefit | escape }}</p>
+                {%- endif -%}
+              </div>
+              {%- if card_price != blank -%}
+                <p class="nuumi-featured-products__price">{{ card_price }}</p>
               {%- endif -%}
             </div>
 
-            {% render 'nuumi-rating-stars', label: block.settings.rating_label, review_count: block.settings.review_count %}
-
-            <div class="nuumi-featured-product-card__divider"></div>
-
-            <div class="nuumi-featured-product-card__footer">
-              <div class="nuumi-featured-product-card__price">
-                {%- if product != blank -%}
-                  {{ product.selected_or_first_available_variant.price | money }}
-                  {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-                    <span class="nuumi-featured-product-card__compare">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
-                  {%- endif -%}
-                {%- else -%}
-                  {{ block.settings.placeholder_price }}
-                {%- endif -%}
-              </div>
-
-              <a class="nuumi-home-button" href="{% if product != blank %}{{ product.url }}{% else %}{{ block.settings.button_link | default: '#' }}{% endif %}">
-                {{ block.settings.button_label }}
-              </a>
+            <div class="nuumi-featured-products__rating">
+              {% render 'nuumi-rating-stars', rating: block.settings.rating, count: block.settings.rating_count %}
             </div>
+
+            {%- if block.settings.summary != blank -%}
+              <p class="nuumi-featured-products__summary">{{ block.settings.summary | escape }}</p>
+            {%- endif -%}
+
+            {%- if card_url != blank -%}
+              <a class="nuumi-button--gold nuumi-featured-products__cta" href="{{ card_url }}">
+                {{ block.settings.button_label | default: 'Shop now' | escape }}
+              </a>
+            {%- endif -%}
           </div>
         </article>
       {%- endfor -%}
@@ -106,69 +95,51 @@
 
 {% schema %}
 {
-  "name": "Nuumi Product Grid",
-  "tag": "section",
-  "class": "section",
+  "name": "Nuumi Featured Products",
   "settings": [
     {
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "All five products, one clear path"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Shop the Nuumipet essentials designed for calmer, healthier pets"
-    },
-    {
-      "type": "richtext",
-      "id": "intro",
-      "label": "Intro",
-      "default": "<p>Keep the launch assortment lean and easy to scan. Each card should feel credible, premium, and ready for Theme Editor merchandising.</p>"
+      "default": "Daily wellness lineup"
     },
     {
       "type": "text",
-      "id": "button_label",
-      "label": "Section button label",
-      "default": "Browse all products"
+      "id": "heading",
+      "label": "Heading",
+      "default": "Five focused formulas. One calmer, healthier routine."
     },
     {
-      "type": "url",
-      "id": "button_link",
-      "label": "Section button link"
-    },
-    {
-      "type": "header",
-      "content": "Spacing"
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Keep every launch product visible from the homepage with editorial product cards that make benefits and trust cues easy to scan.</p>"
     },
     {
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 140,
+      "max": 120,
       "step": 4,
       "unit": "px",
-      "label": "Top padding",
-      "default": 52
+      "label": "Padding top",
+      "default": 72
     },
     {
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 140,
+      "max": 120,
       "step": 4,
       "unit": "px",
-      "label": "Bottom padding",
-      "default": 52
+      "label": "Padding bottom",
+      "default": 72
     }
   ],
   "blocks": [
     {
       "type": "product_card",
       "name": "Product card",
-      "limit": 5,
       "settings": [
         {
           "type": "product",
@@ -176,28 +147,52 @@
           "label": "Product"
         },
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Override image"
+        },
+        {
           "type": "text",
-          "id": "badge_text",
-          "label": "Badge text",
-          "default": "Vet-loved formula"
+          "id": "badge",
+          "label": "Badge",
+          "default": "Best seller"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Override title"
+        },
+        {
+          "type": "text",
+          "id": "benefit",
+          "label": "Primary benefit",
+          "default": "Daily calm, comfort, and confidence support."
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Override price"
         },
         {
           "type": "textarea",
           "id": "summary",
           "label": "Summary",
-          "default": "Use this space for the sharpest outcome-focused summary if the product description is not ready yet."
+          "default": "Built for pet parents who want visible support without guesswork or filler-heavy formulas."
         },
         {
-          "type": "text",
-          "id": "rating_label",
-          "label": "Rating label",
-          "default": "Trusted by pet parents"
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 4.8
         },
         {
-          "type": "text",
-          "id": "review_count",
-          "label": "Review count",
-          "default": "128"
+          "type": "number",
+          "id": "rating_count",
+          "label": "Rating count",
+          "default": 128
         },
         {
           "type": "text",
@@ -207,27 +202,16 @@
         },
         {
           "type": "url",
-          "id": "button_link",
-          "label": "Fallback button link"
-        },
-        {
-          "type": "text",
-          "id": "placeholder_title",
-          "label": "Placeholder title",
-          "default": "Launch product"
-        },
-        {
-          "type": "text",
-          "id": "placeholder_price",
-          "label": "Placeholder price",
-          "default": "$49.00"
+          "id": "link",
+          "label": "Override link"
         }
       ]
     }
   ],
+  "max_blocks": 5,
   "presets": [
     {
-      "name": "Nuumi Product Grid",
+      "name": "Nuumi Featured Products",
       "blocks": [
         { "type": "product_card" },
         { "type": "product_card" },
@@ -239,3 +223,17 @@
   ]
 }
 {% endschema %}
+
+<style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+</style>

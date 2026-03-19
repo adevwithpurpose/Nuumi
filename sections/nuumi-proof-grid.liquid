@@ -2,9 +2,17 @@
 
 <section class="nuumi-proof-grid section-{{ section.id }}-padding">
   <div class="page-width">
-    {%- if section.settings.title != blank -%}
-      <h2 class="nuumi-proof-grid__title center">{{ section.settings.title | escape }}</h2>
-    {%- endif -%}
+    <div class="nuumi-proof-grid__header center">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-proof-grid__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-proof-grid__title">{{ section.settings.title | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="nuumi-proof-grid__description rte">{{ section.settings.description }}</div>
+      {%- endif -%}
+    </div>
 
     <div class="nuumi-proof-grid__container">
       {%- for block in section.blocks -%}
@@ -38,9 +46,21 @@
   "settings": [
     {
       "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Trust that carries through"
+    },
+    {
+      "type": "text",
       "id": "title",
       "label": "Heading",
       "default": "Why Choose Nuumi?"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>These proof points set up the promise behind every Nuumi formula: credible ingredients, dependable manufacturing, and reassurance close to the buying journey.</p>"
     },
     {
       "type": "range",
