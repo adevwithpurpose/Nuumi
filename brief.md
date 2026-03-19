@@ -30,22 +30,22 @@ The immediate goal is to build:
 - Build one product page first and use it as the approval baseline for the rest
 - Above the fold should be similar to:
   - `https://funnels-build.thisisatestsiteonly.com/1efef29f-0d50-4911-897e-b86a970a2d4a/pdp-ec-nv3`
-- Remaining PDP sections should visually lean toward:
-  - `https://funnels-build.thisisatestsiteonly.com/b7ae061e-d35b-43ad-8ff5-200b7c38d448/pdp-byebark`
-- Reuse one consistent above-the-fold format across physical products
-- Expected above-the-fold content:
-  - gallery on the left
-  - headline and subheadline
-  - bullet points
-  - quantity selection for `1`, `3`, `6`
-  - one-time purchase and subscribe-and-save choices
-- One product is digital and will need a lighter variation later
+  - Remaining PDP sections should visually lean toward:
+    - `https://funnels-build.thisisatestsiteonly.com/b7ae061e-d35b-43ad-8ff5-200b7c38d448/pdp-byebark`
+    - Reuse one consistent above-the-fold format across physical products
+    - Expected above-the-fold content:
+      - gallery on the left
+        - headline and subheadline
+          - bullet points
+            - quantity selection for `1`, `3`, `6`
+              - one-time purchase and subscribe-and-save choices
+              - One product is digital and will need a lighter variation later
 
-### Editing and Workflow
-- Theme must support local development first, then GitHub sync to the store
-- Key homepage and PDP content must remain editable in Shopify Theme Editor
-- The client should be able to update settings, copy, imagery, badges, FAQs, and merchandising without code changes
-
+              ### Editing and Workflow
+              - Theme must support local development first, then GitHub sync to the store
+              - Key homepage and PDP content must remain editable in Shopify Theme Editor
+              - The client should be able to update settings, copy, imagery, badges, FAQs, and merchandising without code changes
+              
 ## Reference Material Saved Locally
 
 All initial references are stored in `D:/antigravity/Projects/Nuumipet/design-ideas-study/`:
