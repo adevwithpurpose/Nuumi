@@ -1,6 +1,21 @@
+{%- liquid
+  assign announcement_enabled = true
+  assign announcement_text = section.settings.text
+  assign announcement_link = section.settings.link
+  assign announcement_bg = section.settings.bg_color
+
+  if section.settings.use_global_content and settings.nuumi_announcement_use_global
+    assign announcement_enabled = settings.nuumi_announcement_enabled
+    assign announcement_text = settings.nuumi_announcement_text
+    assign announcement_link = settings.nuumi_announcement_link
+    assign announcement_bg = settings.nuumi_announcement_bg
+  endif
+-%}
+
+{%- if announcement_enabled and announcement_text != blank -%}
 {%- style -%}
   .nuumi-announcement-bar {
-    background-color: {{ section.settings.bg_color }};
+    background-color: {{ announcement_bg }};
     color: #FFFFFF;
     text-align: center;
     padding: 0.8rem 1.5rem;
@@ -25,21 +40,28 @@
 {%- endstyle -%}
 
 <div class="nuumi-announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
-  {%- if section.settings.link != blank -%}
-    <a href="{{ section.settings.link }}" class="nuumi-announcement-bar__link">
+  {%- if announcement_link != blank -%}
+    <a href="{{ announcement_link }}" class="nuumi-announcement-bar__link">
   {%- endif -%}
     <p class="nuumi-announcement-bar__text">
-      {{ section.settings.text | escape }}
+      {{ announcement_text | escape }}
     </p>
-  {%- if section.settings.link != blank -%}
+  {%- if announcement_link != blank -%}
     </a>
   {%- endif -%}
 </div>
+{%- endif -%}
 
 {% schema %}
 {
   "name": "Nuumi Announcement Bar",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_global_content",
+      "label": "Use global announcement settings",
+      "default": true
+    },
     {
       "type": "text",
       "id": "text",

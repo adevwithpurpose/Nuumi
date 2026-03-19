@@ -116,6 +116,11 @@
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
 
+        --nuumi-gold: {{ settings.nuumi_color_gold }};
+        --nuumi-gold-dark: {{ settings.nuumi_color_gold_dark }};
+        --nuumi-deep-blue: {{ settings.nuumi_color_deep_blue }};
+        --nuumi-off-white: {{ settings.nuumi_color_off_white }};
+
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
         --media-border-width: {{ settings.media_border_thickness }}px;

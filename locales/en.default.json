@@ -179,13 +179,7 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
-      "nuumi_purchase_label": "Purchase option",
-      "nuumi_subscribe_label": "Subscribe",
-      "nuumi_try_label": "Starter",
-      "nuumi_popular_label": "Most popular",
-      "nuumi_best_value_label": "Best value",
-      "nuumi_option_label": "Select option"
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
     },
     "modal": {
       "label": "Media gallery"

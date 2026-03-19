@@ -1,15 +1,4 @@
 :root {
-  /* Brand Colors */
-  --nuumi-gold: #F59E0B;
-  --nuumi-gold-dark: #D97706;
-  --nuumi-off-white: #F9FAFB;
-  --nuumi-deep-blue: #1E3A8A;
-  
-  /* Fonts */
-  --font-heading-family: "DM Serif Display", serif;
-  --font-body-family: "Plus Jakarta Sans", sans-serif;
-
-  /* Button Shadows */
   --nuumi-button-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
 }
 
@@ -43,6 +32,12 @@
   transform: translateY(0);
 }
 
+.nuumi-button--gold:focus-visible {
+  outline: 3px solid rgba(8, 22, 44, 0.9);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.24), var(--nuumi-button-shadow);
+}
+
 /* Premium Shine Effect */
 .nuumi-button--gold::after {
   content: '';
@@ -66,4 +61,18 @@
 @keyframes nuumi-shine {
   0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
   20%, 100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nuumi-button--gold,
+  .nuumi-button--gold::after {
+    animation: none;
+    transition: none;
+  }
+
+  .nuumi-button--gold,
+  .nuumi-button--gold:hover,
+  .nuumi-button--gold:active {
+    transform: none;
+  }
 }
