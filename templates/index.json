@@ -1,20 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "nuumi_announcement_bar": {
       "type": "nuumi-announcement-bar",
+      "disabled": true,
       "settings": {
+        "use_global_content": true,
         "text": "Free Shipping on Orders Over $75",
-        "bg_color": "#0A1B32"
+        "link": "",
+        "bg_color": "#0a1b32"
       }
     },
     "nuumi_home_hero": {
       "type": "nuumi-home-hero",
-      "settings": {
-        "title": "Authority and trust, but cleaner",
-        "subtitle": "Clean daily wellness support for modern pet routines",
-        "button_label": "Shop Now",
-        "button_link": "shopify://collections/all"
-      },
       "blocks": {
         "bullet_1": {
           "type": "bullet",
@@ -39,7 +45,14 @@
         "bullet_1",
         "bullet_2",
         "bullet_3"
-      ]
+      ],
+      "settings": {
+        "title": "Authority and trust, but cleaner",
+        "subtitle": "Clean daily wellness support for modern pet routines",
+        "image": "shopify://shop_images/Gemini_Generated_Image_bru0prbru0prbru0.webp",
+        "button_label": "Shop Now",
+        "button_link": "shopify://collections/all"
+      }
     },
     "nuumi_trust_strip": {
       "type": "nuumi-trust-strip",
@@ -80,18 +93,11 @@
         "item_4"
       ],
       "settings": {
-        "speed": 30
+        "speed": 31
       }
     },
     "nuumi_proof_grid": {
       "type": "nuumi-proof-grid",
-      "settings": {
-        "eyebrow": "Trust that carries through",
-        "title": "Why Choose Nuumi?",
-        "description": "<p>These proof points set up the promise behind every Nuumi formula: credible ingredients, dependable manufacturing, and reassurance close to the buying journey.</p>",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
       "blocks": {
         "proof_1": {
           "type": "proof_item",
@@ -122,21 +128,22 @@
         "proof_1",
         "proof_2",
         "proof_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Trust that carries through",
+        "title": "Why Choose Nuumi?",
+        "description": "<p>These proof points set up the promise behind every Nuumi formula: credible ingredients, dependable manufacturing, and reassurance close to the buying journey.</p>",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     },
     "nuumi_featured_products": {
       "type": "nuumi-featured-products",
-      "settings": {
-        "eyebrow": "Launch collection",
-        "heading": "Shop all five formulas in one clear, premium routine.",
-        "description": "<p>Every card makes the core benefit, proof, and next step easy to scan so pet parents can shop with confidence.</p>",
-        "padding_top": 64,
-        "padding_bottom": 72
-      },
       "blocks": {
         "product_card_1": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "badge": "New launch",
             "title": "EnerCanis",
             "benefit": "Daily energy and vitality support.",
@@ -151,6 +158,7 @@
         "product_card_2": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "badge": "Bestseller",
             "title": "CalmiCollar",
             "benefit": "Calm behavior support without dullness.",
@@ -165,6 +173,7 @@
         "product_card_3": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "badge": "Daily routine",
             "title": "ByeBark",
             "benefit": "Helps reduce reactive barking triggers.",
@@ -179,6 +188,7 @@
         "product_card_4": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "badge": "Joint care",
             "title": "PawPoint",
             "benefit": "Comfort and mobility support.",
@@ -193,6 +203,7 @@
         "product_card_5": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "badge": "Bundle value",
             "title": "Wellness Bundle",
             "benefit": "A full-headline routine in one bundle.",
@@ -211,20 +222,17 @@
         "product_card_3",
         "product_card_4",
         "product_card_5"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Launch collection",
+        "heading": "Shop all five formulas in one clear, premium routine.",
+        "description": "<p>Every card makes the core benefit, proof, and next step easy to scan so pet parents can shop with confidence.</p>",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
     },
     "nuumi_expert_spotlight": {
       "type": "nuumi-expert-spotlight",
-      "settings": {
-        "eyebrow": "Expert-led trust",
-        "heading": "A stronger wellness routine starts with formulas customers believe in.",
-        "quote": "When you remove clutter and give pet parents a clear reason to trust the routine, compliance improves and outcomes follow.",
-        "name": "Dr. Sarah Jenkins",
-        "role": "DVM, Companion Animal Wellness Advisor",
-        "body": "<p>Nuumipet keeps expert guidance visible without turning the experience cold. Clear routines, credible ingredients, and practical reassurance help pet parents commit with confidence.</p>",
-        "padding_top": 72,
-        "padding_bottom": 88
-      },
       "blocks": {
         "proof_point_1": {
           "type": "proof_point",
@@ -255,17 +263,21 @@
         "proof_point_1",
         "proof_point_2",
         "proof_point_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Expert-led trust",
+        "heading": "A stronger wellness routine starts with formulas customers believe in.",
+        "image": "shopify://shop_images/product8311.png",
+        "quote": "When you remove clutter and give pet parents a clear reason to trust the routine, compliance improves and outcomes follow.",
+        "name": "Dr. Sarah Jenkins",
+        "role": "DVM, Companion Animal Wellness Advisor",
+        "body": "<p>Nuumipet keeps expert guidance visible without turning the experience cold. Clear routines, credible ingredients, and practical reassurance help pet parents commit with confidence.</p>",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
     },
     "nuumi_benefits_story": {
       "type": "nuumi-benefits-story",
-      "settings": {
-        "eyebrow": "How the experience works",
-        "heading": "Designed to feel calmer, clearer, and more premium at every scroll depth.",
-        "description": "<p>These three cards explain why the Nuumipet routine feels easier to trust: cleaner formulas, clearer proof, and habits pet parents can actually keep.</p>",
-        "padding_top": 80,
-        "padding_bottom": 72
-      },
       "blocks": {
         "benefit_1": {
           "type": "benefit",
@@ -299,17 +311,17 @@
         "benefit_1",
         "benefit_2",
         "benefit_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "How the experience works",
+        "heading": "Designed to feel calmer, clearer, and more premium at every scroll depth.",
+        "description": "<p>These three cards explain why the Nuumipet routine feels easier to trust: cleaner formulas, clearer proof, and habits pet parents can actually keep.</p>",
+        "padding_top": 80,
+        "padding_bottom": 72
+      }
     },
     "nuumi_faq": {
       "type": "nuumi-faq",
-      "settings": {
-        "eyebrow": "Before they buy",
-        "heading": "Answer the questions that usually slow checkout decisions.",
-        "description": "<p>Give pet parents direct answers on timing, consistency, and confidence so they can move from interest to checkout without hesitation.</p>",
-        "padding_top": 64,
-        "padding_bottom": 72
-      },
       "blocks": {
         "faq_1": {
           "type": "faq_item",
@@ -337,7 +349,14 @@
         "faq_1",
         "faq_2",
         "faq_3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Before they buy",
+        "heading": "Answer the questions that usually slow checkout decisions.",
+        "description": "<p>Give pet parents direct answers on timing, consistency, and confidence so they can move from interest to checkout without hesitation.</p>",
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
