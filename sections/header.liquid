@@ -20,20 +20,20 @@
   }
   
   @media screen and (min-width: 990px) {
-    .header-wrapper .header {
+    .header-wrapper .header:not(.header--middle-center):not(.header--top-center) {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
     }
-    .header-wrapper .header__heading,
-    .header-wrapper .header__heading-link {
+    .header-wrapper .header:not(.header--middle-center):not(.header--top-center) .header__heading,
+    .header-wrapper .header:not(.header--middle-center):not(.header--top-center) .header__heading-link {
       justify-self: start;
       margin: 0;
     }
-    .header-wrapper .header__inline-menu {
+    .header-wrapper .header:not(.header--middle-center):not(.header--top-center) .header__inline-menu {
       justify-self: center;
     }
-    .header-wrapper .header__icons {
+    .header-wrapper .header:not(.header--middle-center):not(.header--top-center) .header__icons {
       justify-self: end;
     }
     .header-wrapper .list-menu__item--link {
