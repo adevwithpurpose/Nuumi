@@ -15,21 +15,18 @@
     </div>
 
     <div class="nuumi-featured-products__grid">
-      {%- for block in section.blocks -%}
+      {%- for block in section.blocks limit: 4 -%}
         {%- assign product_card = block.settings.product -%}
-        {%- assign card_title = block.settings.title -%}
-        {%- if card_title == blank and product_card != blank -%}
-          {%- assign card_title = product_card.title -%}
+        {%- if product_card == blank -%}
+          {%- continue -%}
         {%- endif -%}
-        {%- assign card_benefit = block.settings.benefit -%}
-        {%- assign card_price = block.settings.price -%}
-        {%- if card_price == blank and product_card != blank -%}
-          {%- assign card_price = product_card.price | money -%}
+        {%- assign card_url = product_card.url -%}
+        {%- if block.settings.link != blank -%}
+          {%- assign card_url = block.settings.link -%}
         {%- endif -%}
-        {%- assign card_url = block.settings.link -%}
-        {%- if card_url == blank and product_card != blank -%}
-          {%- assign card_url = product_card.url -%}
-        {%- endif -%}
+        {%- assign card_benefit = product_card.metafields.custom.benefit.value -%}
+        {%- assign rating_value = block.settings.rating -%}
+        {%- assign rating_count_value = block.settings.rating_count -%}
 
         <article class="nuumi-featured-products__card" {{ block.shopify_attributes }}>
           <div class="nuumi-featured-products__media">
@@ -38,13 +35,13 @@
                 class: 'nuumi-featured-products__image',
                 loading: 'lazy',
                 widths: '320, 480, 720, 900',
-                alt: card_title | escape
+                alt: product_card.title | escape
               }}
             {%- elsif product_card != blank and product_card.featured_image != blank -%}
-              {{ product_card.featured_image | image_url: width: 900 | image_tag:
+              {{ product_card.featured_image | image_url: width: 800 | image_tag:
                 class: 'nuumi-featured-products__image',
                 loading: 'lazy',
-                widths: '320, 480, 720, 900',
+                widths: '320, 480, 720, 800',
                 alt: product_card.featured_image.alt | escape
               }}
             {%- else -%}
@@ -53,33 +50,27 @@
               </div>
             {%- endif -%}
 
-            {%- if block.settings.badge != blank -%}
-              <span class="nuumi-featured-products__badge">{{ block.settings.badge | escape }}</span>
+            {%- if card_benefit != blank -%}
+              <span class="nuumi-featured-products__badge">{{ card_benefit | escape }}</span>
             {%- endif -%}
           </div>
 
           <div class="nuumi-featured-products__body">
             <div class="nuumi-featured-products__meta">
               <div>
-                {%- if card_title != blank -%}
-                  <h3 class="nuumi-featured-products__title">{{ card_title | escape }}</h3>
-                {%- endif -%}
+                <h3 class="nuumi-featured-products__title">{{ product_card.title | escape }}</h3>
                 {%- if card_benefit != blank -%}
                   <p class="nuumi-featured-products__benefit">{{ card_benefit | escape }}</p>
                 {%- endif -%}
               </div>
-              {%- if card_price != blank -%}
-                <p class="nuumi-featured-products__price">{{ card_price }}</p>
-              {%- endif -%}
+              <p class="nuumi-featured-products__price">{{ product_card.price | money }}</p>
             </div>
 
             <div class="nuumi-featured-products__rating">
-              {% render 'nuumi-rating-stars', rating: block.settings.rating, count: block.settings.rating_count %}
+              {% render 'nuumi-rating-stars', rating: rating_value, count: rating_count_value %}
             </div>
 
-            {%- if block.settings.summary != blank -%}
-              <p class="nuumi-featured-products__summary">{{ block.settings.summary | escape }}</p>
-            {%- endif -%}
+            <p class="nuumi-featured-products__summary">{{ product_card.description | strip_html | truncatewords: 18 }}</p>
 
             {%- if card_url != blank -%}
               <a class="nuumi-button--gold nuumi-featured-products__cta" href="{{ card_url }}">
@@ -208,12 +199,11 @@
       ]
     }
   ],
-  "max_blocks": 5,
+  "max_blocks": 4,
   "presets": [
     {
       "name": "Nuumi Featured Products",
       "blocks": [
-        { "type": "product_card" },
         { "type": "product_card" },
         { "type": "product_card" },
         { "type": "product_card" },

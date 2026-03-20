@@ -13,9 +13,10 @@
   <div class="nuumi-rating-stars__stars">
     {%- for i in (1..5) -%}
       {%- assign star_fill = 0 -%}
+      {%- assign threshold = i | minus: 1 -%}
       {%- if rating >= i -%}
         {%- assign star_fill = 100 -%}
-      {%- elsif rating > i | minus: 1 -%}
+      {%- elsif rating > threshold -%}
         {%- assign star_fill = rating | minus: i | plus: 1 | times: 100 | round -%}
       {%- endif -%}
 
