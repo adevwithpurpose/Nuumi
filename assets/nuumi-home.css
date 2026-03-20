@@ -736,19 +736,13 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-benefits-story {
-  background: linear-gradient(180deg, #f4f8fc 0%, #ffffff 100%);
+  background: #FFFFFF;
   position: relative;
 }
 
-.nuumi-benefits-story::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: min(88vw, 96rem);
-  height: 1px;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, rgba(10, 27, 50, 0), rgba(10, 27, 50, 0.14), rgba(10, 27, 50, 0));
+.nuumi-benefits-story .page-width {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
 }
 
 .nuumi-benefits-story__header {
@@ -756,68 +750,62 @@ h1.nuumi-home-hero__title {
   margin: 0 auto 4.8rem;
 }
 
-.nuumi-benefits-story__eyebrow,
-.nuumi-faq__eyebrow {
-  margin: 0 0 1.2rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--nuumi-gold);
+.nuumi-benefits-story__eyebrow {
+  color: #0066FF !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  font-size: 0.85rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
-.nuumi-benefits-story__heading,
-.nuumi-faq__heading {
-  margin: 0;
-  font-family: var(--font-heading-family);
-  font-size: clamp(3rem, 5vw, 4.8rem);
-  line-height: 1.08;
-  color: var(--nuumi-deep-blue);
+.nuumi-benefits-story__heading {
+  color: #1A2B4C !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 1rem !important;
 }
 
-.nuumi-benefits-story__description,
-.nuumi-faq__description {
-  margin-top: 1.6rem;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #5b6474;
+.nuumi-benefits-story__description {
+  color: #4A5568 !important;
+  max-width: 700px !important;
+  margin: 0 auto 4rem auto !important;
+  font-size: 1.1rem !important;
 }
 
-.nuumi-benefits-story__description p,
-.nuumi-faq__description p {
+.nuumi-benefits-story__description p {
   margin: 0;
 }
 
 .nuumi-benefits-story__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media screen and (min-width: 990px) {
-  .nuumi-benefits-story__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3rem !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
 }
 
 .nuumi-benefits-story__card {
-  overflow: hidden;
-  border-radius: 2.4rem;
-  background: #ffffff;
-  border: 1px solid rgba(10, 27, 50, 0.08);
-  box-shadow: 0 2rem 5rem rgba(10, 27, 50, 0.08);
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
-}
-
-.nuumi-benefits-story__card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 2.6rem 5.5rem rgba(10, 27, 50, 0.12);
-  border-color: rgba(217, 119, 6, 0.16);
+  display: grid !important;
+  grid-template-columns: 80px 1fr !important;
+  gap: 2rem !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 .nuumi-benefits-story__media {
-  aspect-ratio: 4 / 3;
-  background: linear-gradient(180deg, rgba(10, 27, 50, 0.06), rgba(10, 27, 50, 0.01));
+  width: 80px !important;
+  height: 80px !important;
+  background: #F4F8FF !important;
+  border-radius: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .nuumi-benefits-story__image,
@@ -837,40 +825,46 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-benefits-story__placeholder-icon {
-  width: 5.2rem;
-  height: 5.2rem;
-  color: rgba(10, 27, 50, 0.26);
-}
-
-.nuumi-benefits-story__content {
-  display: grid;
-  gap: 1.2rem;
-  padding: 2.4rem 2.2rem 2.6rem;
+  width: 32px !important;
+  height: 32px !important;
+  color: #0066FF !important;
 }
 
 .nuumi-benefits-story__card-eyebrow {
-  margin: 0 0 0.8rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--nuumi-gold);
+  color: #0066FF !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin: 0 0 0.5rem 0 !important;
 }
 
 .nuumi-benefits-story__card-title {
-  margin: 0;
-  font-family: var(--font-heading-family);
-  font-size: 2.2rem;
-  line-height: 1.15;
-  color: var(--nuumi-deep-blue);
+  color: #1A2B4C !important;
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  margin: 0 0 0.5rem 0 !important;
+  line-height: 1.3 !important;
 }
 
 .nuumi-benefits-story__card-text {
-  margin: 0;
-  font-size: 1.45rem;
-  line-height: 1.78;
-  color: #536072;
-  max-width: 32ch;
+  color: #4A5568 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .nuumi-benefits-story__card {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  .nuumi-benefits-story__media {
+    margin: 0 auto !important;
+  }
 }
 
 .nuumi-faq {
