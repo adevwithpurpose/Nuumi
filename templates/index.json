@@ -133,7 +133,7 @@
         "product_card_1": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "50-shades-of-fun",
             "badge": "New launch",
             "title": "EnerCanis",
             "benefit": "Daily energy and vitality support.",
@@ -148,7 +148,7 @@
         "product_card_2": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "calmicollar-cat",
             "badge": "Bestseller",
             "title": "CalmiCollar",
             "benefit": "Calm behavior support without dullness.",
@@ -163,7 +163,7 @@
         "product_card_3": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "calmicollar",
             "badge": "Daily routine",
             "title": "ByeBark",
             "benefit": "Helps reduce reactive barking triggers.",
