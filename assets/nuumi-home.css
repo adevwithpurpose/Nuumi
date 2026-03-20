@@ -893,80 +893,130 @@ h1.nuumi-home-hero__title {
   }
 }
 
+.nuumi-faq {
+  background-color: #F8FAFC !important;
+}
+
+.nuumi-faq .page-width {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
 .nuumi-faq__header {
   max-width: 76rem;
   margin: 0 auto 3.2rem;
 }
 
+.nuumi-faq__eyebrow {
+  color: #0066FF !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  font-size: 0.85rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.nuumi-faq__heading {
+  color: #1A2B4C !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 1rem !important;
+}
+
+.nuumi-faq__description {
+  color: #4A5568 !important;
+  max-width: 600px !important;
+  margin: 0 auto 3rem auto !important;
+  font-size: 1.1rem !important;
+}
+
 .nuumi-faq__list {
-  max-width: 88rem;
-  margin: 0 auto;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
 }
 
-.nuumi-faq__item {
-  border-top: 1px solid rgba(10, 27, 50, 0.12);
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+details.nuumi-faq__item {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
 }
 
-.nuumi-faq__item:last-child {
-  border-bottom: 1px solid rgba(10, 27, 50, 0.12);
+details.nuumi-faq__item:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
 }
 
 .nuumi-faq__item[open] {
-  background: rgba(244, 248, 252, 0.48);
-  border-color: rgba(10, 27, 50, 0.18);
+  background-color: #FFFFFF !important;
 }
 
-.nuumi-faq__question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
-  padding: 2rem 0;
-  cursor: pointer;
-  list-style: none;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--nuumi-deep-blue);
+summary.nuumi-faq__question {
+  list-style: none !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1.5rem 1.5rem !important;
+  cursor: pointer !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: #1A2B4C !important;
 }
 
-.nuumi-faq__question::-webkit-details-marker {
-  display: none;
+summary.nuumi-faq__question::-webkit-details-marker {
+  display: none !important;
 }
 
 .nuumi-faq__toggle {
-  position: relative;
-  width: 2.2rem;
-  height: 2.2rem;
-  flex-shrink: 0;
+  position: relative !important;
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0 !important;
+  color: #0066FF !important;
 }
 
-.nuumi-faq__toggle::before,
+.nuumi-faq__toggle::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 14px !important;
+  height: 2px !important;
+  background-color: currentColor !important;
+  border-radius: 2px !important;
+}
+
 .nuumi-faq__toggle::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1.4rem;
-  height: 2px;
-  background: var(--nuumi-gold);
-  transform: translate(-50%, -50%);
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 2px !important;
+  height: 14px !important;
+  background-color: currentColor !important;
+  border-radius: 2px !important;
+  transition: transform 0.2s ease !important;
 }
 
-.nuumi-faq__toggle::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-  transition: opacity 0.2s ease;
-}
-
-.nuumi-faq__item[open] .nuumi-faq__toggle::after {
-  opacity: 0;
+details[open] .nuumi-faq__toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg) !important;
+  opacity: 0 !important;
 }
 
 .nuumi-faq__answer {
-  padding: 0.8rem 0 2.6rem;
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: #556173;
+  padding: 0 1.5rem 1.5rem 1.5rem !important;
+  color: #4A5568 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  border-top: none !important;
 }
 
 .nuumi-faq__answer p {
