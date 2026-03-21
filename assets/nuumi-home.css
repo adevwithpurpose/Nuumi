@@ -313,15 +313,15 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-proof-grid__card {
-  background: transparent !important;
-  border-radius: 0 !important;
-  padding: 3rem 0 !important;
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  padding: 3.2rem !important;
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
   text-align: left !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03) !important;
 }
 
 .nuumi-proof-grid__icon-wrapper {
@@ -417,12 +417,14 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-featured-products__card {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.04) !important;
+  border-radius: 20px !important;
   display: flex !important;
   flex-direction: column !important;
-  box-shadow: none !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04) !important;
+  padding-bottom: 2.4rem !important;
+  overflow: hidden !important;
 }
 
 .nuumi-featured-products__media {
@@ -431,7 +433,8 @@ h1.nuumi-home-hero__title {
   aspect-ratio: 4 / 3 !important;
   overflow: hidden !important;
   background-color: var(--nuumi-earth-light) !important;
-  border-radius: 16px !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.04) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -612,8 +615,10 @@ h1.nuumi-home-hero__title {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 3.2rem;
   align-items: stretch;
-  background: var(--nuumi-earth-light);
-  border-radius: 1.6rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.05);
+  border-radius: 2.4rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
   padding: 4.8rem;
   overflow: hidden;
 }
@@ -650,16 +655,20 @@ h1.nuumi-home-hero__title {
   margin-top: 4.8rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3.2rem 2.4rem;
+  gap: 0;
   max-width: 44rem;
+  border-top: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.06);
+  border-left: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.06);
 }
 
 .nuumi-media-credibility__stat {
-  padding: 0;
+  padding: 2.4rem 1.6rem 2.2rem 0;
+  border-right: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.06);
+  border-bottom: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.06);
 }
 
 .nuumi-media-credibility__stat:nth-child(2n) {
-  padding-left: 0;
+  padding-left: 1.6rem;
 }
 
 .nuumi-media-credibility__stat-value {
@@ -787,13 +796,13 @@ h1.nuumi-home-hero__title {
 .nuumi-expert-spotlight__panel {
   display: grid !important;
   grid-template-columns: 0.8fr 1.2fr !important;
-  gap: 3rem !important;
+  gap: 4.8rem !important;
   align-items: center !important;
   background: #FFFFFF !important;
   border-radius: 24px !important;
-  padding: 3rem !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
-  border: 1px solid #E6E2DD !important;
+  padding: 4.8rem !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.04) !important;
 }
 
 .nuumi-expert-spotlight__media {
@@ -1153,15 +1162,16 @@ h1.nuumi-home-hero__title {
 
 details.nuumi-faq__item {
   background-color: #FFFFFF !important;
-  border: 1px solid #E6E2DD !important;
+  border: 1px solid rgba(var(--nuumi-earth-dark-rgb), 0.06) !important;
   border-radius: 12px !important;
   overflow: hidden !important;
   transition: all 0.2s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01) !important;
 }
 
 details.nuumi-faq__item:hover {
-  border-color: #D4CEC4 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(var(--nuumi-earth-dark-rgb), 0.12) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03) !important;
 }
 
 .nuumi-faq__item[open] {
