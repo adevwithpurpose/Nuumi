@@ -218,6 +218,88 @@
         "padding_bottom": 88
       }
     },
+    "nuumi_media_credibility": {
+      "type": "nuumi-media-credibility",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "label": "CBS"
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "label": "ABC"
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "label": "NBC"
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "label": "BuzzFeed"
+          }
+        },
+        "logo_5": {
+          "type": "logo",
+          "settings": {
+            "label": "Forbes"
+          }
+        },
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "value": "100k+",
+            "label": "Five-Star Reviews Globally"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "3",
+            "label": "Successful Clinical Studies"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "12",
+            "label": "Proprietary Formulas"
+          }
+        },
+        "stat_4": {
+          "type": "stat",
+          "settings": {
+            "value": "1",
+            "label": "Patent-Pending Formula"
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_5",
+        "stat_1",
+        "stat_2",
+        "stat_3",
+        "stat_4"
+      ],
+      "settings": {
+        "logos_eyebrow": "As seen on sponsored content",
+        "heading": "Your pet health optimization partner™",
+        "body": "<p>Just the science. No hyperbole. No unsupported health claims. We deliver exceptional products and honest advice to support your pet's health.</p>",
+        "image": "shopify://shop_images/Gemini_Generated_Image_2.png",
+        "padding_top": 32,
+        "padding_bottom": 80
+      }
+    },
     "nuumi_benefits_story": {
       "type": "nuumi-benefits-story",
       "blocks": {
@@ -307,6 +389,7 @@
     "nuumi_proof_grid",
     "nuumi_featured_products",
     "nuumi_expert_spotlight",
+    "nuumi_media_credibility",
     "nuumi_benefits_story",
     "nuumi_faq"
   ]
