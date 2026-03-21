@@ -11,3 +11,8 @@ Thumbs.db
 
 # settings_data.json is intentionally tracked so color schemes
 # and brand settings deploy correctly via git integration.
+
+# Ignored Local Backups & Skeletons #
+#####################################
+Nuumipet V1/
+_legacy_backup/

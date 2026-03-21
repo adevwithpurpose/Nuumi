@@ -75,12 +75,27 @@ Primary remaining items:
 - verify Shopify CLI workflow and GitHub/store connection
 - decide whether to expose additional global controls for typography and button treatment
 
+## GitHub & Deployment Workflow (Source of Truth)
+
+**CRITICAL DEPLOYMENT Rule:** The `main` branch in this repository represents the absolute Source of Truth for the live Shopify Theme preview.
+Any push to `main` will automatically trigger Shopify's GitHub integration and immediately reflect changes on the storefront.
+
+### The Correct Version
+
+- **Active Branch:** `main`
+- **Active Framework:** Custom Nuumi stack built on Dawn architecture.
+
+### Known Traps (Local Skeletons)
+
+**WARNING:** There is a dormant, raw directory sitting locally (`Nuumipet V1/` and `_legacy_backup/`) that contains a stock Shopify "Skeleton" `hello-world` theme.
+- **Do not track these.** They are explicitly included in `.gitignore`.
+- If they are accidentally committed, the Shopify integration will panic and deploy a blank HTML `Hello World` skeleton instead of the Nuumi architecture. Always verify `git status` before a `git add .` to ensure nothing from these nested raw folders sneaks in.
+
 ## Local workflow notes
 
-- Dawn remains the base theme architecture
-- Custom Nuumi work should preserve Shopify section/block editability
-- `.planning/` reflects the manual workflow after removal of the old GSD wrappers
-- `config/settings_data.json` is tracked and must stay valid Shopify JSON
+- Custom Nuumi work should preserve Shopify section/block editability.
+- `config/settings_data.json` is intentionally tracked and must stay valid Shopify JSON so color schemes and configurations cleanly deploy via the git sync.
+- Use targeted git adds (e.g. `git add assets/nuumi-home.css`) instead of aggressive blanket stages when possible.
 
 ## Reference docs
 
