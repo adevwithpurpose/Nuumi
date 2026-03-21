@@ -104,14 +104,14 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
-    "nuumi_color_gold": "#0066FF",
-    "nuumi_color_gold_dark": "#0052CC",
-    "nuumi_color_deep_blue": "#1A2B4C",
-    "nuumi_color_off_white": "#F0F4F8",
+    "nuumi_color_gold": "#07ADAB",
+    "nuumi_color_gold_dark": "#206E6C",
+    "nuumi_color_deep_blue": "#1C3333",
+    "nuumi_color_off_white": "#F8FAFC",
     "nuumi_announcement_enabled": true,
     "nuumi_announcement_text": "Free Shipping on Orders Over $75",
     "nuumi_announcement_link": "",
-    "nuumi_announcement_bg": "#0A1B32",
+    "nuumi_announcement_bg": "#1C3333",
     "nuumi_announcement_use_global": true,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -150,55 +150,55 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
+          "text": "#1c3333",
+          "button": "#07adab",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "secondary_button_label": "#206e6c",
+          "shadow": "#1c3333"
         }
       },
       "scheme-2": {
         "settings": {
-          "background": "#f3f3f3",
+          "background": "#f8fafc",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "text": "#332924",
+          "button": "#206e6c",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#583521",
+          "shadow": "#332924"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#1c3333",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#000000",
+          "button": "#07adab",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#1c3333"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
+          "background": "#332924",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#121212",
+          "button": "#ad4307",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#332924"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#206e6c",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#334fb4",
+          "button_label": "#206e6c",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#1c3333"
         }
       }
     }
@@ -356,10 +356,10 @@
       "badge_corner_radius": 40,
       "sale_badge_color_scheme": "scheme-5",
       "sold_out_badge_color_scheme": "scheme-3",
-      "nuumi_color_gold": "#0066FF",
-      "nuumi_color_gold_dark": "#0052CC",
-      "nuumi_color_deep_blue": "#1A2B4C",
-      "nuumi_color_off_white": "#F0F4F8",
+      "nuumi_color_gold": "#07ADAB",
+      "nuumi_color_gold_dark": "#206E6C",
+      "nuumi_color_deep_blue": "#1C3333",
+      "nuumi_color_off_white": "#F8FAFC",
       "nuumi_announcement_enabled": true,
       "nuumi_announcement_text": "Free Shipping on Orders Over $75",
       "nuumi_announcement_link": "",
