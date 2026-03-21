@@ -123,7 +123,7 @@
         "eyebrow": "Trust that carries through",
         "title": "Why Choose Nuumi?",
         "description": "<p>These proof points set up the promise behind every Nuumi formula: credible ingredients, dependable manufacturing, and reassurance close to the buying journey.</p>",
-        "padding_top": 60,
+        "padding_top": 16,
         "padding_bottom": 60
       }
     },
@@ -159,59 +159,11 @@
             "button_label": "Shop CalmiCollar",
             "link": "shopify://collections/all"
           }
-        },
-        "product_card_3": {
-          "type": "product_card",
-          "settings": {
-            "product": "calmicollar",
-            "badge": "Daily routine",
-            "title": "ByeBark",
-            "benefit": "Helps reduce reactive barking triggers.",
-            "price": "$39",
-            "summary": "Structured around cleaner daily adherence, so the benefit story feels practical rather than overpromised.",
-            "rating": 4.7,
-            "rating_count": 163,
-            "button_label": "Shop ByeBark",
-            "link": "shopify://collections/all"
-          }
-        },
-        "product_card_4": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "badge": "Joint care",
-            "title": "PawPoint",
-            "benefit": "Comfort and mobility support.",
-            "price": "$44",
-            "summary": "A mobility formula designed to support everyday comfort with clear ingredients and a routine that feels easy to keep.",
-            "rating": 4.9,
-            "rating_count": 141,
-            "button_label": "Shop PawPoint",
-            "link": "shopify://collections/all"
-          }
-        },
-        "product_card_5": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "badge": "Bundle value",
-            "title": "Wellness Bundle",
-            "benefit": "A full-headline routine in one bundle.",
-            "price": "$119",
-            "summary": "The highest-conviction offer on the page, combining multiple routines into one premium starter path for new customers.",
-            "rating": 5,
-            "rating_count": 96,
-            "button_label": "Shop the bundle",
-            "link": "shopify://collections/all"
-          }
         }
       },
       "block_order": [
         "product_card_1",
-        "product_card_2",
-        "product_card_3",
-        "product_card_4",
-        "product_card_5"
+        "product_card_2"
       ],
       "settings": {
         "eyebrow": "Launch collection",
