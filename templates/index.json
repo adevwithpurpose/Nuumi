@@ -135,13 +135,13 @@
           "settings": {
             "product": "50-shades-of-fun",
             "badge": "New launch",
-            "title": "EnerCanis",
-            "benefit": "Daily energy and vitality support.",
-            "price": "$34",
-            "summary": "A go-to daily formula for dogs that need steadier energy, cleaner ingredients, and a routine owners can actually keep up with.",
+            "title": "",
+            "benefit": "",
+            "price": "",
+            "summary": "",
             "rating": 4.9,
             "rating_count": 214,
-            "button_label": "Shop EnerCanis",
+            "button_label": "",
             "link": "shopify://collections/all"
           }
         },
