@@ -166,15 +166,14 @@
             data-cascade
           {% endif %}
         >
-          <div class="footer__nuumi-intro">
-            <p class="footer__nuumi-kicker">Stay in the routine</p>
-            <h2 class="footer__nuumi-heading">Get launch offers, expert guidance, and smarter daily pet wellness tips.</h2>
-          </div>
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
-              {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
-              {%- endif -%}
+              <div class="footer__nuumi-intro">
+                <p class="footer__nuumi-kicker">Stay in the routine</p>
+                {%- if section.settings.newsletter_heading != blank -%}
+                  <h2 class="footer__nuumi-heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+                {%- endif -%}
+              </div>
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
@@ -301,8 +300,6 @@
           </div>
         {%- endif -%}
       </div>
-    </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
