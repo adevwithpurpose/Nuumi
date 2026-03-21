@@ -3,15 +3,23 @@
 <section class="nuumi-trust-strip">
   <div class="nuumi-trust-strip__marquee">
     <div class="nuumi-trust-strip__content">
-      {%- for i in (1..2) -%}
-        {%- for block in section.blocks -%}
-          <div class="nuumi-trust-strip__item"{% if i == 1 %} {{ block.shopify_attributes }}{% endif %}>
-            {%- if block.settings.icon != 'none' -%}
-              {% render 'nuumi-icons', icon: block.settings.icon, class: 'nuumi-trust-strip__icon' %}
-            {%- endif -%}
-            <span class="nuumi-trust-strip__text">{{ block.settings.text | escape }}</span>
-          </div>
-        {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <div class="nuumi-trust-strip__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != 'none' -%}
+            {% render 'nuumi-icons', icon: block.settings.icon, class: 'nuumi-trust-strip__icon' %}
+          {%- endif -%}
+          <span class="nuumi-trust-strip__text">{{ block.settings.text | escape }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="nuumi-trust-strip__content" aria-hidden="true">
+      {%- for block in section.blocks -%}
+        <div class="nuumi-trust-strip__item">
+          {%- if block.settings.icon != 'none' -%}
+            {% render 'nuumi-icons', icon: block.settings.icon, class: 'nuumi-trust-strip__icon' %}
+          {%- endif -%}
+          <span class="nuumi-trust-strip__text">{{ block.settings.text | escape }}</span>
+        </div>
       {%- endfor -%}
     </div>
   </div>

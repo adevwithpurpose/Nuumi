@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   padding: 0;
-  background: #0b172a;
+  background: var(--nuumi-deep-blue);
   text-align: left;
 }
 
@@ -81,7 +81,7 @@ h1.nuumi-home-hero__title {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  color: #22C55E;
+  color: var(--nuumi-gold);
 }
 
 .nuumi-home-hero__cta {
@@ -118,7 +118,7 @@ h1.nuumi-home-hero__title {
 
 .nuumi-home-hero a.nuumi-button--gold {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif !important;
-  background-color: #0066FF !important;
+  background-color: var(--nuumi-gold) !important;
   color: #FFFFFF !important;
   border-radius: 50px !important;
   font-weight: 700 !important;
@@ -126,17 +126,17 @@ h1.nuumi-home-hero__title {
   font-size: 1.4rem !important;
   line-height: 1 !important;
   text-decoration: none !important;
-  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2) !important;
+  box-shadow: 0 8px 24px rgba(7, 173, 171, 0.22) !important;
   border: 0 !important;
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .nuumi-home-hero a.nuumi-button--gold:hover,
 .nuumi-home-hero a.nuumi-button--gold:focus-visible {
-  background-color: #0052cc !important;
+  background-color: var(--nuumi-gold-dark) !important;
   color: #FFFFFF !important;
   transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(0, 102, 255, 0.25) !important;
+  box-shadow: 0 12px 32px rgba(32, 110, 108, 0.28) !important;
 }
 
 .nuumi-home-hero a.nuumi-button--gold:focus-visible {
@@ -189,18 +189,19 @@ h1.nuumi-home-hero__title {
 
 .nuumi-trust-strip::before {
   left: 0;
-  background: linear-gradient(90deg, rgba(30, 58, 138, 1) 0%, rgba(30, 58, 138, 0) 100%);
+  background: linear-gradient(90deg, rgba(28, 51, 51, 1) 0%, rgba(28, 51, 51, 0) 100%);
 }
 
 .nuumi-trust-strip::after {
   right: 0;
-  background: linear-gradient(270deg, rgba(30, 58, 138, 1) 0%, rgba(30, 58, 138, 0) 100%);
+  background: linear-gradient(270deg, rgba(28, 51, 51, 1) 0%, rgba(28, 51, 51, 0) 100%);
 }
 
 .nuumi-trust-strip__marquee {
   display: flex;
   overflow: hidden;
   user-select: none;
+  gap: 0;
 }
 
 .nuumi-trust-strip__content {
@@ -210,6 +211,12 @@ h1.nuumi-home-hero__title {
   gap: 2.4rem;
   min-width: max-content;
   animation: nuumi-marquee 30s linear infinite;
+  padding-right: 2.4rem;
+  will-change: transform;
+}
+
+.nuumi-trust-strip__content[aria-hidden='true'] {
+  animation-delay: -15s;
 }
 
 .nuumi-trust-strip__item {
@@ -242,7 +249,7 @@ h1.nuumi-home-hero__title {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% - 2.4rem));
   }
 }
 
