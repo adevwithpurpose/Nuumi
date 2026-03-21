@@ -11,8 +11,6 @@
           <span class="nuumi-trust-strip__text">{{ block.settings.text | escape }}</span>
         </div>
       {%- endfor -%}
-    </div>
-    <div class="nuumi-trust-strip__content" aria-hidden="true">
       {%- for block in section.blocks -%}
         <div class="nuumi-trust-strip__item">
           {%- if block.settings.icon != 'none' -%}
