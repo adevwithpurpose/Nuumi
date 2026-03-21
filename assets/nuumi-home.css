@@ -106,7 +106,7 @@ h1.nuumi-home-hero__title {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(28, 51, 51, 0.9) 0%, rgba(28, 51, 51, 0.6) 40%, rgba(28, 51, 51, 0) 100%);
+  background: linear-gradient(90deg, rgba(var(--nuumi-earth-dark-rgb), 0.6) 0%, rgba(var(--nuumi-earth-dark-rgb), 0.3) 40%, rgba(var(--nuumi-earth-dark-rgb), 0) 100%);
 }
 
 .nuumi-home-hero__image {
@@ -162,7 +162,7 @@ h1.nuumi-home-hero__title {
   }
 
   .nuumi-home-hero__image-container::after {
-    background: linear-gradient(0deg, rgba(28, 51, 51, 0.94) 0%, rgba(28, 51, 51, 0.66) 42%, rgba(28, 51, 51, 0) 100%);
+    background: linear-gradient(0deg, rgba(var(--nuumi-earth-dark-rgb), 0.74) 0%, rgba(var(--nuumi-earth-dark-rgb), 0.46) 42%, rgba(var(--nuumi-earth-dark-rgb), 0) 100%);
   }
 }
 
@@ -220,8 +220,8 @@ h1.nuumi-home-hero__title {
   gap: 0.9rem;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
 }
 
 .nuumi-trust-strip__icon {
@@ -313,15 +313,15 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-proof-grid__card {
-  background: #FFFFFF !important;
-  border-radius: 20px !important;
-  padding: 3rem 2rem !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 3rem 0 !important;
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
   text-align: left !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: none !important;
 }
 
 .nuumi-proof-grid__icon-wrapper {
@@ -371,7 +371,7 @@ h1.nuumi-home-hero__title {
 
 .nuumi-featured-products__header {
   max-width: 78rem;
-  margin: 0 auto 2.4rem;
+  margin: 0 0 4.8rem;
 }
 
 .nuumi-featured-products__eyebrow {
@@ -417,13 +417,12 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-featured-products__card {
-  background: #FFFFFF !important;
-  border: 1px solid #E6E2DD !important;
-  border-radius: 16px !important;
-  overflow: hidden !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02) !important;
+  box-shadow: none !important;
 }
 
 .nuumi-featured-products__media {
@@ -431,7 +430,8 @@ h1.nuumi-home-hero__title {
   width: 100% !important;
   aspect-ratio: 4 / 3 !important;
   overflow: hidden !important;
-  background-color: #F9F8F6 !important;
+  background-color: var(--nuumi-earth-light) !important;
+  border-radius: 16px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -612,9 +612,9 @@ h1.nuumi-home-hero__title {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 3.2rem;
   align-items: stretch;
-  background: linear-gradient(180deg, #dcecf7 0%, #d5e8f5 100%);
-  border-radius: 3.2rem;
-  padding: 3.6rem;
+  background: var(--nuumi-earth-light);
+  border-radius: 1.6rem;
+  padding: 4.8rem;
   overflow: hidden;
 }
 
@@ -647,23 +647,19 @@ h1.nuumi-home-hero__title {
 }
 
 .nuumi-media-credibility__stats {
-  margin-top: 4rem;
+  margin-top: 4.8rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
+  gap: 3.2rem 2.4rem;
   max-width: 44rem;
-  border-top: 1px solid rgba(88, 53, 33, 0.12);
-  border-left: 1px solid rgba(88, 53, 33, 0.12);
 }
 
 .nuumi-media-credibility__stat {
-  padding: 2.4rem 1.6rem 2.2rem 0;
-  border-right: 1px solid rgba(88, 53, 33, 0.12);
-  border-bottom: 1px solid rgba(88, 53, 33, 0.12);
+  padding: 0;
 }
 
 .nuumi-media-credibility__stat:nth-child(2n) {
-  padding-left: 1.6rem;
+  padding-left: 0;
 }
 
 .nuumi-media-credibility__stat-value {
