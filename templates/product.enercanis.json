@@ -109,37 +109,6 @@
     },
     "agitation": {
       "type": "nuumi-pdp-agitation",
-      "blocks": {
-        "point_1": {
-          "type": "point",
-          "settings": {
-            "icon": "science",
-            "title": "Masking is not repairing",
-            "text": "Many digestive products support symptoms for a few days without rebuilding the compromised barrier underneath them."
-          }
-        },
-        "point_2": {
-          "type": "point",
-          "settings": {
-            "icon": "shield",
-            "title": "The cycle gets expensive fast",
-            "text": "When the lining stays damaged, families often end up in a loop of food changes, stool tests, and another short-lived fix."
-          }
-        },
-        "point_3": {
-          "type": "point",
-          "settings": {
-            "icon": "heart",
-            "title": "Leakage shows up beyond the gut",
-            "text": "Once toxins and irritants keep slipping through, itching, immune dysfunction, and energy issues can start riding along with the digestive mess."
-          }
-        }
-      },
-      "block_order": [
-        "point_1",
-        "point_2",
-        "point_3"
-      ],
       "settings": {
         "bg_color": "#f7fbfd",
         "eyebrow": "Why the usual fixes keep failing",
@@ -149,163 +118,6 @@
         "analogy_text": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back into the house. EnerCanis is designed to help rebuild the screen instead of endlessly cleaning up the mess.</p>",
         "image": "shopify://shop_images/Gemini_Generated_Image_ym5vrzym5vrzym5v.png",
         "layout": "diagram_right"
-      }
-    },
-    "efficacy_grid": {
-      "type": "nuumi-pdp-efficacy-grid",
-      "blocks": {
-        "ingredient_1": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1761409135624_glut.webp",
-            "icon": "science",
-            "tag": "Barrier fuel",
-            "title": "L-Glutamine",
-            "benefit": "Primary fuel for intestinal cells.",
-            "text": "Supports the gut lining at the cellular level so the damaged barrier has what it needs to begin rebuilding."
-          }
-        },
-        "ingredient_2": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759680646330_Hydrolyzed_Fish_Collagen.webp",
-            "icon": "shield",
-            "tag": "Rebuild support",
-            "title": "Hydrolyzed Fish Collagen",
-            "benefit": "Rebuilds connective tissue.",
-            "text": "Helps restore the structural support layer that gives the intestinal wall more integrity under stress."
-          }
-        },
-        "ingredient_3": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759681033480_Palmitoylethanolamide_PEA.webp",
-            "icon": "heart",
-            "tag": "Inflammation control",
-            "title": "PEA",
-            "benefit": "Reduces chronic inflammation.",
-            "text": "Helps calm the chronic inflammatory signaling that can keep the gut, skin, and immune system reactive."
-          }
-        },
-        "ingredient_4": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759680555818_7_Strain_Probiotic_Blend.webp",
-            "icon": "leaf",
-            "tag": "Microbiome support",
-            "title": "Probiotic Blend",
-            "benefit": "Lactobacillus and Bifidobacterium",
-            "text": "produce compounds signaling tight junctions to reassemble."
-          }
-        },
-        "ingredient_5": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759681233205_turmeric.webp",
-            "icon": "science",
-            "tag": "Barrier support",
-            "title": "Turmeric Root Extract",
-            "benefit": "Supports mucosal integrity.",
-            "text": "Used to help reinforce the protective lining of the gut when the mucosa has been under prolonged stress."
-          }
-        },
-        "ingredient_6": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759681508514_Chicory_Root_Inulin.webp",
-            "icon": "leaf",
-            "tag": "Microbiome support",
-            "title": "Chicory Root Inulin",
-            "benefit": "Feeds beneficial bacteria.",
-            "text": "Prebiotic fiber that feeds beneficial bacteria and increases production of gut-healing compounds."
-          }
-        },
-        "ingredient_7": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759681844283_beef_liver.webp",
-            "icon": "shield",
-            "tag": "Cellular repair",
-            "title": "Beef Liver Powder",
-            "benefit": "Provides vitamins",
-            "text": "Provides B vitamins, iron, and vitamin A for cellular repair and palatability."
-          }
-        },
-        "ingredient_8": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759682066429_Kelp_Powder.webp",
-            "icon": "heart",
-            "tag": "Soothing support",
-            "title": "Kelp Powder",
-            "benefit": "Supporting thyroid",
-            "text": "Trace minerals and iodine supporting thyroid function and gut motility."
-          }
-        },
-        "ingredient_9": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759682093534_Flax_Seed_Powder.webp",
-            "icon": "science",
-            "tag": "Inflammatory support",
-            "title": "Flax Seed Powder",
-            "benefit": "Omega-3",
-            "text": "Omega-3 fatty acids providing anti-throughout the body."
-          }
-        },
-        "ingredient_10": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759682590634_Sodium_Copper_Chlorophyllin.webp",
-            "icon": "leaf",
-            "tag": "Antioxidant",
-            "title": "Sodium Copper Chlorophyllin",
-            "benefit": "Reduce gas odor",
-            "text": "Internal deodorizer with antioxidant properties that reduce gas odor."
-          }
-        },
-        "ingredient_11": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759682809800_Chlorella.webp",
-            "icon": "shield",
-            "tag": "Natural detoxification",
-            "title": "Chlorella Powder",
-            "benefit": "Binds circulating toxins",
-            "text": "Binds circulating toxins while the barrier heals, supporting natural detoxification."
-          }
-        },
-        "ingredient_12": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/1759683010520_fennel_seed.webp",
-            "icon": "science",
-            "tag": "Anti-inflammatory",
-            "title": "Fennel Seed Powder",
-            "benefit": "Reduces gas",
-            "text": "Carminative that reduces gas and provides mild anti-inflammatory effects."
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_1",
-        "ingredient_2",
-        "ingredient_3",
-        "ingredient_4",
-        "ingredient_5",
-        "ingredient_6",
-        "ingredient_7",
-        "ingredient_8",
-        "ingredient_9",
-        "ingredient_10",
-        "ingredient_11",
-        "ingredient_12"
-      ],
-      "settings": {
-        "bg_color": "#ffffff",
-        "eyebrow": "The 12-ingredient efficacy grid",
-        "title": "Every ingredient has a specific job in the barrier-repair chain.",
-        "text": "<p>EnerCanis is structured around barrier fuel, connective-tissue rebuilding, inflammatory control, and microbiome support so the protocol feels clinically coherent from first dose to full transformation window.</p>"
       }
     },
     "timeline": {
@@ -354,7 +166,7 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1761409135624_glut.webp",
+            "image": "shopify://shop_images/Gemini_Generated_Image_idnhx3idnhx3idnh.png",
             "step_label": "Step 1",
             "title": "Add to food once daily",
             "text": "Add the recommended dose of EnerCanis directly into your dog's meal once per day."
@@ -363,7 +175,7 @@
         "step_2": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1761649028887_Dog_and_bowl_2.webp",
+            "image": "shopify://shop_images/Gemini_Generated_Image_cieny1cieny1cien.png",
             "step_label": "Step 2",
             "title": "Mix thoroughly",
             "text": "Mix thoroughly with food so your dog gets the full serving with every meal."
@@ -372,7 +184,7 @@
         "step_3": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1761649029203_happy_dog_6.webp",
+            "image": "shopify://shop_images/Gemini_Generated_Image_cieny1cieny1cien_1.png",
             "step_label": "Step 3",
             "title": "Stay consistent for 8-12 weeks",
             "text": "Consistency is key. Most dogs show early signs first, then full chronic-pattern improvement over time."
@@ -523,7 +335,7 @@
       "type": "nuumi-pdp-expert",
       "settings": {
         "bg_color": "#f7fbfd",
-        "image": "shopify://shop_images/1763505124773_sara_r.webp",
+        "image": "shopify://shop_images/Gemini_Generated_Image_nx3cajnx3cajnx3c.png",
         "badge_text": "Veterinary perspective",
         "quote": "When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing.",
         "name": "Dr. Elena Morris",
@@ -660,7 +472,6 @@
   "order": [
     "main",
     "agitation",
-    "efficacy_grid",
     "timeline",
     "how_to_use",
     "transparency",
