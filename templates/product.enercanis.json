@@ -15,6 +15,7 @@
         "support_1": {
           "type": "support_point",
           "settings": {
+            "image": "shopify://shop_images/Untitled_Instagram_Post_1.png",
             "icon": "science",
             "title": "Targets the gut lining directly",
             "text": "Designed to feed and rebuild the damaged intestinal wall instead of just covering up the symptom of the week."
@@ -23,6 +24,7 @@
         "support_2": {
           "type": "support_point",
           "settings": {
+            "image": "shopify://shop_images/Untitled_Instagram_Post_4.png",
             "icon": "shield",
             "title": "Built for chronic diarrhea and itching cycles",
             "text": "Made for the dogs who have already cycled through premium food, probiotics, and temporary fixes without lasting relief."
@@ -31,6 +33,7 @@
         "support_3": {
           "type": "support_point",
           "settings": {
+            "image": "shopify://shop_images/Untitled_Instagram_Post_2.png",
             "icon": "heart",
             "title": "Structured for the full 8-12 week transformation",
             "text": "The page is built to encourage a long enough protocol for the gut barrier, skin, and immune pattern to visibly shift."
@@ -128,36 +131,162 @@
           }
         }
       },
-      "block_order": ["point_1", "point_2", "point_3"],
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ],
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "eyebrow": "Why the usual fixes keep failing",
         "title": "Premium food and store-bought probiotics may calm the symptom, but they rarely repair the damaged gut barrier underneath it.",
         "text": "<p>When the intestinal lining is damaged, it behaves like a torn screen door. Nutrients struggle to stay where they belong while toxins, allergens, and inflammatory waste keep leaking into the bloodstream. That is why the diarrhea, itching, and vet visits never really feel finished.</p>",
         "analogy_title": "Think of it like a torn screen door.",
         "analogy_text": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back into the house. EnerCanis is designed to help rebuild the screen instead of endlessly cleaning up the mess.</p>",
+        "image": "shopify://shop_images/Gemini_Generated_Image_ym5vrzym5vrzym5v.png",
         "layout": "diagram_right"
       }
     },
     "efficacy_grid": {
       "type": "nuumi-pdp-efficacy-grid",
       "blocks": {
-        "ingredient_1": { "type": "ingredient", "settings": { "icon": "science", "tag": "Barrier fuel", "title": "L-Glutamine", "benefit": "Primary fuel for intestinal cells.", "text": "Supports the gut lining at the cellular level so the damaged barrier has what it needs to begin rebuilding." } },
-        "ingredient_2": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Rebuild support", "title": "Hydrolyzed Fish Collagen", "benefit": "Rebuilds connective tissue.", "text": "Helps restore the structural support layer that gives the intestinal wall more integrity under stress." } },
-        "ingredient_3": { "type": "ingredient", "settings": { "icon": "heart", "tag": "Inflammation control", "title": "PEA", "benefit": "Reduces chronic inflammation.", "text": "Helps calm the chronic inflammatory signaling that can keep the gut, skin, and immune system reactive." } },
-        "ingredient_4": { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Microbiome support", "title": "Prebiotic Fiber", "benefit": "Feeds beneficial bacteria.", "text": "Gives the good bacteria a better environment so stool consistency and digestive calm can stabilize more easily." } },
-        "ingredient_5": { "type": "ingredient", "settings": { "icon": "science", "tag": "Barrier support", "title": "Zinc Carnosine", "benefit": "Supports mucosal integrity.", "text": "Used to help reinforce the protective lining of the gut when the mucosa has been under prolonged stress." } },
-        "ingredient_6": { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Microbiome support", "title": "Inulin", "benefit": "Feeds beneficial bacteria.", "text": "Helps nourish the bacteria that support stool consistency, fermentation balance, and overall digestive calm." } },
-        "ingredient_7": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Inflammation support", "title": "Quercetin", "benefit": "Helps calm immune reactivity.", "text": "Included to support a calmer inflammatory response when gut irritation keeps showing up in the skin and immune system." } },
-        "ingredient_8": { "type": "ingredient", "settings": { "icon": "heart", "tag": "Soothing support", "title": "Aloe Vera", "benefit": "Helps soothe irritated tissue.", "text": "Supports a gentler digestive environment for dogs whose gut lining has been repeatedly inflamed." } },
-        "ingredient_9": { "type": "ingredient", "settings": { "icon": "science", "tag": "Digestive support", "title": "Digestive Enzyme Blend", "benefit": "Helps break food down more efficiently.", "text": "Supports smoother digestion so the gut is not constantly fighting through poorly processed meals." } },
-        "ingredient_10": { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Repair support", "title": "Butyrate Support", "benefit": "Supports healthy colon cells.", "text": "Helps nourish the lower-gut lining where chronic stool instability often keeps repeating." } },
-        "ingredient_11": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Immune balance", "title": "Postbiotic Complex", "benefit": "Supports a healthier gut-immune conversation.", "text": "Helps the gut barrier communicate more calmly with the immune system instead of staying in constant defense mode." } },
-        "ingredient_12": { "type": "ingredient", "settings": { "icon": "science", "tag": "Absorption support", "title": "Bioactive Peptide Matrix", "benefit": "Helps deliver nutrients to the tissue that needs them most.", "text": "Rounds out the formula with targeted support for nutrient delivery and long-term barrier resilience." } }
+        "ingredient_1": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "science",
+            "tag": "Barrier fuel",
+            "title": "L-Glutamine",
+            "benefit": "Primary fuel for intestinal cells.",
+            "text": "Supports the gut lining at the cellular level so the damaged barrier has what it needs to begin rebuilding."
+          }
+        },
+        "ingredient_2": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shield",
+            "tag": "Rebuild support",
+            "title": "Hydrolyzed Fish Collagen",
+            "benefit": "Rebuilds connective tissue.",
+            "text": "Helps restore the structural support layer that gives the intestinal wall more integrity under stress."
+          }
+        },
+        "ingredient_3": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "heart",
+            "tag": "Inflammation control",
+            "title": "PEA",
+            "benefit": "Reduces chronic inflammation.",
+            "text": "Helps calm the chronic inflammatory signaling that can keep the gut, skin, and immune system reactive."
+          }
+        },
+        "ingredient_4": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "leaf",
+            "tag": "Microbiome support",
+            "title": "Prebiotic Fiber",
+            "benefit": "Feeds beneficial bacteria.",
+            "text": "Gives the good bacteria a better environment so stool consistency and digestive calm can stabilize more easily."
+          }
+        },
+        "ingredient_5": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "science",
+            "tag": "Barrier support",
+            "title": "Zinc Carnosine",
+            "benefit": "Supports mucosal integrity.",
+            "text": "Used to help reinforce the protective lining of the gut when the mucosa has been under prolonged stress."
+          }
+        },
+        "ingredient_6": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "leaf",
+            "tag": "Microbiome support",
+            "title": "Inulin",
+            "benefit": "Feeds beneficial bacteria.",
+            "text": "Helps nourish the bacteria that support stool consistency, fermentation balance, and overall digestive calm."
+          }
+        },
+        "ingredient_7": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shield",
+            "tag": "Inflammation support",
+            "title": "Quercetin",
+            "benefit": "Helps calm immune reactivity.",
+            "text": "Included to support a calmer inflammatory response when gut irritation keeps showing up in the skin and immune system."
+          }
+        },
+        "ingredient_8": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "heart",
+            "tag": "Soothing support",
+            "title": "Aloe Vera",
+            "benefit": "Helps soothe irritated tissue.",
+            "text": "Supports a gentler digestive environment for dogs whose gut lining has been repeatedly inflamed."
+          }
+        },
+        "ingredient_9": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "science",
+            "tag": "Digestive support",
+            "title": "Digestive Enzyme Blend",
+            "benefit": "Helps break food down more efficiently.",
+            "text": "Supports smoother digestion so the gut is not constantly fighting through poorly processed meals."
+          }
+        },
+        "ingredient_10": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "leaf",
+            "tag": "Repair support",
+            "title": "Butyrate Support",
+            "benefit": "Supports healthy colon cells.",
+            "text": "Helps nourish the lower-gut lining where chronic stool instability often keeps repeating."
+          }
+        },
+        "ingredient_11": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shield",
+            "tag": "Immune balance",
+            "title": "Postbiotic Complex",
+            "benefit": "Supports a healthier gut-immune conversation.",
+            "text": "Helps the gut barrier communicate more calmly with the immune system instead of staying in constant defense mode."
+          }
+        },
+        "ingredient_12": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "science",
+            "tag": "Absorption support",
+            "title": "Bioactive Peptide Matrix",
+            "benefit": "Helps deliver nutrients to the tissue that needs them most.",
+            "text": "Rounds out the formula with targeted support for nutrient delivery and long-term barrier resilience."
+          }
+        }
       },
-      "block_order": ["ingredient_1", "ingredient_2", "ingredient_3", "ingredient_4", "ingredient_5", "ingredient_6", "ingredient_7", "ingredient_8", "ingredient_9", "ingredient_10", "ingredient_11", "ingredient_12"],
+      "block_order": [
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3",
+        "ingredient_4",
+        "ingredient_5",
+        "ingredient_6",
+        "ingredient_7",
+        "ingredient_8",
+        "ingredient_9",
+        "ingredient_10",
+        "ingredient_11",
+        "ingredient_12"
+      ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "eyebrow": "The 12-ingredient efficacy grid",
         "title": "Every ingredient has a specific job in the barrier-repair chain.",
         "text": "<p>EnerCanis is structured around barrier fuel, connective-tissue rebuilding, inflammatory control, and microbiome support so the protocol feels clinically coherent from first dose to full transformation window.</p>"
@@ -187,13 +316,17 @@
           "settings": {
             "phase": "Weeks 8-12",
             "title": "A visible shift in chronic patterns",
-            "text": "By the full protocol window, the goal is that the old cycle of diarrhea, itching, and repeat vet visits no longer feels like your normal." 
+            "text": "By the full protocol window, the goal is that the old cycle of diarrhea, itching, and repeat vet visits no longer feels like your normal."
           }
         }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
-        "bg_color": "#EEF7F9",
+        "bg_color": "#eef7f9",
         "eyebrow": "What improvement usually looks like",
         "title": "A timeline built around visible, believable progress instead of miracle promises.",
         "text": "<p>The protocol is strongest when it sets honest expectations: first the gut settles, then the skin and immune stress begin backing off, and finally the longer chronic patterns start losing momentum.</p>"
@@ -202,17 +335,67 @@
     "transparency": {
       "type": "nuumi-pdp-transparency-banner",
       "blocks": {
-        "item_1": { "type": "item", "settings": { "icon": "leaf", "text": "100% Vegan" } },
-        "item_2": { "type": "item", "settings": { "icon": "heart", "text": "Keto-Friendly" } },
-        "item_3": { "type": "item", "settings": { "icon": "star", "text": "BBB A+ Rating" } },
-        "item_4": { "type": "item", "settings": { "icon": "shield", "text": "GMP Certified Facility" } },
-        "item_5": { "type": "item", "settings": { "icon": "science", "text": "No GMOs" } },
-        "item_6": { "type": "item", "settings": { "icon": "check_mark", "text": "BPA Free" } },
-        "item_7": { "type": "item", "settings": { "icon": "science", "text": "3rd Party Lab Tested" } }
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "text": "100% Vegan"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "Keto-Friendly"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "text": "BBB A+ Rating"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "GMP Certified Facility"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "No GMOs"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "BPA Free"
+          }
+        },
+        "item_7": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "3rd Party Lab Tested"
+          }
+        }
       },
-      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5", "item_6", "item_7"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7"
+      ],
       "settings": {
-        "bg_color": "#10243A",
+        "bg_color": "#10243a",
         "eyebrow": "Trust and transparency",
         "title": "Everything a desperate pet parent wants to verify before buying."
       }
@@ -220,13 +403,47 @@
     "social_proof": {
       "type": "nuumi-pdp-social-proof",
       "blocks": {
-        "review_1": { "type": "review", "settings": { "rating": 5, "badge": "Verified Buyer", "quote": "We tried prescription food, powders, and rotating probiotics. EnerCanis was the first thing that made his stool look normal and his skin stop flaring every few days.", "highlight": "Visible change by week two.", "name": "Melissa R.", "meta": "English bulldog parent" } },
-        "review_2": { "type": "review", "settings": { "rating": 5, "badge": "Photo Review", "quote": "The biggest difference was how quickly the gut chaos settled. Once that happened, the itching and redness also started improving instead of staying in a constant cycle.", "highlight": "Less itching, better stools.", "name": "Andre T.", "meta": "Rescue mix parent" } },
-        "review_3": { "type": "review", "settings": { "rating": 5, "badge": "Most Helpful", "quote": "The 3-bottle plan made the difference for us. One bottle was encouraging, but by the full supply window it really felt like his old chronic pattern had broken.", "highlight": "3-bottle protocol felt worth it.", "name": "Jasmine L.", "meta": "Senior dog parent" } }
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Verified Buyer",
+            "quote": "We tried prescription food, powders, and rotating probiotics. EnerCanis was the first thing that made his stool look normal and his skin stop flaring every few days.",
+            "highlight": "Visible change by week two.",
+            "name": "Melissa R.",
+            "meta": "English bulldog parent"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Photo Review",
+            "quote": "The biggest difference was how quickly the gut chaos settled. Once that happened, the itching and redness also started improving instead of staying in a constant cycle.",
+            "highlight": "Less itching, better stools.",
+            "name": "Andre T.",
+            "meta": "Rescue mix parent"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Most Helpful",
+            "quote": "The 3-bottle plan made the difference for us. One bottle was encouraging, but by the full supply window it really felt like his old chronic pattern had broken.",
+            "highlight": "3-bottle protocol felt worth it.",
+            "name": "Jasmine L.",
+            "meta": "Senior dog parent"
+          }
+        }
       },
-      "block_order": ["review_1", "review_2", "review_3"],
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "eyebrow": "Real family proof",
         "title": "The reviews all sound the same: finally, the stool settled and the itching started backing off.",
         "text": "<p>These cards are written to feel like the relief pet parents are actually chasing: less mess, less scratching, and fewer desperate swings from one failed fix to the next.</p>"
@@ -235,7 +452,7 @@
     "expert": {
       "type": "nuumi-pdp-expert",
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "badge_text": "Veterinary perspective",
         "quote": "When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing.",
         "name": "Dr. Elena Morris",
@@ -274,16 +491,21 @@
           }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "title": "EnerCanis FAQ"
       }
     },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
-        "bg_color": "#10243A",
+        "bg_color": "#10243a",
         "icon": "shield",
         "title": "90-Day Worry-Free Transformation Guarantee",
         "text": "<p>If your dog does not show visible improvement after the full supply, we will refund your purchase. Simple as that.</p>"
@@ -294,10 +516,12 @@
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
