@@ -36,10 +36,6 @@
             "heading": "Choose your supply"
           }
         },
-        "purchase_mode": {
-          "type": "purchase_mode",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -53,7 +49,6 @@
         "price",
         "bullets",
         "quantity_packs",
-        "purchase_mode",
         "buy_buttons"
       ],
       "settings": {
