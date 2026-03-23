@@ -1,0 +1,166 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-final-cta section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width page-width--narrow">
+    <div class="nuumi-pdp-final-cta__card">
+      <div class="nuumi-pdp-final-cta__content">
+        {%- if section.settings.badge_text != blank -%}
+          <span class="nuumi-pdp-final-cta__badge">{{ section.settings.badge_text }}</span>
+        {%- endif -%}
+
+        {%- if section.settings.title != blank -%}
+          <h2 class="nuumi-pdp-final-cta__title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.text != blank -%}
+          <div class="nuumi-pdp-final-cta__text rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.guarantee_points != blank -%}
+          <div class="nuumi-pdp-final-cta__points">
+            {%- for point in section.settings.guarantee_points -%}
+              <div class="nuumi-pdp-final-cta__point">
+                <svg class="nuumi-pdp-final-cta__check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>{{ point }}</span>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        <div class="nuumi-pdp-final-cta__actions">
+          {%- if section.settings.cta_label != blank -%}
+            <a href="{{ section.settings.cta_link }}" class="nuumi-pdp-final-cta__button button">
+              {{ section.settings.cta_label }}
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.show_guarantee_badge -%}
+            <div class="nuumi-pdp-final-cta__guarantee">
+              {%- if section.settings.guarantee_image != blank -%}
+                {{ section.settings.guarantee_image | image_url: width: 200 | image_tag:
+                  loading: 'lazy',
+                  class: 'nuumi-pdp-final-cta__guarantee-image',
+                  sizes: '120px',
+                  widths: '100, 150, 200'
+                }}
+              {%- else -%}
+                <div class="nuumi-pdp-final-cta__guarantee-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+              {%- endif -%}
+              <div class="nuumi-pdp-final-cta__guarantee-text">
+                {%- if section.settings.guarantee_title != blank -%}
+                  <strong>{{ section.settings.guarantee_title }}</strong>
+                {%- endif -%}
+                {%- if section.settings.guarantee_text != blank -%}
+                  <span>{{ section.settings.guarantee_text }}</span>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+
+      {%- if section.settings.image != blank -%}
+        <div class="nuumi-pdp-final-cta__image-wrapper">
+          {{ section.settings.image | image_url: width: 800 | image_tag:
+            loading: 'lazy',
+            class: 'nuumi-pdp-final-cta__image',
+            sizes: '(min-width: 990px) 400px, 100vw',
+            widths: '400, 600, 800'
+          }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Final CTA",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f7fbfd"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "90-Day Guarantee"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Try It For 90 Days And Witness Your Dog's Transformation... Guaranteed!"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description",
+      "default": "<p>We stand behind our formula and don't want you to spend a dime unless you see visible improvements in your dog's health.</p><p>That's why every bottle of EnerCanis comes with our 90-Day Transformation Guarantee.</p><p>If after using the full supply your dog hasn't shown meaningful improvement, just let us know and we'll refund your purchase.</p>"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_points",
+      "label": "Guarantee Points (comma separated)",
+      "default": "Free US shipping, 90-day money back guarantee, Secure checkout"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Button Label",
+      "default": "Start Your Dog's 90-Day Reset"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link",
+      "default": "/cart"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_guarantee_badge",
+      "label": "Show Guarantee Badge",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "guarantee_image",
+      "label": "Guarantee Badge Image"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_title",
+      "label": "Guarantee Title",
+      "default": "90-Day Worry-Free Guarantee"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee Text",
+      "default": "Full refund if not satisfied"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Final CTA"
+    }
+  ]
+}
+{% endschema %}
