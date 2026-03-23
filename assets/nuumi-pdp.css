@@ -3782,55 +3782,7 @@
   }
 }
 
-.nuumi-pdp-expert__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.2rem;
-  align-items: center;
-}
-
-@media screen and (min-width: 990px) {
-  .nuumi-pdp-expert__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 4.8rem;
-  }
-}
-
-.nuumi-pdp-expert__image-wrapper {
-  border-radius: 2.4rem;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  box-shadow: 0 12px 32px rgba(16, 36, 58, 0.08);
-}
-
-.nuumi-pdp-expert__image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-
-.nuumi-pdp-expert__content {
-  display: flex;
-  flex-direction: column;
-  padding: 3.2rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 2.4rem;
-  box-shadow: 0 12px 32px rgba(16, 36, 58, 0.04);
-}
-
-@media screen and (min-width: 990px) {
-  .nuumi-pdp-expert__content {
-    padding: 4.8rem;
-  }
-}
-
-.nuumi-pdp-expert__badge {
-  font-family: var(--font-body-family);
-  font-size: 1.1rem;
+ze: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -3882,4 +3834,154 @@
   font-size: 1.4rem;
   color: #64748b;
   line-height: 1.2;
+}
+
+
+
+/* Expert Section - Editorial Layout v2 */
+.nuumi-pdp-expert-v2 {
+  padding: 6.4rem 0;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-pdp-expert-v2 {
+    padding: 9.6rem 0;
+  }
+}
+
+.nuumi-pdp-expert-v2__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-pdp-expert-v2__grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 8rem;
+  }
+}
+
+.nuumi-pdp-expert-v2__image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  /* Very soft sophisticated shadow, not a boxy drop shadow */
+  box-shadow: 0 20px 48px rgba(16, 36, 58, 0.08);
+}
+
+.nuumi-pdp-expert-v2__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Give it an elegant portrait ratio */
+  aspect-ratio: 4 / 5;
+}
+
+.nuumi-pdp-expert-v2__text-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-pdp-expert-v2__text-column {
+    padding-right: 4rem;
+  }
+}
+
+.nuumi-pdp-expert-v2__quote-icon {
+  color: var(--nuumi-gold, #cfa861);
+  margin-bottom: 2.4rem;
+  opacity: 0.8;
+}
+
+.nuumi-pdp-expert-v2__eyebrow {
+  font-family: var(--font-body-family);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #0f766e;
+  margin-bottom: 1.6rem;
+}
+
+.nuumi-pdp-expert-v2__heading {
+  margin: 0 0 2.4rem;
+  color: var(--nuumi-deep-blue);
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.2rem, 4vw, 4.4rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nuumi-pdp-expert-v2__quote {
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.4rem, 3.2vw, 3.8rem);
+  color: #334155;
+  margin: 0 0 4.8rem 0;
+  line-height: 1.35;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.nuumi-pdp-expert-v2__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid rgba(16, 36, 58, 0.08);
+}
+
+.nuumi-pdp-expert-v2__author-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nuumi-pdp-expert-v2__name {
+  font-family: var(--font-body-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nuumi-deep-blue);
+  line-height: 1.2;
+}
+
+.nuumi-pdp-expert-v2__credentials {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.nuumi-pdp-expert-v2__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.6rem;
+  border-radius: 999px;
+  background: rgba(16, 36, 58, 0.04);
+  color: var(--nuumi-deep-blue);
+  font-family: var(--font-body-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nuumi-pdp-expert-v2__social:hover {
+  background: rgba(16, 36, 58, 0.08);
+  transform: translateY(-1px);
+}
+
+.nuumi-pdp-expert-v2__social svg {
+  width: 1.8rem;
+  height: 1.8rem;
 }

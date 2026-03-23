@@ -1,40 +1,65 @@
 {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
 
-<div class="nuumi-pdp-expert section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+<div class="nuumi-pdp-expert-v2 section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
   <div class="page-width">
-    <div class="nuumi-pdp-expert__grid">
-      <div class="nuumi-pdp-expert__image-wrapper">
-        {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 1000 | image_tag:
-            loading: 'lazy',
-            class: 'nuumi-pdp-expert__image',
-            sizes: '(min-width: 990px) 50vw, 100vw',
-            widths: '375, 550, 750, 1000'
-          }}
-        {%- else -%}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-expert__image' }}
-        {%- endif -%}
-      </div>
-      <div class="nuumi-pdp-expert__content">
-        {%- if section.settings.badge_text != blank -%}
-          <div class="nuumi-pdp-expert__badge">{{ section.settings.badge_text }}</div>
-        {%- endif -%}
-        {%- if section.settings.heading != blank -%}
-          <h2 class="nuumi-pdp-expert__heading">{{ section.settings.heading }}</h2>
-        {%- endif -%}
-        
-        {%- if section.settings.quote != blank -%}
-          <blockquote class="nuumi-pdp-expert__quote">"{{ section.settings.quote }}"</blockquote>
-        {%- endif -%}
-        
-        <div class="nuumi-pdp-expert__author">
-          {%- if section.settings.name != blank -%}
-            <span class="nuumi-pdp-expert__name">{{ section.settings.name }}</span>
-          {%- endif -%}
-          {%- if section.settings.credentials != blank -%}
-            <span class="nuumi-pdp-expert__credentials">{{ section.settings.credentials }}</span>
+    <div class="nuumi-pdp-expert-v2__grid">
+      
+      <div class="nuumi-pdp-expert-v2__media-column">
+        <div class="nuumi-pdp-expert-v2__image-wrapper">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 1200 | image_tag:
+              loading: 'lazy',
+              class: 'nuumi-pdp-expert-v2__image',
+              sizes: '(min-width: 990px) 50vw, 100vw',
+              widths: '375, 550, 750, 1000, 1200'
+            }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-expert-v2__image' }}
           {%- endif -%}
         </div>
+      </div>
+
+      <div class="nuumi-pdp-expert-v2__text-column">
+        <div class="nuumi-pdp-expert-v2__quote-icon">
+          <svg width="44" height="34" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6288 34C10.027 34 7.02553 32.7303 4.62444 30.1908C2.22335 27.6513 1.02281 24.5028 1.02281 20.7454C1.02281 16.4891 2.37341 12.3323 5.07461 8.27488C7.87588 4.11796 11.5276 1.36018 16.0298 0L18.6308 3.51139C14.7291 5.918 11.6778 8.87595 9.47683 12.3852C7.37593 15.7951 6.32549 19.1054 6.32549 22.316C7.62605 21.0125 9.22674 20.3607 11.1275 20.3607C14.1288 20.3607 16.58 21.3634 18.4808 23.3688C20.3816 25.274 21.332 27.5303 21.332 30.1379C21.332 32.7455 20.3816 35.0018 18.4808 36.9071C16.58 38.8123 14.1288 39.7649 11.1275 39.7649L13.6288 34ZM36.1384 34C32.5366 34 29.5352 32.7303 27.1341 30.1908C24.733 27.6513 23.5324 24.5028 23.5324 20.7454C23.5324 16.4891 24.883 12.3323 27.5842 8.27488C30.3855 4.11796 34.0372 1.36018 38.5394 0L41.1404 3.51139C37.2387 5.918 34.1874 8.87595 31.9864 12.3852C29.8855 15.7951 28.8351 19.1054 28.8351 22.316C30.1357 21.0125 31.7364 20.3607 33.6371 20.3607C36.6385 20.3607 39.0896 21.3634 40.9904 23.3688C42.8912 25.274 43.8416 27.5303 43.8416 30.1379C43.8416 32.7455 42.8912 35.0018 40.9904 36.9071C39.0896 38.8123 36.6385 39.7649 33.6371 39.7649L36.1384 34Z" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <div class="nuumi-pdp-expert-v2__content-body">
+          {%- if section.settings.badge_text != blank -%}
+            <div class="nuumi-pdp-expert-v2__eyebrow">{{ section.settings.badge_text }}</div>
+          {%- endif -%}
+          
+          {%- if section.settings.heading != blank -%}
+            <h2 class="nuumi-pdp-expert-v2__heading">{{ section.settings.heading }}</h2>
+          {%- endif -%}
+          
+          {%- if section.settings.quote != blank -%}
+            <div class="nuumi-pdp-expert-v2__quote">{{ section.settings.quote }}</div>
+          {%- endif -%}
+        </div>
+        
+        <div class="nuumi-pdp-expert-v2__footer">
+          <div class="nuumi-pdp-expert-v2__author-stack">
+            {%- if section.settings.name != blank -%}
+              <span class="nuumi-pdp-expert-v2__name">{{ section.settings.name }}</span>
+            {%- endif -%}
+            {%- if section.settings.credentials != blank -%}
+              <span class="nuumi-pdp-expert-v2__credentials">{{ section.settings.credentials }}</span>
+            {%- endif -%}
+          </div>
+
+          {%- if section.settings.instagram_url != blank -%}
+            <a href="{{ section.settings.instagram_url }}" target="_blank" class="nuumi-pdp-expert-v2__social" aria-label="Follow on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C9.284 2 8.943 2.012 7.864 2.061C6.788 2.11 6.053 2.28 5.414 2.528C4.755 2.784 4.194 3.125 3.633 3.686C3.072 4.247 2.731 4.808 2.475 5.467C2.227 6.106 2.057 6.841 2.008 7.917C1.959 8.996 1.947 9.337 1.947 12.053C1.947 14.769 1.959 15.11 2.008 16.189C2.057 17.265 2.227 18 2.475 18.639C2.731 19.298 3.072 19.859 3.633 20.42C4.194 20.981 4.755 21.322 5.414 21.578C6.053 21.826 6.788 21.996 7.864 22.045C8.943 22.094 9.284 22.106 12 22.106C14.716 22.106 15.057 22.094 16.136 22.045C17.212 21.996 17.947 21.826 18.586 21.578C19.245 21.322 19.806 20.981 20.367 20.42C20.928 19.859 21.269 19.298 21.525 18.639C21.773 18 21.943 17.265 21.992 16.189C22.041 15.11 22.053 14.769 22.053 12.053C22.053 9.337 22.041 8.996 21.992 7.917C21.943 6.841 21.773 6.106 21.525 5.467C21.269 4.808 20.928 4.247 20.367 3.686C19.806 3.125 19.245 2.784 18.586 2.528C17.947 2.28 17.212 2.11 16.136 2.061C15.057 2.012 14.716 2 12 2ZM12 4.175C14.67 4.175 14.986 4.185 16.036 4.233C17.016 4.278 17.518 4.436 17.848 4.564C18.286 4.734 18.599 4.938 18.928 5.267C19.257 5.596 19.461 5.909 19.631 6.347C19.759 6.677 19.917 7.179 19.962 8.159C20.01 9.209 20.02 9.525 20.02 12.195C20.02 14.865 20.01 15.181 19.962 16.231C19.917 17.211 19.759 17.713 19.631 18.043C19.461 18.481 19.257 18.794 18.928 19.123C18.599 19.452 18.286 19.656 17.848 19.826C17.518 19.954 17.016 20.112 16.036 20.157C14.986 20.205 14.67 20.215 12 20.215C9.33 20.215 9.014 20.205 7.964 20.157C6.984 20.112 6.482 19.954 6.152 19.826C5.714 19.656 5.401 19.452 5.072 19.123C4.743 18.794 4.539 18.481 4.369 18.043C4.241 17.713 4.083 17.211 4.038 16.231C3.99 15.181 3.98 14.865 3.98 12.195C3.98 9.525 3.99 9.209 4.038 8.159C4.083 7.179 4.241 6.677 4.369 6.347C4.539 5.909 4.743 5.596 5.072 5.267C5.401 4.938 5.714 4.734 6.152 4.564C6.482 4.436 6.984 4.278 7.964 4.233C9.014 4.185 9.33 4.175 12 4.175ZM12 6.865C9.163 6.865 6.865 9.163 6.865 12C6.865 14.837 9.163 17.135 12 17.135C14.837 17.135 17.135 14.837 17.135 12C17.135 9.163 14.837 6.865 12 6.865ZM12 14.96C10.365 14.96 9.04 13.635 9.04 12C9.04 10.365 10.365 9.04 12 9.04C13.635 9.04 14.96 10.365 14.96 12C14.96 13.635 13.635 14.96 12 14.96ZM18.406 6.829C18.406 7.629 17.757 8.278 16.957 8.278C16.157 8.278 15.508 7.629 15.508 6.829C15.508 6.029 16.157 5.38 16.957 5.38C17.757 5.38 18.406 6.029 18.406 6.829Z" fill="currentColor"/>
+              </svg>
+              <span>Follow {{ section.settings.name | split: ' ' | first }}</span>
+            </a>
+          {%- endif -%}
+        </div>
+
       </div>
     </div>
   </div>
@@ -42,7 +67,7 @@
 
 {% schema %}
 {
-  "name": "Nuumi Expert",
+  "name": "Nuumi Expert (Editorial)",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -50,7 +75,7 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#FFFFFF"
+      "default": "#f4f9f9"
     },
     {
       "type": "image_picker",
@@ -61,13 +86,7 @@
       "type": "text",
       "id": "badge_text",
       "label": "Badge Text",
-      "default": "Veterinarian Approved"
-    },
-    {
-      "type": "textarea",
-      "id": "quote",
-      "label": "Quote",
-      "default": "Nuumi represents a new standard in pet care. The clinical doses of active ingredients provide real, measurable results for joint health and mobility."
+      "default": "Veterinary Perspective"
     },
     {
       "type": "text",
@@ -76,21 +95,33 @@
       "default": "An expert perspective on root-cause gut repair"
     },
     {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing."
+    },
+    {
       "type": "text",
       "id": "name",
       "label": "Expert Name",
-      "default": "Dr. Sarah Jenkins"
+      "default": "Dr. Sara Ranocchi"
     },
     {
       "type": "text",
       "id": "credentials",
       "label": "Credentials",
-      "default": "DVM, Chief Veterinary Officer"
+      "default": "Italian Nutrition Biologist"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram Link",
+      "default": "https://www.instagram.com/dr.sara_ranocchi_/"
     }
   ],
   "presets": [
     {
-      "name": "Nuumi Expert"
+      "name": "Nuumi Expert (Editorial)"
     }
   ]
 }
