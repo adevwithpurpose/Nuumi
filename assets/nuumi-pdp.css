@@ -2878,6 +2878,78 @@
   line-height: 1.45;
 }
 
+.nuumi-pdp-efficacy__header {
+  max-width: 72rem;
+  margin: 0 auto 2.2rem;
+}
+
+.nuumi-pdp-efficacy__text,
+.nuumi-pdp-efficacy__text p {
+  font-size: 1.36rem;
+  line-height: 1.58;
+}
+
+.nuumi-pdp-efficacy__grid {
+  gap: 1.15rem;
+}
+
+.nuumi-pdp-efficacy__card {
+  padding: 1.25rem;
+  border-radius: 1.7rem;
+  border-color: rgba(15, 118, 110, 0.08);
+  box-shadow: 0 14px 30px rgba(16, 36, 58, 0.04);
+}
+
+.nuumi-pdp-efficacy__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.9rem;
+}
+
+.nuumi-pdp-efficacy__media,
+.nuumi-pdp-efficacy__media--image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.1rem;
+  flex: 0 0 4rem;
+  box-shadow: 0 10px 18px rgba(16, 36, 58, 0.06);
+}
+
+.nuumi-pdp-efficacy__tag {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.08);
+  color: #0f766e;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nuumi-pdp-efficacy__card-title {
+  font-size: 1.5rem;
+  line-height: 1.18;
+}
+
+.nuumi-pdp-efficacy__card-benefit {
+  margin-top: 0.42rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.nuumi-pdp-efficacy__card-text {
+  margin-top: 0.55rem;
+  font-size: 1.14rem;
+  line-height: 1.48;
+}
+
 .nuumi-pdp-efficacy__card-top {
   align-items: flex-start;
 }
@@ -3003,6 +3075,10 @@
   .nuumi-pdp-agitation__diagram-card {
     position: sticky;
     top: 10rem;
+  }
+
+  .nuumi-pdp-efficacy__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .nuumi-pdp-timeline__track {
@@ -3276,6 +3352,38 @@
 @media screen and (max-width: 749px) {
   .nuumi-pdp-efficacy__grid {
     grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .nuumi-pdp-efficacy__header {
+    margin-bottom: 1.6rem;
+  }
+
+  .nuumi-pdp-efficacy__card {
+    padding: 1rem;
+  }
+
+  .nuumi-pdp-efficacy__media,
+  .nuumi-pdp-efficacy__media--image {
+    width: 3.6rem;
+    height: 3.6rem;
+    flex-basis: 3.6rem;
+  }
+
+  .nuumi-pdp-efficacy__tag {
+    font-size: 0.9rem;
+  }
+
+  .nuumi-pdp-efficacy__card-title {
+    font-size: 1.34rem;
+  }
+
+  .nuumi-pdp-efficacy__card-benefit {
+    font-size: 1.12rem;
+  }
+
+  .nuumi-pdp-efficacy__card-text {
+    font-size: 1.08rem;
   }
 
   .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail-slider {
