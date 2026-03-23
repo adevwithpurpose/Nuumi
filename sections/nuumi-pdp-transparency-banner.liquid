@@ -1,0 +1,58 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-transparency section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-transparency__intro">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-transparency__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="nuumi-pdp-transparency__title">{{ section.settings.title }}</h2>
+    </div>
+    <div class="nuumi-pdp-transparency__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-transparency__item" {{ block.shopify_attributes }}>
+          <span class="nuumi-pdp-transparency__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+          <span class="nuumi-pdp-transparency__text">{{ block.settings.text }}</span>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Transparency Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#10243A" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Trust and transparency" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Everything a desperate pet parent wants to verify before buying." }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "limit": 8,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "leaf", "label": "Leaf" }, { "value": "shield", "label": "Shield" }, { "value": "science", "label": "Science" }, { "value": "star", "label": "Star" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }], "default": "check_mark" },
+        { "type": "text", "id": "text", "label": "Text", "default": "3rd Party Lab Tested" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Transparency Banner",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "leaf", "text": "100% Vegan" } },
+        { "type": "item", "settings": { "icon": "heart", "text": "Keto-Friendly" } },
+        { "type": "item", "settings": { "icon": "star", "text": "BBB A+ Rating" } },
+        { "type": "item", "settings": { "icon": "shield", "text": "GMP Certified Facility" } },
+        { "type": "item", "settings": { "icon": "science", "text": "No GMOs" } },
+        { "type": "item", "settings": { "icon": "check_mark", "text": "BPA Free" } },
+        { "type": "item", "settings": { "icon": "science", "text": "3rd Party Lab Tested" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

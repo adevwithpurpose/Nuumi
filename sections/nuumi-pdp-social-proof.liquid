@@ -1,0 +1,72 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-social-proof section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-social-proof__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-social-proof__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="nuumi-pdp-social-proof__title">{{ section.settings.title }}</h2>
+      <div class="nuumi-pdp-social-proof__text rte">{{ section.settings.text }}</div>
+    </div>
+    <div class="nuumi-pdp-social-proof__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-social-proof__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-social-proof__card-top">
+            {% render 'nuumi-rating-stars', rating: block.settings.rating, count: blank, class: 'nuumi-pdp-social-proof__stars' %}
+            {%- if block.settings.badge != blank -%}
+              <span class="nuumi-pdp-social-proof__badge">{{ block.settings.badge }}</span>
+            {%- endif -%}
+          </div>
+          <blockquote class="nuumi-pdp-social-proof__quote">{{ block.settings.quote }}</blockquote>
+          <p class="nuumi-pdp-social-proof__highlight">{{ block.settings.highlight }}</p>
+          <div class="nuumi-pdp-social-proof__author">
+            <span class="nuumi-pdp-social-proof__name">{{ block.settings.name }}</span>
+            {%- if block.settings.meta != blank -%}
+              <span class="nuumi-pdp-social-proof__meta">{{ block.settings.meta }}</span>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Social Proof",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Real family proof" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "The reviews all sound the same: finally, the stool settled and the itching started backing off." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>These cards are written to feel like the relief pet parents are actually chasing: less mess, less scratching, and fewer desperate swings from one failed fix to the next.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 4,
+      "settings": [
+        { "type": "range", "id": "rating", "label": "Rating", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "text", "id": "badge", "label": "Badge", "default": "Verified Buyer" },
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "After months of messy stools and vet visits, EnerCanis was the first thing that actually made the pattern start calming down." },
+        { "type": "text", "id": "highlight", "label": "Highlight", "default": "Firmer stools in the first week." },
+        { "type": "text", "id": "name", "label": "Name", "default": "Melissa R." },
+        { "type": "text", "id": "meta", "label": "Meta", "default": "French bulldog parent" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Social Proof",
+      "blocks": [
+        { "type": "review", "settings": { "rating": 5, "badge": "Verified Buyer", "quote": "We tried prescription food, powders, and rotating probiotics. EnerCanis was the first thing that made his stool look normal and his skin stop flaring every few days.", "highlight": "Visible change by week two.", "name": "Melissa R.", "meta": "English bulldog parent" } },
+        { "type": "review", "settings": { "rating": 5, "badge": "Photo Review", "quote": "The biggest difference was how quickly the gut chaos settled. Once that happened, the itching and redness also started improving instead of staying in a constant cycle.", "highlight": "Less itching, better stools.", "name": "Andre T.", "meta": "Rescue mix parent" } },
+        { "type": "review", "settings": { "rating": 5, "badge": "Most Helpful", "quote": "The 3-bottle plan made the difference for us. One bottle was encouraging, but by the full supply window it really felt like his old chronic pattern had broken.", "highlight": "3-bottle protocol felt worth it.", "name": "Jasmine L.", "meta": "Senior dog parent" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

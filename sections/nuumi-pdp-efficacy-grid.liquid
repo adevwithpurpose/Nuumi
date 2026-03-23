@@ -1,0 +1,78 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-efficacy section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-efficacy__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-efficacy__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="nuumi-pdp-efficacy__title">{{ section.settings.title }}</h2>
+      <div class="nuumi-pdp-efficacy__text rte">{{ section.settings.text }}</div>
+    </div>
+
+    <div class="nuumi-pdp-efficacy__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-efficacy__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-efficacy__card-top">
+            <span class="nuumi-pdp-efficacy__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+            {%- if block.settings.tag != blank -%}
+              <span class="nuumi-pdp-efficacy__tag">{{ block.settings.tag }}</span>
+            {%- endif -%}
+          </div>
+          <h3 class="nuumi-pdp-efficacy__card-title">{{ block.settings.title }}</h3>
+          <p class="nuumi-pdp-efficacy__card-benefit">{{ block.settings.benefit }}</p>
+          {%- if block.settings.text != blank -%}
+            <p class="nuumi-pdp-efficacy__card-text">{{ block.settings.text }}</p>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PDP Efficacy Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The 12-ingredient efficacy grid" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Every ingredient has a specific job in the barrier-repair chain." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>EnerCanis is not built like a generic digestive blend. It is organized around barrier fuel, connective-tissue rebuilding, inflammatory control, and microbiome support so the protocol feels clinically coherent from the first dose to the full transformation window.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "limit": 12,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "leaf", "label": "Leaf" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "star", "label": "Star" }], "default": "science" },
+        { "type": "text", "id": "tag", "label": "Tag", "default": "Core active" },
+        { "type": "text", "id": "title", "label": "Ingredient", "default": "L-Glutamine" },
+        { "type": "text", "id": "benefit", "label": "Benefit", "default": "Primary fuel for intestinal cells." },
+        { "type": "textarea", "id": "text", "label": "Detail", "default": "Supports the enterocytes that line the intestinal wall so the barrier has the raw material it needs to recover." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PDP Efficacy Grid",
+      "blocks": [
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Barrier fuel", "title": "L-Glutamine", "benefit": "Primary fuel for intestinal cells.", "text": "Supports the cells that line the gut so the damaged barrier can start rebuilding from the inside out." } },
+        { "type": "ingredient", "settings": { "icon": "shield", "tag": "Rebuild support", "title": "Hydrolyzed Fish Collagen", "benefit": "Rebuilds connective tissue.", "text": "Supplies the structural support the intestinal lining needs when it has been under chronic inflammatory stress." } },
+        { "type": "ingredient", "settings": { "icon": "heart", "tag": "Inflammation control", "title": "PEA", "benefit": "Reduces chronic inflammation.", "text": "Helps calm the inflammatory noise that keeps the gut, skin, and immune system stuck in a reactive pattern." } },
+        { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Microbiome support", "title": "Prebiotic Fiber", "benefit": "Feeds beneficial bacteria.", "text": "Creates a stronger environment for the bacteria that help keep stools, gas, and irritation under control." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 5", "benefit": "Placeholder clinical benefit.", "text": "Use this block to add the next synergistic active once the final formula sheet is approved." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 6", "benefit": "Placeholder clinical benefit.", "text": "Reserved for another barrier-support ingredient in the finalized formula." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 7", "benefit": "Placeholder clinical benefit.", "text": "Reserved for another gut-healing cofactor in the finalized formula." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 8", "benefit": "Placeholder clinical benefit.", "text": "Reserved for another anti-inflammatory support active." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 9", "benefit": "Placeholder clinical benefit.", "text": "Reserved for another microbiome-support ingredient." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 10", "benefit": "Placeholder clinical benefit.", "text": "Reserved for another connective-tissue support ingredient." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 11", "benefit": "Placeholder clinical benefit.", "text": "Reserved for another calming cofactor in the full ingredient matrix." } },
+        { "type": "ingredient", "settings": { "icon": "science", "tag": "Synergy placeholder", "title": "Ingredient 12", "benefit": "Placeholder clinical benefit.", "text": "Reserved for the final synergistic ingredient once the full 12-active system is finalized." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

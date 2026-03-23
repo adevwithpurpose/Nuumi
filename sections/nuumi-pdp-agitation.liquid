@@ -1,0 +1,105 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-agitation section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-agitation__grid {% if section.settings.layout == 'diagram_left' %}nuumi-pdp-agitation__grid--reverse{% endif %}">
+      <div class="nuumi-pdp-agitation__content">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="nuumi-pdp-agitation__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="nuumi-pdp-agitation__title">{{ section.settings.title }}</h2>
+        <div class="nuumi-pdp-agitation__text rte">{{ section.settings.text }}</div>
+
+        <div class="nuumi-pdp-agitation__analogy">
+          <h3 class="nuumi-pdp-agitation__analogy-title">{{ section.settings.analogy_title }}</h3>
+          <div class="nuumi-pdp-agitation__analogy-text rte">{{ section.settings.analogy_text }}</div>
+        </div>
+
+        {%- if section.blocks.size > 0 -%}
+          <div class="nuumi-pdp-agitation__points">
+            {%- for block in section.blocks -%}
+              <article class="nuumi-pdp-agitation__point" {{ block.shopify_attributes }}>
+                <span class="nuumi-pdp-agitation__point-icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+                <div>
+                  <p class="nuumi-pdp-agitation__point-title">{{ block.settings.title }}</p>
+                  <p class="nuumi-pdp-agitation__point-text">{{ block.settings.text }}</p>
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="nuumi-pdp-agitation__visual">
+        <div class="nuumi-pdp-agitation__diagram-card">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 1200 | image_tag:
+              loading: 'lazy',
+              class: 'nuumi-pdp-agitation__image',
+              sizes: '(min-width: 990px) 45vw, 100vw',
+              widths: '375, 550, 750, 1100, 1200'
+            }}
+          {%- else -%}
+            <div class="nuumi-pdp-agitation__diagram-shell" aria-hidden="true">
+              <div class="nuumi-pdp-agitation__diagram-state nuumi-pdp-agitation__diagram-state--damaged">
+                <span class="nuumi-pdp-agitation__diagram-label">Damaged Barrier</span>
+                <div class="nuumi-pdp-agitation__diagram-door">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <p>Toxins, allergens, and inflammatory waste keep slipping through.</p>
+              </div>
+              <div class="nuumi-pdp-agitation__diagram-arrow"></div>
+              <div class="nuumi-pdp-agitation__diagram-state nuumi-pdp-agitation__diagram-state--healthy">
+                <span class="nuumi-pdp-agitation__diagram-label">Restored Barrier</span>
+                <div class="nuumi-pdp-agitation__diagram-door nuumi-pdp-agitation__diagram-door--sealed">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <p>Nutrients stay where they belong and chronic irritation starts to settle.</p>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PDP Agitation",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#F7FBFD" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Why the usual fixes keep failing" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Premium food and generic probiotics may calm the symptom, but they rarely repair the damaged gut barrier underneath it." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>When the intestinal lining gets damaged, it behaves like a torn screen door: nutrients have a harder time staying in, while irritants and toxins keep leaking through into the bloodstream. That is why diarrhea, itching, and immune flare-ups tend to keep circling back.</p>" },
+    { "type": "text", "id": "analogy_title", "label": "Analogy title", "default": "Think of it like a torn screen door." },
+    { "type": "richtext", "id": "analogy_text", "label": "Analogy text", "default": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back inside. EnerCanis is structured to help rebuild the screen instead of endlessly cleaning up the mess.</p>" },
+    { "type": "image_picker", "id": "image", "label": "Diagram image" },
+    { "type": "select", "id": "layout", "label": "Desktop layout", "options": [{ "value": "diagram_right", "label": "Diagram right" }, { "value": "diagram_left", "label": "Diagram left" }], "default": "diagram_right" }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "limit": 4,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }], "default": "science" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Why symptoms keep bouncing back" },
+        { "type": "text", "id": "text", "label": "Text", "default": "The lining stays irritated, so the triggers keep circulating long after the bowl has been changed." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PDP Agitation",
+      "blocks": [
+        { "type": "point", "settings": { "icon": "science", "title": "Masking is not repairing", "text": "Store-bought probiotics can support the microbiome, but they usually do not rebuild the compromised wall itself." } },
+        { "type": "point", "settings": { "icon": "shield", "title": "Vet visits become a cycle", "text": "Families often bounce between stool tests, food changes, and temporary relief because the lining never fully recovers." } },
+        { "type": "point", "settings": { "icon": "heart", "title": "Inflammation spills outward", "text": "Once the barrier leaks, skin, immune, and energy issues can start showing up alongside the digestive chaos." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

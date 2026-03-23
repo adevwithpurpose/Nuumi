@@ -1,0 +1,62 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-timeline section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-timeline__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-timeline__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="nuumi-pdp-timeline__title">{{ section.settings.title }}</h2>
+      <div class="nuumi-pdp-timeline__text rte">{{ section.settings.text }}</div>
+    </div>
+
+    <div class="nuumi-pdp-timeline__track">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-timeline__step" {{ block.shopify_attributes }}>
+          <span class="nuumi-pdp-timeline__step-marker"></span>
+          <div class="nuumi-pdp-timeline__step-card">
+            <span class="nuumi-pdp-timeline__phase">{{ block.settings.phase }}</span>
+            <h3 class="nuumi-pdp-timeline__step-title">{{ block.settings.title }}</h3>
+            <p class="nuumi-pdp-timeline__step-text">{{ block.settings.text }}</p>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PDP Timeline",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#EEF7F9" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "What improvement usually looks like" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "A timeline built around visible, believable progress instead of miracle promises." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Barrier repair is not an overnight trick. The protocol is strongest when it sets honest expectations: first the gut settles, then the skin and immune stress begin backing off, and finally the longer chronic patterns start losing momentum.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 4,
+      "settings": [
+        { "type": "text", "id": "phase", "label": "Phase", "default": "Days 5-7" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Firmer stools and less gas" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "The first sign is often less digestive chaos at ground level: fewer urgent stool issues, less gurgling, and less bloating after meals." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PDP Timeline",
+      "blocks": [
+        { "type": "step", "settings": { "phase": "Days 5-7", "title": "Firmer stools and reduced gas", "text": "The earliest change is usually less digestive noise: stools begin tightening up and the constant gassiness starts settling." } },
+        { "type": "step", "settings": { "phase": "Weeks 2-4", "title": "Skin improvements and less itching", "text": "As the barrier calms down, many families start noticing fewer flare-ups in the skin and less frantic scratching." } },
+        { "type": "step", "settings": { "phase": "Weeks 8-12", "title": "A visible shift in chronic patterns", "text": "By the full protocol window, the goal is that the repeating cycle of messy stools, skin issues, and immune stress feels fundamentally different." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

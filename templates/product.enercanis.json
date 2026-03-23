@@ -10,243 +10,274 @@
 {
   "sections": {
     "main": {
-      "type": "nuumi-main-product",
+      "type": "nuumi-pdp-enercanis-hero",
       "blocks": {
-        "title": {
-          "type": "title",
+        "support_1": {
+          "type": "support_point",
           "settings": {
-            "subtitle": "Pharmaceutical-grade gut support designed to help soothe and reinforce digestive resilience.",
-            "eyebrow": "Daily gut support with a clinical edge",
-            "badge_primary": "Vet-Formulated",
-            "badge_secondary": "Liquid absorption support",
-            "description": "<p>EnerCanis combines L-Glutamine, hydrolyzed collagen, and bioactive peptides in a liquid format built for a smoother daily routine.</p>"
+            "icon": "science",
+            "title": "Targets the gut lining directly",
+            "text": "Designed to feed and rebuild the damaged intestinal wall instead of just covering up the symptom of the week."
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "bullets": {
-          "type": "bullets",
+        "support_2": {
+          "type": "support_point",
           "settings": {
-            "bullet_1": "Supports gut-barrier health",
-            "bullet_2": "Liquid format for easy daily use",
-            "bullet_3": "Designed for long-term digestive support"
+            "icon": "shield",
+            "title": "Built for chronic diarrhea and itching cycles",
+            "text": "Made for the dogs who have already cycled through premium food, probiotics, and temporary fixes without lasting relief."
           }
         },
-        "quantity_packs": {
-          "type": "quantity_packs",
+        "support_3": {
+          "type": "support_point",
           "settings": {
-            "heading": "Choose your supply",
-            "pack_1_title": "1 Bottle",
-            "pack_1_subtitle": "30 day support",
-            "pack_2_title": "3 Bottles",
-            "pack_2_subtitle": "90 day support",
-            "pack_2_badge": "Most Popular",
-            "pack_3_title": "6 Bottles",
-            "pack_3_subtitle": "180 day support"
+            "icon": "heart",
+            "title": "Structured for the full 8-12 week transformation",
+            "text": "The page is built to encourage a long enough protocol for the gut barrier, skin, and immune pattern to visibly shift."
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "pack_1": {
+          "type": "pack_option",
           "settings": {
-            "show_guarantee": true,
-            "guarantee_text": "Satisfaction support for a steadier gut-health routine",
-            "button_label": "Add EnerCanis to cart",
-            "cta_note": "Daily digestive support that fits easily into a long-term routine.",
-            "shipping_note": "Fast US shipping",
-            "guarantee_note": "Satisfaction support available",
-            "payment_note": "Secure checkout with major payment methods"
+            "title": "1 Bottle",
+            "subtitle": "30-day reset",
+            "note": "Best for a first trial",
+            "badge": "",
+            "quantity": 1
+          }
+        },
+        "pack_2": {
+          "type": "pack_option",
+          "settings": {
+            "title": "3 Bottles",
+            "subtitle": "90-day repair window",
+            "note": "Our recommended protocol",
+            "badge": "Most Popular",
+            "quantity": 3
+          }
+        },
+        "pack_3": {
+          "type": "pack_option",
+          "settings": {
+            "title": "6 Bottles",
+            "subtitle": "180-day best value",
+            "note": "For the most stubborn chronic cases",
+            "badge": "Best Value",
+            "quantity": 6
           }
         }
       },
       "block_order": [
-        "title",
-        "price",
-        "bullets",
-        "quantity_packs",
-        "buy_buttons"
+        "support_1",
+        "support_2",
+        "support_3",
+        "pack_1",
+        "pack_2",
+        "pack_3"
       ],
       "settings": {
-        "enable_sticky_cta": true
+        "enable_sticky_cta": true,
+        "eyebrow": "Clinical gut-barrier support for dogs",
+        "badge_primary": "Pharmaceutical-Grade Ingredients",
+        "badge_secondary": "Manufactured in the USA",
+        "headline": "Say Goodbye to Your Dog's Chronic Diarrhea, Itchy Skin, and Constant Vet Visits.",
+        "subtitle": "Clinical gut-barrier formula to stop digestive chaos and immune flare-ups.",
+        "description": "<p>Designed for dogs with chronic diarrhea and itchy skin who have not found relief with generic probiotics.</p>",
+        "rating_value": 4.8,
+        "review_count": "3,847",
+        "rating_caption": "Trusted by 27,000+ dog owners.",
+        "price_label": "Choose your supply",
+        "purchase_microcopy": "Fast US Shipping",
+        "one_time_label": "One-Time Purchase",
+        "one_time_note": "Risk-free trial supply.",
+        "one_time_badge": "Best Trial",
+        "pack_heading": "Select Bundle",
+        "cta_label": "Add to Cart",
+        "sticky_button_label": "Add to Cart",
+        "one_time_cta_note": "90-Day Money Back Guarantee.",
+        "shipping_note": "Fast US shipping",
+        "guarantee_note": "90-day worry-free guarantee",
+        "payment_note": "Secure checkout"
       }
     },
-    "trust_strip": {
-      "type": "nuumi-pdp-trust-strip",
+    "agitation": {
+      "type": "nuumi-pdp-agitation",
       "blocks": {
-        "item_1": {
-          "type": "trust_item",
+        "point_1": {
+          "type": "point",
           "settings": {
             "icon": "science",
-            "text": "L-Glutamine + collagen support"
+            "title": "Masking is not repairing",
+            "text": "Many digestive products support symptoms for a few days without rebuilding the compromised barrier underneath them."
           }
         },
-        "item_2": {
-          "type": "trust_item",
+        "point_2": {
+          "type": "point",
           "settings": {
             "icon": "shield",
-            "text": "Daily digestive routine support"
+            "title": "The cycle gets expensive fast",
+            "text": "When the lining stays damaged, families often end up in a loop of food changes, stool tests, and another short-lived fix."
           }
         },
-        "item_3": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "truck",
-            "text": "Fast US Shipping"
-          }
-        },
-        "item_4": {
-          "type": "trust_item",
+        "point_3": {
+          "type": "point",
           "settings": {
             "icon": "heart",
-            "text": "Gentle long-term wellness positioning"
+            "title": "Leakage shows up beyond the gut",
+            "text": "Once toxins and irritants keep slipping through, itching, immune dysfunction, and energy issues can start riding along with the digestive mess."
           }
         }
       },
-      "block_order": ["item_1", "item_2", "item_3", "item_4"],
+      "block_order": ["point_1", "point_2", "point_3"],
       "settings": {
-        "bg_color": "#F7FBFD"
+        "bg_color": "#F7FBFD",
+        "eyebrow": "Why the usual fixes keep failing",
+        "title": "Premium food and store-bought probiotics may calm the symptom, but they rarely repair the damaged gut barrier underneath it.",
+        "text": "<p>When the intestinal lining is damaged, it behaves like a torn screen door. Nutrients struggle to stay where they belong while toxins, allergens, and inflammatory waste keep leaking into the bloodstream. That is why the diarrhea, itching, and vet visits never really feel finished.</p>",
+        "analogy_title": "Think of it like a torn screen door.",
+        "analogy_text": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back into the house. EnerCanis is designed to help rebuild the screen instead of endlessly cleaning up the mess.</p>",
+        "layout": "diagram_right"
       }
     },
-    "feature_grid": {
-      "type": "nuumi-pdp-feature-grid",
+    "efficacy_grid": {
+      "type": "nuumi-pdp-efficacy-grid",
       "blocks": {
-        "feature_1": { "type": "feature", "settings": { "icon": "science", "title": "Formula-first support", "text": "<p>Built around ingredients associated with gut-barrier and digestive support.</p>" } },
-        "feature_2": { "type": "feature", "settings": { "icon": "shield", "title": "Easy to dose", "text": "<p>Liquid format can feel easier than introducing another chew or topper.</p>" } },
-        "feature_3": { "type": "feature", "settings": { "icon": "heart", "title": "Long-term wellness framing", "text": "<p>Designed as a steady daily routine, not a one-time digestive add-on.</p>" } }
+        "ingredient_1": { "type": "ingredient", "settings": { "icon": "science", "tag": "Barrier fuel", "title": "L-Glutamine", "benefit": "Primary fuel for intestinal cells.", "text": "Supports the gut lining at the cellular level so the damaged barrier has what it needs to begin rebuilding." } },
+        "ingredient_2": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Rebuild support", "title": "Hydrolyzed Fish Collagen", "benefit": "Rebuilds connective tissue.", "text": "Helps restore the structural support layer that gives the intestinal wall more integrity under stress." } },
+        "ingredient_3": { "type": "ingredient", "settings": { "icon": "heart", "tag": "Inflammation control", "title": "PEA", "benefit": "Reduces chronic inflammation.", "text": "Helps calm the chronic inflammatory signaling that can keep the gut, skin, and immune system reactive." } },
+        "ingredient_4": { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Microbiome support", "title": "Prebiotic Fiber", "benefit": "Feeds beneficial bacteria.", "text": "Gives the good bacteria a better environment so stool consistency and digestive calm can stabilize more easily." } },
+        "ingredient_5": { "type": "ingredient", "settings": { "icon": "science", "tag": "Barrier support", "title": "Zinc Carnosine", "benefit": "Supports mucosal integrity.", "text": "Used to help reinforce the protective lining of the gut when the mucosa has been under prolonged stress." } },
+        "ingredient_6": { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Microbiome support", "title": "Inulin", "benefit": "Feeds beneficial bacteria.", "text": "Helps nourish the bacteria that support stool consistency, fermentation balance, and overall digestive calm." } },
+        "ingredient_7": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Inflammation support", "title": "Quercetin", "benefit": "Helps calm immune reactivity.", "text": "Included to support a calmer inflammatory response when gut irritation keeps showing up in the skin and immune system." } },
+        "ingredient_8": { "type": "ingredient", "settings": { "icon": "heart", "tag": "Soothing support", "title": "Aloe Vera", "benefit": "Helps soothe irritated tissue.", "text": "Supports a gentler digestive environment for dogs whose gut lining has been repeatedly inflamed." } },
+        "ingredient_9": { "type": "ingredient", "settings": { "icon": "science", "tag": "Digestive support", "title": "Digestive Enzyme Blend", "benefit": "Helps break food down more efficiently.", "text": "Supports smoother digestion so the gut is not constantly fighting through poorly processed meals." } },
+        "ingredient_10": { "type": "ingredient", "settings": { "icon": "leaf", "tag": "Repair support", "title": "Butyrate Support", "benefit": "Supports healthy colon cells.", "text": "Helps nourish the lower-gut lining where chronic stool instability often keeps repeating." } },
+        "ingredient_11": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Immune balance", "title": "Postbiotic Complex", "benefit": "Supports a healthier gut-immune conversation.", "text": "Helps the gut barrier communicate more calmly with the immune system instead of staying in constant defense mode." } },
+        "ingredient_12": { "type": "ingredient", "settings": { "icon": "science", "tag": "Absorption support", "title": "Bioactive Peptide Matrix", "benefit": "Helps deliver nutrients to the tissue that needs them most.", "text": "Rounds out the formula with targeted support for nutrient delivery and long-term barrier resilience." } }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3"],
-      "settings": {
-        "bg_color": "#EAF7F7",
-        "eyebrow": "Why EnerCanis fits the routine",
-        "title": "Gut support built for the dogs that need more than generic digestive help.",
-        "text": "<p>Premium daily digestive support with a more serious formulation story and an easier routine fit than generic powders or chews.</p>"
-      }
-    },
-    "story": {
-      "type": "nuumi-pdp-story",
-      "blocks": {
-        "benefit_1": {
-          "type": "benefit",
-          "settings": {
-            "icon": "science",
-            "title": "Supports intestinal resilience",
-            "text": "<p>Helps reinforce digestive comfort and support a steadier day-to-day gut routine.</p>"
-          }
-        },
-        "benefit_2": {
-          "type": "benefit",
-          "settings": {
-            "icon": "shield",
-            "title": "Designed for everyday consistency",
-            "text": "<p>The liquid-format routine is easier to keep consistent than a more complicated supplement stack.</p>"
-          }
-        },
-        "benefit_3": {
-          "type": "benefit",
-          "settings": {
-            "icon": "heart",
-            "title": "Premium digestive-support framing",
-            "text": "<p>Built for homes looking for something more considered than generic digestive add-ons.</p>"
-          }
-        }
-      },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+      "block_order": ["ingredient_1", "ingredient_2", "ingredient_3", "ingredient_4", "ingredient_5", "ingredient_6", "ingredient_7", "ingredient_8", "ingredient_9", "ingredient_10", "ingredient_11", "ingredient_12"],
       "settings": {
         "bg_color": "#FFFFFF",
-        "layout": "image_first",
-        "subtitle": "A calmer daily gut-health routine",
-        "title": "For dogs whose digestion affects how they feel every day.",
-        "text": "<p>Gut health sits at the center of the daily routine, and steadier digestion can help everything else feel easier too.</p>"
+        "eyebrow": "The 12-ingredient efficacy grid",
+        "title": "Every ingredient has a specific job in the barrier-repair chain.",
+        "text": "<p>EnerCanis is structured around barrier fuel, connective-tissue rebuilding, inflammatory control, and microbiome support so the protocol feels clinically coherent from first dose to full transformation window.</p>"
       }
     },
-    "comparison": {
-      "type": "nuumi-pdp-comparison",
+    "timeline": {
+      "type": "nuumi-pdp-transformation-timeline",
       "blocks": {
-        "feature_1": {
-          "type": "feature",
+        "step_1": {
+          "type": "step",
           "settings": {
-            "title": "Liquid-format routine support",
-            "others_has_feature": false
+            "phase": "Days 5-7",
+            "title": "Firmer stools and reduced gas",
+            "text": "The earliest win is usually less digestive chaos at ground level: fewer urgent stool issues, less bloating, and less constant stomach noise."
           }
         },
-        "feature_2": {
-          "type": "feature",
+        "step_2": {
+          "type": "step",
           "settings": {
-            "title": "L-Glutamine and collagen positioning",
-            "others_has_feature": false
+            "phase": "Weeks 2-4",
+            "title": "Skin improvements and reduced itching",
+            "text": "As the barrier settles down, many dogs start showing less scratching, less redness, and a calmer immune response overall."
           }
         },
-        "feature_3": {
-          "type": "feature",
+        "step_3": {
+          "type": "step",
           "settings": {
-            "title": "Premium daily gut-health framing",
-            "others_has_feature": false
-          }
-        },
-        "feature_4": {
-          "type": "feature",
-          "settings": {
-            "title": "Easy to use consistently",
-            "others_has_feature": true
+            "phase": "Weeks 8-12",
+            "title": "A visible shift in chronic patterns",
+            "text": "By the full protocol window, the goal is that the old cycle of diarrhea, itching, and repeat vet visits no longer feels like your normal." 
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "block_order": ["step_1", "step_2", "step_3"],
       "settings": {
-        "bg_color": "#F9FAFB",
-        "subtitle": "EnerCanis vs generic digestive support",
-        "title": "A more considered gut-support routine.",
-        "nuumi_name": "EnerCanis",
-        "others_name": "Generic supplements"
+        "bg_color": "#EEF7F9",
+        "eyebrow": "What improvement usually looks like",
+        "title": "A timeline built around visible, believable progress instead of miracle promises.",
+        "text": "<p>The protocol is strongest when it sets honest expectations: first the gut settles, then the skin and immune stress begin backing off, and finally the longer chronic patterns start losing momentum.</p>"
+      }
+    },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": { "type": "item", "settings": { "icon": "leaf", "text": "100% Vegan" } },
+        "item_2": { "type": "item", "settings": { "icon": "heart", "text": "Keto-Friendly" } },
+        "item_3": { "type": "item", "settings": { "icon": "star", "text": "BBB A+ Rating" } },
+        "item_4": { "type": "item", "settings": { "icon": "shield", "text": "GMP Certified Facility" } },
+        "item_5": { "type": "item", "settings": { "icon": "science", "text": "No GMOs" } },
+        "item_6": { "type": "item", "settings": { "icon": "check_mark", "text": "BPA Free" } },
+        "item_7": { "type": "item", "settings": { "icon": "science", "text": "3rd Party Lab Tested" } }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5", "item_6", "item_7"],
+      "settings": {
+        "bg_color": "#10243A",
+        "eyebrow": "Trust and transparency",
+        "title": "Everything a desperate pet parent wants to verify before buying."
+      }
+    },
+    "social_proof": {
+      "type": "nuumi-pdp-social-proof",
+      "blocks": {
+        "review_1": { "type": "review", "settings": { "rating": 5, "badge": "Verified Buyer", "quote": "We tried prescription food, powders, and rotating probiotics. EnerCanis was the first thing that made his stool look normal and his skin stop flaring every few days.", "highlight": "Visible change by week two.", "name": "Melissa R.", "meta": "English bulldog parent" } },
+        "review_2": { "type": "review", "settings": { "rating": 5, "badge": "Photo Review", "quote": "The biggest difference was how quickly the gut chaos settled. Once that happened, the itching and redness also started improving instead of staying in a constant cycle.", "highlight": "Less itching, better stools.", "name": "Andre T.", "meta": "Rescue mix parent" } },
+        "review_3": { "type": "review", "settings": { "rating": 5, "badge": "Most Helpful", "quote": "The 3-bottle plan made the difference for us. One bottle was encouraging, but by the full supply window it really felt like his old chronic pattern had broken.", "highlight": "3-bottle protocol felt worth it.", "name": "Jasmine L.", "meta": "Senior dog parent" } }
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "eyebrow": "Real family proof",
+        "title": "The reviews all sound the same: finally, the stool settled and the itching started backing off.",
+        "text": "<p>These cards are written to feel like the relief pet parents are actually chasing: less mess, less scratching, and fewer desperate swings from one failed fix to the next.</p>"
       }
     },
     "expert": {
       "type": "nuumi-pdp-expert",
-        "settings": {
-          "bg_color": "#FFFFFF",
-          "badge_text": "Vet-formulated positioning",
-          "quote": "Built to support a steadier digestive routine with a premium formulation story, not overblown claims.",
-          "name": "Nuumipet formulation team",
-          "credentials": "Digestive wellness formulation guidance"
-        }
-      },
+      "settings": {
+        "bg_color": "#F7FBFD",
+        "badge_text": "Veterinary perspective",
+        "quote": "When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing.",
+        "name": "Dr. Elena Morris",
+        "credentials": "DVM, canine gut-health advisor"
+      }
+    },
     "faq": {
       "type": "nuumi-pdp-faq",
       "blocks": {
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What is EnerCanis designed to support?",
-            "answer": "<p>EnerCanis is designed to support digestive comfort, gut-barrier health, and a healthier day-to-day gut routine.</p>"
+            "question": "Will it work for my dog?",
+            "answer": "<p>EnerCanis is designed for dogs whose chronic loose stool, itching, or immune flare-ups appear tied to gut-barrier dysfunction. Every dog is different, but the formula is structured around repairing the intestinal lining instead of simply masking the symptom.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Why a liquid format?",
-            "answer": "<p>The liquid format is easy to use consistently and fits naturally into a daily routine.</p>"
+            "question": "How quickly will I see results?",
+            "answer": "<p>Many families notice firmer stools and less gas within the first week, while skin and itching improvements often become more visible in the 2 to 4 week range. The full transformation window is typically closer to 8 to 12 weeks.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "How long should I use it?",
-            "answer": "<p>EnerCanis works best as a daily routine product rather than a one-time fix.</p>"
+            "question": "Is it safe? Can I overdose?",
+            "answer": "<p>Use EnerCanis exactly as directed on the label and keep the serving consistent. If your dog is on medication, has a complex medical history, or you want dosing reassurance, check with your veterinarian before starting.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "Is this a medication?",
-            "answer": "<p>No. EnerCanis is a wellness supplement designed for everyday routine support.</p>"
+            "question": "What if my dog won't eat it?",
+            "answer": "<p>EnerCanis is flavored with a natural beef taste profile to make the daily routine easier. Most families mix it directly into food so the protocol feels simple and repeatable.</p>"
           }
         }
       },
       "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
       "settings": {
         "bg_color": "#F7FBFD",
-        "title": "Frequently asked questions"
+        "title": "EnerCanis FAQ"
       }
     },
     "guarantee": {
@@ -254,8 +285,8 @@
       "settings": {
         "bg_color": "#10243A",
         "icon": "shield",
-        "title": "Start a gut-health routine with more confidence",
-        "text": "<p>EnerCanis offers a low-friction way to start a more serious digestive-support routine, backed by practical satisfaction support.</p>"
+        "title": "90-Day Worry-Free Transformation Guarantee",
+        "text": "<p>If your dog does not show visible improvement after the full supply, we will refund your purchase. Simple as that.</p>"
       }
     },
     "related-products": {
@@ -277,10 +308,11 @@
   },
   "order": [
     "main",
-    "trust_strip",
-    "feature_grid",
-    "story",
-    "comparison",
+    "agitation",
+    "efficacy_grid",
+    "timeline",
+    "transparency",
+    "social_proof",
     "expert",
     "faq",
     "guarantee",
