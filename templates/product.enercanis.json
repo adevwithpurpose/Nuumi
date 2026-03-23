@@ -348,6 +348,48 @@
         "text": "<p>The protocol is strongest when it sets honest expectations: first the gut settles, then the skin and immune stress begin backing off, and finally the longer chronic patterns start losing momentum.</p>"
       }
     },
+    "how_to_use": {
+      "type": "nuumi-pdp-how-to-use",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1761409135624_glut.webp",
+            "step_label": "Step 1",
+            "title": "Add to food once daily",
+            "text": "Add the recommended dose of EnerCanis directly into your dog's meal once per day."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1761649028887_Dog_and_bowl_2.webp",
+            "step_label": "Step 2",
+            "title": "Mix thoroughly",
+            "text": "Mix thoroughly with food so your dog gets the full serving with every meal."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1761649029203_happy_dog_6.webp",
+            "step_label": "Step 3",
+            "title": "Stay consistent for 8-12 weeks",
+            "text": "Consistency is key. Most dogs show early signs first, then full chronic-pattern improvement over time."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "bg_color": "#f2f8fc",
+        "title": "How To Use",
+        "text": "Follow these 3 simple daily steps to stay consistent and get the best barrier-repair outcome."
+      }
+    },
     "transparency": {
       "type": "nuumi-pdp-transparency-banner",
       "blocks": {
@@ -620,6 +662,7 @@
     "agitation",
     "efficacy_grid",
     "timeline",
+    "how_to_use",
     "transparency",
     "social_proof",
     "expert",

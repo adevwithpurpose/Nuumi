@@ -1,0 +1,93 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-howto section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-howto__header">
+      <h2 class="nuumi-pdp-howto__title">{{ section.settings.title }}</h2>
+      {%- if section.settings.text != blank -%}
+        <p class="nuumi-pdp-howto__text">{{ section.settings.text }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-howto__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-howto__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-howto__media">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 700 | image_tag:
+                loading: 'lazy',
+                class: 'nuumi-pdp-howto__image',
+                sizes: '(min-width: 990px) 33vw, 100vw',
+                widths: '240, 360, 500, 700'
+              }}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-howto__image' }}
+            {%- endif -%}
+          </div>
+          <div>
+            <span class="nuumi-pdp-howto__meta">{{ block.settings.step_label }}</span>
+            <h3 class="nuumi-pdp-howto__card-title">{{ block.settings.title }}</h3>
+            <p class="nuumi-pdp-howto__card-text">{{ block.settings.text }}</p>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PDP How To Use",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#F2F8FC" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "How To Use" },
+    { "type": "text", "id": "text", "label": "Intro text", "default": "Follow these 3 simple daily steps to stay consistent and get the best barrier-repair outcome." }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 3,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Step image" },
+        { "type": "text", "id": "step_label", "label": "Step label", "default": "Step 1" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Measure the correct dose" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Add the recommended daily amount based on your dog's weight using the label guide." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PDP How To Use",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 1",
+            "title": "Add to food once daily",
+            "text": "Add the recommended dose of EnerCanis directly into your dog's meal once per day."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 2",
+            "title": "Mix thoroughly",
+            "text": "Mix thoroughly with food so your dog gets the full serving with every meal."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 3",
+            "title": "Stay consistent for 8-12 weeks",
+            "text": "Consistency is key. Most dogs show early signs first, then full chronic-pattern improvement over time."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -2557,3 +2557,390 @@
     font-size: 2.8rem;
   }
 }
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell {
+  padding: 1rem;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .product__media-list {
+  margin: 0;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .product__media-item {
+  width: 100%;
+  min-width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .product__media-item:not(.is-active) {
+  display: none;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .media,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .media img {
+  width: 100%;
+  height: 100%;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .media img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail-slider {
+  margin: 1rem 0 0;
+  width: 100%;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail-list {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail-list::-webkit-scrollbar {
+  display: none;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .slider-button {
+  width: 3.4rem;
+  height: 3.4rem;
+  min-width: 3.4rem;
+  min-height: 3.4rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid rgba(16, 36, 58, 0.14);
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .slider-button .svg-wrapper,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .slider-button .icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__title,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__subtitle,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__description {
+  max-width: 100%;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__rating-row {
+  align-items: center;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__support-card {
+  align-items: center;
+  gap: 1rem;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__support-media,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__support-media--image,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__support-media--icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  flex: 0 0 3.2rem;
+  margin-top: 0;
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__support-media--icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.nuumi-pdp-agitation__text,
+.nuumi-pdp-agitation__text p {
+  font-size: 1.34rem;
+  line-height: 1.55;
+}
+
+.nuumi-pdp-agitation__analogy-title {
+  font-size: 1.62rem;
+}
+
+.nuumi-pdp-agitation__analogy-text,
+.nuumi-pdp-agitation__analogy-text p,
+.nuumi-pdp-agitation__point-text {
+  font-size: 1.24rem;
+  line-height: 1.5;
+}
+
+.nuumi-pdp-efficacy__card-top {
+  align-items: flex-start;
+}
+
+.nuumi-pdp-efficacy__media,
+.nuumi-pdp-efficacy__media--image {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 1rem;
+}
+
+.nuumi-pdp-efficacy__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nuumi-pdp-timeline__track {
+  align-items: stretch;
+}
+
+.nuumi-pdp-timeline__step {
+  min-width: 0;
+}
+
+.nuumi-pdp-timeline__step-card {
+  height: 100%;
+}
+
+.nuumi-pdp-timeline__step-title {
+  font-size: 1.72rem;
+  line-height: 1.2;
+}
+
+.nuumi-pdp-timeline__step-text {
+  font-size: 1.32rem;
+  line-height: 1.55;
+}
+
+.nuumi-pdp-transparency {
+  background: linear-gradient(180deg, #0f2b44 0%, #0a2136 100%);
+}
+
+.nuumi-pdp-transparency__eyebrow {
+  color: #25d6d2;
+}
+
+.nuumi-pdp-transparency__title {
+  color: #ecf8ff;
+}
+
+.nuumi-pdp-transparency__item {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.nuumi-pdp-transparency__icon {
+  background: rgba(37, 214, 210, 0.15);
+  color: #25d6d2;
+}
+
+.nuumi-pdp-transparency__text {
+  color: #f7fcff;
+}
+
+.nuumi-expert {
+  padding: 4.8rem 0;
+}
+
+.nuumi-expert__grid {
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.nuumi-expert__image-wrapper {
+  border-radius: 2.2rem;
+  box-shadow: 0 20px 45px rgba(16, 36, 58, 0.12);
+}
+
+.nuumi-expert__image {
+  aspect-ratio: 4 / 5;
+  object-position: center;
+}
+
+.nuumi-expert__content {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(16, 36, 58, 0.1);
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.nuumi-expert__badge {
+  margin-bottom: 1.2rem;
+}
+
+.nuumi-expert__quote {
+  margin: 0 0 1.8rem;
+  font-size: clamp(2rem, 2.7vw, 4rem);
+  line-height: 1.2;
+  font-style: normal;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell {
+    padding: 1.2rem;
+  }
+
+  .nuumi-pdp-timeline__track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nuumi-pdp-timeline__track::before {
+    left: 10%;
+    right: 10%;
+    top: 0.8rem;
+  }
+
+  .nuumi-pdp-timeline__step {
+    padding-top: 1.6rem;
+  }
+
+  .nuumi-pdp-timeline__step-marker {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .nuumi-pdp-transparency__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .nuumi-expert__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell {
+    padding: 0.7rem;
+    min-height: 0;
+  }
+
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .product__media-item {
+    display: flex !important;
+  }
+
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .product__media-item:not(.is-active) {
+    display: none !important;
+  }
+
+  .nuumi-pdp-timeline__step {
+    padding-left: 2rem;
+  }
+
+  .nuumi-pdp-timeline__step-title {
+    font-size: 1.5rem;
+  }
+
+  .nuumi-pdp-timeline__step-text {
+    font-size: 1.24rem;
+  }
+
+  .nuumi-expert__content {
+    padding: 1.6rem;
+  }
+}
+
+.nuumi-pdp-howto {
+  padding: 3.6rem 0;
+}
+
+.nuumi-pdp-howto__header {
+  max-width: 74rem;
+  margin: 0 auto 2.4rem;
+  text-align: center;
+}
+
+.nuumi-pdp-howto__title {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.6rem, 3.6vw, 4.4rem);
+  line-height: 1.06;
+}
+
+.nuumi-pdp-howto__text {
+  margin: 1rem 0 0;
+  color: #476173;
+  font-size: 1.48rem;
+  line-height: 1.6;
+}
+
+.nuumi-pdp-howto__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.nuumi-pdp-howto__card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.4rem;
+  border-radius: 1.8rem;
+  border: 1px solid rgba(16, 36, 58, 0.08);
+  background: rgba(255, 255, 255, 0.93);
+}
+
+.nuumi-pdp-howto__media {
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: #e8f3f8;
+  border: 1px solid rgba(16, 36, 58, 0.1);
+}
+
+.nuumi-pdp-howto__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nuumi-pdp-howto__meta {
+  display: inline-flex;
+  margin-bottom: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nuumi-pdp-howto__card-title {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.nuumi-pdp-howto__card-text {
+  margin: 0.4rem 0 0;
+  color: #5b7383;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 990px) {
+  .nuumi-pdp-howto__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nuumi-pdp-howto__card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .nuumi-pdp-howto__media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+}
