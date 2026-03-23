@@ -1,0 +1,289 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "nuumi-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subtitle": "Pharmaceutical-grade gut support designed to help soothe and reinforce digestive resilience.",
+            "eyebrow": "Daily gut support with a clinical edge",
+            "badge_primary": "Vet-Formulated",
+            "badge_secondary": "Liquid absorption support",
+            "description": "<p>EnerCanis combines L-Glutamine, hydrolyzed collagen, and bioactive peptides in a liquid format built for a smoother daily routine.</p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "bullets": {
+          "type": "bullets",
+          "settings": {
+            "bullet_1": "Supports gut-barrier health",
+            "bullet_2": "Liquid format for easy daily use",
+            "bullet_3": "Designed for long-term digestive support"
+          }
+        },
+        "quantity_packs": {
+          "type": "quantity_packs",
+          "settings": {
+            "heading": "Choose your supply",
+            "pack_1_title": "1 Bottle",
+            "pack_1_subtitle": "30 day support",
+            "pack_2_title": "3 Bottles",
+            "pack_2_subtitle": "90 day support",
+            "pack_2_badge": "Most Popular",
+            "pack_3_title": "6 Bottles",
+            "pack_3_subtitle": "180 day support"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_guarantee": true,
+            "guarantee_text": "Satisfaction support for a steadier gut-health routine",
+            "button_label": "Add EnerCanis to cart",
+            "cta_note": "Daily digestive support that fits easily into a long-term routine.",
+            "shipping_note": "Fast US shipping",
+            "guarantee_note": "Satisfaction support available",
+            "payment_note": "Secure checkout with major payment methods"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "bullets",
+        "quantity_packs",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_cta": true
+      }
+    },
+    "trust_strip": {
+      "type": "nuumi-pdp-trust-strip",
+      "blocks": {
+        "item_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "science",
+            "text": "L-Glutamine + collagen support"
+          }
+        },
+        "item_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Daily digestive routine support"
+          }
+        },
+        "item_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "truck",
+            "text": "Fast US Shipping"
+          }
+        },
+        "item_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "heart",
+            "text": "Gentle long-term wellness positioning"
+          }
+        }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4"],
+      "settings": {
+        "bg_color": "#F7FBFD"
+      }
+    },
+    "feature_grid": {
+      "type": "nuumi-pdp-feature-grid",
+      "blocks": {
+        "feature_1": { "type": "feature", "settings": { "icon": "science", "title": "Formula-first support", "text": "<p>Built around ingredients associated with gut-barrier and digestive support.</p>" } },
+        "feature_2": { "type": "feature", "settings": { "icon": "shield", "title": "Easy to dose", "text": "<p>Liquid format can feel easier than introducing another chew or topper.</p>" } },
+        "feature_3": { "type": "feature", "settings": { "icon": "heart", "title": "Long-term wellness framing", "text": "<p>Designed as a steady daily routine, not a one-time digestive add-on.</p>" } }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "settings": {
+        "bg_color": "#EAF7F7",
+        "eyebrow": "Why EnerCanis fits the routine",
+        "title": "Gut support built for the dogs that need more than generic digestive help.",
+        "text": "<p>Premium daily digestive support with a more serious formulation story and an easier routine fit than generic powders or chews.</p>"
+      }
+    },
+    "story": {
+      "type": "nuumi-pdp-story",
+      "blocks": {
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "icon": "science",
+            "title": "Supports intestinal resilience",
+            "text": "<p>Helps reinforce digestive comfort and support a steadier day-to-day gut routine.</p>"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "title": "Designed for everyday consistency",
+            "text": "<p>The liquid-format routine is easier to keep consistent than a more complicated supplement stack.</p>"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "icon": "heart",
+            "title": "Premium digestive-support framing",
+            "text": "<p>Built for homes looking for something more considered than generic digestive add-ons.</p>"
+          }
+        }
+      },
+      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "layout": "image_first",
+        "subtitle": "A calmer daily gut-health routine",
+        "title": "For dogs whose digestion affects how they feel every day.",
+        "text": "<p>Gut health sits at the center of the daily routine, and steadier digestion can help everything else feel easier too.</p>"
+      }
+    },
+    "comparison": {
+      "type": "nuumi-pdp-comparison",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Liquid-format routine support",
+            "others_has_feature": false
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "title": "L-Glutamine and collagen positioning",
+            "others_has_feature": false
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium daily gut-health framing",
+            "others_has_feature": false
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "title": "Easy to use consistently",
+            "others_has_feature": true
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {
+        "bg_color": "#F9FAFB",
+        "subtitle": "EnerCanis vs generic digestive support",
+        "title": "A more considered gut-support routine.",
+        "nuumi_name": "EnerCanis",
+        "others_name": "Generic supplements"
+      }
+    },
+    "expert": {
+      "type": "nuumi-pdp-expert",
+        "settings": {
+          "bg_color": "#FFFFFF",
+          "badge_text": "Vet-formulated positioning",
+          "quote": "Built to support a steadier digestive routine with a premium formulation story, not overblown claims.",
+          "name": "Nuumipet formulation team",
+          "credentials": "Digestive wellness formulation guidance"
+        }
+      },
+    "faq": {
+      "type": "nuumi-pdp-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is EnerCanis designed to support?",
+            "answer": "<p>EnerCanis is designed to support digestive comfort, gut-barrier health, and a healthier day-to-day gut routine.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Why a liquid format?",
+            "answer": "<p>The liquid format is easy to use consistently and fits naturally into a daily routine.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long should I use it?",
+            "answer": "<p>EnerCanis works best as a daily routine product rather than a one-time fix.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this a medication?",
+            "answer": "<p>No. EnerCanis is a wellness supplement designed for everyday routine support.</p>"
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "settings": {
+        "bg_color": "#F7FBFD",
+        "title": "Frequently asked questions"
+      }
+    },
+    "guarantee": {
+      "type": "nuumi-pdp-guarantee",
+      "settings": {
+        "bg_color": "#10243A",
+        "icon": "shield",
+        "title": "Start a gut-health routine with more confidence",
+        "text": "<p>EnerCanis offers a low-friction way to start a more serious digestive-support routine, backed by practical satisfaction support.</p>"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust_strip",
+    "feature_grid",
+    "story",
+    "comparison",
+    "expert",
+    "faq",
+    "guarantee",
+    "related-products"
+  ]
+}

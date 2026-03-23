@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "nuumi-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subtitle": "A calming collar designed to help dogs feel safer during separation, travel, and high-stress routine changes.",
+            "eyebrow": "Calm support for the dogs that struggle when you step away",
+            "badge_primary": "Clinically Proven",
+            "badge_secondary": "Separation-anxiety support",
+            "description": "<p>CalmiCollar brings pheromone-based calm support to dogs that tip into stress, destructive behavior, or overstimulation when their environment changes.</p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "bullets": {
+          "type": "bullets",
+          "settings": {
+            "bullet_1": "Designed for anxious or overstimulated dogs",
+            "bullet_2": "Easy wear-based support",
+            "bullet_3": "Built for calmer day-to-day routine transitions"
+          }
+        },
+        "quantity_packs": {
+          "type": "quantity_packs",
+          "settings": {
+            "heading": "Choose your support plan",
+            "pack_1_title": "1 Collar",
+            "pack_1_subtitle": "Start with one dog",
+            "pack_2_title": "3 Collars",
+            "pack_2_subtitle": "Ongoing monthly support",
+            "pack_2_badge": "Most Popular",
+            "pack_3_title": "6 Collars",
+            "pack_3_subtitle": "Long-term routine coverage"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_guarantee": true,
+            "guarantee_text": "Satisfaction support for a calmer routine transition",
+            "button_label": "Add CalmiCollar to cart",
+            "cta_note": "Easy support for dogs that need help settling into a calmer routine.",
+            "shipping_note": "Fast US shipping",
+            "guarantee_note": "Satisfaction support available",
+            "payment_note": "Secure checkout with major payment methods"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "bullets",
+        "quantity_packs",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_cta": true
+      }
+    },
+    "trust_strip": {
+      "type": "nuumi-pdp-trust-strip",
+      "blocks": {
+        "item_1": { "type": "trust_item", "settings": { "icon": "heart", "text": "Separation-anxiety support" } },
+        "item_2": { "type": "trust_item", "settings": { "icon": "shield", "text": "Easy daily wear" } },
+        "item_3": { "type": "trust_item", "settings": { "icon": "science", "text": "Pheromone-based calming approach" } },
+        "item_4": { "type": "trust_item", "settings": { "icon": "truck", "text": "Fast US Shipping" } }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4"],
+      "settings": { "bg_color": "#F7FBFD" }
+    },
+    "feature_grid": {
+      "type": "nuumi-pdp-feature-grid",
+      "blocks": {
+        "feature_1": { "type": "feature", "settings": { "icon": "heart", "title": "Supports calmer behavior", "text": "<p>Helps dogs settle more easily during stress triggers and routine changes.</p>" } },
+        "feature_2": { "type": "feature", "settings": { "icon": "science", "title": "Pheromone-led positioning", "text": "<p>Built around calm-support language for dogs that struggle with stress and overstimulation.</p>" } },
+        "feature_3": { "type": "feature", "settings": { "icon": "shield", "title": "Low-friction routine fit", "text": "<p>Wear-based support can feel simpler than building a more complex routine.</p>" } }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "settings": {
+        "bg_color": "#EAF7F7",
+        "eyebrow": "Why CalmiCollar fits the routine",
+        "title": "Calm support that fits the dogs who struggle most with transitions.",
+        "text": "<p>A gentler, daily-wear route for dogs that react strongly to being alone, traveling, or shifting routines.</p>"
+      }
+    },
+    "story": {
+      "type": "nuumi-pdp-story",
+      "blocks": {
+        "benefit_1": { "type": "benefit", "settings": { "icon": "heart", "title": "Helps dogs feel safer", "text": "<p>Positioned around comfort and calm rather than dramatic promises.</p>" } },
+        "benefit_2": { "type": "benefit", "settings": { "icon": "shield", "title": "Supports routine transitions", "text": "<p>Useful for departures, travel, visitors, and similar changes.</p>" } },
+        "benefit_3": { "type": "benefit", "settings": { "icon": "science", "title": "Low-friction daily support", "text": "<p>Wear-based support can feel simpler than introducing a more complex routine.</p>" } }
+      },
+      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "layout": "image_first",
+        "subtitle": "A calmer support layer",
+        "title": "For the dogs that unravel when routine changes.",
+        "text": "<p>CalmiCollar supports dogs facing emotional overload and environmental stress with a gentler daily support layer.</p>"
+      }
+    },
+    "comparison": {
+      "type": "nuumi-pdp-comparison",
+      "blocks": {
+        "feature_1": { "type": "feature", "settings": { "title": "Wearable daily support", "others_has_feature": false } },
+        "feature_2": { "type": "feature", "settings": { "title": "Pheromone-based calming positioning", "others_has_feature": false } },
+        "feature_3": { "type": "feature", "settings": { "title": "Designed for separation-anxiety triggers", "others_has_feature": false } },
+        "feature_4": { "type": "feature", "settings": { "title": "Simple to keep in routine", "others_has_feature": true } }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {
+        "bg_color": "#F9FAFB",
+        "subtitle": "CalmiCollar vs heavier stress-management routines",
+        "title": "A calmer approach than reaction-only stress support.",
+        "nuumi_name": "CalmiCollar",
+        "others_name": "Heavier alternatives"
+      }
+    },
+    "expert": {
+      "type": "nuumi-pdp-expert",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "badge_text": "Clinically proven positioning",
+        "quote": "A calmer daily-wear support layer for dogs that struggle with routine changes and overstimulation.",
+        "name": "Nuumipet calming-care team",
+        "credentials": "Behavior-support product guidance"
+      }
+    },
+    "faq": {
+      "type": "nuumi-pdp-faq",
+      "blocks": {
+        "faq_1": { "type": "faq_item", "settings": { "question": "What is CalmiCollar designed to help with?", "answer": "<p>CalmiCollar is designed to support stress-prone dogs during separation, routine changes, travel, and overstimulating moments.</p>" } },
+        "faq_2": { "type": "faq_item", "settings": { "question": "How does it fit into the day?", "answer": "<p>It fits easily into the day as a low-friction daily wear support option.</p>" } },
+        "faq_3": { "type": "faq_item", "settings": { "question": "Is it meant to replace training?", "answer": "<p>No. CalmiCollar is supportive and works best alongside training and thoughtful routine management.</p>" } },
+        "faq_4": { "type": "faq_item", "settings": { "question": "Will it work for every dog?", "answer": "<p>Results vary by dog, environment, and consistency, so the promise should stay measured.</p>" } }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "settings": { "bg_color": "#F7FBFD", "title": "Frequently asked questions" }
+    },
+    "guarantee": {
+      "type": "nuumi-pdp-guarantee",
+      "settings": {
+        "bg_color": "#10243A",
+        "icon": "shield",
+        "title": "Start a calmer routine with less friction",
+        "text": "<p>CalmiCollar is an easy first step for homes that want calmer behavior support without overcomplicating the routine.</p>"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": ["main", "trust_strip", "feature_grid", "story", "comparison", "expert", "faq", "guarantee", "related-products"]
+}

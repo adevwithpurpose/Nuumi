@@ -1,0 +1,76 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-feature-grid section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-feature-grid__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-feature-grid__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-pdp-feature-grid__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="nuumi-pdp-feature-grid__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-feature-grid__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-feature-grid__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-feature-grid__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          <h3 class="nuumi-pdp-feature-grid__card-title">{{ block.settings.title }}</h3>
+          <div class="nuumi-pdp-feature-grid__card-text">{{ block.settings.text }}</div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Feature Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#EAF7F7" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Why people keep it close" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "A bark-control tool built for the moments that usually escalate fastest." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Use the cards below to explain how the device fits into real routines, not just a generic training pitch.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "star", "label": "Star" },
+            { "value": "check_mark", "label": "Check Mark" }
+          ],
+          "default": "science"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "Use it where barking starts" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Keep one near the front door, fence line, or the places your dog locks into the habit fastest.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Feature Grid",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "science", "title": "Interrupts the loop", "text": "<p>Designed to cut through the moment before barking turns into a longer spiral.</p>" } },
+        { "type": "feature", "settings": { "icon": "shield", "title": "No collar routine required", "text": "<p>A handheld option for homes that want bark support without switching to a wearable device.</p>" } },
+        { "type": "feature", "settings": { "icon": "heart", "title": "Easy to keep nearby", "text": "<p>Simple enough to leave by the door, near the yard, or anywhere barking usually begins.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

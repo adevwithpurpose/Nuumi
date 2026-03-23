@@ -1,0 +1,261 @@
+<product-info
+  id="MainProduct-{{ section.id }}"
+  class="nuumi-pdp nuumi-pdp--byebark section-{{ section.id }}-padding"
+  data-section="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-update-url="true"
+  data-url="{{ product.url }}"
+>
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  {% assign current_variant_price = current_variant.price | default: product.price %}
+  {% assign first_pack = section.blocks | where: 'type', 'pack_option' | first %}
+
+  <div class="page-width">
+    <div class="nuumi-byebark-hero">
+      <div class="nuumi-byebark-hero__media-column">
+        <div class="nuumi-byebark-hero__media-shell">
+          {% render 'product-media-gallery', variant_images: variant_images %}
+        </div>
+      </div>
+
+      <div class="nuumi-byebark-hero__content-column">
+        <section id="ProductInfo-{{ section.id }}" class="nuumi-byebark-hero__panel">
+          <div class="nuumi-byebark-hero__intro">
+            {%- if section.settings.eyebrow != blank -%}
+              <p class="nuumi-byebark-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+            {%- endif -%}
+
+            <div class="nuumi-byebark-hero__badge-row">
+              {%- if section.settings.badge_primary != blank -%}
+                <span class="nuumi-byebark-hero__badge">{{ section.settings.badge_primary }}</span>
+              {%- endif -%}
+              {%- if section.settings.badge_secondary != blank -%}
+                <span class="nuumi-byebark-hero__badge nuumi-byebark-hero__badge--soft">{{ section.settings.badge_secondary }}</span>
+              {%- endif -%}
+            </div>
+
+            <h1 class="nuumi-byebark-hero__title">{{ product.title | escape }}</h1>
+
+            {%- if section.settings.subtitle != blank -%}
+              <p class="nuumi-byebark-hero__subtitle">{{ section.settings.subtitle }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.description != blank -%}
+              <div class="nuumi-byebark-hero__description rte">{{ section.settings.description }}</div>
+            {%- endif -%}
+          </div>
+
+          {%- if section.blocks.size > 0 -%}
+            <div class="nuumi-byebark-hero__benefits">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'benefit' -%}
+                  <div class="nuumi-byebark-hero__benefit" {{ block.shopify_attributes }}>
+                    <span class="nuumi-byebark-hero__benefit-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                    <div>
+                      <p class="nuumi-byebark-hero__benefit-title">{{ block.settings.title }}</p>
+                      {%- if block.settings.text != blank -%}
+                        <p class="nuumi-byebark-hero__benefit-text">{{ block.settings.text }}</p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
+          <div class="nuumi-byebark-hero__purchase-card">
+            <div class="nuumi-byebark-hero__price-row" id="price-{{ section.id }}" role="status">
+              <div>
+                {%- if section.settings.price_label != blank -%}
+                  <p class="nuumi-byebark-hero__price-label">{{ section.settings.price_label }}</p>
+                {%- endif -%}
+                <p class="nuumi-byebark-hero__price" data-unit-price>{{ current_variant_price | money }}</p>
+              </div>
+              {%- if section.settings.price_note != blank -%}
+                <p class="nuumi-byebark-hero__price-note">{{ section.settings.price_note }}</p>
+              {%- endif -%}
+            </div>
+
+            {%- assign pack_blocks = section.blocks | where: 'type', 'pack_option' -%}
+            {%- if pack_blocks.size > 0 -%}
+              <div class="nuumi-byebark-hero__packs">
+                {%- if section.settings.pack_heading != blank -%}
+                  <p class="nuumi-byebark-hero__packs-heading">{{ section.settings.pack_heading }}</p>
+                {%- endif -%}
+                <div class="nuumi-byebark-hero__pack-grid">
+                  {%- for block in pack_blocks -%}
+                    {%- assign is_default = false -%}
+                    {%- if forloop.first -%}
+                      {%- assign is_default = true -%}
+                    {%- endif -%}
+                    <label class="nuumi-byebark-hero__pack {% if is_default %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+                      <input type="radio" name="byebark_pack_{{ section.id }}" value="{{ block.settings.quantity }}" data-qty="{{ block.settings.quantity }}" data-price="{{ current_variant_price | times: block.settings.quantity }}" {% if is_default %}checked{% endif %}>
+                      {%- if block.settings.badge != blank -%}
+                        <span class="nuumi-byebark-hero__pack-badge">{{ block.settings.badge }}</span>
+                      {%- endif -%}
+                      <span class="nuumi-byebark-hero__pack-title">{{ block.settings.title }}</span>
+                      {%- if block.settings.subtitle != blank -%}
+                        <span class="nuumi-byebark-hero__pack-subtitle">{{ block.settings.subtitle }}</span>
+                      {%- endif -%}
+                      {%- if block.settings.note != blank -%}
+                        <span class="nuumi-byebark-hero__pack-note">{{ block.settings.note }}</span>
+                      {%- endif -%}
+                    </label>
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            <product-form class="product-form" data-section-id="{{ section.id }}">
+              <div class="product-form__error-message-wrapper" role="alert" hidden>
+                <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+                <span class="product-form__error-message"></span>
+              </div>
+
+              {%- form 'product', product, id: 'product-form-' | append: section.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" name="id" value="{{ current_variant.id }}" class="product-variant-id">
+                <input type="hidden" name="quantity" value="{{ first_pack.settings.quantity | default: 1 }}" data-quantity-input>
+
+                <div class="nuumi-byebark-hero__cta-group">
+                  <button type="submit" name="add" class="nuumi-button--gold nuumi-byebark-hero__cta product-form__submit" {% if current_variant.available == false %}disabled{% endif %}>
+                    <span data-atc-label>
+                      {%- if current_variant.available == false -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        {{ section.settings.cta_label }} - {{ current_variant_price | money }}
+                      {%- endif -%}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+
+                  {%- if section.settings.cta_note != blank -%}
+                    <p class="nuumi-byebark-hero__cta-note">{{ section.settings.cta_note }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endform -%}
+            </product-form>
+
+            <div class="nuumi-byebark-hero__micro-trust">
+              {%- if section.settings.shipping_note != blank -%}
+                <span>{{ section.settings.shipping_note }}</span>
+              {%- endif -%}
+              {%- if section.settings.guarantee_note != blank -%}
+                <span>{{ section.settings.guarantee_note }}</span>
+              {%- endif -%}
+            </div>
+
+            {%- if section.settings.payment_note != blank -%}
+              <p class="nuumi-byebark-hero__payment-note">{{ section.settings.payment_note }}</p>
+            {%- endif -%}
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</product-info>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sectionRoot = document.getElementById('MainProduct-{{ section.id }}');
+    if (!sectionRoot) return;
+
+    var unitPriceEl = sectionRoot.querySelector('[data-unit-price]');
+    var quantityInput = sectionRoot.querySelector('[data-quantity-input]');
+    var atcLabel = sectionRoot.querySelector('[data-atc-label]');
+    var packInputs = sectionRoot.querySelectorAll('input[name="byebark_pack_{{ section.id }}"]');
+
+    function formatMoney(cents) {
+      if (!window.Shopify || typeof window.Shopify.formatMoney !== 'function') {
+        return '$' + (cents / 100).toFixed(2);
+      }
+      return window.Shopify.formatMoney(cents);
+    }
+
+    packInputs.forEach(function(input) {
+      input.addEventListener('change', function() {
+        if (!input.checked) return;
+
+        var packCard = input.closest('.nuumi-byebark-hero__pack');
+        sectionRoot.querySelectorAll('.nuumi-byebark-hero__pack').forEach(function(card) {
+          card.classList.remove('is-selected');
+        });
+        if (packCard) packCard.classList.add('is-selected');
+
+        var qty = parseInt(input.dataset.qty || '1', 10);
+        var price = parseInt(input.dataset.price || '0', 10);
+
+        if (quantityInput) quantityInput.value = qty;
+        if (unitPriceEl) unitPriceEl.textContent = formatMoney(price);
+        if (atcLabel) atcLabel.textContent = {{ section.settings.cta_label | json }} + ' - ' + formatMoney(price);
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Nuumi ByeBark Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Modern bark control, without the harsh feel" },
+    { "type": "text", "id": "badge_primary", "label": "Primary badge", "default": "Best Seller" },
+    { "type": "text", "id": "badge_secondary", "label": "Secondary badge", "default": "No-shock routine support" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Smart ultrasonic bark control device for the moments that spiral fastest." },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>ByeBark helps interrupt fence fighting, delivery-driver barking, and frantic jumping or nipping with a faster, lower-friction tool that is easy to keep nearby.</p>" },
+    { "type": "text", "id": "price_label", "label": "Price label", "default": "Starting at" },
+    { "type": "text", "id": "price_note", "label": "Price note", "default": "One device. No collar required." },
+    { "type": "text", "id": "pack_heading", "label": "Pack heading", "default": "Choose your setup" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Add ByeBark to cart" },
+    { "type": "text", "id": "cta_note", "label": "CTA note", "default": "Keep one near the door, yard, or the places barking starts fastest." },
+    { "type": "text", "id": "shipping_note", "label": "Shipping note", "default": "Fast US shipping" },
+    { "type": "text", "id": "guarantee_note", "label": "Guarantee note", "default": "30-day satisfaction support" },
+    { "type": "text", "id": "payment_note", "label": "Payment note", "default": "Secure checkout with major payment methods" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 4,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Interrupts barking fast" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Made for fence fighting, delivery alerts, and overstimulated moments at home." }
+      ]
+    },
+    {
+      "type": "pack_option",
+      "name": "Pack option",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "1 Device" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Best for a single problem area" },
+        { "type": "text", "id": "note", "label": "Note", "default": "$49 each" },
+        { "type": "text", "id": "badge", "label": "Badge", "default": "Featured" },
+        { "type": "range", "id": "quantity", "label": "Quantity", "min": 1, "max": 6, "step": 1, "default": 1 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi ByeBark Hero",
+      "blocks": [
+        { "type": "benefit", "settings": { "title": "Interrupts barking fast", "text": "Made for fence fighting, delivery alerts, and overstimulated moments at home." } },
+        { "type": "benefit", "settings": { "title": "No-shock routine support", "text": "A sound-based tool designed to redirect attention without forcing a collar into the routine." } },
+        { "type": "benefit", "settings": { "title": "Smart pattern shifting", "text": "Built to vary the pattern so dogs are less likely to tune it out over time." } },
+        { "type": "pack_option", "settings": { "title": "1 Device", "subtitle": "Best for one hotspot", "note": "$49 each", "quantity": 1 } },
+        { "type": "pack_option", "settings": { "title": "2 Devices", "subtitle": "Front door + backyard", "note": "Two-device setup", "badge": "Most Popular", "quantity": 2 } },
+        { "type": "pack_option", "settings": { "title": "3 Devices", "subtitle": "Whole-home coverage", "note": "Three-device setup", "badge": "Best Value", "quantity": 3 } }
+      ]
+    }
+  ]
+}
+{% endschema %}

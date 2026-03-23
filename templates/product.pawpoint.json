@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "nuumi-main-product",
+      "blocks": {
+        "title": { "type": "title", "settings": { "subtitle": "Ear wipes designed to help you clean hidden folds and reach the areas bulkier tools often miss.", "eyebrow": "Ear-cleaning support with better control where it matters", "badge_primary": "Top Rated", "badge_secondary": "Finger-control design", "description": "<p>PawPoint offers a more precise, easier-to-control ear-cleaning routine for dogs that need regular maintenance and a gentler-feeling approach.</p>" } },
+        "price": { "type": "price", "settings": {} },
+        "bullets": {
+          "type": "bullets",
+          "settings": {
+            "bullet_1": "Finger-control cleaning format",
+            "bullet_2": "Reaches hidden folds more easily",
+            "bullet_3": "Built for recurring ear-care routines"
+          }
+        },
+        "quantity_packs": {
+          "type": "quantity_packs",
+          "settings": {
+            "heading": "Choose your supply",
+            "pack_1_title": "1 Pack",
+            "pack_1_subtitle": "Start your routine",
+            "pack_2_title": "3 Packs",
+            "pack_2_subtitle": "Ongoing ear care",
+            "pack_2_badge": "Most Popular",
+            "pack_3_title": "6 Packs",
+            "pack_3_subtitle": "Long-term maintenance"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_guarantee": true,
+            "guarantee_text": "Satisfaction support for a cleaner ear-care routine",
+            "button_label": "Add PawPoint to cart",
+            "cta_note": "Built for homes that need a cleaner, easier-to-control ear-care routine.",
+            "shipping_note": "Fast US shipping",
+            "guarantee_note": "Satisfaction support available",
+            "payment_note": "Secure checkout with major payment methods"
+          }
+        }
+      },
+      "block_order": ["title", "price", "bullets", "quantity_packs", "buy_buttons"],
+      "settings": { "enable_sticky_cta": true }
+    },
+    "trust_strip": {
+      "type": "nuumi-pdp-trust-strip",
+      "blocks": {
+        "item_1": { "type": "trust_item", "settings": { "icon": "shield", "text": "Finger-control precision" } },
+        "item_2": { "type": "trust_item", "settings": { "icon": "heart", "text": "Gentler routine feel" } },
+        "item_3": { "type": "trust_item", "settings": { "icon": "science", "text": "Better reach in hidden folds" } },
+        "item_4": { "type": "trust_item", "settings": { "icon": "truck", "text": "Fast US Shipping" } }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4"],
+      "settings": { "bg_color": "#F7FBFD" }
+    },
+    "feature_grid": {
+      "type": "nuumi-pdp-feature-grid",
+      "blocks": {
+        "feature_1": { "type": "feature", "settings": { "icon": "shield", "title": "Better control", "text": "<p>The finger-fit format helps position cleaning exactly where needed.</p>" } },
+        "feature_2": { "type": "feature", "settings": { "icon": "science", "title": "Reaches where debris hides", "text": "<p>Made for hidden folds and hard-to-reach curves.</p>" } },
+        "feature_3": { "type": "feature", "settings": { "icon": "heart", "title": "Easier recurring routine", "text": "<p>A lower-friction option for regular ear care and ongoing maintenance.</p>" } }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "settings": {
+        "bg_color": "#EAF7F7",
+        "eyebrow": "Why PawPoint feels easier",
+        "title": "Ear care that feels more precise than generic wipes and bulky tools.",
+        "text": "<p>Built around control, access, and a more consistent cleaning routine for dogs with recurring ear buildup.</p>"
+      }
+    },
+    "story": {
+      "type": "nuumi-pdp-story",
+      "blocks": {
+        "benefit_1": { "type": "benefit", "settings": { "icon": "shield", "title": "Cleaner access", "text": "<p>Better control than a loose wipe or bulky applicator.</p>" } },
+        "benefit_2": { "type": "benefit", "settings": { "icon": "science", "title": "Supports preventive hygiene", "text": "<p>Positioned around consistent maintenance, not treatment language.</p>" } },
+        "benefit_3": { "type": "benefit", "settings": { "icon": "heart", "title": "Simple repeatable routine", "text": "<p>Best framed around consistency and easier recurring care.</p>" } }
+      },
+      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "layout": "image_first",
+        "subtitle": "More control where it matters",
+        "title": "For dogs whose ears need more than a quick surface wipe.",
+        "text": "<p>PawPoint is a smarter maintenance tool for homes that want to clean more thoroughly before small issues grow.</p>"
+      }
+    },
+    "comparison": {
+      "type": "nuumi-pdp-comparison",
+      "blocks": {
+        "feature_1": { "type": "feature", "settings": { "title": "Finger-control format", "others_has_feature": false } },
+        "feature_2": { "type": "feature", "settings": { "title": "Better access to hidden folds", "others_has_feature": false } },
+        "feature_3": { "type": "feature", "settings": { "title": "Easier recurring maintenance", "others_has_feature": false } },
+        "feature_4": { "type": "feature", "settings": { "title": "Familiar wipe-based routine", "others_has_feature": true } }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {
+        "bg_color": "#F9FAFB",
+        "subtitle": "PawPoint vs standard wipes and tools",
+        "title": "A cleaner, more controlled ear-care routine.",
+        "nuumi_name": "PawPoint",
+        "others_name": "Standard alternatives"
+      }
+    },
+    "expert": {
+      "type": "nuumi-pdp-expert",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "badge_text": "Top-rated precision-care positioning",
+        "quote": "Built around precision, access, and easier recurring hygiene rather than bulky, frustrating ear-care routines.",
+        "name": "Nuumipet hygiene-care team",
+        "credentials": "Ear-care routine guidance"
+      }
+    },
+    "faq": {
+      "type": "nuumi-pdp-faq",
+      "blocks": {
+        "faq_1": { "type": "faq_item", "settings": { "question": "What makes PawPoint different from normal ear wipes?", "answer": "<p>PawPoint offers finger-control precision and better reach into hidden folds for a more complete clean.</p>" } },
+        "faq_2": { "type": "faq_item", "settings": { "question": "Is it for occasional or regular use?", "answer": "<p>PawPoint works best as part of a regular ear-care routine.</p>" } },
+        "faq_3": { "type": "faq_item", "settings": { "question": "Does it replace veterinary care?", "answer": "<p>No. PawPoint supports everyday hygiene and is not a treatment product.</p>" } },
+        "faq_4": { "type": "faq_item", "settings": { "question": "Why use this instead of a bulkier tool?", "answer": "<p>It gives you more control, a gentler-feeling routine, and easier access to the areas wipes often miss.</p>" } }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "settings": { "bg_color": "#F7FBFD", "title": "Frequently asked questions" }
+    },
+    "guarantee": {
+      "type": "nuumi-pdp-guarantee",
+      "settings": {
+        "bg_color": "#10243A",
+        "icon": "shield",
+        "title": "Start a cleaner ear-care routine with more confidence",
+        "text": "<p>PawPoint makes it easier to stay consistent with ear hygiene and avoid the frustration of clumsy tools.</p>"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": ["main", "trust_strip", "feature_grid", "story", "comparison", "expert", "faq", "guarantee", "related-products"]
+}

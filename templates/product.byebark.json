@@ -1,0 +1,316 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "nuumi-pdp-byebark-hero",
+      "blocks": {
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "title": "Interrupts barking fast",
+            "text": "Made for fence fighting, delivery alerts, and overstimulated moments at home."
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "title": "No-shock routine support",
+            "text": "A sound-based tool designed to redirect attention without forcing a collar into the routine."
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "title": "Smart pattern shifting",
+            "text": "Built to vary the pattern so dogs are less likely to tune it out over time."
+          }
+        },
+        "pack_1": {
+          "type": "pack_option",
+          "settings": {
+            "title": "1 Device",
+            "subtitle": "Best for one hotspot",
+            "note": "$49 each",
+            "badge": "",
+            "quantity": 1
+          }
+        },
+        "pack_2": {
+          "type": "pack_option",
+          "settings": {
+            "title": "2 Devices",
+            "subtitle": "Front door + backyard",
+            "note": "Two-device setup",
+            "badge": "Most Popular",
+            "quantity": 2
+          }
+        },
+        "pack_3": {
+          "type": "pack_option",
+          "settings": {
+            "title": "3 Devices",
+            "subtitle": "Whole-home coverage",
+            "note": "Three-device setup",
+            "badge": "Best Value",
+            "quantity": 3
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "pack_1",
+        "pack_2",
+        "pack_3"
+      ],
+      "settings": {
+        "eyebrow": "Modern bark control, without the harsh feel",
+        "badge_primary": "Best Seller",
+        "badge_secondary": "No-shock routine support",
+        "subtitle": "Smart ultrasonic bark control device for the moments that spiral fastest.",
+        "description": "<p>ByeBark helps interrupt fence fighting, delivery-driver barking, and frantic jumping or nipping with a faster, lower-friction tool that is easy to keep nearby.</p>",
+        "price_label": "Starting at",
+        "price_note": "One device. No collar required.",
+        "pack_heading": "Choose your setup",
+        "cta_label": "Add ByeBark to cart",
+        "cta_note": "Keep one near the door, yard, or the places barking starts fastest.",
+        "shipping_note": "Fast US shipping",
+        "guarantee_note": "30-day satisfaction support",
+        "payment_note": "Secure checkout with major payment methods"
+      }
+    },
+    "trust_strip": {
+      "type": "nuumi-pdp-trust-strip",
+      "blocks": {
+        "item_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "truck",
+            "text": "Fast US Shipping"
+          }
+        },
+        "item_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "30-Day Satisfaction Support"
+          }
+        },
+        "item_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "science",
+            "text": "Smart Pattern Shifting"
+          }
+        },
+        "item_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "heart",
+            "text": "No-Shock Routine Support"
+          }
+        }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4"],
+      "settings": {
+        "bg_color": "#FFFFFF"
+      }
+    },
+    "feature_grid": {
+      "type": "nuumi-pdp-feature-grid",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "science",
+            "title": "Interrupts the loop",
+            "text": "<p>Designed to cut through the moment before barking turns into a longer spiral.</p>"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "shield",
+            "title": "No collar routine required",
+            "text": "<p>A handheld option for homes that want bark support without switching to a wearable device.</p>"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "heart",
+            "title": "Easy to keep nearby",
+            "text": "<p>Simple enough to leave by the door, near the yard, or anywhere barking usually begins.</p>"
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "settings": {
+        "bg_color": "#EAF7F7",
+        "eyebrow": "Why people keep it close",
+        "title": "A bark-control tool built for the moments that usually escalate fastest.",
+        "text": "<p>ByeBark is easiest to trust when the page explains where it fits: quick household interruptions, calmer training moments, and a lower-friction routine than harsher devices.</p>"
+      }
+    },
+    "story": {
+      "type": "nuumi-pdp-story",
+      "blocks": {
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "icon": "science",
+            "title": "Cuts through focus quickly",
+            "text": "<p>Useful when your dog is locked into a barking pattern and needs a faster interruption cue.</p>"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "title": "Designed for real home triggers",
+            "text": "<p>From fence-line reactions to the sound of the delivery driver, the use case stays practical and familiar.</p>"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "icon": "heart",
+            "title": "Simpler than heavier setups",
+            "text": "<p>For many homes, a handheld tool feels easier to reach for than introducing a more intense training device.</p>"
+          }
+        }
+      },
+      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+      "settings": {
+        "bg_color": "#F7FBFD",
+        "layout": "text_first",
+        "subtitle": "How ByeBark fits the routine",
+        "title": "For the barking moments that happen fast and throw the whole room off.",
+        "text": "<p>The goal is not a harsher routine. The goal is to interrupt the spiral early, redirect attention, and make it easier to move the dog back into a calmer moment.</p>"
+      }
+    },
+    "comparison": {
+      "type": "nuumi-pdp-comparison",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Handheld and easy to keep nearby",
+            "others_has_feature": false
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "title": "No-shock routine support",
+            "others_has_feature": false
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "title": "Built for delivery and fence triggers",
+            "others_has_feature": false
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "title": "Quick to reach for at home",
+            "others_has_feature": true
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "subtitle": "ByeBark vs harsher approaches",
+        "title": "A calmer bark-control setup for everyday home triggers.",
+        "nuumi_name": "ByeBark",
+        "others_name": "Heavier alternatives"
+      }
+    },
+    "faq": {
+      "type": "nuumi-pdp-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is ByeBark a shock device?",
+            "answer": "<p>No. ByeBark is positioned as an ultrasonic bark-control tool, not a shock collar or prong-based routine.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What kind of barking is it designed for?",
+            "answer": "<p>It is best framed around common household triggers like fence fighting, delivery-driver barking, and overstimulated barking at home.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it work for every dog?",
+            "answer": "<p>Results can vary by dog, environment, and training consistency. The safer promise is that it is designed to help interrupt unwanted barking quickly for many households.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Where should I keep it?",
+            "answer": "<p>Most homes will keep it near the front door, yard access, or other places where barking tends to start first so it is easy to reach in the moment.</p>"
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "settings": {
+        "bg_color": "#F7FBFD",
+        "title": "Frequently asked questions"
+      }
+    },
+    "guarantee": {
+      "type": "nuumi-pdp-guarantee",
+      "settings": {
+        "bg_color": "#10243A",
+        "icon": "shield",
+        "title": "Try ByeBark with more confidence",
+        "text": "<p>The page keeps the promise practical: a focused bark-control tool, a simpler household routine, and satisfaction support if it is not the right fit for your home.</p>"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust_strip",
+    "feature_grid",
+    "story",
+    "comparison",
+    "faq",
+    "guarantee",
+    "related-products"
+  ]
+}
