@@ -1167,38 +1167,39 @@
 .nuumi-expert__content {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.74);
+  padding: 3.2rem;
+  background: #ffffff;
   border: 1px solid rgba(16, 36, 58, 0.08);
   border-radius: 2rem;
-  box-shadow: 0 20px 42px rgba(16, 36, 58, 0.06);
+  box-shadow: 0 12px 32px rgba(16, 36, 58, 0.04);
 }
 
 .nuumi-expert__badge {
   font-family: var(--font-body-family);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   color: #0f766e;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
 }
 
 .nuumi-expert__heading {
-  margin: 0 0 1.4rem;
+  margin: 0 0 1.6rem;
   color: var(--nuumi-deep-blue);
   font-family: var(--font-heading-family);
-  font-size: clamp(2rem, 2.6vw, 3.2rem);
-  line-height: 1.08;
+  font-size: clamp(2.2rem, 2.8vw, 3.4rem);
+  line-height: 1.1;
 }
 
 .nuumi-expert__quote {
-  font-family: var(--font-heading-family);
-  font-size: 2.2rem;
-  color: var(--nuumi-deep-blue);
-  margin: 0 0 2rem 0;
-  line-height: 1.24;
+  font-family: var(--font-body-family);
+  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  color: #374151;
+  margin: 0 0 3.2rem 0;
+  line-height: 1.35;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 750px) {
@@ -1210,22 +1211,25 @@
 .nuumi-expert__author {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  padding-left: 1.2rem;
-  border-left: 4px solid #0f766e;
+  gap: 0.4rem;
+  padding-left: 1.4rem;
+  border-left: 3px solid #0f766e;
+  margin-top: auto;
 }
 
 .nuumi-expert__name {
   font-family: var(--font-body-family);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--nuumi-deep-blue);
+  line-height: 1.2;
 }
 
 .nuumi-expert__credentials {
   font-family: var(--font-body-family);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: #6B7280;
+  line-height: 1.2;
 }
 
 /* FAQ Section */
@@ -3218,10 +3222,11 @@
 }
 
 .nuumi-expert__content {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(16, 36, 58, 0.1);
+  background: #ffffff;
+  padding: 4.8rem;
+  border: 1px solid rgba(16, 36, 58, 0.08);
   border-radius: 2rem;
-  padding: 2rem;
+  box-shadow: 0 12px 32px rgba(16, 36, 58, 0.04);
 }
 
 .nuumi-expert__badge {
@@ -3229,10 +3234,10 @@
 }
 
 .nuumi-expert__quote {
-  margin: 0 0 1.8rem;
-  font-size: clamp(2rem, 2.7vw, 4rem);
-  line-height: 1.2;
-  font-style: normal;
+  margin: 0 0 3.2rem;
+  font-size: clamp(2.4rem, 2.7vw, 3.4rem);
+  line-height: 1.35;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 990px) {
@@ -3350,7 +3355,7 @@
   }
 
   .nuumi-expert__content {
-    padding: 1.6rem;
+    padding: 2.4rem;
   }
 }
 
