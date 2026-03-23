@@ -15,8 +15,10 @@
         <article class="nuumi-pdp-timeline__step" {{ block.shopify_attributes }}>
           <span class="nuumi-pdp-timeline__step-marker"></span>
           <div class="nuumi-pdp-timeline__step-card">
-            <span class="nuumi-pdp-timeline__phase">{{ block.settings.phase }}</span>
-            <h3 class="nuumi-pdp-timeline__step-title">{{ block.settings.title }}</h3>
+            <div class="nuumi-pdp-timeline__step-head">
+              <span class="nuumi-pdp-timeline__phase">{{ block.settings.phase }}</span>
+              <h3 class="nuumi-pdp-timeline__step-title">{{ block.settings.title }}</h3>
+            </div>
             <p class="nuumi-pdp-timeline__step-text">{{ block.settings.text }}</p>
           </div>
         </article>

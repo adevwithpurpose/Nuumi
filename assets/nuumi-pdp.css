@@ -2950,6 +2950,64 @@
   line-height: 1.48;
 }
 
+.nuumi-pdp-timeline__header {
+  max-width: 74rem;
+  margin: 0 auto 2.4rem;
+}
+
+.nuumi-pdp-timeline__text,
+.nuumi-pdp-timeline__text p {
+  font-size: 1.34rem;
+  line-height: 1.58;
+}
+
+.nuumi-pdp-timeline__track {
+  gap: 1.4rem;
+}
+
+.nuumi-pdp-timeline__step {
+  padding-left: 2rem;
+}
+
+.nuumi-pdp-timeline__step::before {
+  left: 0.65rem;
+  bottom: -1.2rem;
+}
+
+.nuumi-pdp-timeline__step-marker {
+  width: 1.4rem;
+  height: 1.4rem;
+  top: 2rem;
+  box-shadow: 0 0 0 0.4rem rgba(245, 158, 11, 0.16);
+}
+
+.nuumi-pdp-timeline__step-card {
+  padding: 1.75rem;
+  border-radius: 2rem;
+}
+
+.nuumi-pdp-timeline__step-head {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.nuumi-pdp-timeline__phase {
+  margin-bottom: 0;
+  font-size: 0.94rem;
+}
+
+.nuumi-pdp-timeline__step-title {
+  margin: 0;
+  font-size: 1.72rem;
+  line-height: 1.15;
+}
+
+.nuumi-pdp-timeline__step-text {
+  font-size: 1.22rem;
+  line-height: 1.55;
+}
+
 .nuumi-pdp-efficacy__card-top {
   align-items: flex-start;
 }
@@ -3079,6 +3137,32 @@
 
   .nuumi-pdp-efficacy__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nuumi-pdp-timeline__track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+
+  .nuumi-pdp-timeline__track::before {
+    left: 12%;
+    right: 12%;
+    top: 0.75rem;
+  }
+
+  .nuumi-pdp-timeline__step {
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .nuumi-pdp-timeline__step-marker {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .nuumi-pdp-timeline__step-card {
+    min-height: 100%;
   }
 
   .nuumi-pdp-timeline__track {
@@ -3384,6 +3468,48 @@
 
   .nuumi-pdp-efficacy__card-text {
     font-size: 1.08rem;
+  }
+
+  .nuumi-pdp-timeline__header {
+    margin-bottom: 1.7rem;
+  }
+
+  .nuumi-pdp-timeline__track {
+    gap: 1rem;
+  }
+
+  .nuumi-pdp-timeline__step {
+    padding-left: 1.8rem;
+  }
+
+  .nuumi-pdp-timeline__step::before {
+    left: 0.55rem;
+    bottom: -1rem;
+  }
+
+  .nuumi-pdp-timeline__step-marker {
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 1.85rem;
+  }
+
+  .nuumi-pdp-timeline__step-card {
+    padding: 1.25rem;
+    border-radius: 1.7rem;
+  }
+
+  .nuumi-pdp-timeline__step-head {
+    gap: 0.55rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .nuumi-pdp-timeline__step-title {
+    font-size: 1.4rem;
+  }
+
+  .nuumi-pdp-timeline__step-text {
+    font-size: 1.12rem;
+    line-height: 1.48;
   }
 
   .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail-slider {
