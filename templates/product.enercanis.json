@@ -291,18 +291,24 @@
         "video_nq99Wa": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/ShoppingPaw.com_4.mp4",
+            "video_url": "",
             "title": "Watch our story"
           }
         },
         "video_QJdJVX": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/ShoppingPaw.com_3.mp4",
+            "video_url": "",
             "title": "Watch our story"
           }
         },
         "video_RqgQnT": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/ShoppingPaw.com_2.mp4",
+            "video_url": "",
             "title": "Watch our story"
           }
         },
