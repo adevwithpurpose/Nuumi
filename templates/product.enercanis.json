@@ -288,6 +288,24 @@
     "social_proof": {
       "type": "nuumi-pdp-social-proof",
       "blocks": {
+        "video_nq99Wa": {
+          "type": "video",
+          "settings": {
+            "title": "Watch our story"
+          }
+        },
+        "video_QJdJVX": {
+          "type": "video",
+          "settings": {
+            "title": "Watch our story"
+          }
+        },
+        "video_RqgQnT": {
+          "type": "video",
+          "settings": {
+            "title": "Watch our story"
+          }
+        },
         "review_1": {
           "type": "review",
           "settings": {
@@ -334,6 +352,9 @@
         }
       },
       "block_order": [
+        "video_nq99Wa",
+        "video_QJdJVX",
+        "video_RqgQnT",
         "review_1",
         "review_2",
         "review_3",
