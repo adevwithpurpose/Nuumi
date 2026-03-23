@@ -3849,12 +3849,15 @@
 
 .nuumi-pdp-expert__quote {
   font-family: var(--font-body-family);
-  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  font-size: clamp(2.4rem, 2.8vw, 3.2rem);
   color: #334155;
   margin: 0 0 3rem 0;
+  padding: 0;
+  border: none;
   line-height: 1.45;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .nuumi-pdp-expert__author {
