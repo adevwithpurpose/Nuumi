@@ -35,6 +35,23 @@
               hide_variants: true
             %}
           </div>
+          <div class="nuumi-enercanis-hero__left-guarantee">
+            <div class="nuumi-enercanis-hero__left-guarantee-badge">
+              {%- if section.settings.left_guarantee_image != blank -%}
+                {{ section.settings.left_guarantee_image | image_url: width: 240 | image_tag:
+                  loading: 'lazy',
+                  class: 'nuumi-enercanis-hero__left-guarantee-image',
+                  widths: '96, 144, 192, 240'
+                }}
+              {%- else -%}
+                <span class="nuumi-enercanis-hero__left-guarantee-fallback">90-Day</span>
+              {%- endif -%}
+            </div>
+            <div class="nuumi-enercanis-hero__left-guarantee-copy">
+              <p class="nuumi-enercanis-hero__left-guarantee-title">{{ section.settings.left_guarantee_title }}</p>
+              <p class="nuumi-enercanis-hero__left-guarantee-text">{{ section.settings.left_guarantee_text }}</p>
+            </div>
+          </div>
       </div>
 
       <div class="nuumi-enercanis-hero__content-column">
@@ -345,6 +362,10 @@
     { "type": "text", "id": "shipping_note", "label": "Shipping note", "default": "Fast US shipping" },
     { "type": "text", "id": "guarantee_note", "label": "Guarantee note", "default": "90-day worry-free guarantee" },
     { "type": "text", "id": "payment_note", "label": "Payment note", "default": "Secure checkout with major payment methods" },
+    { "type": "header", "content": "Left Guarantee Block" },
+    { "type": "image_picker", "id": "left_guarantee_image", "label": "Guarantee badge image" },
+    { "type": "text", "id": "left_guarantee_title", "label": "Guarantee title", "default": "Try it worry-free for 90 days" },
+    { "type": "text", "id": "left_guarantee_text", "label": "Guarantee text", "default": "If your dog does not show visible improvement after the full supply, we will refund your purchase. Simple as that." },
     {
       "type": "header",
       "content": "Media Settings"
