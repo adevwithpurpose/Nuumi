@@ -1,38 +1,38 @@
 {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
 
-<div class="nuumi-expert section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+<div class="nuumi-pdp-expert section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
   <div class="page-width">
-    <div class="nuumi-expert__grid">
-      <div class="nuumi-expert__image-wrapper">
+    <div class="nuumi-pdp-expert__grid">
+      <div class="nuumi-pdp-expert__image-wrapper">
         {%- if section.settings.image != blank -%}
           {{ section.settings.image | image_url: width: 1000 | image_tag:
             loading: 'lazy',
-            class: 'nuumi-expert__image',
+            class: 'nuumi-pdp-expert__image',
             sizes: '(min-width: 990px) 50vw, 100vw',
             widths: '375, 550, 750, 1000'
           }}
         {%- else -%}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-expert__image' }}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-expert__image' }}
         {%- endif -%}
       </div>
-      <div class="nuumi-expert__content">
+      <div class="nuumi-pdp-expert__content">
         {%- if section.settings.badge_text != blank -%}
-          <div class="nuumi-expert__badge">{{ section.settings.badge_text }}</div>
+          <div class="nuumi-pdp-expert__badge">{{ section.settings.badge_text }}</div>
         {%- endif -%}
         {%- if section.settings.heading != blank -%}
-          <h2 class="nuumi-expert__heading">{{ section.settings.heading }}</h2>
+          <h2 class="nuumi-pdp-expert__heading">{{ section.settings.heading }}</h2>
         {%- endif -%}
         
         {%- if section.settings.quote != blank -%}
-          <blockquote class="nuumi-expert__quote">"{{ section.settings.quote }}"</blockquote>
+          <blockquote class="nuumi-pdp-expert__quote">"{{ section.settings.quote }}"</blockquote>
         {%- endif -%}
         
-        <div class="nuumi-expert__author">
+        <div class="nuumi-pdp-expert__author">
           {%- if section.settings.name != blank -%}
-            <span class="nuumi-expert__name">{{ section.settings.name }}</span>
+            <span class="nuumi-pdp-expert__name">{{ section.settings.name }}</span>
           {%- endif -%}
           {%- if section.settings.credentials != blank -%}
-            <span class="nuumi-expert__credentials">{{ section.settings.credentials }}</span>
+            <span class="nuumi-pdp-expert__credentials">{{ section.settings.credentials }}</span>
           {%- endif -%}
         </div>
       </div>
