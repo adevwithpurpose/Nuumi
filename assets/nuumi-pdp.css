@@ -2928,6 +2928,48 @@
   line-height: 1.5;
 }
 
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(16, 36, 58, 0.12);
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail[aria-current='true'] {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 0.15rem rgba(15, 118, 110, 0.12);
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .slider-button:hover,
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .slider-button:focus-visible {
+  background: #f4fafb;
+  border-color: rgba(15, 118, 110, 0.3);
+}
+
+.nuumi-pdp--enercanis .nuumi-enercanis-hero__support-card,
+.nuumi-pdp-efficacy__card,
+.nuumi-pdp-timeline__step-card,
+.nuumi-pdp-howto__card {
+  box-shadow: 0 14px 32px rgba(16, 36, 58, 0.05);
+}
+
+.nuumi-pdp-transparency__item,
+.nuumi-pdp-howto__card,
+.nuumi-pdp-timeline__step-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.nuumi-pdp-transparency__item:hover,
+.nuumi-pdp-howto__card:hover,
+.nuumi-pdp-timeline__step-card:hover {
+  transform: translateY(-2px);
+}
+
+.nuumi-pdp-howto__card-title,
+.nuumi-pdp-timeline__step-title,
+.nuumi-pdp-efficacy__card-title {
+  text-wrap: balance;
+}
+
 @media screen and (min-width: 990px) {
   .nuumi-pdp-howto__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2942,5 +2984,81 @@
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;
+  }
+
+  .nuumi-pdp-howto__card {
+    padding: 1.6rem;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .nuumi-pdp-transparency__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nuumi-expert__grid {
+    gap: 2.4rem;
+  }
+
+  .nuumi-expert__quote {
+    font-size: clamp(1.9rem, 5vw, 3rem);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .thumbnail-slider {
+    gap: 0.55rem;
+  }
+
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__media-shell .slider-button {
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+
+  .nuumi-pdp--enercanis .nuumi-enercanis-hero__support-card {
+    padding: 0.95rem 1rem;
+  }
+
+  .nuumi-pdp-efficacy__card {
+    padding: 1.1rem;
+  }
+
+  .nuumi-pdp-transparency__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nuumi-pdp-transparency__item {
+    padding: 1.2rem 1.35rem;
+  }
+
+  .nuumi-pdp-howto__header {
+    margin-bottom: 1.8rem;
+  }
+
+  .nuumi-pdp-howto__card {
+    grid-template-columns: 6.4rem 1fr;
+    gap: 0.9rem;
+    padding: 1.1rem;
+  }
+
+  .nuumi-pdp-howto__media {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 1rem;
+  }
+
+  .nuumi-pdp-howto__text {
+    font-size: 1.34rem;
+  }
+
+  .nuumi-pdp-howto__card-title {
+    font-size: 1.42rem;
+  }
+
+  .nuumi-pdp-howto__card-text {
+    font-size: 1.2rem;
   }
 }
