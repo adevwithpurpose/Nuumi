@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -442,12 +451,24 @@
             "name": "Jasmine L.",
             "meta": "Senior dog parent"
           }
+        },
+        "review_6Pftrb": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Verified Buyer",
+            "quote": "After months of messy stools and vet visits, EnerCanis was the first thing that actually made the pattern start calming down.",
+            "highlight": "Firmer stools in the first week.",
+            "name": "Melissa R.",
+            "meta": "French bulldog parent"
+          }
         }
       },
       "block_order": [
         "review_1",
         "review_2",
-        "review_3"
+        "review_3",
+        "review_6Pftrb"
       ],
       "settings": {
         "bg_color": "#ffffff",
@@ -460,6 +481,7 @@
       "type": "nuumi-pdp-expert",
       "settings": {
         "bg_color": "#f7fbfd",
+        "image": "shopify://shop_images/1763505124773_sara_r.webp",
         "badge_text": "Veterinary perspective",
         "quote": "When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing.",
         "name": "Dr. Elena Morris",
