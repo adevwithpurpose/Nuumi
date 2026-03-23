@@ -24,6 +24,7 @@
   {% assign one_time_total_price = base_price | times: default_quantity %}
   {% assign form_id = 'product-form-' | append: section.id %}
   {% assign default_bundle_title = first_pack.settings.title | default: '1 Bottle' %}
+  {% assign subscribe_enabled = section.settings.enable_subscribe_mode %}
 
   <div class="page-width">
     <div class="nuumi-enercanis-hero">
@@ -116,9 +117,41 @@
           {%- endif -%}
 
             <div class="nuumi-enercanis-hero__purchase-card">
-              {%- if section.settings.purchase_microcopy != blank -%}
-                <p class="nuumi-enercanis-hero__purchase-microcopy">{{ section.settings.purchase_microcopy }}</p>
-              {%- endif -%}
+              <div class="nuumi-enercanis-hero__mode-group">
+                <p class="nuumi-enercanis-hero__purchase-label">{{ section.settings.purchase_mode_heading }}</p>
+                <div class="nuumi-enercanis-hero__mode-grid">
+                  <label class="nuumi-enercanis-hero__mode {% unless subscribe_enabled %}is-selected{% endunless %}" data-mode-card="one_time">
+                    <input
+                      type="radio"
+                      name="enercanis_mode_{{ section.id }}"
+                      value="one_time"
+                      data-mode="one_time"
+                      {% unless subscribe_enabled %}checked{% endunless %}
+                    >
+                    <span class="nuumi-enercanis-hero__mode-copy">
+                      <span class="nuumi-enercanis-hero__mode-title">{{ section.settings.one_time_label }}</span>
+                      <span class="nuumi-enercanis-hero__mode-text">{{ section.settings.one_time_mode_text }}</span>
+                    </span>
+                  </label>
+
+                  {%- if subscribe_enabled -%}
+                    <label class="nuumi-enercanis-hero__mode is-selected" data-mode-card="subscribe">
+                      <input
+                        type="radio"
+                        name="enercanis_mode_{{ section.id }}"
+                        value="subscribe"
+                        data-mode="subscribe"
+                        checked
+                      >
+                      <span class="nuumi-enercanis-hero__mode-copy">
+                        <span class="nuumi-enercanis-hero__mode-badge">{{ section.settings.subscribe_badge }}</span>
+                        <span class="nuumi-enercanis-hero__mode-title">{{ section.settings.subscribe_label }}</span>
+                        <span class="nuumi-enercanis-hero__mode-text">{{ section.settings.subscribe_note }}</span>
+                      </span>
+                    </label>
+                  {%- endif -%}
+                </div>
+              </div>
 
               <div class="nuumi-enercanis-hero__price-row">
                 <div>
@@ -151,6 +184,7 @@
                         value="{{ block.settings.quantity }}"
                         data-qty="{{ block.settings.quantity }}"
                         data-title="{{ block.settings.title | escape }}"
+                        data-discount="{{ block.settings.discount_percent | default: 0 }}"
                         {% if is_default %}checked{% endif %}
                       >
                       {%- if block.settings.badge != blank -%}
@@ -163,6 +197,8 @@
                       {%- if block.settings.note != blank -%}
                         <span class="nuumi-enercanis-hero__pack-note">{{ block.settings.note }}</span>
                       {%- endif -%}
+                      <span class="nuumi-enercanis-hero__pack-per" data-pack-per></span>
+                      <span class="nuumi-enercanis-hero__pack-save" data-pack-save></span>
                     </label>
                   {%- endfor -%}
                 </div>
@@ -178,7 +214,7 @@
               {%- form 'product', product, id: form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 <input type="hidden" name="id" value="{{ current_variant.id }}" class="product-variant-id">
                 <input type="hidden" name="quantity" value="{{ default_quantity }}" data-quantity-input>
-                <input type="hidden" name="properties[Purchase option]" value="{{ section.settings.one_time_label }}" data-purchase-option>
+                <input type="hidden" name="properties[Purchase option]" value="{% if subscribe_enabled %}{{ section.settings.subscribe_label }}{% else %}{{ section.settings.one_time_label }}{% endif %}" data-purchase-option>
                 <input type="hidden" name="properties[Bundle]" value="{{ default_bundle_title }}" data-bundle-label>
 
                 <div class="nuumi-enercanis-hero__cta-group">
@@ -193,7 +229,11 @@
                       {%- if current_variant.available == false -%}
                         {{ 'products.product.sold_out' | t }}
                       {%- else -%}
-                        {{ section.settings.cta_label }} - {{ one_time_total_price | money }}
+                        {%- if subscribe_enabled -%}
+                          {{ section.settings.subscribe_cta_label }}
+                        {%- else -%}
+                          {{ section.settings.cta_label }}
+                        {%- endif -%}
                       {%- endif -%}
                     </span>
                     {%- render 'loading-spinner' -%}
@@ -245,11 +285,20 @@
 
     var basePrice = {{ base_price | json }};
     var sectionSettings = {
+      subscribeEnabled: {{ section.settings.enable_subscribe_mode | json }},
+      subscribeDiscountPercent: {{ section.settings.subscribe_discount_percent | default: 0 | json }},
+      oneTimeLabel: {{ section.settings.one_time_label | json }},
+      oneTimeModeText: {{ section.settings.one_time_mode_text | json }},
       oneTimeNote: {{ section.settings.one_time_note | json }},
       oneTimeBadge: {{ section.settings.one_time_badge | json }},
       ctaLabel: {{ section.settings.cta_label | json }},
       stickyLabel: {{ section.settings.sticky_button_label | json }},
-      oneTimeCtaNote: {{ section.settings.one_time_cta_note | json }}
+      oneTimeCtaNote: {{ section.settings.one_time_cta_note | json }},
+      subscribeLabel: {{ section.settings.subscribe_label | json }},
+      subscribeBadge: {{ section.settings.subscribe_badge | json }},
+      subscribeNote: {{ section.settings.subscribe_note | json }},
+      subscribeCtaLabel: {{ section.settings.subscribe_cta_label | json }},
+      subscribeCtaNote: {{ section.settings.subscribe_cta_note | json }}
     };
 
     var priceEl = sectionRoot.querySelector('[data-total-price]');
@@ -261,6 +310,8 @@
     var priceNote = sectionRoot.querySelector('[data-price-note]');
     var priceChip = sectionRoot.querySelector('[data-price-chip]');
     var packInputs = sectionRoot.querySelectorAll('input[name="enercanis_pack_{{ section.id }}"]');
+    var modeInputs = sectionRoot.querySelectorAll('input[name="enercanis_mode_{{ section.id }}"]');
+    var purchaseOptionInput = sectionRoot.querySelector('[data-purchase-option]');
     var stickyCta = document.querySelector('[data-sticky-cta]');
     var stickyButton = document.querySelector('[data-sticky-button]');
     var submitButton = document.getElementById('ProductSubmitButton-{{ section.id }}');
@@ -278,10 +329,31 @@
       return checked || packInputs[0];
     }
 
+    function getSelectedMode() {
+      var checkedMode = sectionRoot.querySelector('input[name="enercanis_mode_{{ section.id }}"]:checked');
+      return checkedMode ? checkedMode.value : 'one_time';
+    }
+
+    function updateModeCards(selectedMode) {
+      sectionRoot.querySelectorAll('[data-mode-card]').forEach(function(card) {
+        card.classList.remove('is-selected');
+      });
+
+      var active = sectionRoot.querySelector('[data-mode-card="' + selectedMode + '"]');
+      if (active) active.classList.add('is-selected');
+    }
+
     function updateDisplay() {
       var selectedPack = getSelectedPack();
+      var selectedMode = getSelectedMode();
       var quantity = selectedPack ? parseInt(selectedPack.dataset.qty || '1', 10) : 1;
-      var total = Math.round(basePrice * quantity);
+      var packDiscount = selectedPack ? parseFloat(selectedPack.dataset.discount || '0') / 100 : 0;
+      var subscribeDiscount = selectedMode === 'subscribe' ? (parseFloat(sectionSettings.subscribeDiscountPercent || 0) / 100) : 0;
+      var baseTotal = Math.round(basePrice * quantity);
+      var afterPackDiscount = Math.round(baseTotal * (1 - packDiscount));
+      var total = Math.round(afterPackDiscount * (1 - subscribeDiscount));
+
+      updateModeCards(selectedMode);
 
       if (selectedPack) {
         sectionRoot.querySelectorAll('.nuumi-enercanis-hero__pack').forEach(function(card) {
@@ -292,21 +364,58 @@
       }
 
       if (quantityInput) quantityInput.value = quantity;
+      if (purchaseOptionInput) {
+        purchaseOptionInput.value = selectedMode === 'subscribe' ? sectionSettings.subscribeLabel : sectionSettings.oneTimeLabel;
+      }
       if (bundleInput && selectedPack) bundleInput.value = selectedPack.dataset.title || '';
       if (priceEl) priceEl.textContent = formatMoney(total);
       if (stickyPriceEl) stickyPriceEl.textContent = formatMoney(total);
-      if (atcLabel) atcLabel.textContent = sectionSettings.ctaLabel + ' - ' + formatMoney(total);
-      if (priceNote) priceNote.textContent = sectionSettings.oneTimeNote;
+      if (atcLabel) {
+        atcLabel.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeCtaLabel : sectionSettings.ctaLabel;
+      }
+      if (priceNote) {
+        priceNote.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeNote : sectionSettings.oneTimeNote;
+      }
       if (priceChip) {
-        priceChip.textContent = sectionSettings.oneTimeBadge;
+        priceChip.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeBadge : sectionSettings.oneTimeBadge;
         priceChip.style.display = priceChip.textContent ? 'inline-flex' : 'none';
       }
       if (ctaNote) {
-        ctaNote.textContent = sectionSettings.oneTimeCtaNote;
+        ctaNote.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeCtaNote : sectionSettings.oneTimeCtaNote;
       }
+
+      if (stickyButton) {
+        stickyButton.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeCtaLabel : sectionSettings.stickyLabel;
+      }
+
+      packInputs.forEach(function(input) {
+        var card = input.closest('.nuumi-enercanis-hero__pack');
+        if (!card) return;
+
+        var packQty = parseInt(input.dataset.qty || '1', 10);
+        var packLevelDiscount = parseFloat(input.dataset.discount || '0') / 100;
+        var packBaseTotal = Math.round(basePrice * packQty);
+        var packOneTime = Math.round(packBaseTotal * (1 - packLevelDiscount));
+        var packFinal = Math.round(packOneTime * (1 - subscribeDiscount));
+        var perBottle = Math.round(packFinal / Math.max(packQty, 1));
+        var savings = Math.max(packBaseTotal - packFinal, 0);
+
+        var perNode = card.querySelector('[data-pack-per]');
+        var saveNode = card.querySelector('[data-pack-save]');
+
+        if (perNode) perNode.textContent = formatMoney(perBottle) + '/bottle';
+        if (saveNode) {
+          saveNode.textContent = savings > 0 ? 'Save ' + formatMoney(savings) : '';
+          saveNode.style.display = savings > 0 ? 'inline-flex' : 'none';
+        }
+      });
     }
 
     packInputs.forEach(function(input) {
+      input.addEventListener('change', updateDisplay);
+    });
+
+    modeInputs.forEach(function(input) {
       input.addEventListener('change', updateDisplay);
     });
 
@@ -351,10 +460,19 @@
     { "type": "text", "id": "review_count", "label": "Review count", "default": "3,847" },
     { "type": "text", "id": "rating_caption", "label": "Rating caption", "default": "Trusted by pet parents desperate for a real root-cause answer." },
     { "type": "text", "id": "price_label", "label": "Price label", "default": "Today's preferred protocol" },
+    { "type": "text", "id": "purchase_mode_heading", "label": "Purchase mode heading", "default": "Choose purchase option" },
     { "type": "text", "id": "purchase_microcopy", "label": "Purchase microcopy", "default": "27,000+ transformed dog owners" },
     { "type": "text", "id": "one_time_label", "label": "One-time label", "default": "One-Time Purchase" },
+    { "type": "text", "id": "one_time_mode_text", "label": "One-time mode text", "default": "Pay once, no subscription" },
     { "type": "text", "id": "one_time_note", "label": "Price note", "default": "One-time purchase. Subscription can be enabled later once the app is configured." },
     { "type": "text", "id": "one_time_badge", "label": "Price badge", "default": "One-Time Purchase" },
+    { "type": "checkbox", "id": "enable_subscribe_mode", "label": "Enable subscribe option", "default": true },
+    { "type": "range", "id": "subscribe_discount_percent", "label": "Subscribe discount (%)", "min": 0, "max": 40, "step": 1, "default": 20 },
+    { "type": "text", "id": "subscribe_label", "label": "Subscribe label", "default": "Subscribe & Save" },
+    { "type": "text", "id": "subscribe_badge", "label": "Subscribe badge", "default": "Save 20%" },
+    { "type": "text", "id": "subscribe_note", "label": "Subscribe note", "default": "Lower monthly cost. Skip or cancel anytime." },
+    { "type": "text", "id": "subscribe_cta_label", "label": "Subscribe CTA label", "default": "Claim Discount & Try Risk-Free" },
+    { "type": "text", "id": "subscribe_cta_note", "label": "Subscribe CTA note", "default": "Subscribe now to lock in savings and keep your dog on protocol." },
     { "type": "text", "id": "pack_heading", "label": "Pack heading", "default": "Choose your bundle" },
     { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Start the gut-barrier protocol" },
     { "type": "text", "id": "sticky_button_label", "label": "Sticky CTA label", "default": "Start now" },
@@ -442,6 +560,7 @@
         { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "30-day reset" },
         { "type": "text", "id": "note", "label": "Note", "default": "Entry protocol" },
         { "type": "text", "id": "badge", "label": "Badge", "default": "Featured" },
+        { "type": "range", "id": "discount_percent", "label": "Bundle discount (%)", "min": 0, "max": 60, "step": 1, "default": 0 },
         { "type": "range", "id": "quantity", "label": "Quantity", "min": 1, "max": 6, "step": 1, "default": 1 }
       ]
     }
@@ -453,9 +572,9 @@
         { "type": "support_point", "settings": { "icon": "science", "title": "Targets the root cause", "text": "Helps restore the gut barrier so toxins are less likely to keep leaking into the system." } },
         { "type": "support_point", "settings": { "icon": "shield", "title": "Built for chronic cases", "text": "Made for dogs cycling through diarrhea, itching, and immune stress instead of a one-off upset stomach." } },
         { "type": "support_point", "settings": { "icon": "heart", "title": "Long-term healing protocol", "text": "Structured to support the 8 to 12 week window where the biggest changes become visible." } },
-        { "type": "pack_option", "settings": { "title": "1 Bottle", "subtitle": "30-day reset", "note": "Best for first-time trial", "quantity": 1 } },
-        { "type": "pack_option", "settings": { "title": "3 Bottles", "subtitle": "90-day repair window", "note": "Our recommended protocol", "badge": "Most Popular", "quantity": 3 } },
-        { "type": "pack_option", "settings": { "title": "6 Bottles", "subtitle": "180-day best value", "note": "For chronic multi-symptom cases", "badge": "Best Value", "quantity": 6 } }
+        { "type": "pack_option", "settings": { "title": "1 Bottle", "subtitle": "30-day reset", "note": "Best for first-time trial", "discount_percent": 0, "quantity": 1 } },
+        { "type": "pack_option", "settings": { "title": "3 Bottles", "subtitle": "90-day repair window", "note": "Our recommended protocol", "badge": "Most Popular", "discount_percent": 18, "quantity": 3 } },
+        { "type": "pack_option", "settings": { "title": "6 Bottles", "subtitle": "180-day best value", "note": "For chronic multi-symptom cases", "badge": "Best Value", "discount_percent": 28, "quantity": 6 } }
       ]
     }
   ]

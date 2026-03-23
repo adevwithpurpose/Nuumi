@@ -46,6 +46,7 @@
             "subtitle": "30-day reset",
             "note": "Best for a first trial",
             "badge": "",
+            "discount_percent": 0,
             "quantity": 1
           }
         },
@@ -56,6 +57,7 @@
             "subtitle": "90-day repair window",
             "note": "Our recommended protocol",
             "badge": "Most Popular",
+            "discount_percent": 18,
             "quantity": 3
           }
         },
@@ -66,6 +68,7 @@
             "subtitle": "180-day best value",
             "note": "For the most stubborn chronic cases",
             "badge": "Best Value",
+            "discount_percent": 28,
             "quantity": 6
           }
         }
@@ -85,18 +88,27 @@
         "badge_secondary": "Manufactured in the USA",
         "headline": "Say Goodbye to Your Dog's Chronic Diarrhea, Itchy Skin, and Constant Vet Visits.",
         "subtitle": "",
-        "description": "<p>Designed for dogs with chronic diarrhea and itchy skin who have not found relief with generic probiotics.</p>",
+        "description": "<p>The liquid gut-sealing system that helps repair microscopic tears in the intestinal wall for lasting, root-cause relief.</p>",
         "rating_value": 4.8,
         "review_count": "3,847",
         "rating_caption": "Trusted by 27,000+ dog owners.",
         "price_label": "Choose your supply",
-        "purchase_microcopy": "Fast US Shipping",
+        "purchase_mode_heading": "Choose purchase option",
+        "purchase_microcopy": "",
         "one_time_label": "One-Time Purchase",
+        "one_time_mode_text": "Pay once, no subscription",
         "one_time_note": "Risk-free trial supply.",
         "one_time_badge": "Best Trial",
+        "enable_subscribe_mode": true,
+        "subscribe_discount_percent": 20,
+        "subscribe_label": "Subscribe & Save",
+        "subscribe_badge": "Save 20%",
+        "subscribe_note": "Lower monthly cost. Skip or cancel anytime.",
+        "subscribe_cta_label": "Claim Discount & Try Risk-Free",
+        "subscribe_cta_note": "Subscribe now to lock in savings and keep your dog on protocol.",
         "pack_heading": "Select Bundle",
-        "cta_label": "Add to Cart",
-        "sticky_button_label": "Add to Cart",
+        "cta_label": "Start Your Dog's 90-Day Reset",
+        "sticky_button_label": "Start Your Dog's 90-Day Reset",
         "one_time_cta_note": "90-Day Money Back Guarantee.",
         "shipping_note": "Fast US shipping",
         "guarantee_note": "90-day worry-free guarantee",
