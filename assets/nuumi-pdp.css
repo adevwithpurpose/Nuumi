@@ -2725,21 +2725,99 @@
   line-height: 1.45;
 }
 
+.nuumi-pdp-agitation__content {
+  max-width: 58rem;
+}
+
+.nuumi-pdp-agitation__title {
+  max-width: 18ch;
+  line-height: 1.06;
+}
+
 .nuumi-pdp-agitation__text,
 .nuumi-pdp-agitation__text p {
-  font-size: 1.34rem;
-  line-height: 1.55;
+  font-size: 1.28rem;
+  line-height: 1.52;
+}
+
+.nuumi-pdp-agitation__analogy {
+  margin-top: 1.5rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: 1.8rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 30px rgba(16, 36, 58, 0.04);
 }
 
 .nuumi-pdp-agitation__analogy-title {
-  font-size: 1.62rem;
+  font-size: 1.5rem;
+  line-height: 1.22;
 }
 
 .nuumi-pdp-agitation__analogy-text,
 .nuumi-pdp-agitation__analogy-text p,
 .nuumi-pdp-agitation__point-text {
-  font-size: 1.24rem;
-  line-height: 1.5;
+  font-size: 1.18rem;
+  line-height: 1.48;
+}
+
+.nuumi-pdp-agitation__points {
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.nuumi-pdp-agitation__point {
+  gap: 0.9rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 1.5rem;
+  border-color: rgba(15, 118, 110, 0.1);
+  box-shadow: 0 12px 26px rgba(16, 36, 58, 0.04);
+}
+
+.nuumi-pdp-agitation__point-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: rgba(15, 118, 110, 0.1);
+}
+
+.nuumi-pdp-agitation__point-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.nuumi-pdp-agitation__point-title {
+  font-size: 1.34rem;
+  font-weight: 800;
+}
+
+.nuumi-pdp-agitation__point-text {
+  font-size: 1.16rem;
+  line-height: 1.45;
+}
+
+.nuumi-pdp-agitation__diagram-card {
+  padding: 1.8rem;
+  border-radius: 2.2rem;
+}
+
+.nuumi-pdp-agitation__image {
+  aspect-ratio: 4 / 4.6;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 12px 24px rgba(16, 36, 58, 0.06);
+}
+
+.nuumi-pdp-agitation__diagram-shell {
+  gap: 1.2rem;
+}
+
+.nuumi-pdp-agitation__diagram-state {
+  padding: 1.45rem;
+  border-radius: 1.8rem;
+}
+
+.nuumi-pdp-agitation__diagram-state p {
+  font-size: 1.14rem;
+  line-height: 1.45;
 }
 
 .nuumi-pdp-efficacy__card-top {
@@ -2852,6 +2930,21 @@
 
   .nuumi-pdp--enercanis .nuumi-enercanis-hero__left-guarantee {
     grid-template-columns: 7.2rem 1fr;
+  }
+
+  .nuumi-pdp-agitation__grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: 3.2rem;
+    align-items: start;
+  }
+
+  .nuumi-pdp-agitation__visual {
+    align-self: stretch;
+  }
+
+  .nuumi-pdp-agitation__diagram-card {
+    position: sticky;
+    top: 10rem;
   }
 
   .nuumi-pdp-timeline__track {
@@ -3161,6 +3254,33 @@
 
   .nuumi-pdp--enercanis .nuumi-enercanis-hero__left-guarantee-text {
     font-size: 1.18rem;
+  }
+
+  .nuumi-pdp-agitation__title {
+    max-width: none;
+  }
+
+  .nuumi-pdp-agitation__analogy {
+    padding: 1.15rem 1.2rem;
+  }
+
+  .nuumi-pdp-agitation__point {
+    padding: 1rem;
+  }
+
+  .nuumi-pdp-agitation__point-title {
+    font-size: 1.26rem;
+  }
+
+  .nuumi-pdp-agitation__point-text,
+  .nuumi-pdp-agitation__analogy-text,
+  .nuumi-pdp-agitation__analogy-text p {
+    font-size: 1.12rem;
+  }
+
+  .nuumi-pdp-agitation__diagram-card {
+    padding: 1.2rem;
+    border-radius: 1.8rem;
   }
 
   .nuumi-pdp-efficacy__card {
