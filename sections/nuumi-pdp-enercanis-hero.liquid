@@ -12,6 +12,7 @@
   {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
@@ -27,7 +28,7 @@
   <div class="page-width">
     <div class="nuumi-enercanis-hero">
       <div class="nuumi-enercanis-hero__media-column product__column-sticky">
-          <div class="nuumi-enercanis-hero__media-shell">
+          <div class="nuumi-enercanis-hero__media-shell product product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
             {% render 'product-media-gallery',
               variant_images: variant_images,
               section: section,
