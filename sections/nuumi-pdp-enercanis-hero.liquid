@@ -27,9 +27,13 @@
   <div class="page-width">
     <div class="nuumi-enercanis-hero">
       <div class="nuumi-enercanis-hero__media-column product__column-sticky">
-        <div class="nuumi-enercanis-hero__media-shell">
-          {% render 'product-media-gallery', variant_images: variant_images %}
-        </div>
+          <div class="nuumi-enercanis-hero__media-shell">
+            {% render 'product-media-gallery',
+              variant_images: variant_images,
+              section: section,
+              hide_variants: true
+            %}
+          </div>
       </div>
 
       <div class="nuumi-enercanis-hero__content-column">
@@ -339,7 +343,44 @@
     { "type": "text", "id": "one_time_cta_note", "label": "CTA note", "default": "Most pet parents choose the 3-bottle bundle to give the gut barrier enough time to visibly improve." },
     { "type": "text", "id": "shipping_note", "label": "Shipping note", "default": "Fast US shipping" },
     { "type": "text", "id": "guarantee_note", "label": "Guarantee note", "default": "90-day worry-free guarantee" },
-    { "type": "text", "id": "payment_note", "label": "Payment note", "default": "Secure checkout with major payment methods" }
+    { "type": "text", "id": "payment_note", "label": "Payment note", "default": "Secure checkout with major payment methods" },
+    {
+      "type": "header",
+      "content": "Media Settings"
+    },
+    {
+      "type": "select",
+      "id": "gallery_layout",
+      "options": [
+        { "value": "stacked", "label": "Stacked" },
+        { "value": "thumbnail", "label": "Thumbnail" },
+        { "value": "thumbnail_slider", "label": "Thumbnail slider" }
+      ],
+      "default": "thumbnail_slider",
+      "label": "Desktop layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_thumbnails",
+      "options": [
+        { "value": "show", "label": "Show thumbnails" },
+        { "value": "hide", "label": "Hide thumbnails" }
+      ],
+      "default": "show",
+      "label": "Mobile thumbnails"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_variants",
+      "default": false,
+      "label": "Hide other variants' media after selecting a variant"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "default": false,
+      "label": "Enable video looping"
+    }
   ],
   "blocks": [
     {

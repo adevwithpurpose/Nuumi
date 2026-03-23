@@ -14,7 +14,17 @@
       {%- for block in section.blocks -%}
         <article class="nuumi-pdp-efficacy__card" {{ block.shopify_attributes }}>
           <div class="nuumi-pdp-efficacy__card-top">
-            <span class="nuumi-pdp-efficacy__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+            {%- if block.settings.image != blank -%}
+              <span class="nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--image">
+                {{ block.settings.image | image_url: width: 96 | image_tag:
+                  loading: 'lazy',
+                  class: 'nuumi-pdp-efficacy__image',
+                  widths: '48, 72, 96'
+                }}
+              </span>
+            {%- else -%}
+              <span class="nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+            {%- endif -%}
             {%- if block.settings.tag != blank -%}
               <span class="nuumi-pdp-efficacy__tag">{{ block.settings.tag }}</span>
             {%- endif -%}
@@ -47,7 +57,18 @@
       "name": "Ingredient",
       "limit": 12,
       "settings": [
-        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "leaf", "label": "Leaf" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "star", "label": "Star" }], "default": "science" },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image override"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [{ "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "leaf", "label": "Leaf" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "star", "label": "Star" }],
+          "default": "science"
+        },
         { "type": "text", "id": "tag", "label": "Tag", "default": "Core active" },
         { "type": "text", "id": "title", "label": "Ingredient", "default": "L-Glutamine" },
         { "type": "text", "id": "benefit", "label": "Benefit", "default": "Primary fuel for intestinal cells." },
