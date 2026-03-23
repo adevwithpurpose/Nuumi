@@ -15,7 +15,7 @@
     </div>
 
     <div class="nuumi-featured-products__grid">
-      {%- for block in section.blocks limit: 4 -%}
+      {%- for block in section.blocks limit: 3 -%}
         {%- assign product_card = block.settings.product -%}
         {%- if product_card == blank -%}
           {%- continue -%}
@@ -24,9 +24,18 @@
         {%- if block.settings.link != blank -%}
           {%- assign card_url = block.settings.link -%}
         {%- endif -%}
-        {%- assign card_benefit = product_card.metafields.custom.benefit.value -%}
+        {%- assign card_badge = block.settings.badge | default: product_card.metafields.custom.benefit.value -%}
+        {%- assign card_title = block.settings.title | default: product_card.title -%}
+        {%- assign card_price = block.settings.price -%}
+        {%- assign card_summary = block.settings.summary | default: product_card.description | strip_html | truncatewords: 18 -%}
         {%- assign rating_value = block.settings.rating -%}
         {%- assign rating_count_value = block.settings.rating_count -%}
+        {%- if rating_value == blank or rating_value <= 0 -%}
+          {%- assign rating_value = product_card.metafields.reviews.rating.value -%}
+        {%- endif -%}
+        {%- if rating_count_value == blank or rating_count_value <= 0 -%}
+          {%- assign rating_count_value = product_card.metafields.reviews.rating_count.value | default: product_card.metafields.reviews.rating_count -%}
+        {%- endif -%}
 
         <article class="nuumi-featured-products__card" {{ block.shopify_attributes }}>
           <div class="nuumi-featured-products__media">
@@ -50,33 +59,38 @@
               </div>
             {%- endif -%}
 
-            {%- if card_benefit != blank -%}
-              <span class="nuumi-featured-products__badge">{{ card_benefit | escape }}</span>
-            {%- endif -%}
           </div>
 
           <div class="nuumi-featured-products__body">
-            <div class="nuumi-featured-products__meta">
-              <div>
-                <h3 class="nuumi-featured-products__title">{{ product_card.title | escape }}</h3>
-                {%- if card_benefit != blank -%}
-                  <p class="nuumi-featured-products__benefit">{{ card_benefit | escape }}</p>
-                {%- endif -%}
+            <div class="nuumi-featured-products__pitch">
+              {%- if card_badge != blank -%}
+                <p class="nuumi-featured-products__card-eyebrow">{{ card_badge | escape }}</p>
+              {%- endif -%}
+
+              {%- if rating_value != blank and rating_value > 0 -%}
+                <div class="nuumi-featured-products__rating">
+                  {% render 'nuumi-rating-stars', rating: rating_value, count: rating_count_value %}
+                </div>
+              {%- endif -%}
+
+              <div class="nuumi-featured-products__meta">
+                <div>
+                  <h3 class="nuumi-featured-products__title">{{ card_title | escape }}</h3>
+                </div>
               </div>
-              <p class="nuumi-featured-products__price">{{ product_card.price | money }}</p>
+
+              <p class="nuumi-featured-products__summary">{{ card_summary | escape }}</p>
             </div>
 
-            <div class="nuumi-featured-products__rating">
-              {% render 'nuumi-rating-stars', rating: rating_value, count: rating_count_value %}
+            <div class="nuumi-featured-products__action">
+              <p class="nuumi-featured-products__price">{%- if card_price != blank -%}{{ card_price | escape }}{%- else -%}{{ product_card.price | money }}{%- endif -%}</p>
+
+              {%- if card_url != blank -%}
+                <a class="nuumi-button--gold nuumi-featured-products__cta" href="{{ card_url }}">
+                  {{ block.settings.button_label | default: 'Shop now' | escape }}
+                </a>
+              {%- endif -%}
             </div>
-
-            <p class="nuumi-featured-products__summary">{{ product_card.description | strip_html | truncatewords: 18 }}</p>
-
-            {%- if card_url != blank -%}
-              <a class="nuumi-button--gold nuumi-featured-products__cta" href="{{ card_url }}">
-                {{ block.settings.button_label | default: 'Shop now' | escape }}
-              </a>
-            {%- endif -%}
           </div>
         </article>
       {%- endfor -%}
@@ -92,19 +106,19 @@
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "Daily wellness lineup"
+      "default": "Start with two essentials"
     },
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Five focused formulas. One calmer, healthier routine."
+      "default": "A focused routine beats a crowded shelf."
     },
     {
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p>Keep every launch product visible from the homepage with editorial product cards that make benefits and trust cues easy to scan.</p>"
+      "default": "<p>Lead with two or three problem-solving essentials so the homepage feels guided, calm, and easy to shop at a glance.</p>"
     },
     {
       "type": "range",
@@ -146,7 +160,7 @@
           "type": "text",
           "id": "badge",
           "label": "Badge",
-          "default": "Best seller"
+          "default": "Targeted support"
         },
         {
           "type": "text",
@@ -157,7 +171,7 @@
           "type": "text",
           "id": "benefit",
           "label": "Primary benefit",
-          "default": "Daily calm, comfort, and confidence support."
+          "default": "A clear daily support story for a specific pet need."
         },
         {
           "type": "text",
@@ -168,7 +182,7 @@
           "type": "textarea",
           "id": "summary",
           "label": "Summary",
-          "default": "Built for pet parents who want visible support without guesswork or filler-heavy formulas."
+          "default": "Lead with the problem it helps solve, what kind of support it offers, and why it feels easier to trust than a generic wellness product."
         },
         {
           "type": "range",
@@ -189,7 +203,7 @@
           "type": "text",
           "id": "button_label",
           "label": "Button label",
-          "default": "Shop now"
+          "default": "View product"
         },
         {
           "type": "url",
@@ -199,12 +213,11 @@
       ]
     }
   ],
-  "max_blocks": 4,
+  "max_blocks": 3,
   "presets": [
     {
       "name": "Nuumi Featured Products",
       "blocks": [
-        { "type": "product_card" },
         { "type": "product_card" },
         { "type": "product_card" },
         { "type": "product_card" }

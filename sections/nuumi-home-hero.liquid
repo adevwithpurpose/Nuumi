@@ -13,34 +13,36 @@
   {%- endif -%}
 
   <div class="nuumi-home-hero__content">
-    {%- if section.settings.title != blank -%}
-      <h1 class="nuumi-home-hero__title">{{ section.settings.title | escape }}</h1>
-    {%- endif -%}
+    <div class="nuumi-home-hero__panel">
+      {%- if section.settings.title != blank -%}
+        <h1 class="nuumi-home-hero__title">{{ section.settings.title | escape }}</h1>
+      {%- endif -%}
 
-    {%- if section.settings.subtitle != blank -%}
-      <p class="nuumi-home-hero__subtitle">{{ section.settings.subtitle | escape }}</p>
-    {%- endif -%}
+      {%- if section.settings.subtitle != blank -%}
+        <p class="nuumi-home-hero__subtitle">{{ section.settings.subtitle | escape }}</p>
+      {%- endif -%}
 
-    {%- if section.blocks.size > 0 -%}
-      <ul class="nuumi-home-hero__bullets">
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'bullet' -%}
-            <li class="nuumi-home-hero__bullet" {{ block.shopify_attributes }}>
-              {% render 'nuumi-icons', icon: 'check_mark', class: 'nuumi-icon' %}
-              <span>{{ block.settings.text | escape }}</span>
-            </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <ul class="nuumi-home-hero__bullets">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'bullet' -%}
+              <li class="nuumi-home-hero__bullet" {{ block.shopify_attributes }}>
+                {% render 'nuumi-icons', icon: 'check_mark', class: 'nuumi-icon' %}
+                <span>{{ block.settings.text | escape }}</span>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
 
-    {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
-      <div class="nuumi-home-hero__cta">
-        <a href="{{ section.settings.button_link }}" class="nuumi-button--gold">
-          {{ section.settings.button_label | escape }}
-        </a>
-      </div>
-    {%- endif -%}
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        <div class="nuumi-home-hero__cta">
+          <a href="{{ section.settings.button_link }}" class="nuumi-button--gold">
+            {{ section.settings.button_label | escape }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
   </div>
 </section>
 
@@ -52,13 +54,13 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Authority and trust, but cleaner"
+      "default": "Real support for the pet problems families deal with every day."
     },
     {
       "type": "text",
       "id": "subtitle",
       "label": "Subtitle",
-      "default": "The #1 Choice for Pet Wellness"
+      "default": "Nuumipet brings together targeted essentials for gut health, calming, bark control, ear hygiene, and multi-need support in one cleaner, easier-to-trust routine."
     },
     {
       "type": "image_picker",
@@ -69,7 +71,7 @@
       "type": "text",
       "id": "button_label",
       "label": "Button label",
-      "default": "Shop Now"
+      "default": "Shop the Essentials"
     },
     {
       "type": "url",
@@ -86,7 +88,7 @@
           "type": "text",
           "id": "text",
           "label": "Bullet text",
-          "default": "Premium Quality"
+          "default": "Gut, calm, bark, and hygiene support"
         }
       ]
     }

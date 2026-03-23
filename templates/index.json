@@ -15,19 +15,19 @@
         "bullet_1": {
           "type": "bullet",
           "settings": {
-            "text": "Veterinarian Formulated"
+            "text": "Gut, calm, bark, and hygiene support"
           }
         },
         "bullet_2": {
           "type": "bullet",
           "settings": {
-            "text": "Premium Clean Ingredients"
+            "text": "Focused tools for common daily pet needs"
           }
         },
         "bullet_3": {
           "type": "bullet",
           "settings": {
-            "text": "Trusted by 10,000+ Pet Parents"
+            "text": "A lean five-product routine, not a crowded catalog"
           }
         }
       },
@@ -37,10 +37,10 @@
         "bullet_3"
       ],
       "settings": {
-        "title": "Authority and trust, but cleaner",
-        "subtitle": "Clean daily wellness support for modern pet routines",
+        "title": "Real support for the pet problems families deal with every day.",
+        "subtitle": "Nuumipet brings together targeted essentials for gut health, calming, bark control, ear hygiene, and multi-need support in one cleaner, easier-to-trust routine.",
         "image": "shopify://shop_images/Gemini_Generated_Image_bru0prbru0prbru0.webp",
-        "button_label": "Shop Now",
+        "button_label": "Shop the Essentials",
         "button_link": "shopify://collections/all"
       }
     },
@@ -51,14 +51,14 @@
           "type": "trust_item",
           "settings": {
             "icon": "science",
-            "text": "VET FORMULATED"
+            "text": "TARGETED PET SUPPORT"
           }
         },
         "item_2": {
           "type": "trust_item",
           "settings": {
             "icon": "shield",
-            "text": "MADE IN THE USA"
+            "text": "LEAN 5-PRODUCT LINEUP"
           }
         },
         "item_3": {
@@ -72,7 +72,21 @@
           "type": "trust_item",
           "settings": {
             "icon": "star",
-            "text": "5-STAR RATED"
+            "text": "TARGETED DAILY SUPPORT"
+          }
+        },
+        "item_5": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "heart",
+            "text": "DIGESTION TO CALMING"
+          }
+        },
+        "item_6": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "science",
+            "text": "TOOLS AND FORMULAS"
           }
         }
       },
@@ -80,7 +94,9 @@
         "item_1",
         "item_2",
         "item_3",
-        "item_4"
+        "item_4",
+        "item_5",
+        "item_6"
       ],
       "settings": {
         "speed": 31
@@ -93,24 +109,24 @@
           "type": "proof_item",
           "settings": {
             "icon": "science",
-            "title": "VET FORMULATED",
-            "description": "Expertly crafted for optimal pet health and longevity."
+            "title": "TARGETED SUPPORT",
+            "description": "Each product is built around a clear job, whether that is gut support, bark interruption, calming support, or ear hygiene."
           }
         },
         "proof_2": {
           "type": "proof_item",
           "settings": {
             "icon": "shield",
-            "title": "MADE IN THE USA",
-            "description": "Manufactured in FDA-registered facilities with premium ingredients."
+            "title": "CLEANER CHOICES",
+            "description": "The lineup stays lean so shoppers can understand what each essential is for without sorting through filler-heavy wellness clutter."
           }
         },
         "proof_3": {
           "type": "proof_item",
           "settings": {
             "icon": "return",
-            "title": "30-DAY GUARANTEE",
-            "description": "Love it or your money back. No questions asked."
+            "title": "BUY WITH CONFIDENCE",
+            "description": "From daily digestive care to quick bark support, Nuumipet keeps the routine practical, focused, and backed by a 30-day guarantee."
           }
         }
       },
@@ -120,11 +136,11 @@
         "proof_3"
       ],
       "settings": {
-        "eyebrow": "Trust that carries through",
-        "title": "Why Choose Nuumi?",
-        "description": "<p>These proof points set up the promise behind every Nuumi formula: credible ingredients, dependable manufacturing, and reassurance close to the buying journey.</p>",
-        "padding_top": 16,
-        "padding_bottom": 60
+        "eyebrow": "The Nuumipet standard",
+        "title": "Why the lineup feels easier to trust",
+        "description": "<p>Nuumipet is not trying to be everything at once. It is a focused set of formulas and tools built for the issues pet parents are already trying to solve at home.</p>",
+        "padding_top": 28,
+        "padding_bottom": 76
       }
     },
     "nuumi_featured_products": {
@@ -134,14 +150,14 @@
           "type": "product_card",
           "settings": {
             "product": "50-shades-of-fun",
-            "badge": "New launch",
-            "title": "",
-            "benefit": "",
-            "price": "",
-            "summary": "",
-            "rating": 4.9,
-            "rating_count": 214,
-            "button_label": "",
+            "badge": "Gut health support",
+            "title": "EnerCanis Gut Health Supplement",
+            "benefit": "Daily digestive support with a clearer ingredient story.",
+            "price": "$39",
+            "summary": "Liquid L-Glutamine, Hydrolyzed Collagen, and prebiotic support designed to help soothe the gut, support the intestinal barrier, and fit easily into a daily routine.",
+            "rating": 0,
+            "rating_count": 0,
+            "button_label": "View EnerCanis",
             "link": "shopify://collections/all"
           }
         },
@@ -149,14 +165,14 @@
           "type": "product_card",
           "settings": {
             "product": "calmicollar-cat",
-            "badge": "Bestseller",
-            "title": "CalmiCollar",
-            "benefit": "Calm behavior support without dullness.",
-            "price": "$42",
-            "summary": "Built for overstimulated routines, with a clearer calm story that feels premium and easy to understand at a glance.",
-            "rating": 4.8,
-            "rating_count": 189,
-            "button_label": "Shop CalmiCollar",
+            "badge": "Bark control tool",
+            "title": "ByeBark Ultrasonic Device",
+            "benefit": "Fast interruption for frantic barking without harm.",
+            "price": "$49",
+            "summary": "A smart ultrasonic training tool made to break barking loops quickly, from fence fighting to door-trigger barking, while varying the pattern so dogs do not tune it out.",
+            "rating": 0,
+            "rating_count": 0,
+            "button_label": "View ByeBark",
             "link": "shopify://collections/all"
           }
         }
@@ -166,11 +182,11 @@
         "product_card_2"
       ],
       "settings": {
-        "eyebrow": "Launch collection",
-        "heading": "Shop all five formulas in one clear, premium routine.",
-        "description": "<p>Every card makes the core benefit, proof, and next step easy to scan so pet parents can shop with confidence.</p>",
-        "padding_top": 64,
-        "padding_bottom": 72
+        "eyebrow": "Start with two essentials",
+        "heading": "A focused routine beats a crowded shelf.",
+        "description": "<p>We lead with two of the clearest problem-solving essentials in the lineup so the homepage stays guided, calm, and easy to shop instead of dumping all five products at once.</p>",
+        "padding_top": 76,
+        "padding_bottom": 96
       }
     },
     "nuumi_expert_spotlight": {
@@ -180,24 +196,24 @@
           "type": "proof_point",
           "settings": {
             "icon": "science",
-            "title": "Formula-first positioning",
-            "text": "Every formula leads with a clear benefit, a believable ingredient story, and language customers can understand at a glance."
+            "title": "Specific jobs",
+            "text": "The lineup is built around real needs like gut health, calming support, bark control, and ear cleaning."
           }
         },
         "proof_point_2": {
           "type": "proof_point",
           "settings": {
             "icon": "shield",
-            "title": "Manufacturing transparency",
-            "text": "Manufacturing quality, sourcing standards, and the guarantee stay visible where trust matters most, right near the buying decision."
+            "title": "Measured claims",
+            "text": "The homepage stays grounded in what each product is actually designed to do instead of promising everything at once."
           }
         },
         "proof_point_3": {
           "type": "proof_point",
           "settings": {
             "icon": "heart",
-            "title": "Built for repeatable routines",
-            "text": "The daily routine feels simple enough to stick with, while the brand still reads premium, credible, and calm."
+            "title": "Routine friendly",
+            "text": "Each essential is positioned to feel realistic for everyday use, whether it is a supplement, collar, device, wipe, or bundle."
           }
         }
       },
@@ -207,15 +223,15 @@
         "proof_point_3"
       ],
       "settings": {
-        "eyebrow": "Expert-led trust",
-        "heading": "A stronger wellness routine starts with formulas customers believe in.",
+        "eyebrow": "A clearer product philosophy",
+        "heading": "Built for everyday pet issues, not generic wellness buzzwords.",
         "image": "shopify://shop_images/product8311.png",
-        "quote": "When you remove clutter and give pet parents a clear reason to trust the routine, compliance improves and outcomes follow.",
-        "name": "Dr. Sarah Jenkins",
-        "role": "DVM, Companion Animal Wellness Advisor",
-        "body": "<p>Nuumipet keeps expert guidance visible without turning the experience cold. Clear routines, credible ingredients, and practical reassurance help pet parents commit with confidence.</p>",
-        "padding_top": 72,
-        "padding_bottom": 88
+        "quote": "A strong pet-wellness routine should make it obvious what to reach for first, what each product is helping with, and how the pieces fit together at home.",
+        "name": "Why Nuumipet stays focused",
+        "role": "Targeted wellness essentials",
+        "body": "<p>That is why the range stays lean: EnerCanis for gut support, ByeBark for bark control, CalmiCollar for calming support, PawPoint for ear hygiene, and one bundle for homes that want broader coverage.</p>",
+        "padding_top": 88,
+        "padding_bottom": 100
       }
     },
     "nuumi_media_credibility": {
@@ -224,59 +240,59 @@
         "logo_1": {
           "type": "logo",
           "settings": {
-            "label": "CBS"
+            "label": "Gut Health"
           }
         },
         "logo_2": {
           "type": "logo",
           "settings": {
-            "label": "ABC"
+            "label": "Calming"
           }
         },
         "logo_3": {
           "type": "logo",
           "settings": {
-            "label": "NBC"
+            "label": "Bark Control"
           }
         },
         "logo_4": {
           "type": "logo",
           "settings": {
-            "label": "BuzzFeed"
+            "label": "Ear Hygiene"
           }
         },
         "logo_5": {
           "type": "logo",
           "settings": {
-            "label": "Forbes"
+            "label": "Bundle Care"
           }
         },
         "stat_1": {
           "type": "stat",
           "settings": {
-            "value": "100k+",
-            "label": "Five-Star Reviews Globally"
+            "value": "5",
+            "label": "Launch essentials in the lineup"
           }
         },
         "stat_2": {
           "type": "stat",
           "settings": {
             "value": "3",
-            "label": "Successful Clinical Studies"
+            "label": "Core care lanes covered"
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "12",
-            "label": "Proprietary Formulas"
+            "value": "1",
+            "label": "Bundle for multi-need homes"
           }
         },
         "stat_4": {
           "type": "stat",
           "settings": {
-            "value": "1",
-            "label": "Patent-Pending Formula"
+            "value": "30-day",
+            "label": "Guarantee highlighted across the store"
           }
         }
       },
@@ -292,12 +308,12 @@
         "stat_4"
       ],
       "settings": {
-        "logos_eyebrow": "As seen on sponsored content",
-        "heading": "Your pet health optimization partner™",
-        "body": "<p>Just the science. No hyperbole. No unsupported health claims. We deliver exceptional products and honest advice to support your pet's health.</p>",
+        "logos_eyebrow": "What the lineup is built around",
+        "heading": "Five essentials, organized around the needs pet parents recognize fastest.",
+        "body": "<p>Instead of padding the catalog with lookalike products, Nuumipet keeps the range concentrated around digestion, calming, behavior, hygiene, and one bundle that brings the daily basics together.</p>",
         "image": "shopify://shop_images/Gemini_Generated_Image_2.png",
-        "padding_top": 32,
-        "padding_bottom": 80
+        "padding_top": 48,
+        "padding_bottom": 96
       }
     },
     "nuumi_benefits_story": {
@@ -307,27 +323,27 @@
           "type": "benefit",
           "settings": {
             "icon": "science",
-            "eyebrow": "Cleaner formulas",
-            "title": "Ingredient stories should feel evidence-led, not inflated.",
-            "text": "Each formula explains what it supports, why the ingredients matter, and how the routine fits into everyday pet care without guesswork."
+            "eyebrow": "Digestive care",
+            "title": "EnerCanis leads with a clear gut-health job.",
+            "text": "It is built around L-Glutamine, Hydrolyzed Collagen, and prebiotic support to help soothe the gut and support the intestinal barrier."
           }
         },
         "benefit_2": {
           "type": "benefit",
           "settings": {
             "icon": "shield",
-            "eyebrow": "More confidence",
-            "title": "Proof belongs beside the value proposition, not buried beneath it.",
-            "text": "Guarantees, manufacturing quality, and brand reassurance stay close to the offer so confidence builds without extra digging."
+            "eyebrow": "Behavior support",
+            "title": "ByeBark and CalmiCollar cover two different stress patterns.",
+            "text": "One helps interrupt barking in the moment, while the other supports calmer behavior for dogs that need more environmental reassurance."
           }
         },
         "benefit_3": {
           "type": "benefit",
           "settings": {
             "icon": "heart",
-            "eyebrow": "Better adherence",
-            "title": "Make every daily routine look easier to start and easier to sustain.",
-            "text": "The routine feels realistic for busy households, making it easier for pet parents to start, stay consistent, and feel good about the choice."
+            "eyebrow": "Practical care",
+            "title": "PawPoint and the bundle round out the daily routine.",
+            "text": "Ear wipes make preventive hygiene easier, and the Core Wellness Bundle gives multi-need households one simpler place to start."
           }
         }
       },
@@ -337,11 +353,11 @@
         "benefit_3"
       ],
       "settings": {
-        "eyebrow": "How the experience works",
-        "heading": "Designed to feel calmer, clearer, and more premium at every scroll depth.",
-        "description": "<p>These three cards explain why the Nuumipet routine feels easier to trust: cleaner formulas, clearer proof, and habits pet parents can actually keep.</p>",
-        "padding_top": 80,
-        "padding_bottom": 72
+        "eyebrow": "How the lineup fits together",
+        "heading": "Each product solves a different part of the everyday care routine.",
+        "description": "<p>The catalog stays intentionally small so each item can do a specific job well, from gut support and calming to bark control, hygiene, and bundled daily care.</p>",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     },
     "nuumi_faq": {
@@ -350,22 +366,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly should customers expect to see results?",
-            "answer": "<p>Most pet parents should expect a gradual change over a few weeks of consistent daily use. The clearest results come when the routine stays steady.</p>"
+            "question": "How do I know which Nuumipet product to start with?",
+            "answer": "<p>Start with the problem you are trying to solve first. EnerCanis supports gut health, ByeBark helps interrupt barking, CalmiCollar supports calmer behavior, PawPoint covers ear hygiene, and the bundle is the broadest option for multi-need homes.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Can these answers be updated later?",
-            "answer": "<p>Yes. Every FAQ item can be edited, reordered, added, or removed directly in the Theme Editor as the offer or messaging evolves.</p>"
+            "question": "Can I use more than one product in the routine?",
+            "answer": "<p>Yes, many households will shop across more than one care lane. Because the lineup covers different needs, it is reasonable to pair essentials when your pet needs support in more than one area. If your pet is already under veterinary care or taking medications, check with your veterinarian first.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Where should guarantees and trust claims be repeated?",
-            "answer": "<p>Repeat them close to the buy decision, inside proof sections, and again near the end of the page so confidence stays high all the way through checkout.</p>"
+            "question": "What is your return policy?",
+            "answer": "<p>Nuumipet highlights a 30-day guarantee so you can try the routine with more confidence. Check the store policy details at checkout or in the footer for the latest terms.</p>"
           }
         }
       },
@@ -375,9 +391,9 @@
         "faq_3"
       ],
       "settings": {
-        "eyebrow": "Before they buy",
-        "heading": "Answer the questions that usually slow checkout decisions.",
-        "description": "<p>Give pet parents direct answers on timing, consistency, and confidence so they can move from interest to checkout without hesitation.</p>",
+        "eyebrow": "Before you choose",
+        "heading": "Helpful answers for a smaller, more focused product range.",
+        "description": "<p>The goal is to make choosing feel simpler: understand what each product does, how the lineup works together, and where to find policy details before you check out.</p>",
         "padding_top": 64,
         "padding_bottom": 72
       }
