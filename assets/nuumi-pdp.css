@@ -3841,146 +3841,164 @@ ze: 1.1rem;
 
 
 /* Expert Section - Compact Modern */
-.nuumi-pdp-expert-modern {
-  padding: 4.8rem 0;
+.nuumi-pdp-expert-compact {
+  padding: 4rem 0;
 }
+
 @media screen and (min-width: 750px) {
-  .nuumi-pdp-expert-modern {
-    padding: 6.4rem 0;
+  .nuumi-pdp-expert-compact {
+    padding: 5.6rem 0;
   }
 }
 
-.nuumi-pdp-expert-modern .page-width--narrow {
-  max-width: 96rem;
-  margin: 0 auto;
-}
-
-.nuumi-pdp-expert-modern__card {
+.nuumi-pdp-expert-compact__card {
   display: flex;
   flex-direction: column;
+  gap: 2.4rem;
   background: #ffffff;
-  border: 1px solid rgba(16, 36, 58, 0.08);
-  border-radius: 2.4rem;
-  box-shadow: 0 12px 32px rgba(16, 36, 58, 0.04);
+  border-radius: 2rem;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(16, 36, 58, 0.06);
 }
 
 @media screen and (min-width: 750px) {
-  .nuumi-pdp-expert-modern__card {
+  .nuumi-pdp-expert-compact__card {
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
+    gap: 3.2rem;
   }
 }
 
-.nuumi-pdp-expert-modern__image-column {
-  width: 100%;
-  height: 340px;
+.nuumi-pdp-expert-compact__image-wrapper {
   position: relative;
+  flex-shrink: 0;
 }
 
 @media screen and (min-width: 750px) {
-  .nuumi-pdp-expert-modern__image-column {
-    width: 42%;
-    height: auto;
-    flex-shrink: 0;
+  .nuumi-pdp-expert-compact__image-wrapper {
+    width: 280px;
   }
 }
 
-.nuumi-pdp-expert-modern__image {
+.nuumi-pdp-expert-compact__image {
   width: 100%;
-  height: 100%;
+  height: 280px;
   object-fit: cover;
   display: block;
 }
 
-.nuumi-pdp-expert-modern__content-column {
-  padding: 3.2rem 2.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
 @media screen and (min-width: 750px) {
-  .nuumi-pdp-expert-modern__content-column {
-    padding: 4.8rem 4rem;
+  .nuumi-pdp-expert-compact__image {
+    height: 100%;
+    min-height: 340px;
   }
 }
 
-.nuumi-pdp-expert-modern__badge {
-  display: inline-block;
+.nuumi-pdp-expert-compact__badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  background: rgba(15, 118, 110, 0.95);
+  color: #ffffff;
   font-family: var(--font-body-family);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #0f766e;
-  margin-bottom: 1.6rem;
+  letter-spacing: 0.1em;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.nuumi-pdp-expert-modern__quote {
-  margin: 0 0 3.2rem;
+.nuumi-pdp-expert-compact__content {
+  padding: 2.4rem 2rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+@media screen and (min-width: 750px) {
+  .nuumi-pdp-expert-compact__content {
+    padding: 3.2rem 3.2rem 3.2rem 0;
+  }
+}
+
+.nuumi-pdp-expert-compact__quote {
+  margin: 0 0 2.4rem;
+  padding: 0;
+  border: none;
   font-family: var(--font-heading-family);
-  font-size: clamp(2.2rem, 3vw, 2.8rem);
-  color: var(--nuumi-deep-blue);
-  line-height: 1.35;
+  font-size: clamp(1.8rem, 2.4vw, 2.2rem);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  line-height: 1.45;
+  color: var(--nuumi-deep-blue);
+  position: relative;
 }
 
-.nuumi-pdp-expert-modern__footer {
+.nuumi-pdp-expert-compact__quote-icon {
+  display: block;
+  width: 2.8rem;
+  height: 2.8rem;
+  color: #0f766e;
+  opacity: 0.3;
+  margin-bottom: 1.2rem;
+}
+
+.nuumi-pdp-expert-compact__author {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.6rem;
-  padding-top: 2.4rem;
+  padding-top: 2rem;
   border-top: 1px solid rgba(16, 36, 58, 0.08);
-  margin-top: auto;
 }
 
-.nuumi-pdp-expert-modern__author {
+.nuumi-pdp-expert-compact__author-info {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.3rem;
 }
 
-.nuumi-pdp-expert-modern__name {
+.nuumi-pdp-expert-compact__name {
   font-family: var(--font-body-family);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--nuumi-deep-blue);
   line-height: 1.2;
 }
 
-.nuumi-pdp-expert-modern__credentials {
+.nuumi-pdp-expert-compact__credentials {
   font-family: var(--font-body-family);
   font-size: 1.3rem;
   color: #64748b;
   line-height: 1.2;
 }
 
-.nuumi-pdp-expert-modern__insta {
+.nuumi-pdp-expert-compact__instagram {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  background: #f8fbfc;
+  background: linear-gradient(135deg, #f8fbfc 0%, #e8f4f6 100%);
   color: #0f766e;
-  border: 1px solid rgba(15, 118, 110, 0.1);
-  transition: all 0.2s ease;
+  border: 1px solid rgba(15, 118, 110, 0.15);
+  transition: all 0.25s ease;
   flex-shrink: 0;
 }
 
-.nuumi-pdp-expert-modern__insta:hover {
-  background: #0f766e;
+.nuumi-pdp-expert-compact__instagram:hover {
+  background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.25);
 }
 
-.nuumi-pdp-expert-modern__insta svg {
-  width: 2.2rem;
-  height: 2.2rem;
+.nuumi-pdp-expert-compact__instagram svg {
+  width: 2rem;
+  height: 2rem;
 }

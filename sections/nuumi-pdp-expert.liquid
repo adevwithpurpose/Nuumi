@@ -1,41 +1,41 @@
 {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
 
-<div class="nuumi-pdp-expert-modern section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
-  <div class="page-width page-width--narrow">
-    <div class="nuumi-pdp-expert-modern__card">
-      <div class="nuumi-pdp-expert-modern__image-column">
+<div class="nuumi-pdp-expert-compact section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-expert-compact__card">
+      <div class="nuumi-pdp-expert-compact__image-wrapper">
         {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 800 | image_tag:
+          {{ section.settings.image | image_url: width: 600 | image_tag:
             loading: 'lazy',
-            class: 'nuumi-pdp-expert-modern__image',
-            sizes: '(min-width: 750px) 40vw, 100vw',
-            widths: '375, 550, 750, 800'
+            class: 'nuumi-pdp-expert-compact__image',
+            sizes: '(min-width: 750px) 280px, 100vw',
+            widths: '280, 400, 500, 600'
           }}
         {%- else -%}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-expert-modern__image' }}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-expert-compact__image' }}
         {%- endif -%}
+        <div class="nuumi-pdp-expert-compact__badge">{{ section.settings.badge_text }}</div>
       </div>
-      <div class="nuumi-pdp-expert-modern__content-column">
-        {%- if section.settings.badge_text != blank -%}
-          <div class="nuumi-pdp-expert-modern__badge">{{ section.settings.badge_text }}</div>
-        {%- endif -%}
-        
+      <div class="nuumi-pdp-expert-compact__content">
         {%- if section.settings.quote != blank -%}
-          <h3 class="nuumi-pdp-expert-modern__quote">"{{ section.settings.quote }}"</h3>
+          <blockquote class="nuumi-pdp-expert-compact__quote">
+            <svg class="nuumi-pdp-expert-compact__quote-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14.017 21v-3.999c0-1.105.895-2 2-2h1c.552 0 1-.448 1-1v-4.985c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1v7.985c0 1.105.895 2 2 2h1zm-10 0v-3.999c0-1.105.895-2 2-2h1c.552 0 1-.448 1-1v-4.985c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1v7.985c0 1.105.895 2 2 2h1z"/>
+            </svg>
+            {{ section.settings.quote }}
+          </blockquote>
         {%- endif -%}
-        
-        <div class="nuumi-pdp-expert-modern__footer">
-          <div class="nuumi-pdp-expert-modern__author">
+        <div class="nuumi-pdp-expert-compact__author">
+          <div class="nuumi-pdp-expert-compact__author-info">
             {%- if section.settings.name != blank -%}
-              <span class="nuumi-pdp-expert-modern__name">{{ section.settings.name }}</span>
+              <span class="nuumi-pdp-expert-compact__name">{{ section.settings.name }}</span>
             {%- endif -%}
             {%- if section.settings.credentials != blank -%}
-              <span class="nuumi-pdp-expert-modern__credentials">{{ section.settings.credentials }}</span>
+              <span class="nuumi-pdp-expert-compact__credentials">{{ section.settings.credentials }}</span>
             {%- endif -%}
           </div>
-
           {%- if section.settings.instagram_url != blank -%}
-            <a href="{{ section.settings.instagram_url }}" target="_blank" class="nuumi-pdp-expert-modern__insta" aria-label="Follow on Instagram">
+            <a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener noreferrer" class="nuumi-pdp-expert-compact__instagram" aria-label="Follow Dr. Sara on Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -51,7 +51,7 @@
 
 {% schema %}
 {
-  "name": "Nuumi Expert (Modern)",
+  "name": "Nuumi Expert (Compact)",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -59,7 +59,7 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#f4f9f9"
+      "default": "#f7fbfd"
     },
     {
       "type": "image_picker",
@@ -99,7 +99,7 @@
   ],
   "presets": [
     {
-      "name": "Nuumi Expert (Modern)"
+      "name": "Nuumi Expert (Compact)"
     }
   ]
 }
