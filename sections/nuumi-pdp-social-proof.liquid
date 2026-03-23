@@ -19,9 +19,32 @@
       <div class="nuumi-pdp-social-proof__video-grid">
         {%- for block in section.blocks -%}
           {%- if block.type == 'video' -%}
+            {%- assign video_id = block.settings.video.id | default: block.settings.video_url.id -%}
             <div class="nuumi-pdp-social-proof__video-card" {{ block.shopify_attributes }}>
               <div class="nuumi-pdp-social-proof__video-placeholder">
-                <svg class="nuumi-pdp-social-proof__play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                {%- if block.settings.video != blank -%}
+                  {{ block.settings.video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: 'nuumi-pdp-social-proof__video-media' }}
+                {%- elsif block.settings.video_url != blank and video_id != blank -%}
+                  {%- if block.settings.video_url.type == 'youtube' -%}
+                    <iframe
+                      class="nuumi-pdp-social-proof__video-media"
+                      src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                      title="{{ block.settings.title | escape }}"
+                    ></iframe>
+                  {%- else -%}
+                    <iframe
+                      class="nuumi-pdp-social-proof__video-media"
+                      src="https://player.vimeo.com/video/{{ video_id }}"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                      title="{{ block.settings.title | escape }}"
+                    ></iframe>
+                  {%- endif -%}
+                {%- else -%}
+                  <svg class="nuumi-pdp-social-proof__play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                {%- endif -%}
               </div>
               {%- if block.settings.title != blank -%}
                 <p class="nuumi-pdp-social-proof__video-title">{{ block.settings.title }}</p>
@@ -74,6 +97,8 @@
       "name": "Video Placeholder",
       "limit": 3,
       "settings": [
+        { "type": "video", "id": "video", "label": "Shopify-hosted video" },
+        { "type": "video_url", "id": "video_url", "accept": ["youtube", "vimeo"], "label": "External video URL", "placeholder": "https://www.youtube.com/watch?v=_9VUPq3SxOc", "info": "Use YouTube or Vimeo if the video is not uploaded to Shopify." },
         { "type": "text", "id": "title", "label": "Label/Title", "default": "Watch our story" }
       ]
     },
