@@ -21,7 +21,27 @@
           {%- if block.type == 'video' -%}
             {%- assign video_id = block.settings.video.id | default: block.settings.video_url.id -%}
             <div class="nuumi-pdp-social-proof__video-card" {{ block.shopify_attributes }}>
-              <div class="nuumi-pdp-social-proof__video-placeholder">
+              <div class="nuumi-pdp-social-proof__video-frame">
+                {%- if block.settings.poster_image != blank -%}
+                  <button
+                    type="button"
+                    class="nuumi-pdp-social-proof__video-placeholder"
+                    data-video-toggle
+                    aria-label="Play video: {{ block.settings.title | escape }}"
+                  >
+                    {{ block.settings.poster_image | image_url: width: 900 | image_tag:
+                      loading: 'lazy',
+                      class: 'nuumi-pdp-social-proof__poster-image',
+                      sizes: '(min-width: 990px) 33vw, 100vw',
+                      widths: '300, 450, 600, 750, 900'
+                    }}
+                    <span class="nuumi-pdp-social-proof__play-badge">
+                      <svg class="nuumi-pdp-social-proof__play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                    </span>
+                  </button>
+                  <div class="nuumi-pdp-social-proof__video-player" hidden>
+                {%- endif -%}
+
                 {%- if block.settings.video != blank -%}
                   {{ block.settings.video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: 'nuumi-pdp-social-proof__video-media' }}
                 {%- elsif block.settings.video_url != blank and video_id != blank -%}
@@ -44,6 +64,10 @@
                   {%- endif -%}
                 {%- else -%}
                   <svg class="nuumi-pdp-social-proof__play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                {%- endif -%}
+
+                {%- if block.settings.poster_image != blank -%}
+                  </div>
                 {%- endif -%}
               </div>
               {%- if block.settings.title != blank -%}
@@ -97,6 +121,7 @@
       "name": "Video Placeholder",
       "limit": 3,
       "settings": [
+        { "type": "image_picker", "id": "poster_image", "label": "Poster image" },
         { "type": "video", "id": "video", "label": "Shopify-hosted video" },
         { "type": "video_url", "id": "video_url", "accept": ["youtube", "vimeo"], "label": "External video URL", "placeholder": "https://www.youtube.com/watch?v=_9VUPq3SxOc", "info": "Use YouTube or Vimeo if the video is not uploaded to Shopify." },
         { "type": "text", "id": "title", "label": "Label/Title", "default": "Watch our story" }
@@ -131,3 +156,24 @@
   ]
 }
 {% endschema %}
+
+<script>
+  document.addEventListener('click', function(event) {
+    var trigger = event.target.closest('[data-video-toggle]');
+    if (!trigger) return;
+
+    var frame = trigger.closest('.nuumi-pdp-social-proof__video-frame');
+    if (!frame) return;
+
+    var player = frame.querySelector('.nuumi-pdp-social-proof__video-player');
+    if (!player) return;
+
+    trigger.hidden = true;
+    player.hidden = false;
+
+    var media = player.querySelector('video');
+    if (media) {
+      media.play().catch(function() {});
+    }
+  });
+</script>

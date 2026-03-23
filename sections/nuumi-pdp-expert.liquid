@@ -19,6 +19,9 @@
         {%- if section.settings.badge_text != blank -%}
           <div class="nuumi-expert__badge">{{ section.settings.badge_text }}</div>
         {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="nuumi-expert__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
         
         {%- if section.settings.quote != blank -%}
           <blockquote class="nuumi-expert__quote">"{{ section.settings.quote }}"</blockquote>
@@ -65,6 +68,12 @@
       "id": "quote",
       "label": "Quote",
       "default": "Nuumi represents a new standard in pet care. The clinical doses of active ingredients provide real, measurable results for joint health and mobility."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "An expert perspective on root-cause gut repair"
     },
     {
       "type": "text",

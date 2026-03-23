@@ -217,6 +217,163 @@
         "text": "Follow these 3 simple daily steps to stay consistent and get the best barrier-repair outcome."
       }
     },
+    "efficacy_grid": {
+      "type": "nuumi-pdp-efficacy-grid",
+      "blocks": {
+        "ingredient_1": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1761409135624_glut.webp",
+            "icon": "science",
+            "tag": "Barrier fuel",
+            "title": "L-Glutamine",
+            "benefit": "Primary fuel for intestinal cells.",
+            "text": "Supports the gut lining at the cellular level so the damaged barrier has what it needs to begin rebuilding."
+          }
+        },
+        "ingredient_2": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759680646330_Hydrolyzed_Fish_Collagen.webp",
+            "icon": "shield",
+            "tag": "Rebuild support",
+            "title": "Hydrolyzed Fish Collagen",
+            "benefit": "Rebuilds connective tissue.",
+            "text": "Helps restore the structural support layer that gives the intestinal wall more integrity under stress."
+          }
+        },
+        "ingredient_3": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759681033480_Palmitoylethanolamide_PEA.webp",
+            "icon": "heart",
+            "tag": "Inflammation control",
+            "title": "PEA",
+            "benefit": "Reduces chronic inflammation.",
+            "text": "Helps calm the chronic inflammatory signaling that can keep the gut, skin, and immune system reactive."
+          }
+        },
+        "ingredient_4": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759680555818_7_Strain_Probiotic_Blend.webp",
+            "icon": "leaf",
+            "tag": "Microbiome support",
+            "title": "Probiotic Blend",
+            "benefit": "Lactobacillus and Bifidobacterium",
+            "text": "Produce compounds that help signal tight junctions to reassemble and strengthen the gut barrier."
+          }
+        },
+        "ingredient_5": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759681233205_turmeric.webp",
+            "icon": "science",
+            "tag": "Barrier support",
+            "title": "Turmeric Root Extract",
+            "benefit": "Supports mucosal integrity.",
+            "text": "Used to help reinforce the protective lining of the gut when the mucosa has been under prolonged stress."
+          }
+        },
+        "ingredient_6": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759681508514_Chicory_Root_Inulin.webp",
+            "icon": "leaf",
+            "tag": "Microbiome support",
+            "title": "Chicory Root Inulin",
+            "benefit": "Feeds beneficial bacteria.",
+            "text": "Prebiotic fiber that feeds beneficial bacteria and increases production of gut-healing compounds."
+          }
+        },
+        "ingredient_7": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759681844283_beef_liver.webp",
+            "icon": "shield",
+            "tag": "Cellular repair",
+            "title": "Beef Liver Powder",
+            "benefit": "Provides vitamins.",
+            "text": "Provides B vitamins, iron, and vitamin A for cellular repair and improved palatability."
+          }
+        },
+        "ingredient_8": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759682066429_Kelp_Powder.webp",
+            "icon": "heart",
+            "tag": "Soothing support",
+            "title": "Kelp Powder",
+            "benefit": "Supports thyroid and motility.",
+            "text": "Trace minerals and iodine help support thyroid function and healthy gut motility."
+          }
+        },
+        "ingredient_9": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759682093534_Flax_Seed_Powder.webp",
+            "icon": "science",
+            "tag": "Inflammatory support",
+            "title": "Flax Seed Powder",
+            "benefit": "Omega-3 support.",
+            "text": "Omega-3 fatty acids help provide anti-inflammatory support throughout the body."
+          }
+        },
+        "ingredient_10": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759682590634_Sodium_Copper_Chlorophyllin.webp",
+            "icon": "leaf",
+            "tag": "Antioxidant",
+            "title": "Sodium Copper Chlorophyllin",
+            "benefit": "Helps reduce gas odor.",
+            "text": "An internal deodorizer with antioxidant properties that helps reduce unpleasant gas odor."
+          }
+        },
+        "ingredient_11": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759682809800_Chlorella.webp",
+            "icon": "shield",
+            "tag": "Natural detoxification",
+            "title": "Chlorella Powder",
+            "benefit": "Binds circulating toxins.",
+            "text": "Helps bind circulating toxins while the barrier heals, supporting natural detoxification."
+          }
+        },
+        "ingredient_12": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/1759683010520_fennel_seed.webp",
+            "icon": "science",
+            "tag": "Digestive calm",
+            "title": "Fennel Seed Powder",
+            "benefit": "Reduces gas.",
+            "text": "A gentle carminative that helps reduce gas and supports calmer digestion."
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3",
+        "ingredient_4",
+        "ingredient_5",
+        "ingredient_6",
+        "ingredient_7",
+        "ingredient_8",
+        "ingredient_9",
+        "ingredient_10",
+        "ingredient_11",
+        "ingredient_12"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "The 12-ingredient efficacy grid",
+        "title": "Every ingredient has a specific job in the barrier-repair chain.",
+        "text": "<p>EnerCanis is structured around barrier fuel, connective-tissue rebuilding, inflammatory control, and microbiome support so the protocol feels clinically coherent from first dose to full transformation window.</p>"
+      }
+    },
     "transparency": {
       "type": "nuumi-pdp-transparency-banner",
       "blocks": {
@@ -379,6 +536,7 @@
         "bg_color": "#f7fbfd",
         "image": "shopify://shop_images/Gemini_Generated_Image_nx3cajnx3cajnx3c.png",
         "badge_text": "Veterinary perspective",
+        "heading": "An expert perspective on root-cause gut repair",
         "quote": "When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing.",
         "name": "Dr. Elena Morris",
         "credentials": "DVM, canine gut-health advisor"
@@ -446,22 +604,8 @@
         "faq_9": {
           "type": "faq_item",
           "settings": {
-            "question": "Will you have enough stock for my subscription?",
-            "answer": "<p>Yes. Subscribers get priority allocation. We maintain inventory reserves specifically for subscription customers so your dog never runs out during their healing protocol.</p>"
-          }
-        },
-        "faq_10": {
-          "type": "faq_item",
-          "settings": {
             "question": "Where are ingredients sourced?",
             "answer": "<p>Manufactured in the USA from premium domestic and globally sourced ingredients. All suppliers meet pharmaceutical-grade quality standards and undergo third-party testing for purity and potency.</p>"
-          }
-        },
-        "faq_11": {
-          "type": "faq_item",
-          "settings": {
-            "question": "When will I receive my order?",
-            "answer": "<p>We ship all orders within 24 hours. Domestic orders typically arrive in 2-3 business days, depending on your location. International shipping may take 7-14 business days. You'll receive a tracking number as soon as your order ships.</p>"
           }
         }
       },
@@ -474,9 +618,7 @@
         "faq_6",
         "faq_7",
         "faq_8",
-        "faq_9",
-        "faq_10",
-        "faq_11"
+        "faq_9"
       ],
       "settings": {
         "bg_color": "#f7fbfd",
@@ -516,6 +658,7 @@
     "agitation",
     "timeline",
     "how_to_use",
+    "efficacy_grid",
     "transparency",
     "social_proof",
     "expert",
