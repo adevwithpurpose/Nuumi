@@ -30,14 +30,27 @@
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
-              {%- when '@app' -%}
-                {% render block %}
-              
               {%- when 'title' -%}
                 <div class="nuumi-pdp__title-block" {{ block.shopify_attributes }}>
+                  {%- if block.settings.eyebrow != blank -%}
+                    <p class="nuumi-pdp__eyebrow">{{ block.settings.eyebrow }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.badge_primary != blank or block.settings.badge_secondary != blank -%}
+                    <div class="nuumi-pdp__badges">
+                      {%- if block.settings.badge_primary != blank -%}
+                        <span class="nuumi-pdp__badge nuumi-pdp__badge--primary">{{ block.settings.badge_primary }}</span>
+                      {%- endif -%}
+                      {%- if block.settings.badge_secondary != blank -%}
+                        <span class="nuumi-pdp__badge nuumi-pdp__badge--secondary">{{ block.settings.badge_secondary }}</span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
                   <h1 class="nuumi-pdp__title">{{ product.title | escape }}</h1>
                   {%- if block.settings.subtitle != blank -%}
                     <p class="nuumi-pdp__subtitle">{{ block.settings.subtitle }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.description != blank -%}
+                    <div class="nuumi-pdp__description rte">{{ block.settings.description }}</div>
                   {%- endif -%}
                 </div>
 
@@ -75,51 +88,30 @@
                     <label class="nuumi-pdp__pack-option nuumi-pdp__pack-option--selected">
                       <input type="radio" name="quantity_pack" value="1" checked>
                       <div class="nuumi-pdp__pack-content">
-                        <span class="nuumi-pdp__pack-title">1 Pack</span>
-                        <span class="nuumi-pdp__pack-subtitle">30 Day Supply</span>
+                        <span class="nuumi-pdp__pack-title">{{ block.settings.pack_1_title }}</span>
+                        <span class="nuumi-pdp__pack-subtitle">{{ block.settings.pack_1_subtitle }}</span>
                       </div>
                     </label>
                     <label class="nuumi-pdp__pack-option nuumi-pdp__pack-option--popular">
-                      <div class="nuumi-pdp__pack-badge">Most Popular</div>
+                      {%- if block.settings.pack_2_badge != blank -%}
+                        <div class="nuumi-pdp__pack-badge">{{ block.settings.pack_2_badge }}</div>
+                      {%- endif -%}
                       <input type="radio" name="quantity_pack" value="3">
                       <div class="nuumi-pdp__pack-content">
-                        <span class="nuumi-pdp__pack-title">3 Packs</span>
-                        <span class="nuumi-pdp__pack-subtitle">90 Day Supply</span>
+                        <span class="nuumi-pdp__pack-title">{{ block.settings.pack_2_title }}</span>
+                        <span class="nuumi-pdp__pack-subtitle">{{ block.settings.pack_2_subtitle }}</span>
                       </div>
                     </label>
                     <label class="nuumi-pdp__pack-option">
                       <input type="radio" name="quantity_pack" value="6">
                       <div class="nuumi-pdp__pack-content">
-                        <span class="nuumi-pdp__pack-title">6 Packs</span>
-                        <span class="nuumi-pdp__pack-subtitle">180 Day Supply</span>
+                        <span class="nuumi-pdp__pack-title">{{ block.settings.pack_3_title }}</span>
+                        <span class="nuumi-pdp__pack-subtitle">{{ block.settings.pack_3_subtitle }}</span>
                       </div>
                     </label>
                   </div>
                   <!-- Hidden actual quantity input for Dawn's form -->
                   <input type="hidden" name="quantity" value="1" form="{{ product_form_id }}" id="Quantity-{{ section.id }}">
-                </div>
-
-              {%- when 'purchase_mode' -%}
-                <div class="nuumi-pdp__purchase-mode" {{ block.shopify_attributes }}>
-                  <label class="nuumi-pdp__mode-option nuumi-pdp__mode-option--active">
-                    <input type="radio" name="purchase_mode" value="subscribe" checked>
-                    <div class="nuumi-pdp__mode-content">
-                      <div class="nuumi-pdp__mode-header">
-                        <span class="nuumi-pdp__mode-title">Subscribe & Save 20%</span>
-                        <span class="nuumi-pdp__mode-price">{{ product.price | times: 0.8 | money }}</span>
-                      </div>
-                      <p class="nuumi-pdp__mode-desc">Cancel anytime. Free shipping.</p>
-                    </div>
-                  </label>
-                  <label class="nuumi-pdp__mode-option">
-                    <input type="radio" name="purchase_mode" value="onetime">
-                    <div class="nuumi-pdp__mode-content">
-                      <div class="nuumi-pdp__mode-header">
-                        <span class="nuumi-pdp__mode-title">One-Time Purchase</span>
-                        <span class="nuumi-pdp__mode-price">{{ product.price | money }}</span>
-                      </div>
-                    </div>
-                  </label>
                 </div>
 
               {%- when 'buy_buttons' -%}
@@ -145,7 +137,7 @@
                             {%- if product.selected_or_first_available_variant.available == false -%}
                               {{ 'products.product.sold_out' | t }}
                             {%- else -%}
-                              Add to Cart — {{ product.price | money }}
+                              {{ block.settings.button_label }} — {{ product.price | money }}
                             {%- endif -%}
                           </span>
                           {%- render 'loading-spinner' -%}
@@ -160,6 +152,25 @@
                     <span class="nuumi-pdp__guarantee-icon">{% render 'nuumi-icons', icon: 'shield' %}</span>
                     <span>{{ block.settings.guarantee_text }}</span>
                   </div>
+                {%- endif -%}
+
+                {%- if block.settings.cta_note != blank -%}
+                  <p class="nuumi-pdp__cta-note">{{ block.settings.cta_note }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.shipping_note != blank or block.settings.guarantee_note != blank -%}
+                  <div class="nuumi-pdp__micro-trust">
+                    {%- if block.settings.shipping_note != blank -%}
+                      <span>{{ block.settings.shipping_note }}</span>
+                    {%- endif -%}
+                    {%- if block.settings.guarantee_note != blank -%}
+                      <span>{{ block.settings.guarantee_note }}</span>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.payment_note != blank -%}
+                  <p class="nuumi-pdp__payment-note">{{ block.settings.payment_note }}</p>
                 {%- endif -%}
 
             {%- endcase -%}
@@ -202,18 +213,6 @@
         }
       });
     });
-
-    // Purchase Mode Logic
-    const modeRadios = document.querySelectorAll('input[name="purchase_mode"]');
-    modeRadios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        if (this.checked) {
-          document.querySelectorAll('.nuumi-pdp__mode-option').forEach(opt => opt.classList.remove('nuumi-pdp__mode-option--active'));
-          this.closest('.nuumi-pdp__mode-option').classList.add('nuumi-pdp__mode-option--active');
-        }
-      });
-    });
-
     // Sticky CTA Logic
     const stickyCta = document.querySelector('.nuumi-sticky-cta');
     const buyButtons = document.querySelector('.nuumi-pdp__buy-buttons');
@@ -249,9 +248,6 @@
   ],
   "blocks": [
     {
-      "type": "@app"
-    },
-    {
       "type": "title",
       "name": "Title & Subtitle",
       "limit": 1,
@@ -261,6 +257,30 @@
           "id": "subtitle",
           "label": "Subtitle",
           "default": "Veterinarian Formulated"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Daily support for modern pet routines"
+        },
+        {
+          "type": "text",
+          "id": "badge_primary",
+          "label": "Primary badge",
+          "default": "Best Seller"
+        },
+        {
+          "type": "text",
+          "id": "badge_secondary",
+          "label": "Secondary badge",
+          "default": "Premium Support"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Built for pet parents who want a more intentional routine with clearer benefits and easier daily use.</p>"
         }
       ]
     },
@@ -304,13 +324,50 @@
           "id": "heading",
           "label": "Heading",
           "default": "Choose your supply"
+        },
+        {
+          "type": "text",
+          "id": "pack_1_title",
+          "label": "Pack 1 title",
+          "default": "1 Pack"
+        },
+        {
+          "type": "text",
+          "id": "pack_1_subtitle",
+          "label": "Pack 1 subtitle",
+          "default": "30 Day Supply"
+        },
+        {
+          "type": "text",
+          "id": "pack_2_title",
+          "label": "Pack 2 title",
+          "default": "3 Packs"
+        },
+        {
+          "type": "text",
+          "id": "pack_2_subtitle",
+          "label": "Pack 2 subtitle",
+          "default": "90 Day Supply"
+        },
+        {
+          "type": "text",
+          "id": "pack_2_badge",
+          "label": "Pack 2 badge",
+          "default": "Most Popular"
+        },
+        {
+          "type": "text",
+          "id": "pack_3_title",
+          "label": "Pack 3 title",
+          "default": "6 Packs"
+        },
+        {
+          "type": "text",
+          "id": "pack_3_subtitle",
+          "label": "Pack 3 subtitle",
+          "default": "180 Day Supply"
         }
       ]
-    },
-    {
-      "type": "purchase_mode",
-      "name": "Purchase Mode",
-      "limit": 1
     },
     {
       "type": "buy_buttons",
@@ -328,6 +385,36 @@
           "id": "guarantee_text",
           "label": "Guarantee Text",
           "default": "90-Day Money Back Guarantee"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Add to Cart"
+        },
+        {
+          "type": "text",
+          "id": "cta_note",
+          "label": "CTA Note",
+          "default": "Built for a simple, repeatable daily routine."
+        },
+        {
+          "type": "text",
+          "id": "shipping_note",
+          "label": "Shipping Note",
+          "default": "Fast US shipping"
+        },
+        {
+          "type": "text",
+          "id": "guarantee_note",
+          "label": "Guarantee Note",
+          "default": "Satisfaction support available"
+        },
+        {
+          "type": "text",
+          "id": "payment_note",
+          "label": "Payment Note",
+          "default": "Secure checkout with major payment methods"
         }
       ]
     }

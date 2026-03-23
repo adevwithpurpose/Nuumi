@@ -1,3 +1,8 @@
+ignore:
+  - 'Nuumipet V1/**'
+  - '_legacy_backup/**'
+  - 'node_modules/**'
+
 MatchingTranslations:
   enabled: false
 TemplateLength:

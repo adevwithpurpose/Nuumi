@@ -10,10 +10,392 @@
   gap: 3rem;
 }
 
+.nuumi-pdp--byebark {
+  background:
+    linear-gradient(180deg, #f6fafc 0%, #eef7f7 100%);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.nuumi-byebark-hero {
+  display: grid;
+  gap: 3.2rem;
+  align-items: start;
+}
+
+.nuumi-byebark-hero__media-shell,
+.nuumi-byebark-hero__panel {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.nuumi-byebark-hero__media-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #ecf5f8 100%);
+  border: 1px solid rgba(16, 36, 58, 0.08);
+  box-shadow: 0 24px 60px rgba(16, 36, 58, 0.08);
+  padding: 2rem;
+}
+
+.nuumi-byebark-hero__panel {
+  background: #fffdf8;
+  border: 1px solid rgba(16, 36, 58, 0.08);
+  box-shadow: 0 24px 60px rgba(16, 36, 58, 0.08);
+  padding: 3rem;
+  display: grid;
+  gap: 2.4rem;
+}
+
+.nuumi-byebark-hero__eyebrow,
+.nuumi-pdp-feature-grid__eyebrow {
+  margin: 0 0 1rem;
+  color: #0f766e;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.nuumi-byebark-hero__badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.nuumi-byebark-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nuumi-byebark-hero__badge--soft {
+  background: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+}
+
+.nuumi-byebark-hero__title {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.8rem, 5vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  max-width: 11ch;
+}
+
+.nuumi-byebark-hero__subtitle {
+  margin: 1.2rem 0 0;
+  color: #1e3a4f;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  max-width: 38rem;
+}
+
+.nuumi-byebark-hero__description,
+.nuumi-pdp-feature-grid__text {
+  color: #476173;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.nuumi-byebark-hero__description p,
+.nuumi-pdp-feature-grid__text p {
+  margin: 0;
+}
+
+.nuumi-byebark-hero__benefits {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.nuumi-byebark-hero__benefit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.nuumi-byebark-hero__benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.14);
+  color: #0f766e;
+  margin-top: 0.2rem;
+}
+
+.nuumi-byebark-hero__benefit-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.nuumi-byebark-hero__benefit-title {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.nuumi-byebark-hero__benefit-text {
+  margin: 0.35rem 0 0;
+  color: #5b7383;
+  font-size: 1.42rem;
+  line-height: 1.55;
+}
+
+.nuumi-byebark-hero__purchase-card {
+  display: grid;
+  gap: 1.8rem;
+  padding: 2.2rem;
+  border-radius: 2.4rem;
+  background: #ffffff;
+  border: 1px solid rgba(16, 36, 58, 0.08);
+}
+
+.nuumi-byebark-hero__price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  align-items: flex-end;
+}
+
+.nuumi-byebark-hero__price-label {
+  margin: 0 0 0.4rem;
+  color: #0f766e;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.nuumi-byebark-hero__price {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-size: clamp(3.2rem, 4vw, 4.4rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.nuumi-byebark-hero__price-note {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  max-width: 18rem;
+  text-align: right;
+}
+
+.nuumi-byebark-hero__packs-heading {
+  margin: 0 0 1rem;
+  color: var(--nuumi-deep-blue);
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.nuumi-byebark-hero__pack-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.nuumi-byebark-hero__pack {
+  position: relative;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.5rem 1.6rem;
+  border-radius: 1.8rem;
+  border: 1px solid rgba(16, 36, 58, 0.1);
+  background: #f8fbfc;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nuumi-byebark-hero__pack input {
+  position: absolute;
+  opacity: 0;
+}
+
+.nuumi-byebark-hero__pack.is-selected {
+  border-color: #0f766e;
+  box-shadow: 0 14px 30px rgba(15, 118, 110, 0.12);
+  transform: translateY(-1px);
+}
+
+.nuumi-byebark-hero__pack-badge {
+  position: absolute;
+  top: -0.9rem;
+  right: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--nuumi-gold);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.nuumi-byebark-hero__pack-title {
+  color: var(--nuumi-deep-blue);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.nuumi-byebark-hero__pack-subtitle,
+.nuumi-byebark-hero__pack-note,
+.nuumi-byebark-hero__cta-note,
+.nuumi-byebark-hero__payment-note {
+  color: #64748b;
+  font-size: 1.34rem;
+  line-height: 1.5;
+}
+
+.nuumi-byebark-hero__cta-group {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.nuumi-byebark-hero__cta {
+  width: 100%;
+  justify-content: center;
+  min-height: 5.8rem;
+}
+
+.nuumi-byebark-hero__cta-note,
+.nuumi-byebark-hero__payment-note {
+  margin: 0;
+}
+
+.nuumi-byebark-hero__micro-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(16, 36, 58, 0.08);
+  color: #0f766e;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nuumi-pdp-feature-grid {
+  position: relative;
+}
+
+.nuumi-pdp-feature-grid__header {
+  max-width: 70rem;
+  margin: 0 auto 3.6rem;
+  text-align: center;
+}
+
+.nuumi-pdp-feature-grid__title {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-family: var(--font-heading-family);
+  font-size: clamp(3rem, 4.2vw, 4.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.nuumi-pdp-feature-grid__grid {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.nuumi-pdp-feature-grid__card {
+  padding: 2.6rem;
+  border-radius: 2.4rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(16, 36, 58, 0.08);
+  box-shadow: 0 18px 40px rgba(16, 36, 58, 0.06);
+}
+
+.nuumi-pdp-feature-grid__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.4rem;
+  height: 5.4rem;
+  margin-bottom: 1.6rem;
+  border-radius: 1.6rem;
+  background: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+}
+
+.nuumi-pdp-feature-grid__icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.nuumi-pdp-feature-grid__card-title {
+  margin: 0 0 0.8rem;
+  color: var(--nuumi-deep-blue);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.nuumi-pdp-feature-grid__card-text {
+  color: #5b7383;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.nuumi-pdp-feature-grid__card-text p {
+  margin: 0;
+}
+
 @media screen and (min-width: 990px) {
   .nuumi-pdp__grid {
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
+  }
+
+  .nuumi-byebark-hero {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 4rem;
+  }
+
+  .nuumi-pdp-feature-grid__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .nuumi-byebark-hero__price-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nuumi-byebark-hero__price-note {
+    text-align: left;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .nuumi-byebark-hero__media-shell,
+  .nuumi-byebark-hero__panel {
+    border-radius: 2.2rem;
+  }
+
+  .nuumi-byebark-hero__panel,
+  .nuumi-pdp-feature-grid__card {
+    padding: 2rem;
+  }
+
+  .nuumi-byebark-hero__title {
+    max-width: none;
+    font-size: clamp(3.2rem, 11vw, 4.8rem);
   }
 }
 
@@ -27,6 +409,27 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+
+.nuumi-pdp__cta-note,
+.nuumi-pdp__payment-note {
+  margin: 0;
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+.nuumi-pdp__micro-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #E5E7EB;
+  color: var(--nuumi-deep-blue);
+  font-family: var(--font-body-family);
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .nuumi-pdp__title {
@@ -899,4 +1302,72 @@
 
 .nuumi-faq__answer p {
   margin: 0;
+}
+
+/* ByeBark Specific Styles */
+.nuumi-pdp__eyebrow {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nuumi-gold);
+  margin-bottom: 0.8rem;
+}
+
+.nuumi-pdp__badges {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.nuumi-pdp__badge {
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nuumi-pdp__badge--primary {
+  background-color: var(--nuumi-gold);
+  color: #fff;
+}
+
+.nuumi-pdp__badge--secondary {
+  background-color: rgba(30, 58, 138, 0.1);
+  color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pdp__description {
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+.nuumi-pdp__trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-top: 1.6rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.nuumi-pdp__trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.3rem;
+  color: #4B5563;
+  font-weight: 600;
+}
+
+.nuumi-pdp__trust-badge-icon {
+  color: var(--nuumi-gold);
+  display: flex;
+  width: 2rem;
+  height: 2rem;
 }
