@@ -1,7 +1,9 @@
 {
   "scripts": {
     "test:e2e": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "products:create": "node scripts/create-products.mjs",
+    "products:create:dry-run": "node scripts/create-products.mjs --dry-run"
   },
   "devDependencies": {
     "cypress": "^15.12.0"

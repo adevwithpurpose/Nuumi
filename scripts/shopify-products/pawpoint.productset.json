@@ -1,0 +1,34 @@
+{
+  "input": {
+    "title": "PawPoint Ear Wipes",
+    "handle": "pawpoint-ear-wipes",
+    "descriptionHtml": "<p>Finger-control ear wipes designed to help you reach hidden folds more easily and support a cleaner recurring ear-care routine.</p>",
+    "productType": "Pet Hygiene",
+    "vendor": "Nuumipet",
+    "templateSuffix": "pawpoint",
+    "status": "DRAFT",
+    "tags": ["PawPoint", "Ear Care", "Nuumipet"],
+    "productOptions": [
+      {
+        "name": "Size",
+        "values": [
+          { "name": "Default" }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "Default"
+          }
+        ],
+        "price": "24.00",
+        "inventoryItem": {
+          "sku": "NUUMI-PAWPOINT-001"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "input": {
+    "title": "ByeBark Ultrasonic Device",
+    "handle": "byebark-ultrasonic-device",
+    "descriptionHtml": "<p>Smart ultrasonic bark control device designed to help interrupt unwanted barking quickly in common home-trigger moments.</p>",
+    "productType": "Pet Device",
+    "vendor": "Nuumipet",
+    "templateSuffix": "byebark",
+    "status": "DRAFT",
+    "tags": ["ByeBark", "Bark Control", "Nuumipet"],
+    "productOptions": [
+      {
+        "name": "Size",
+        "values": [
+          { "name": "Default" }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "Default"
+          }
+        ],
+        "price": "49.00",
+        "inventoryItem": {
+          "sku": "NUUMI-BYEBARK-001"
+        }
+      }
+    ]
+  }
+}

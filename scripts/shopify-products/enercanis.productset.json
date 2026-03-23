@@ -1,0 +1,34 @@
+{
+  "input": {
+    "title": "EnerCanis Gut Health Supplement",
+    "handle": "enercanis-gut-health-supplement",
+    "descriptionHtml": "<p>Premium daily gut support formulated with L-Glutamine, hydrolyzed collagen, and bioactive peptide positioning for dogs who need a steadier digestive routine.</p>",
+    "productType": "Pet Supplement",
+    "vendor": "Nuumipet",
+    "templateSuffix": "enercanis",
+    "status": "DRAFT",
+    "tags": ["EnerCanis", "Gut Health", "Nuumipet"],
+    "productOptions": [
+      {
+        "name": "Size",
+        "values": [
+          { "name": "Default" }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "Default"
+          }
+        ],
+        "price": "39.00",
+        "inventoryItem": {
+          "sku": "NUUMI-ENERCANIS-001"
+        }
+      }
+    ]
+  }
+}

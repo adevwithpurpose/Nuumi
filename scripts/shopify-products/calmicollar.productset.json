@@ -1,0 +1,34 @@
+{
+  "input": {
+    "title": "CalmiCollar",
+    "handle": "calmi-collar",
+    "descriptionHtml": "<p>Calming collar support designed to help dogs feel safer during separation, travel, and stressful routine changes.</p>",
+    "productType": "Pet Wellness Collar",
+    "vendor": "Nuumipet",
+    "templateSuffix": "calmicollar",
+    "status": "DRAFT",
+    "tags": ["CalmiCollar", "Calming Support", "Nuumipet"],
+    "productOptions": [
+      {
+        "name": "Size",
+        "values": [
+          { "name": "Default" }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "Default"
+          }
+        ],
+        "price": "29.00",
+        "inventoryItem": {
+          "sku": "NUUMI-CALMICOLLAR-001"
+        }
+      }
+    ]
+  }
+}
