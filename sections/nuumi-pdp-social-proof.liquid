@@ -9,24 +9,49 @@
       <h2 class="nuumi-pdp-social-proof__title">{{ section.settings.title }}</h2>
       <div class="nuumi-pdp-social-proof__text rte">{{ section.settings.text }}</div>
     </div>
+
+    {%- assign has_videos = false -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'video' -%}{%- assign has_videos = true -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+
+    {%- if has_videos -%}
+      <div class="nuumi-pdp-social-proof__video-grid">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'video' -%}
+            <div class="nuumi-pdp-social-proof__video-card" {{ block.shopify_attributes }}>
+              <div class="nuumi-pdp-social-proof__video-placeholder">
+                <svg class="nuumi-pdp-social-proof__play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              </div>
+              {%- if block.settings.title != blank -%}
+                <p class="nuumi-pdp-social-proof__video-title">{{ block.settings.title }}</p>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
     <div class="nuumi-pdp-social-proof__grid">
       {%- for block in section.blocks -%}
-        <article class="nuumi-pdp-social-proof__card" {{ block.shopify_attributes }}>
-          <div class="nuumi-pdp-social-proof__card-top">
-            {% render 'nuumi-rating-stars', rating: block.settings.rating, count: blank, class: 'nuumi-pdp-social-proof__stars' %}
-            {%- if block.settings.badge != blank -%}
-              <span class="nuumi-pdp-social-proof__badge">{{ block.settings.badge }}</span>
-            {%- endif -%}
-          </div>
-          <blockquote class="nuumi-pdp-social-proof__quote">{{ block.settings.quote }}</blockquote>
-          <p class="nuumi-pdp-social-proof__highlight">{{ block.settings.highlight }}</p>
-          <div class="nuumi-pdp-social-proof__author">
-            <span class="nuumi-pdp-social-proof__name">{{ block.settings.name }}</span>
-            {%- if block.settings.meta != blank -%}
-              <span class="nuumi-pdp-social-proof__meta">{{ block.settings.meta }}</span>
-            {%- endif -%}
-          </div>
-        </article>
+        {%- if block.type == 'review' -%}
+          <article class="nuumi-pdp-social-proof__card" {{ block.shopify_attributes }}>
+            <div class="nuumi-pdp-social-proof__card-top">
+              {% render 'nuumi-rating-stars', rating: block.settings.rating, count: blank, class: 'nuumi-pdp-social-proof__stars' %}
+              {%- if block.settings.badge != blank -%}
+                <span class="nuumi-pdp-social-proof__badge">{{ block.settings.badge }}</span>
+              {%- endif -%}
+            </div>
+            <blockquote class="nuumi-pdp-social-proof__quote">{{ block.settings.quote }}</blockquote>
+            <p class="nuumi-pdp-social-proof__highlight">{{ block.settings.highlight }}</p>
+            <div class="nuumi-pdp-social-proof__author">
+              <span class="nuumi-pdp-social-proof__name">{{ block.settings.name }}</span>
+              {%- if block.settings.meta != blank -%}
+                <span class="nuumi-pdp-social-proof__meta">{{ block.settings.meta }}</span>
+              {%- endif -%}
+            </div>
+          </article>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </div>
@@ -45,6 +70,14 @@
   ],
   "blocks": [
     {
+      "type": "video",
+      "name": "Video Placeholder",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Label/Title", "default": "Watch our story" }
+      ]
+    },
+    {
       "type": "review",
       "name": "Review",
       "limit": 4,
@@ -62,6 +95,9 @@
     {
       "name": "Nuumi Social Proof",
       "blocks": [
+        { "type": "video", "settings": { "title": "How it works" } },
+        { "type": "video", "settings": { "title": "Real results" } },
+        { "type": "video", "settings": { "title": "Why EnerCanis?" } },
         { "type": "review", "settings": { "rating": 5, "badge": "Verified Buyer", "quote": "We tried prescription food, powders, and rotating probiotics. EnerCanis was the first thing that made his stool look normal and his skin stop flaring every few days.", "highlight": "Visible change by week two.", "name": "Melissa R.", "meta": "English bulldog parent" } },
         { "type": "review", "settings": { "rating": 5, "badge": "Photo Review", "quote": "The biggest difference was how quickly the gut chaos settled. Once that happened, the itching and redness also started improving instead of staying in a constant cycle.", "highlight": "Less itching, better stools.", "name": "Andre T.", "meta": "Rescue mix parent" } },
         { "type": "review", "settings": { "rating": 5, "badge": "Most Helpful", "quote": "The 3-bottle plan made the difference for us. One bottle was encouraging, but by the full supply window it really felt like his old chronic pattern had broken.", "highlight": "3-bottle protocol felt worth it.", "name": "Jasmine L.", "meta": "Senior dog parent" } }

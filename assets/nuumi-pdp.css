@@ -2436,6 +2436,51 @@
   font-weight: 800;
 }
 
+.nuumi-pdp-social-proof__video-grid {
+  display: grid;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.nuumi-pdp-social-proof__video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nuumi-pdp-social-proof__video-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: rgba(15, 118, 110, 0.06);
+  border-radius: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(15, 118, 110, 0.2);
+  transition: background 0.3s ease;
+}
+
+.nuumi-pdp-social-proof__video-card:hover .nuumi-pdp-social-proof__video-placeholder {
+  background: rgba(15, 118, 110, 0.1);
+}
+
+.nuumi-pdp-social-proof__play-icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #0f766e;
+  opacity: 0.5;
+}
+
+.nuumi-pdp-social-proof__video-title {
+  margin: 0;
+  color: var(--nuumi-deep-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4;
+}
+
 @media screen and (min-width: 990px) {
   .nuumi-enercanis-hero {
     grid-template-columns: 45fr 55fr;
@@ -2505,6 +2550,12 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .nuumi-pdp-social-proof__video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.4rem;
+    margin-bottom: 4.8rem;
+  }
+
   .nuumi-pdp-social-proof__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2570,6 +2621,7 @@
   .nuumi-pdp-agitation__diagram-card,
   .nuumi-pdp-efficacy__card,
   .nuumi-pdp-social-proof__card,
+  .nuumi-pdp-social-proof__video-placeholder,
   .nuumi-pdp-timeline__step-card {
     border-radius: 2.2rem;
   }
