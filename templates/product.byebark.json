@@ -1,34 +1,28 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "nuumi-pdp-byebark-hero",
       "blocks": {
         "benefit_1": {
-          "type": "benefit",
+          "type": "support_point",
           "settings": {
+            "icon": "science",
             "title": "Interrupts barking fast",
             "text": "Made for fence fighting, delivery alerts, and overstimulated moments at home."
           }
         },
         "benefit_2": {
-          "type": "benefit",
+          "type": "support_point",
           "settings": {
+            "icon": "shield",
             "title": "No-shock routine support",
             "text": "A sound-based tool designed to redirect attention without forcing a collar into the routine."
           }
         },
         "benefit_3": {
-          "type": "benefit",
+          "type": "support_point",
           "settings": {
+            "icon": "heart",
             "title": "Smart pattern shifting",
             "text": "Built to vary the pattern so dogs are less likely to tune it out over time."
           }
@@ -38,8 +32,9 @@
           "settings": {
             "title": "1 Device",
             "subtitle": "Best for one hotspot",
-            "note": "$49 each",
+            "note": "Trial setup",
             "badge": "",
+            "discount_percent": 0,
             "quantity": 1
           }
         },
@@ -47,9 +42,10 @@
           "type": "pack_option",
           "settings": {
             "title": "2 Devices",
-            "subtitle": "Front door + backyard",
-            "note": "Two-device setup",
+            "subtitle": "For Upstairs & Downstairs",
+            "note": "Most popular setup",
             "badge": "Most Popular",
+            "discount_percent": 18,
             "quantity": 2
           }
         },
@@ -57,9 +53,10 @@
           "type": "pack_option",
           "settings": {
             "title": "3 Devices",
-            "subtitle": "Whole-home coverage",
-            "note": "Three-device setup",
+            "subtitle": "For Multi-Dog Homes",
+            "note": "Whole-home coverage",
             "badge": "Best Value",
+            "discount_percent": 28,
             "quantity": 3
           }
         }
@@ -73,170 +70,253 @@
         "pack_3"
       ],
       "settings": {
+        "enable_sticky_cta": true,
         "eyebrow": "Modern bark control, without the harsh feel",
-        "badge_primary": "Best Seller",
-        "badge_secondary": "No-shock routine support",
-        "subtitle": "Smart ultrasonic bark control device for the moments that spiral fastest.",
+        "badge_primary": "Veterinary Reviewed",
+        "badge_secondary": "100% Pain-Free",
+        "headline": "Stops The Bark In Seconds - And Breaks The Habit For Good In Just 3 Days!",
+        "subtitle": "Uses advanced 'Frequency-Shift™ Technology' to instantly capture attention and stop nuisance barking without getting your dog 'used to the sound'.",
         "description": "<p>ByeBark helps interrupt fence fighting, delivery-driver barking, and frantic jumping or nipping with a faster, lower-friction tool that is easy to keep nearby.</p>",
-        "price_label": "Starting at",
-        "price_note": "One device. No collar required.",
-        "pack_heading": "Choose your setup",
+        "rating_value": 4.8,
+        "review_count": "2,300+",
+        "rating_caption": "Happy Customers",
+        "price_label": "Choose your setup",
+        "purchase_mode_heading": "Choose purchase option",
+        "purchase_microcopy": "2,300+ transformed dog owners",
+        "one_time_label": "One-Time Purchase",
+        "one_time_mode_text": "Pay once, no subscription",
+        "one_time_note": "One-time purchase. No hidden fees.",
+        "one_time_badge": "One-Time Purchase",
+        "enable_subscribe_mode": false,
+        "subscribe_discount_percent": 20,
+        "subscribe_label": "Subscribe & Save",
+        "subscribe_badge": "Save 20%",
+        "subscribe_note": "Lower monthly cost. Skip or cancel anytime.",
+        "subscribe_cta_label": "Claim Discount & Try Risk-Free",
+        "subscribe_cta_note": "Subscribe now to lock in savings.",
+        "pack_heading": "Choose your bundle",
         "cta_label": "Add ByeBark to cart",
-        "cta_note": "Keep one near the door, yard, or the places barking starts fastest.",
+        "sticky_button_label": "Add to cart",
+        "one_time_cta_note": "All bundles include 2 free digital bonuses ($194 value).",
         "shipping_note": "Fast US shipping",
-        "guarantee_note": "30-day satisfaction support",
-        "payment_note": "Secure checkout with major payment methods"
+        "guarantee_note": "60-day quiet-home guarantee",
+        "payment_note": "Secure checkout with major payment methods",
+        "left_guarantee_title": "Try it worry-free for 60 days",
+        "left_guarantee_text": "If your dog does not show visible improvement, we will refund your purchase. Simple as that.",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false
       }
     },
-    "trust_strip": {
-      "type": "nuumi-pdp-trust-strip",
+    "agitation": {
+      "type": "nuumi-pdp-agitation",
       "blocks": {
-        "item_1": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "truck",
-            "text": "Fast US Shipping"
-          }
-        },
-        "item_2": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "shield",
-            "text": "30-Day Satisfaction Support"
-          }
-        },
-        "item_3": {
-          "type": "trust_item",
+        "point_1": {
+          "type": "point",
           "settings": {
             "icon": "science",
-            "text": "Smart Pattern Shifting"
+            "title": "Why yelling and shock collars fail",
+            "text": "Yelling adds to the chaos, and shock collars create fear. Neither breaks the actual barking loop."
           }
         },
-        "item_4": {
-          "type": "trust_item",
+        "point_2": {
+          "type": "point",
           "settings": {
-            "icon": "heart",
-            "text": "No-Shock Routine Support"
+            "icon": "shield",
+            "title": "The flat-tone device problem",
+            "text": "Dogs quickly get used to single-frequency devices and start ignoring them."
           }
         }
       },
-      "block_order": ["item_1", "item_2", "item_3", "item_4"],
+      "block_order": [
+        "point_1",
+        "point_2"
+      ],
       "settings": {
-        "bg_color": "#FFFFFF"
+        "bg_color": "#f7fbfd",
+        "eyebrow": "The Barking Loop",
+        "title": "Why traditional methods keep failing to stop the noise.",
+        "text": "<p>When a dog is locked into a barking spiral, they aren't listening. Yelling just sounds like you're barking with them. Shock collars create anxiety that can make reactivity worse. And cheap flat-tone devices lose their effectiveness in days.</p>",
+        "analogy_title": "You need to break the pattern, not punish the dog.",
+        "analogy_text": "<p>ByeBark uses a shifting frequency that instantly captures their attention, pulling them out of the barking loop so you can redirect their behavior.</p>",
+        "layout": "diagram_right"
       }
     },
-    "feature_grid": {
-      "type": "nuumi-pdp-feature-grid",
+    "mechanism": {
+      "type": "nuumi-pdp-byebark-mechanism",
       "blocks": {
-        "feature_1": {
+        "feat_1": {
           "type": "feature",
           "settings": {
             "icon": "science",
-            "title": "Interrupts the loop",
-            "text": "<p>Designed to cut through the moment before barking turns into a longer spiral.</p>"
+            "title": "One-Button Precision",
+            "text": "<p>Instantly capture attention with a single press.</p>"
           }
         },
-        "feature_2": {
+        "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "shield",
-            "title": "No collar routine required",
-            "text": "<p>A handheld option for homes that want bark support without switching to a wearable device.</p>"
+            "title": "Variable Ultrasound (30-40kHz)",
+            "text": "<p>Prevents your dog from getting used to the sound.</p>"
           }
         },
-        "feature_3": {
+        "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "heart",
-            "title": "Easy to keep nearby",
-            "text": "<p>Simple enough to leave by the door, near the yard, or anywhere barking usually begins.</p>"
+            "title": "USB-C Rechargeable",
+            "text": "<p>Fast charging for reliable daily use.</p>"
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "star",
+            "title": "LED Flashlight",
+            "text": "<p>Added safety and visibility for evening walks.</p>"
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4"
+      ],
       "settings": {
         "bg_color": "#EAF7F7",
-        "eyebrow": "Why people keep it close",
-        "title": "A bark-control tool built for the moments that usually escalate fastest.",
-        "text": "<p>ByeBark is easiest to trust when the page explains where it fits: quick household interruptions, calmer training moments, and a lower-friction routine than harsher devices.</p>"
-      }
-    },
-    "story": {
-      "type": "nuumi-pdp-story",
-      "blocks": {
-        "benefit_1": {
-          "type": "benefit",
-          "settings": {
-            "icon": "science",
-            "title": "Cuts through focus quickly",
-            "text": "<p>Useful when your dog is locked into a barking pattern and needs a faster interruption cue.</p>"
-          }
-        },
-        "benefit_2": {
-          "type": "benefit",
-          "settings": {
-            "icon": "shield",
-            "title": "Designed for real home triggers",
-            "text": "<p>From fence-line reactions to the sound of the delivery driver, the use case stays practical and familiar.</p>"
-          }
-        },
-        "benefit_3": {
-          "type": "benefit",
-          "settings": {
-            "icon": "heart",
-            "title": "Simpler than heavier setups",
-            "text": "<p>For many homes, a handheld tool feels easier to reach for than introducing a more intense training device.</p>"
-          }
-        }
-      },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
-      "settings": {
-        "bg_color": "#F7FBFD",
-        "layout": "text_first",
-        "subtitle": "How ByeBark fits the routine",
-        "title": "For the barking moments that happen fast and throw the whole room off.",
-        "text": "<p>The goal is not a harsher routine. The goal is to interrupt the spiral early, redirect attention, and make it easier to move the dog back into a calmer moment.</p>"
+        "eyebrow": "BarkSense Technology",
+        "title": "How BarkSense Technology Works",
+        "text": "<p>A smarter way to interrupt the barking loop.</p>"
       }
     },
     "comparison": {
-      "type": "nuumi-pdp-comparison",
+      "type": "nuumi-pdp-byebark-comparison",
       "blocks": {
-        "feature_1": {
+        "comp_1": {
           "type": "feature",
           "settings": {
-            "title": "Handheld and easy to keep nearby",
-            "others_has_feature": false
+            "title": "100% Pain-Free",
+            "others_has_feature": true,
+            "third_has_feature": false
           }
         },
-        "feature_2": {
+        "comp_2": {
           "type": "feature",
           "settings": {
-            "title": "No-shock routine support",
-            "others_has_feature": false
+            "title": "Frequency-Shift Technology",
+            "others_has_feature": false,
+            "third_has_feature": false
           }
         },
-        "feature_3": {
+        "comp_3": {
           "type": "feature",
           "settings": {
-            "title": "Built for delivery and fence triggers",
-            "others_has_feature": false
+            "title": "Precision Timing",
+            "others_has_feature": false,
+            "third_has_feature": false
           }
         },
-        "feature_4": {
+        "comp_4": {
           "type": "feature",
           "settings": {
-            "title": "Quick to reach for at home",
-            "others_has_feature": true
+            "title": "60-Day Guarantee",
+            "others_has_feature": false,
+            "third_has_feature": false
+          }
+        },
+        "comp_5": {
+          "type": "feature",
+          "settings": {
+            "title": "Free Training Protocol",
+            "others_has_feature": false,
+            "third_has_feature": false
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "block_order": [
+        "comp_1",
+        "comp_2",
+        "comp_3",
+        "comp_4",
+        "comp_5"
+      ],
       "settings": {
         "bg_color": "#FFFFFF",
         "subtitle": "ByeBark vs harsher approaches",
         "title": "A calmer bark-control setup for everyday home triggers.",
         "nuumi_name": "ByeBark",
-        "others_name": "Heavier alternatives"
+        "others_name": "Other Brands",
+        "third_name": "Shock Collars"
+      }
+    },
+    "whats_included": {
+      "type": "nuumi-pdp-byebark-whats-included",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "title": "ByeBark Device",
+            "text": "<p>The core ultrasonic training tool.</p>"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "title": "USB-C Charging Cable",
+            "text": "<p>For fast, convenient charging.</p>"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Wrist Lanyard",
+            "text": "<p>Keep it secure and accessible.</p>"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "title": "Bonus: Training Guide",
+            "text": "<p>Digital protocol for best results.</p>"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "title": "Bonus: Behavior Masterclass",
+            "text": "<p>Expert video training series.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ],
+      "settings": {
+        "bg_color": "#F7FBFD",
+        "eyebrow": "Everything you need",
+        "title": "What's in the box",
+        "text": "<p>Plus 2 free digital bonuses ($194 value) to help you get started.</p>"
+      }
+    },
+    "guarantee": {
+      "type": "nuumi-pdp-guarantee",
+      "settings": {
+        "bg_color": "#10243a",
+        "icon": "shield",
+        "title": "60-Day Quiet-Home Guarantee",
+        "text": "<p>If your dog does not show visible improvement, we will refund your purchase. Simple as that.</p>"
       }
     },
     "faq": {
@@ -269,48 +349,59 @@
             "question": "Where should I keep it?",
             "answer": "<p>Most homes will keep it near the front door, yard access, or other places where barking tends to start first so it is easy to reach in the moment.</p>"
           }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the sound painful for my dog?",
+            "answer": "<p>No, the ultrasonic sound is 100% pain-free. It is designed to be surprising and attention-grabbing, not painful.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is Frequency-Shift Technology?",
+            "answer": "<p>Unlike cheap devices that use a single flat tone, ByeBark shifts its frequency between 30-40kHz. This prevents your dog from getting used to the sound and ignoring it over time.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it waterproof?",
+            "answer": "<p>ByeBark is water-resistant and suitable for outdoor use in light rain, but should not be submerged in water.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does it take to see results?",
+            "answer": "<p>Many owners see an immediate interruption in barking. With consistent use alongside our free training protocol, most dogs break the habit for good in just 3 days.</p>"
+          }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
       "settings": {
-        "bg_color": "#F7FBFD",
-        "title": "Frequently asked questions"
-      }
-    },
-    "guarantee": {
-      "type": "nuumi-pdp-guarantee",
-      "settings": {
-        "bg_color": "#10243A",
-        "icon": "shield",
-        "title": "Try ByeBark with more confidence",
-        "text": "<p>The page keeps the promise practical: a focused bark-control tool, a simpler household routine, and satisfaction support if it is not the right fit for your home.</p>"
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
+        "bg_color": "#f7fbfd",
+        "title": "Frequently Asked Questions"
       }
     }
   },
   "order": [
     "main",
-    "trust_strip",
-    "feature_grid",
-    "story",
+    "agitation",
+    "mechanism",
     "comparison",
-    "faq",
+    "whats_included",
     "guarantee",
-    "related-products"
+    "faq"
   ]
 }
