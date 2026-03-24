@@ -5,7 +5,7 @@ milestone_name: milestone
 current_phase: 4
 current_plan: null
 status: ready_for_execution
-last_updated: "2026-03-18T13:10:00.000Z"
+last_updated: "2026-03-24T00:00:00.000Z"
 progress:
   total_phases: 4
   completed_phases: 3
@@ -57,6 +57,7 @@ progress:
 *   **[2026-03-18]** Shopify CLI/GitHub connection remains a non-code verification gap, so `THEME-04` and `THEME-05` stay pending despite code progress.
 *   **[2026-03-18]** Nuumi brand colors are now exposed as global theme settings and wired through theme-level CSS variables.
 *   **[2026-03-18]** The homepage announcement bar can now use global Theme Editor content, and generic Dawn filler sections were removed from the PDP template.
+*   **[2026-03-24]** The EnerCanis product rollout now includes a modern expert section with Instagram profile link support.
 
 ### Todos
 *   Continue Phase 4 with broader merchant enablement and live Theme Editor QA.
@@ -67,4 +68,4 @@ progress:
 
 ## Session Continuity
 *   **Last session:** 2026-03-18T13:10:00.000Z
-*   **Next step:** Run live Shopify/theme-editor QA and decide whether to expose typography/button styling as additional global Nuumi merchant controls.
+*   **Next step:** Run live Shopify/theme-editor QA and keep the EnerCanis documentation aligned with the current template state.

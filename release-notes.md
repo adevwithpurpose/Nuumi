@@ -30,6 +30,14 @@
 - Added PDP-specific styling in `assets/nuumi-pdp.css`
 - Fixed early PDP integration issues in `sections/nuumi-main-product.liquid` around `variant_images` setup and icon snippet references
 
+### EnerCanis rollout updates
+
+- Added and iterated the custom EnerCanis PDP template in `templates/product.enercanis.json`
+- Added the EnerCanis hero CRO updates: subscription toggle, bundle savings, dynamic pricing, and compact trust row
+- Added the EnerCanis how-to-use section and restored the ingredient/efficacy section in the live template
+- Built and refined the EnerCanis expert section with merchant-editable Instagram link support for Dr. Sara Ranocchi
+- Added supporting PDP polish across agitation, timeline, transparency, social proof, FAQ, and related styling
+
 ### Shared design system work
 
 - Added shared brand styling in `assets/nuumi-base.css`

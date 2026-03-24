@@ -5,7 +5,7 @@ Nuumipet is a custom Shopify Dawn-based storefront for a lean pet wellness brand
 ## Current state
 
 - Homepage: custom Nuumi section stack is implemented
-- PDP: custom Nuumi product-page stack is implemented
+- PDP: custom Nuumi product-page stack is implemented, including the EnerCanis rollout work in progress
 - Phase 4: merchant-enablement work is in progress
 - Live Shopify preview and Theme Editor QA still require Shopify auth
 
@@ -33,6 +33,7 @@ Nuumipet is a custom Shopify Dawn-based storefront for a lean pet wellness brand
 - `sections/nuumi-pdp-expert.liquid`
 - `sections/nuumi-pdp-faq.liquid`
 - `templates/product.json`
+- `templates/product.enercanis.json`
 
 ### Shared styling
 
@@ -74,6 +75,7 @@ Primary remaining items:
 - run live Shopify/theme-editor QA
 - verify Shopify CLI workflow and GitHub/store connection
 - decide whether to expose additional global controls for typography and button treatment
+- keep `docs/products/enercanis.md` aligned with the live EnerCanis rollout notes
 
 ## GitHub & Deployment Workflow (Source of Truth)
 

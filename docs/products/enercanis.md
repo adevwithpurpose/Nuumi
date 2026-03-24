@@ -24,21 +24,21 @@
 ## Hero And Purchase Flow
 
 - `hero_eyebrow`: Daily gut support with a clinical edge
-- `hero_badge_primary`: Vet-Formulated
-- `hero_badge_secondary`: Liquid absorption support
-- `hero_subtitle`: Pharmaceutical-grade gut support designed to help soothe and reinforce digestive resilience.
-- `hero_description`: EnerCanis combines L-Glutamine, hydrolyzed collagen, and bioactive peptides in a liquid format built for a smoother daily routine.
+- `hero_badge_primary`: Pharmaceutical-Grade Ingredients
+- `hero_badge_secondary`: Manufactured in the USA
+- `hero_subtitle`: The liquid gut-sealing system that helps repair microscopic tears in the intestinal wall for lasting, root-cause relief.
+- `hero_description`: EnerCanis combines L-Glutamine, hydrolyzed collagen, and supportive botanicals in a liquid format built for a smoother daily routine.
 - `hero_bullets`:
   - Supports gut-barrier health
   - Liquid format for easy daily use
   - Designed for long-term digestive support
 - `pack_heading`: Choose your supply
 - `pack_options`:
-  - 1 Bottle | 30 day support | $39 each | quantity 1
-  - 3 Bottles | 90 day support | Most Popular | quantity 3
-  - 6 Bottles | 180 day support | Best Value | quantity 6
-- `cta_label`: Add EnerCanis to cart
-- `cta_note`: Daily digestive support that fits easily into a long-term routine.
+  - 1 Bottle | 30-day reset | Best for a first trial | quantity 1
+  - 3 Bottles | 90-day repair window | Most Popular | quantity 3
+  - 6 Bottles | 180-day best value | Best Value | quantity 6
+- `cta_label`: Start Your Dog's 90-Day Reset
+- `cta_note`: Claim the discount and start the protocol with a risk-free purchase flow.
 - `shipping_note`: Fast US shipping
 - `guarantee_note`: Satisfaction support available
 - `payment_note`: Secure checkout with major payment methods
@@ -74,15 +74,17 @@
 
 ## Authority And Objection Handling
 
-- `expert_badge`: Vet-Formulated
-- `expert_quote`: Built to support a steadier digestive routine with a premium formulation story and everyday ease.
-- `expert_name`: Nuumipet formulation team
-- `expert_credentials`: Digestive wellness formulation guidance
+- `expert_badge`: Veterinary perspective
+- `expert_quote`: When a dog keeps cycling through diarrhea, itching, and immune stress, I want a formula that supports the intestinal barrier itself. That is what makes the protocol feel clinically coherent instead of symptom-chasing.
+- `expert_name`: Dr. Sara Ranocchi
+- `expert_credentials`: Italian Nutrition Biologist
+- `expert_instagram`: https://www.instagram.com/dr.sara_ranocchi_/
 - `faq_items`:
   - What is EnerCanis designed to support? | EnerCanis is designed to support digestive comfort, gut-barrier health, and a healthier day-to-day gut routine.
   - Why a liquid format? | The liquid format is easy to use consistently and fits naturally into a daily routine.
   - How long should I use it? | EnerCanis works best as a daily routine product rather than a one-time fix.
   - Is this a medication? | No. EnerCanis is a wellness supplement designed for everyday routine support.
+  - Can I follow the expert on Instagram? | Yes. The expert section now supports a merchant-editable Instagram profile link.
 
 ## Media And Operations
 
@@ -97,4 +99,5 @@
   - custom.comparison_features
   - custom.product_faq
   - custom.guarantee_copy
+  - custom.instagram_url
 - `compliance_review_notes`: Copy stays centered on daily digestive support and avoids medical overclaiming.
