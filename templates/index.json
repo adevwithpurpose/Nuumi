@@ -194,6 +194,7 @@
       "blocks": {
         "proof_point_1": {
           "type": "proof_point",
+          "disabled": true,
           "settings": {
             "icon": "science",
             "title": "Specific jobs",
@@ -202,14 +203,25 @@
         },
         "proof_point_2": {
           "type": "proof_point",
+          "disabled": true,
           "settings": {
             "icon": "shield",
             "title": "Measured claims",
             "text": "The homepage stays grounded in what each product is actually designed to do instead of promising everything at once."
           }
         },
+        "proof_point_XwHVtm": {
+          "type": "proof_point",
+          "disabled": true,
+          "settings": {
+            "icon": "science",
+            "title": "Specific jobs",
+            "text": "The lineup is built around real needs like gut health, calming support, bark control, and ear cleaning."
+          }
+        },
         "proof_point_3": {
           "type": "proof_point",
+          "disabled": true,
           "settings": {
             "icon": "heart",
             "title": "Routine friendly",
@@ -220,12 +232,13 @@
       "block_order": [
         "proof_point_1",
         "proof_point_2",
+        "proof_point_XwHVtm",
         "proof_point_3"
       ],
       "settings": {
         "eyebrow": "A clearer product philosophy",
         "heading": "Built for everyday pet issues, not generic wellness buzzwords.",
-        "image": "shopify://shop_images/product8311.png",
+        "image": "shopify://shop_images/fromreactivetocalm.webp",
         "quote": "A strong pet-wellness routine should make it obvious what to reach for first, what each product is helping with, and how the pieces fit together at home.",
         "name": "Why Nuumipet stays focused",
         "role": "Targeted wellness essentials",
@@ -311,7 +324,7 @@
         "logos_eyebrow": "What the lineup is built around",
         "heading": "Five essentials, organized around the needs pet parents recognize fastest.",
         "body": "<p>Instead of padding the catalog with lookalike products, Nuumipet keeps the range concentrated around digestion, calming, behavior, hygiene, and one bundle that brings the daily basics together.</p>",
-        "image": "shopify://shop_images/Gemini_Generated_Image_2.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_idnhx3idnhx3idnh.png",
         "padding_top": 48,
         "padding_bottom": 96
       }
