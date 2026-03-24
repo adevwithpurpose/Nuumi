@@ -34,6 +34,7 @@ Nuumipet is a custom Shopify Dawn-based storefront for a lean pet wellness brand
 - `sections/nuumi-pdp-faq.liquid`
 - `templates/product.json`
 - `templates/product.enercanis.json`
+- `templates/product.byebark.json`
 
 ### Shared styling
 
