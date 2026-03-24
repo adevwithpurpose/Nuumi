@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -64,7 +73,14 @@
           }
         }
       },
-      "block_order": ["support_1", "support_2", "support_3", "pack_1", "pack_2", "pack_3"],
+      "block_order": [
+        "support_1",
+        "support_2",
+        "support_3",
+        "pack_1",
+        "pack_2",
+        "pack_3"
+      ],
       "settings": {
         "enable_sticky_cta": true,
         "eyebrow": "Clinical gut-barrier support for dogs",
@@ -147,7 +163,11 @@
           }
         }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
         "bg_color": "#eef7f9",
         "eyebrow": "What improvement usually looks like",
@@ -186,7 +206,11 @@
           }
         }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
         "bg_color": "#f2f8fc",
         "title": "How To Use",
@@ -403,7 +427,15 @@
           }
         }
       },
-      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5", "item_6", "item_7"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7"
+      ],
       "settings": {
         "bg_color": "#10243a",
         "eyebrow": "Trust and transparency",
@@ -577,7 +609,17 @@
           }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7", "faq_8", "faq_9"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9"
+      ],
       "settings": {
         "bg_color": "#f7fbfd",
         "title": "EnerCanis FAQ"
@@ -592,23 +634,9 @@
         "text": "<p>If your dog does not show visible improvement after the full supply, we will refund your purchase. Simple as that.</p>"
       }
     },
-    "final_cta": {
-      "type": "nuumi-pdp-final-cta",
-      "settings": {
-        "bg_color": "#f7fbfd",
-        "badge_text": "90-Day Guarantee",
-        "title": "Try It For 90 Days And Witness Your Dog's Transformation... Guaranteed!",
-        "text": "<p>We stand behind our formula and don't want you to spend a dime unless you see visible improvements in your dog's health.</p><p>That's why every bottle of EnerCanis comes with our 90-Day Transformation Guarantee.</p><p>If after using the full supply your dog hasn't shown meaningful improvement, just let us know and we'll refund your purchase.</p>",
-        "guarantee_points": "Free US shipping, 90-day money back guarantee, Secure checkout",
-        "cta_label": "Start Your Dog's 90-Day Reset",
-        "cta_link": "/cart",
-        "show_guarantee_badge": true,
-        "guarantee_title": "90-Day Worry-Free Guarantee",
-        "guarantee_text": "Full refund if not satisfied"
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -637,7 +665,6 @@
     "expert",
     "faq",
     "guarantee",
-    "final_cta",
     "related-products"
   ]
 }
