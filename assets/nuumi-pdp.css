@@ -2406,36 +2406,49 @@
 }
 
 .nuumi-pdp-transparency__intro {
-    max-width: 70rem;
-    margin: 0 auto 3rem;
+    max-width: 74rem;
+    margin: 0 auto 3.2rem;
     text-align: center;
 }
 
 .nuumi-pdp-transparency__grid {
     display: grid;
-    gap: 1.2rem;
+    gap: 1.4rem;
 }
 
 .nuumi-pdp-transparency__item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1.4rem 1.6rem;
-    border-radius: 1.8rem;
+    gap: 1.1rem;
+    padding: 1.45rem 1.6rem;
+    border-radius: 1.6rem;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 24px rgba(4, 19, 33, 0.12);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.nuumi-pdp-transparency__item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 14px 30px rgba(4, 19, 33, 0.18);
 }
 
 .nuumi-pdp-transparency__icon {
-    background: rgba(255, 255, 255, 0.14);
-    color: var(--nuumi-gold);
+    width: 3.2rem;
+    height: 3.2rem;
+    background: rgba(37, 214, 210, 0.14);
+    color: #25d6d2;
+    flex: 0 0 3.2rem;
+    box-shadow: inset 0 0 0 1px rgba(37, 214, 210, 0.16);
 }
 
 .nuumi-pdp-transparency__text {
     color: #ffffff;
-    font-size: 1.42rem;
+    font-size: 1.34rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 .nuumi-pdp-social-proof__quote {
@@ -2710,6 +2723,7 @@
 
     .nuumi-pdp-transparency__grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.1rem;
     }
 }
 
@@ -3778,7 +3792,7 @@
     }
 
     .nuumi-pdp-transparency__item {
-        padding: 1.2rem 1.35rem;
+        padding: 1.15rem 1.2rem;
         min-height: 0;
     }
 
