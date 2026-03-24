@@ -124,6 +124,19 @@
     },
     "agitation": {
       "type": "nuumi-pdp-agitation",
+      "blocks": {
+        "point_dcpCb9": {
+          "type": "point",
+          "settings": {
+            "icon": "science",
+            "title": "Why symptoms keep bouncing back",
+            "text": "The lining stays irritated, so the triggers keep circulating long after the bowl has been changed."
+          }
+        }
+      },
+      "block_order": [
+        "point_dcpCb9"
+      ],
       "settings": {
         "bg_color": "#f7fbfd",
         "eyebrow": "Why the usual fixes keep failing",
