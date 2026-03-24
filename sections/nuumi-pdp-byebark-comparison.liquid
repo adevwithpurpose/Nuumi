@@ -1,0 +1,191 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-comparison section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-comparison__header">
+      {%- if section.settings.subtitle != blank -%}
+        <span class="nuumi-comparison__subtitle">{{ section.settings.subtitle }}</span>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-comparison__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-comparison__table-wrapper">
+      <table class="nuumi-comparison__table nuumi-comparison__table--3col">
+        <thead>
+          <tr>
+            <th class="nuumi-comparison__th-feature"></th>
+            <th class="nuumi-comparison__th-nuumi">
+              {%- if section.settings.nuumi_logo != blank -%}
+                {{ section.settings.nuumi_logo | image_url: width: 200 | image_tag: class: 'nuumi-comparison__logo' }}
+              {%- else -%}
+                <span class="nuumi-comparison__brand-name">{{ section.settings.nuumi_name }}</span>
+              {%- endif -%}
+            </th>
+            <th class="nuumi-comparison__th-others">{{ section.settings.others_name }}</th>
+            <th class="nuumi-comparison__th-others">{{ section.settings.third_name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr {{ block.shopify_attributes }}>
+              <td class="nuumi-comparison__td-feature">{{ block.settings.title }}</td>
+              <td class="nuumi-comparison__td-nuumi">
+                <div class="nuumi-comparison__check">
+                  {% render 'nuumi-icons', icon: 'check_mark' %}
+                </div>
+              </td>
+              <td class="nuumi-comparison__td-others">
+                {%- if block.settings.others_has_feature -%}
+                  <div class="nuumi-comparison__check nuumi-comparison__check--muted">
+                    {% render 'nuumi-icons', icon: 'check_mark' %}
+                  </div>
+                {%- else -%}
+                  <div class="nuumi-comparison__cross">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                {%- endif -%}
+              </td>
+              <td class="nuumi-comparison__td-others">
+                {%- if block.settings.third_has_feature -%}
+                  <div class="nuumi-comparison__check nuumi-comparison__check--muted">
+                    {% render 'nuumi-icons', icon: 'check_mark' %}
+                  </div>
+                {%- else -%}
+                  <div class="nuumi-comparison__cross">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                {%- endif -%}
+              </td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi ByeBark Comparison",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Why Choose Us"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "The Nuumi Standard"
+    },
+    {
+      "type": "image_picker",
+      "id": "nuumi_logo",
+      "label": "Nuumi Logo (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "nuumi_name",
+      "label": "Brand Name (If no logo)",
+      "default": "ByeBark"
+    },
+    {
+      "type": "text",
+      "id": "others_name",
+      "label": "Competitor Name",
+      "default": "Other Brands"
+    },
+    {
+      "type": "text",
+      "id": "third_name",
+      "label": "Third Column Name",
+      "default": "Shock Collars"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Name",
+          "default": "100% Pain-Free"
+        },
+        {
+          "type": "checkbox",
+          "id": "others_has_feature",
+          "label": "Competitor has this feature?",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "third_has_feature",
+          "label": "Third column has this feature?",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi ByeBark Comparison",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "100% Pain-Free",
+            "others_has_feature": true,
+            "third_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Frequency-Shift Technology",
+            "others_has_feature": false,
+            "third_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Precision Timing",
+            "others_has_feature": false,
+            "third_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "60-Day Guarantee",
+            "others_has_feature": false,
+            "third_has_feature": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Free Training Protocol",
+            "others_has_feature": false,
+            "third_has_feature": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

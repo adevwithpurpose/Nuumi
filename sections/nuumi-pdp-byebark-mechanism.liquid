@@ -1,0 +1,77 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-mechanism section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-mechanism__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-mechanism__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-pdp-mechanism__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="nuumi-pdp-mechanism__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-mechanism__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-mechanism__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
+          <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi ByeBark Mechanism",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#F7FBFD" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "BarkSense Technology" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "How BarkSense Technology Works" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A smarter way to interrupt the barking loop.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "star", "label": "Star" },
+            { "value": "check_mark", "label": "Check Mark" }
+          ],
+          "default": "science"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "One-Button Precision" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Instantly capture attention with a single press.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi ByeBark Mechanism",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "science", "title": "One-Button Precision", "text": "<p>Instantly capture attention with a single press.</p>" } },
+        { "type": "feature", "settings": { "icon": "shield", "title": "Variable Ultrasound (30-40kHz)", "text": "<p>Prevents your dog from getting used to the sound.</p>" } },
+        { "type": "feature", "settings": { "icon": "heart", "title": "USB-C Rechargeable", "text": "<p>Fast charging for reliable daily use.</p>" } },
+        { "type": "feature", "settings": { "icon": "star", "title": "LED Flashlight", "text": "<p>Added safety and visibility for evening walks.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

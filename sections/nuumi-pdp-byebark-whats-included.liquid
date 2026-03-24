@@ -1,0 +1,88 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-whats-included section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-whats-included__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-whats-included__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-pdp-whats-included__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="nuumi-pdp-whats-included__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-whats-included__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-whats-included__card" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="nuumi-pdp-whats-included__image-wrapper">
+              {{ block.settings.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'nuumi-pdp-whats-included__image' }}
+            </div>
+          {%- else -%}
+            <div class="nuumi-pdp-whats-included__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          {%- endif -%}
+          <h3 class="nuumi-pdp-whats-included__card-title">{{ block.settings.title }}</h3>
+          <div class="nuumi-pdp-whats-included__card-text">{{ block.settings.text }}</div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi ByeBark Included",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Everything you need" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "What's in the box" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Plus 2 free digital bonuses to help you get started.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Fallback Icon",
+          "options": [
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "star", "label": "Star" },
+            { "value": "check_mark", "label": "Check Mark" }
+          ],
+          "default": "check_mark"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "ByeBark Device" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>The core ultrasonic training tool.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi ByeBark Included",
+      "blocks": [
+        { "type": "item", "settings": { "title": "ByeBark Device", "text": "<p>The core ultrasonic training tool.</p>" } },
+        { "type": "item", "settings": { "title": "USB-C Charging Cable", "text": "<p>For fast, convenient charging.</p>" } },
+        { "type": "item", "settings": { "title": "Wrist Lanyard", "text": "<p>Keep it secure and accessible.</p>" } },
+        { "type": "item", "settings": { "title": "Bonus: Training Guide", "text": "<p>Digital protocol for best results.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
