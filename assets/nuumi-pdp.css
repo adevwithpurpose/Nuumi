@@ -2274,9 +2274,9 @@
 
 .nuumi-pdp-efficacy__card-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     margin-bottom: 0.8rem;
 }
 
@@ -2284,17 +2284,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 1rem;
-    background: rgba(15, 118, 110, 0.12);
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(180deg, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.06));
     color: #0f766e;
     overflow: hidden;
+    flex: 0 0 4.4rem;
+    box-shadow: 0 8px 18px rgba(16, 36, 58, 0.06);
 }
 
 .nuumi-pdp-efficacy__media--icon svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 .nuumi-pdp-efficacy__media--image {
@@ -2304,12 +2306,14 @@
 .nuumi-pdp-efficacy__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
 }
 
 .nuumi-pdp-efficacy__tag {
     font-size: 0.9rem;
     padding: 0.4rem 0.7rem;
+    margin-left: auto;
 }
 
 .nuumi-pdp-efficacy__card-title {
@@ -3194,16 +3198,16 @@
     line-height: 1.55;
 }
 
-.nuumi-pdp-efficacy__card-top {
-    align-items: flex-start;
-}
+    .nuumi-pdp-efficacy__card-top {
+        align-items: flex-start;
+    }
 
-.nuumi-pdp-efficacy__media,
-.nuumi-pdp-efficacy__media--image {
-    width: 3.6rem;
-    height: 3.6rem;
-    border-radius: 1rem;
-}
+    .nuumi-pdp-efficacy__media,
+    .nuumi-pdp-efficacy__media--image {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1rem;
+    }
 
 .nuumi-pdp-efficacy__image {
     width: 100%;
@@ -3818,6 +3822,10 @@
 
     .nuumi-pdp-efficacy__card {
         padding: 1.1rem;
+    }
+
+    .nuumi-pdp-efficacy__card-top {
+        gap: 0.8rem;
     }
 
     .nuumi-pdp-transparency__grid {
