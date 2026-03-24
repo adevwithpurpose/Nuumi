@@ -76,6 +76,7 @@ Primary remaining items:
 - verify Shopify CLI workflow and GitHub/store connection
 - decide whether to expose additional global controls for typography and button treatment
 - keep `docs/products/enercanis.md` aligned with the live EnerCanis rollout notes
+- treat `templates/product.enercanis.json` as the locked reference baseline for future product pages
 
 ## GitHub & Deployment Workflow (Source of Truth)
 
