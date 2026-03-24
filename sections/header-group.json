@@ -14,19 +14,27 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_JJ4ipW": {
+          "type": "announcement",
+          "settings": {
+            "text": "Upto 20% off. Limited time offer",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Try Worry-Free for 90 days",
             "link": ""
           }
         }
       },
       "block_order": [
+        "announcement_JJ4ipW",
         "announcement-bar-0"
       ],
       "settings": {
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "color_scheme": "",
         "show_line_separator": true,
