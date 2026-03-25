@@ -1,0 +1,241 @@
+<product-info
+  id="MainProduct-{{ section.id }}"
+  class="nuumi-pdp nuumi-pdp--leash-walk section-{{ section.id }}-padding"
+  data-section="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-update-url="true"
+  data-url="{{ product.url }}"
+>
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  {% assign base_price = current_variant.price | default: product.price %}
+  {% assign form_id = 'product-form-' | append: section.id %}
+
+  <div class="page-width">
+    <div class="nuumi-leash-walk-hero">
+      <div class="nuumi-leash-walk-hero__media-column product__column-sticky">
+        <div class="nuumi-leash-walk-hero__media-shell product product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
+          {% render 'product-media-gallery',
+            variant_images: variant_images,
+            section: section,
+            hide_variants: true
+          %}
+        </div>
+      </div>
+
+      <div class="nuumi-leash-walk-hero__content-column">
+        <section id="ProductInfo-{{ section.id }}" class="nuumi-leash-walk-hero__panel">
+          <div class="nuumi-leash-walk-hero__intro">
+            {%- if section.settings.eyebrow != blank -%}
+              <p class="nuumi-leash-walk-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+            {%- endif -%}
+
+            <div class="nuumi-leash-walk-hero__badge-row">
+              {%- if section.settings.badge_primary != blank -%}
+                <span class="nuumi-leash-walk-hero__badge">{{ section.settings.badge_primary }}</span>
+              {%- endif -%}
+              {%- if section.settings.badge_secondary != blank -%}
+                <span class="nuumi-leash-walk-hero__badge nuumi-leash-walk-hero__badge--soft">{{ section.settings.badge_secondary }}</span>
+              {%- endif -%}
+            </div>
+
+            <h1 class="nuumi-leash-walk-hero__title">{{ section.settings.headline | default: product.title | escape }}</h1>
+
+            {%- if section.settings.subtitle != blank -%}
+              <p class="nuumi-leash-walk-hero__subtitle">{{ section.settings.subtitle }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.description != blank -%}
+              <div class="nuumi-leash-walk-hero__description rte">{{ section.settings.description }}</div>
+            {%- endif -%}
+          </div>
+
+          <div class="nuumi-leash-walk-hero__purchase-card">
+            <div class="nuumi-leash-walk-hero__price-row">
+              <div>
+                <p class="nuumi-leash-walk-hero__price-label">{{ section.settings.price_label }}</p>
+                <div class="nuumi-leash-walk-hero__price-stack">
+                  <span class="nuumi-leash-walk-hero__compare-at">{{ section.settings.compare_at_price_text }}</span>
+                  <p class="nuumi-leash-walk-hero__price">{{ base_price | money }}</p>
+                </div>
+              </div>
+              <div class="nuumi-leash-walk-hero__price-meta">
+                <span class="nuumi-leash-walk-hero__price-chip">{{ section.settings.price_badge }}</span>
+                <p class="nuumi-leash-walk-hero__price-note">{{ section.settings.price_note }}</p>
+              </div>
+            </div>
+
+            {%- assign support_blocks = section.blocks | where: 'type', 'support_point' -%}
+            {%- if support_blocks.size > 0 -%}
+              <div class="nuumi-leash-walk-hero__support-grid">
+                {%- for block in support_blocks -%}
+                  <article class="nuumi-leash-walk-hero__support-card" {{ block.shopify_attributes }}>
+                    <span class="nuumi-leash-walk-hero__support-media nuumi-leash-walk-hero__support-media--icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+                    <div>
+                      <p class="nuumi-leash-walk-hero__support-title">{{ block.settings.title }}</p>
+                      {%- if block.settings.text != blank -%}
+                        <p class="nuumi-leash-walk-hero__support-text">{{ block.settings.text }}</p>
+                      {%- endif -%}
+                    </div>
+                  </article>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+            <product-form class="product-form" data-section-id="{{ section.id }}">
+              <div class="product-form__error-message-wrapper" role="alert" hidden>
+                <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+                <span class="product-form__error-message"></span>
+              </div>
+
+              {%- form 'product', product, id: form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" name="id" value="{{ current_variant.id }}" class="product-variant-id">
+
+                <div class="nuumi-leash-walk-hero__cta-group">
+                  <button
+                    id="ProductSubmitButton-{{ section.id }}"
+                    type="submit"
+                    name="add"
+                    class="nuumi-button--gold nuumi-leash-walk-hero__cta product-form__submit"
+                    {% if current_variant.available == false %}disabled{% endif %}
+                  >
+                    <span>
+                      {%- if current_variant.available == false -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        {{ section.settings.cta_label }}
+                      {%- endif -%}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+
+                  {%- if section.settings.cta_note != blank -%}
+                    <p class="nuumi-leash-walk-hero__cta-note">{{ section.settings.cta_note }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endform -%}
+            </product-form>
+
+            <div class="nuumi-leash-walk-hero__micro-trust">
+              {%- if section.settings.shipping_note != blank -%}
+                <span>{{ section.settings.shipping_note }}</span>
+              {%- endif -%}
+              {%- if section.settings.guarantee_note != blank -%}
+                <span>{{ section.settings.guarantee_note }}</span>
+              {%- endif -%}
+              {%- if section.settings.payment_note != blank -%}
+                <span>{{ section.settings.payment_note }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</product-info>
+
+{%- if section.settings.enable_sticky_cta -%}
+  <div class="nuumi-sticky-cta nuumi-sticky-cta--leash-walk" data-sticky-cta>
+    <div class="nuumi-sticky-cta__inner page-width">
+      <div class="nuumi-sticky-cta__info">
+        <span class="nuumi-sticky-cta__title">{{ product.title }}</span>
+        <span class="nuumi-sticky-cta__price">{{ base_price | money }}</span>
+      </div>
+      <button type="button" class="nuumi-button--gold nuumi-sticky-cta__button" data-sticky-button>
+        {{ section.settings.sticky_button_label }}
+      </button>
+    </div>
+  </div>
+{%- endif -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sectionRoot = document.getElementById('MainProduct-{{ section.id }}');
+    if (!sectionRoot) return;
+    var stickyCta = document.querySelector('[data-sticky-cta]');
+    var stickyButton = document.querySelector('[data-sticky-button]');
+    var submitButton = document.getElementById('ProductSubmitButton-{{ section.id }}');
+    var buyCard = sectionRoot.querySelector('.nuumi-leash-walk-hero__purchase-card');
+
+    if (stickyButton && submitButton) {
+      stickyButton.addEventListener('click', function() {
+        submitButton.click();
+      });
+    }
+
+    if (stickyCta && buyCard) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+            stickyCta.classList.add('nuumi-sticky-cta--visible');
+          } else {
+            stickyCta.classList.remove('nuumi-sticky-cta--visible');
+          }
+        });
+      }, { threshold: 0 });
+      observer.observe(buyCard);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Nuumi Leash Walk Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "checkbox", "id": "enable_sticky_cta", "label": "Enable mobile sticky CTA", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Calm walks without the pulling" },
+    { "type": "text", "id": "badge_primary", "label": "Primary badge", "default": "Instant Digital Access" },
+    { "type": "text", "id": "badge_secondary", "label": "Secondary badge", "default": "No Shipping Required" },
+    { "type": "text", "id": "headline", "label": "Headline", "default": "How To Stop Your Dog Pulling On The Leash In Less Than 7 Days." },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Transform walks into relaxing moments. Make your dog walk beside you calmly and trust your judgment BEFORE reacting to a threat." },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>A step-by-step digital training system built to make your dog calmer, more responsive, and easier to guide on every walk.</p>" },
+    { "type": "text", "id": "price_label", "label": "Price label", "default": "Today only" },
+    { "type": "text", "id": "compare_at_price_text", "label": "Compare-at text", "default": "$97" },
+    { "type": "text", "id": "price_badge", "label": "Price badge", "default": "Save $50" },
+    { "type": "text", "id": "price_note", "label": "Price note", "default": "Instant digital delivery. No waiting." },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Get instant access now" },
+    { "type": "text", "id": "sticky_button_label", "label": "Sticky CTA label", "default": "Get instant access" },
+    { "type": "text", "id": "cta_note", "label": "CTA note", "default": "Includes video course, eBook, and 3 free bonuses." },
+    { "type": "text", "id": "shipping_note", "label": "Shipping note", "default": "Instant digital access" },
+    { "type": "text", "id": "guarantee_note", "label": "Guarantee note", "default": "60-day money-back guarantee" },
+    { "type": "text", "id": "payment_note", "label": "Payment note", "default": "Secure checkout with major payment methods" },
+    { "type": "select", "id": "gallery_layout", "options": [{ "value": "stacked", "label": "Stacked" }, { "value": "thumbnail", "label": "Thumbnail" }, { "value": "thumbnail_slider", "label": "Thumbnail slider" }], "default": "thumbnail_slider", "label": "Desktop layout" },
+    { "type": "select", "id": "mobile_thumbnails", "options": [{ "value": "show", "label": "Show thumbnails" }, { "value": "hide", "label": "Hide thumbnails" }], "default": "show", "label": "Mobile thumbnails" },
+    { "type": "checkbox", "id": "hide_variants", "default": false, "label": "Hide other variants' media after selecting a variant" },
+    { "type": "checkbox", "id": "enable_video_looping", "default": false, "label": "Enable video looping" }
+  ],
+  "blocks": [
+    {
+      "type": "support_point",
+      "name": "Support point",
+      "limit": 6,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "star", "label": "Star" }], "default": "check_mark" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Video course included" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Step-by-step leash-walk lessons you can start today." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Leash Walk Hero",
+      "blocks": [
+        { "type": "support_point", "settings": { "icon": "check_mark", "title": "Video course included", "text": "A step-by-step leash-walk system you can start immediately." } },
+        { "type": "support_point", "settings": { "icon": "heart", "title": "eBook included", "text": "A companion guide that makes the process easy to follow and repeat." } },
+        { "type": "support_point", "settings": { "icon": "star", "title": "3 bonuses included", "text": "Three free resources that increase the perceived value and training depth." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

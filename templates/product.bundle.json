@@ -1,161 +1,207 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "nuumi-main-product",
+      "type": "nuumi-pdp-leash-walk-hero",
       "blocks": {
-        "title": { "type": "title", "settings": { "subtitle": "A bundled Nuumipet routine designed to cover behavior, digestive support, and hygiene in one higher-value purchase.", "eyebrow": "The essentials bundle for calmer, cleaner, healthier daily care", "badge_primary": "Best Value", "badge_secondary": "360-degree care bundle", "description": "<p>The Core Wellness Bundle is the easiest way to start a full Nuumipet care routine with stronger value than buying each product separately.</p>" } },
-        "price": { "type": "price", "settings": {} },
-        "bullets": {
-          "type": "bullets",
+        "support_1": {
+          "type": "support_point",
           "settings": {
-            "bullet_1": "Multi-product care in one bundle",
-            "bullet_2": "Better bundled value",
-            "bullet_3": "Designed for a more complete wellness routine"
+            "icon": "check_mark",
+            "title": "Video course included",
+            "text": "A step-by-step leash-walk system you can start immediately."
           }
         },
-        "quantity_packs": {
-          "type": "quantity_packs",
+        "support_2": {
+          "type": "support_point",
           "settings": {
-            "heading": "Choose your bundle",
-            "pack_1_title": "1 Bundle",
-            "pack_1_subtitle": "Full starter set",
-            "pack_2_title": "2 Bundles",
-            "pack_2_subtitle": "Multi-pet or restock plan",
-            "pack_2_badge": "Most Popular",
-            "pack_3_title": "3 Bundles",
-            "pack_3_subtitle": "Best long-term value"
+            "icon": "heart",
+            "title": "eBook included",
+            "text": "A companion guide that makes the process easy to follow and repeat."
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "support_3": {
+          "type": "support_point",
           "settings": {
-            "show_guarantee": true,
-            "guarantee_text": "Satisfaction support for a more complete wellness start",
-            "button_label": "Add bundle to cart",
-            "cta_note": "A simpler way to start with the Nuumipet essentials in one purchase.",
-            "shipping_note": "Fast US shipping",
-            "guarantee_note": "Satisfaction support available",
-            "payment_note": "Secure checkout with major payment methods"
+            "icon": "star",
+            "title": "3 bonuses included",
+            "text": "Three free resources that increase the perceived value and training depth."
           }
         }
       },
-      "block_order": ["title", "price", "bullets", "quantity_packs", "buy_buttons"],
-      "settings": { "enable_sticky_cta": true }
-    },
-    "trust_strip": {
-      "type": "nuumi-pdp-trust-strip",
-      "blocks": {
-        "item_1": { "type": "trust_item", "settings": { "icon": "shield", "text": "Better bundled value" } },
-        "item_2": { "type": "trust_item", "settings": { "icon": "heart", "text": "Covers multiple daily needs" } },
-        "item_3": { "type": "trust_item", "settings": { "icon": "science", "text": "Wellness-focused product mix" } },
-        "item_4": { "type": "trust_item", "settings": { "icon": "truck", "text": "Fast US Shipping" } }
-      },
-      "block_order": ["item_1", "item_2", "item_3", "item_4"],
-      "settings": { "bg_color": "#F7FBFD" }
-    },
-    "feature_grid": {
-      "type": "nuumi-pdp-feature-grid",
-      "blocks": {
-        "feature_1": { "type": "feature", "settings": { "icon": "shield", "title": "Better than buying separately", "text": "<p>Stronger value than building the routine one product at a time.</p>" } },
-        "feature_2": { "type": "feature", "settings": { "icon": "heart", "title": "Covers more of the daily routine", "text": "<p>Behavior, gut, and hygiene support in one coordinated order.</p>" } },
-        "feature_3": { "type": "feature", "settings": { "icon": "science", "title": "Designed as a coordinated system", "text": "<p>A curated routine built to cover multiple daily needs in one purchase.</p>" } }
-      },
-      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "block_order": [
+        "support_1",
+        "support_2",
+        "support_3"
+      ],
       "settings": {
-        "bg_color": "#EAF7F7",
-        "eyebrow": "Why the bundle leads",
-        "title": "A simpler way to start the Nuumipet system all at once.",
-        "text": "<p>The highest-leverage starting point for households that want a broader support plan without piecing products together one by one.</p>"
+        "enable_sticky_cta": true,
+        "eyebrow": "Calm walks without the pulling",
+        "badge_primary": "Instant Digital Access",
+        "badge_secondary": "No Shipping Required",
+        "headline": "How To Stop Your Dog Pulling On The Leash In Less Than 7 Days.",
+        "subtitle": "Transform walks into relaxing moments. Make your dog walk beside you calmly and trust your judgment BEFORE reacting to a threat.",
+        "description": "<p>A step-by-step digital training system built to make your dog calmer, more responsive, and easier to guide on every walk.</p>",
+        "price_label": "Today only",
+        "compare_at_price_text": "$97",
+        "price_badge": "Save $50",
+        "price_note": "Instant digital delivery. No waiting.",
+        "cta_label": "Get instant access now",
+        "sticky_button_label": "Get instant access",
+        "cta_note": "Includes video course, eBook, and 3 free bonuses.",
+        "shipping_note": "Instant digital access",
+        "guarantee_note": "60-day money-back guarantee",
+        "payment_note": "Secure checkout with major payment methods",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false
       }
     },
-    "story": {
-      "type": "nuumi-pdp-story",
+    "what_you_get": {
+      "type": "nuumi-pdp-byebark-mechanism",
       "blocks": {
-        "benefit_1": { "type": "benefit", "settings": { "icon": "shield", "title": "More complete care plan", "text": "<p>Better fit for households wanting a stronger starting point.</p>" } },
-        "benefit_2": { "type": "benefit", "settings": { "icon": "heart", "title": "Easier to commit to the routine", "text": "<p>One purchase, one shipment, broader coverage.</p>" } },
-        "benefit_3": { "type": "benefit", "settings": { "icon": "science", "title": "Smart merchandising logic", "text": "<p>Positioned as intentional curation, not random bundling.</p>" } }
+        "item_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "science",
+            "title": "Video course",
+            "text": "<p>A step-by-step manual that is easy to understand and apply with dogs of all ages, breeds, temperaments, and sizes.</p>"
+          }
+        },
+        "item_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "check_mark",
+            "title": "eBook companion",
+            "text": "<p>An easy reference guide that helps you apply the lessons outside the video sessions.</p>"
+          }
+        },
+        "item_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "heart",
+            "title": "Mobile-friendly lessons",
+            "text": "<p>Watch and learn from your phone, tablet, or computer whenever you have a few minutes free.</p>"
+          }
+        }
       },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "settings": {
+        "bg_color": "#F7FBFD",
+        "eyebrow": "What you get",
+        "title": "A digital training system that feels complete from day one.",
+        "text": "<p>Designed to transform walks into calm, structured moments with practical lessons you can start immediately.</p>"
+      }
+    },
+    "bonuses": {
+      "type": "nuumi-pdp-leash-walk-bonuses",
+      "blocks": {
+        "bonus_1": {
+          "type": "bonus",
+          "settings": {
+            "icon": "star",
+            "title": "The Best Harnesses and Leashes on the Market",
+            "text": "<p>The gear guide that helps you choose tools that support calmer walks instead of making them harder.</p>",
+            "value_text": "Value: $27 - YOURS FREE"
+          }
+        },
+        "bonus_2": {
+          "type": "bonus",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Journey Inside the Dog's Mind",
+            "text": "<p>A bonus training resource that helps you understand what drives pulling and reactivity in the first place.</p>",
+            "value_text": "Value: $27 - YOURS FREE"
+          }
+        },
+        "bonus_3": {
+          "type": "bonus",
+          "settings": {
+            "icon": "science",
+            "title": "Cinzia's Secrets",
+            "text": "<p>The small trainer adjustments that help your dog see you as the guide on every walk.</p>",
+            "value_text": "Value: $27 - YOURS FREE"
+          }
+        }
+      },
+      "block_order": [
+        "bonus_1",
+        "bonus_2",
+        "bonus_3"
+      ],
       "settings": {
         "bg_color": "#FFFFFF",
-        "layout": "text_first",
-        "subtitle": "A better-value routine start",
-        "title": "For pet parents who want a more complete routine from day one.",
-        "text": "<p>The Core Wellness Bundle combines convenience and value in one purchase, giving pet parents a more complete starting routine.</p>"
+        "eyebrow": "Free bonuses",
+        "title": "Three extra bonuses that make the program feel complete.",
+        "text": "<p>Each bonus increases the perceived value of the program and deepens the walk-training system.</p>"
       }
     },
-    "comparison": {
-      "type": "nuumi-pdp-comparison",
-      "blocks": {
-        "feature_1": { "type": "feature", "settings": { "title": "Covers behavior, gut, and hygiene", "others_has_feature": false } },
-        "feature_2": { "type": "feature", "settings": { "title": "Better bundle economics", "others_has_feature": false } },
-        "feature_3": { "type": "feature", "settings": { "title": "One-click routine starter", "others_has_feature": false } },
-        "feature_4": { "type": "feature", "settings": { "title": "Single-category support only", "others_has_feature": true } }
-      },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
-      "settings": {
-        "bg_color": "#F9FAFB",
-        "subtitle": "Core Wellness Bundle vs single-product starts",
-        "title": "More complete support than starting one product at a time.",
-        "nuumi_name": "Core Bundle",
-        "others_name": "Single-product starts"
-      }
-    },
-    "expert": {
-      "type": "nuumi-pdp-expert",
+    "authority": {
+      "type": "nuumi-pdp-leash-walk-authority",
       "settings": {
         "bg_color": "#FFFFFF",
-        "badge_text": "Best-value full-routine positioning",
-        "quote": "Built for households that want broader day-to-day support and better value than piecing a routine together one product at a time.",
-        "name": "Nuumipet merchandising team",
-        "credentials": "Multi-product routine planning"
+        "badge_text": "Instructor authority",
+        "heading": "Meet Cinzia, the trainer behind the course.",
+        "quote": "<p>With 13+ years of experience as a dog trainer, Cinzia teaches the small but powerful strategies that help your dog recognize you as the guide on every walk.</p>",
+        "name": "Cinzia",
+        "credentials": "13+ years of dog-training experience"
       }
-    },
-    "faq": {
-      "type": "nuumi-pdp-faq",
-      "blocks": {
-        "faq_1": { "type": "faq_item", "settings": { "question": "What comes in the bundle?", "answer": "<p>The Core Wellness Bundle is framed as a curated Nuumipet routine that combines behavior, digestive, and hygiene support in one purchase.</p>" } },
-        "faq_2": { "type": "faq_item", "settings": { "question": "Why choose the bundle over one product?", "answer": "<p>The bundle gives you better value and a more complete starting routine than buying one product at a time.</p>" } },
-        "faq_3": { "type": "faq_item", "settings": { "question": "Is this right for every pet?", "answer": "<p>It is a strong fit for households that want broader support across multiple daily needs.</p>" } },
-        "faq_4": { "type": "faq_item", "settings": { "question": "Can I buy the products separately later?", "answer": "<p>Yes. You can always buy the products separately later, but the bundle offers the strongest value as a starting point.</p>" } }
-      },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
-      "settings": { "bg_color": "#F7FBFD", "title": "Frequently asked questions" }
     },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
         "bg_color": "#10243A",
         "icon": "shield",
-        "title": "Start the full Nuumipet routine with more value built in",
-        "text": "<p>The Core Wellness Bundle is a confident choice for households that want broader coverage and better value from the first order.</p>"
+        "title": "60-Day Money-Back Guarantee",
+        "text": "<p>If the course is not the right fit for you and your dog, we will refund your purchase. No hassles, no questions asked.</p>"
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "faq": {
+      "type": "nuumi-pdp-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it possible to train a dog through a digital course?",
+            "answer": "<p>Yes. The course is built to break the process into clear, practical lessons you can apply step by step in real life.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "I am short on time, how long will it take?",
+            "answer": "<p>The lessons are designed to be easy to follow and can be implemented in short training windows throughout the week.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it work for my adopted dog?",
+            "answer": "<p>Yes. The course is framed for dogs of different ages, backgrounds, breeds, and temperaments, including adopted dogs.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
       "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
+        "bg_color": "#F7FBFD",
+        "title": "Frequently asked questions"
       }
     }
   },
-  "order": ["main", "trust_strip", "feature_grid", "story", "comparison", "expert", "faq", "guarantee", "related-products"]
+  "order": [
+    "main",
+    "what_you_get",
+    "bonuses",
+    "authority",
+    "guarantee",
+    "faq"
+  ]
 }

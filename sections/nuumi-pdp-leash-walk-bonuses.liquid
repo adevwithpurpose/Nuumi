@@ -1,0 +1,78 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-mechanism section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-mechanism__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-mechanism__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-pdp-mechanism__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="nuumi-pdp-mechanism__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-mechanism__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-mechanism__card" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="nuumi-pdp-whats-included__image-wrapper">
+              {{ block.settings.image | image_url: width: 500 | image_tag:
+                loading: 'lazy',
+                class: 'nuumi-pdp-whats-included__image',
+                widths: '160, 240, 320, 500'
+              }}
+            </div>
+          {%- else -%}
+            <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          {%- endif -%}
+          <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
+          <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
+          {%- if block.settings.value_text != blank -%}
+            <span class="nuumi-byebark-hero__price-chip">{{ block.settings.value_text }}</span>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi Leash Walk Bonuses",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#F7FBFD" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Free bonuses" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Three extra bonuses that make the program feel complete." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Each bonus increases the perceived value of the program and deepens the walk-training system.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "bonus",
+      "name": "Bonus",
+      "limit": 3,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Mockup image" },
+        { "type": "select", "id": "icon", "label": "Fallback icon", "options": [{ "value": "star", "label": "Star" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "science", "label": "Science" }], "default": "star" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Bonus title" },
+        { "type": "richtext", "id": "text", "label": "Description", "default": "<p>Bonus description.</p>" },
+        { "type": "text", "id": "value_text", "label": "Value tag", "default": "Value: $27 - YOURS FREE" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi Leash Walk Bonuses",
+      "blocks": [
+        { "type": "bonus", "settings": { "icon": "star", "title": "The Best Harnesses and Leashes on the Market", "text": "<p>The gear guide that helps you choose tools that support calmer walks instead of making them harder.</p>", "value_text": "Value: $27 - YOURS FREE" } },
+        { "type": "bonus", "settings": { "icon": "check_mark", "title": "Journey Inside the Dog's Mind", "text": "<p>A bonus training resource that helps you understand what drives pulling and reactivity in the first place.</p>", "value_text": "Value: $27 - YOURS FREE" } },
+        { "type": "bonus", "settings": { "icon": "science", "title": "Cinzia's Secrets", "text": "<p>The small trainer adjustments that help your dog see you as the guide on every walk.</p>", "value_text": "Value: $27 - YOURS FREE" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
