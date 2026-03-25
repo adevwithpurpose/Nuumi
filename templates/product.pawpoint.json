@@ -86,6 +86,7 @@
         "one_time_mode_text": "Pay once, no subscription",
         "one_time_note": "One-time purchase. No hidden fees.",
         "one_time_badge": "One-Time Purchase",
+        "enable_subscribe_mode": true,
         "subscribe_discount_percent": 15,
         "subscribe_label": "Subscribe & Save",
         "subscribe_badge": "Save 15%",
@@ -148,6 +149,41 @@
         "layout": "diagram_right"
       }
     },
+    "timeline": {
+      "type": "nuumi-pdp-transformation-timeline",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "phase": "Day 1",
+            "title": "Visible debris removal",
+            "text": "The first use lifts away the visible gunk sitting in the folds, providing immediate relief from surface irritation."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "phase": "Week 1",
+            "title": "Reduced scratching",
+            "text": "Consistency in cleaning the deeper curves helps keep the environment stable, reducing the urge to scratch and shake."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "phase": "Weeks 2-4",
+            "title": "Maintenance routine established",
+            "text": "Once the initial buildup is gone, the routine shifts to maintenance, keeping the ears clean and clear long-term."
+          }
+        }
+      },
+      "settings": {
+        "bg_color": "#eef7f9",
+        "eyebrow": "Visible ear-care progress",
+        "title": "A timeline built around better control and visible results.",
+        "text": "<p>Ear hygiene is about consistency and precision. First you lift the visible debris, then you settle the immediate irritation, and finally you maintain a clear environment with regular finger-control cleaning.</p>"
+      }
+    },
     "how_to": {
       "type": "nuumi-pdp-how-to-use",
       "blocks": {
@@ -194,6 +230,47 @@
         "bg_color": "#F2F8FC",
         "title": "How to use PawPoint",
         "text": "A 4-step routine built around control, visibility, and a cleaner ear-care habit."
+      }
+    },
+    "efficacy_grid": {
+      "type": "nuumi-pdp-efficacy-grid",
+      "blocks": {
+        "feature_1": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shield",
+            "tag": "Precision",
+            "title": "Finger-Fit Design",
+            "benefit": "Unmatched control.",
+            "text": "Allows you to feel the curves and guide the wipe exactly where the debris collects."
+          }
+        },
+        "feature_2": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "science",
+            "tag": "Hygiene",
+            "title": "pH-Balanced Solution",
+            "benefit": "Safe for regular use.",
+            "text": "Gentle on the sensitive skin of the ear canal while lifting away sticky ear gunk."
+          }
+        },
+        "feature_3": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "heart",
+            "tag": "Texture",
+            "title": "Micro-Textured Wipe",
+            "benefit": "Lifts instead of slides.",
+            "text": "Designed to grab onto and remove debris instead of just sliding it across the surface."
+          }
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "Why PawPoint outperforms",
+        "title": "Every feature is designed for better control where it matters.",
+        "text": "<p>PawPoint is not just another wipe. It is a finger-control system organized around precision, safety, and visible debris removal.</p>"
       }
     },
     "features": {
@@ -254,6 +331,44 @@
         "text": "<p>A feature checklist built around precision, visible results, and a faster recurring routine.</p>"
       }
     },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "Veterinary Developed"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "pH-Balanced"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "Lint-Free"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Alcohol-Free"
+          }
+        }
+      },
+      "settings": {
+        "bg_color": "#10243a",
+        "eyebrow": "Trust and hygiene",
+        "title": "Safe ear care designed for recurring daily or weekly routines."
+      }
+    },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
@@ -302,8 +417,11 @@
   "order": [
     "main",
     "agitation",
+    "timeline",
     "how_to",
+    "efficacy_grid",
     "features",
+    "transparency",
     "guarantee",
     "faq"
   ]

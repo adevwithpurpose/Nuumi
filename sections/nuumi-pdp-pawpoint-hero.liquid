@@ -25,6 +25,7 @@
   {% assign default_bundle_title = first_pack.settings.title | default: '1 Pack' %}
   {% assign one_time_total_price = base_price | times: default_quantity %}
   {% assign form_id = 'product-form-' | append: section.id %}
+  {% assign subscribe_enabled = section.settings.enable_subscribe_mode %}
 
   <div class="page-width">
     <div class="nuumi-pawpoint-hero">
@@ -119,22 +120,36 @@
             <div class="nuumi-pawpoint-hero__mode-group">
               <p class="nuumi-pawpoint-hero__purchase-label">{{ section.settings.purchase_mode_heading }}</p>
               <div class="nuumi-pawpoint-hero__mode-grid">
-                <label class="nuumi-pawpoint-hero__mode is-selected" data-mode-card="one_time">
-                  <input type="radio" name="pawpoint_mode_{{ section.id }}" value="one_time" data-mode="one_time" checked>
+                <label class="nuumi-pawpoint-hero__mode {% unless subscribe_enabled %}is-selected{% endunless %}" data-mode-card="one_time">
+                  <input
+                    type="radio"
+                    name="pawpoint_mode_{{ section.id }}"
+                    value="one_time"
+                    data-mode="one_time"
+                    {% unless subscribe_enabled %}checked{% endunless %}
+                  >
                   <span class="nuumi-pawpoint-hero__mode-copy">
                     <span class="nuumi-pawpoint-hero__mode-title">{{ section.settings.one_time_label }}</span>
                     <span class="nuumi-pawpoint-hero__mode-text">{{ section.settings.one_time_mode_text }}</span>
                   </span>
                 </label>
 
-                <label class="nuumi-pawpoint-hero__mode" data-mode-card="subscribe">
-                  <input type="radio" name="pawpoint_mode_{{ section.id }}" value="subscribe" data-mode="subscribe">
-                  <span class="nuumi-pawpoint-hero__mode-copy">
-                    <span class="nuumi-pawpoint-hero__mode-badge">{{ section.settings.subscribe_badge }}</span>
-                    <span class="nuumi-pawpoint-hero__mode-title">{{ section.settings.subscribe_label }}</span>
-                    <span class="nuumi-pawpoint-hero__mode-text">{{ section.settings.subscribe_note }}</span>
-                  </span>
-                </label>
+                {%- if subscribe_enabled -%}
+                  <label class="nuumi-pawpoint-hero__mode is-selected" data-mode-card="subscribe">
+                    <input
+                      type="radio"
+                      name="pawpoint_mode_{{ section.id }}"
+                      value="subscribe"
+                      data-mode="subscribe"
+                      checked
+                    >
+                    <span class="nuumi-pawpoint-hero__mode-copy">
+                      <span class="nuumi-pawpoint-hero__mode-badge">{{ section.settings.subscribe_badge }}</span>
+                      <span class="nuumi-pawpoint-hero__mode-title">{{ section.settings.subscribe_label }}</span>
+                      <span class="nuumi-pawpoint-hero__mode-text">{{ section.settings.subscribe_note }}</span>
+                    </span>
+                  </label>
+                {%- endif -%}
               </div>
             </div>
 
@@ -195,7 +210,7 @@
               {%- form 'product', product, id: form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 <input type="hidden" name="id" value="{{ current_variant.id }}" class="product-variant-id">
                 <input type="hidden" name="quantity" value="{{ default_quantity }}" data-quantity-input>
-                <input type="hidden" name="properties[Purchase option]" value="{{ section.settings.one_time_label }}" data-purchase-option>
+                <input type="hidden" name="properties[Purchase option]" value="{% if subscribe_enabled %}{{ section.settings.subscribe_label }}{% else %}{{ section.settings.one_time_label }}{% endif %}" data-purchase-option>
                 <input type="hidden" name="properties[Bundle]" value="{{ default_bundle_title }}" data-bundle-label>
 
                 <div class="nuumi-pawpoint-hero__cta-group">
@@ -421,6 +436,7 @@
     { "type": "text", "id": "one_time_mode_text", "label": "One-time mode text", "default": "Pay once, no subscription" },
     { "type": "text", "id": "one_time_note", "label": "Price note", "default": "One-time purchase. No hidden fees." },
     { "type": "text", "id": "one_time_badge", "label": "Price badge", "default": "One-Time Purchase" },
+    { "type": "checkbox", "id": "enable_subscribe_mode", "label": "Enable subscribe option", "default": true },
     { "type": "range", "id": "subscribe_discount_percent", "label": "Subscribe discount (%)", "min": 0, "max": 40, "step": 1, "default": 15 },
     { "type": "text", "id": "subscribe_label", "label": "Subscribe label", "default": "Subscribe & Save" },
     { "type": "text", "id": "subscribe_badge", "label": "Subscribe badge", "default": "Save 15%" },
