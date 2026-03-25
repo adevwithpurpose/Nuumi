@@ -1,0 +1,65 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-mechanism section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-mechanism__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-mechanism__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-pdp-mechanism__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="nuumi-pdp-mechanism__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-mechanism__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-mechanism__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
+          <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PawPoint Features",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Why it is superior" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Why PawPoint outperforms wipes, drops, and cotton swabs." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A feature checklist built around precision, visible results, and a faster recurring routine.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "limit": 5,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "check_mark", "label": "Check Mark" }, { "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "heart", "label": "Heart" }, { "value": "star", "label": "Star" }], "default": "check_mark" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Finger-Control Precision" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PawPoint Features",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "check_mark", "title": "Finger-Control Precision", "text": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>" } },
+        { "type": "feature", "settings": { "icon": "heart", "title": "See Instant Results", "text": "<p>Lift away visible ear gunk so the clean feels obvious and satisfying.</p>" } },
+        { "type": "feature", "settings": { "icon": "science", "title": "pH-Balanced", "text": "<p>Built for regular ear hygiene without the harsh feel of improvised cleaners.</p>" } },
+        { "type": "feature", "settings": { "icon": "shield", "title": "60-Second Clean", "text": "<p>A faster recurring routine that fits easily into real life.</p>" } },
+        { "type": "feature", "settings": { "icon": "star", "title": "Lint-Free Micro-Texture", "text": "<p>Designed to grab debris without leaving fuzz behind in the ear fold.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
