@@ -6,8 +6,8 @@
 - `handle`: calmi-collar
 - `source_url`: https://funnels-build.thisisatestsiteonly.com/89f23665-032b-4c9c-9201-27d8451c6546/26c598eb-c11a-44c6-bb9b-a72fc0b3533e.html
 - `source_capture_date`: 2026-03-23
-- `extraction_status`: seeded_from_repo_catalog
-- `review_status`: template_copy_finalized
+- `extraction_status`: rebuilt_from_repo_template_baseline
+- `review_status`: pdp_rebuild_in_repo
 - `product_category`: Pet Wellness Collar
 - `vendor`: Nuumipet
 - `template_target`: product.calmicollar.json
@@ -23,66 +23,68 @@
 
 ## Hero And Purchase Flow
 
-- `hero_eyebrow`: Calm support for the dogs that struggle when you step away
-- `hero_badge_primary`: Clinically Proven
-- `hero_badge_secondary`: Separation-anxiety support
-- `hero_subtitle`: A calming collar designed to help dogs feel safer during separation, travel, and high-stress routine changes.
-- `hero_description`: CalmiCollar brings pheromone-based calm support to dogs that tip into stress, destructive behavior, or overstimulation when their environment changes.
+- `hero_eyebrow`: Comfort-first calm support for anxious dogs
+- `hero_badge_primary`: Vet Approved
+- `hero_badge_secondary`: 100% Drug-Free
+- `hero_headline`: Make Your Dog Stop Barking Non-Stop, Peeing Indoors, or Destroying Furniture When Left Alone.
+- `hero_subtitle`: The maternal secret that gives your dog safety in a collar. Provides 24/7 calming relief without turning your dog into a zombie.
+- `hero_description`: CalmiCollar uses pheromone technology to help dogs settle faster when being left alone triggers barking, indoor accidents, chewing, pacing, or destructive panic.
 - `hero_bullets`:
-  - Designed for anxious or overstimulated dogs
-  - Easy wear-based support
-  - Built for calmer day-to-day routine transitions
-- `pack_heading`: Choose your support plan
+  - Separation-anxiety support
+  - 24/7 drug-free calm
+  - Maternal pheromone technology
+- `pack_heading`: Choose your bundle
 - `pack_options`:
-  - 1 Collar | Start with one dog | $29 each | quantity 1
-  - 3 Collars | Ongoing monthly support | Most Popular | quantity 3
-  - 6 Collars | Long-term routine coverage | Best Value | quantity 6
+  - 1x CalmiCollar | Starter | Single-dog support | quantity 1
+  - 3x CalmiCollar | Buy 2 Get 1 Free | Most Popular | quantity 3
+  - 5x CalmiCollar | Buy 3 Get 2 Free | Best Value | quantity 5
 - `cta_label`: Add CalmiCollar to cart
-- `cta_note`: Easy support for dogs that need help settling into a calmer routine.
+- `cta_note`: Designed for daily separation-anxiety support.
 - `shipping_note`: Fast US shipping
-- `guarantee_note`: Satisfaction support available
+- `guarantee_note`: 30-Day Money-Back Guarantee
 - `payment_note`: Secure checkout with major payment methods
 
-## Trust And Storytelling
+## Modular PDP Structure
 
-- `trust_strip_items`:
-  - heart | Separation-anxiety support
-  - shield | Easy daily wear
-  - science | Pheromone-based calming approach
-  - truck | Fast US Shipping
-- `feature_grid_heading`: Calm support that fits the dogs who struggle most with transitions.
-- `feature_grid_intro`: A gentler, daily-wear route for dogs that react strongly to being alone, traveling, or shifting routines.
-- `feature_grid_items`:
-  - heart | Supports calmer behavior | Best framed around helping dogs settle more easily during stress triggers.
-  - science | Pheromone-led positioning | Built around calm-support language for dogs that struggle with stress and overstimulation.
-  - shield | Low-friction routine fit | Wear-based support can feel simpler than building a more complex routine.
-- `story_heading`: For the dogs that do not just misbehave, but unravel when their routine changes.
-- `story_intro`: Emotional overload and environmental stress can throw a dog off quickly, and CalmiCollar adds a calmer daily support layer to that routine.
-- `story_benefits`:
-  - heart | Helps dogs feel safer | Comfort and calm support for tense, overstimulated moments.
-  - shield | Supports routine transitions | Useful for departures, travel, visitors, and similar changes.
-  - science | Daily calming support | A low-friction option for dogs that need steady routine help.
-- `comparison_heading`: A calmer approach than reaction-only stress management.
-- `comparison_intro`: CalmiCollar vs heavier stress-management routines
-- `comparison_features`:
-  - Wearable daily support | other brands: no
-  - Pheromone-based calming positioning | other brands: no
-  - Designed for separation-anxiety triggers | other brands: no
-  - Simple to keep in routine | other brands: yes
-- `guarantee_heading`: Start a calmer routine with less friction
-- `guarantee_body`: An easy first step for homes that want calmer behavior support without overcomplicating the routine.
+- `section_order`:
+  - cloned hero
+  - survival-mode agitation section
+  - NeuroEase pheromone mechanism section
+  - symptom checklist grid
+  - guarantee block
+  - FAQ accordion
+- `scale_rule`: Use EnerCanis full-page spacing, type scale, card padding, bundle-card rhythm, and section density as the baseline for CalmiCollar and future product-page clones.
+
+## Section Content
+
+- `agitation_heading`: Your dog is not being bad. Their brain is stuck in survival mode.
+- `agitation_body`: Separation anxiety is not stubbornness. It is a full-body panic response. Barking, indoor accidents, pacing, and furniture destruction are the outward symptoms of a nervous system that feels unsafe the second you leave.
+- `failed_methods`:
+  - Prescription meds
+  - Crating and cages
+  - Leaving the TV on
+  - Exhausting walks
+- `mechanism_heading`: Why NeuroEase Blend calms the brain before behavior spirals.
+- `mechanism_features`:
+  - CAP | Tells the brain everything is fine here by helping block external fear signals.
+  - MAP | Mimics the mother dog's safety signal, calming internal stress and panic from the inside out.
+- `checklist_items`:
+  - Shrinks settling time
+  - Reduces whining & barking
+  - Enables training
+  - Ends destructive chewing
+  - Eases separation anxiety
+- `guarantee_heading`: 30-Day Money-Back Guarantee
+- `guarantee_body`: If CalmiCollar is not the right fit for your dog, we will refund your purchase. No hassles, no questions asked.
 
 ## Authority And Objection Handling
 
-- `expert_badge`: Clinically Proven
-- `expert_quote`: A calmer daily-wear support layer for dogs that struggle with routine changes and overstimulation.
-- `expert_name`: Nuumipet calming-care team
-- `expert_credentials`: Behavior-support product guidance
 - `faq_items`:
-  - What is CalmiCollar designed to help with? | CalmiCollar is designed to support stress-prone dogs during separation, routine changes, travel, and overstimulating moments.
-  - How does it fit into the day? | It fits easily into the day as a low-friction daily wear support option.
-  - Is it meant to replace training? | No. CalmiCollar works best alongside training and thoughtful routine management.
-  - Will it work for every dog? | Results vary by dog, environment, and consistency, so the promise stays measured.
+  - How long does one collar last? | Each CalmiCollar is designed to last up to 30 days of continuous wear.
+  - Will it fit my dog? | Yes. It is one-size-fits-all and can be cut to size for a more comfortable fit.
+  - Is the smell strong? | No. The scent is mild with a light lavender profile, not overpowering or unpleasant.
+  - Will it make my dog sleepy? | No. CalmiCollar is designed to promote calm, not sedation, so your dog can still stay alert and trainable.
+  - Can I use it alongside training? | Yes. It works best as a calm-support layer alongside routine, structure, and training practice.
 
 ## Media And Operations
 
@@ -93,9 +95,6 @@
   - custom.badge_primary
   - custom.badge_secondary
   - custom.hero_bullets
-  - custom.trust_strip_items
-  - custom.story_benefits
-  - custom.comparison_features
   - custom.product_faq
   - custom.guarantee_copy
-- `compliance_review_notes`: Copy stays focused on calm-support language rather than unsupported therapeutic claims.
+- `compliance_review_notes`: Copy stays focused on calm-support language, separation-anxiety routines, and drug-free positioning without unsupported therapeutic claims.
