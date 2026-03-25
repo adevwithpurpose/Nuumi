@@ -1,0 +1,582 @@
+<product-info
+  id="MainProduct-{{ section.id }}"
+  class="nuumi-pdp nuumi-pdp--calmicollar section-{{ section.id }}-padding"
+  data-section="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-update-url="true"
+  data-url="{{ product.url }}"
+>
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  {% assign base_price = current_variant.price | default: product.price %}
+  {% assign pack_blocks = section.blocks | where: 'type', 'pack_option' %}
+  {% assign first_pack = pack_blocks | first %}
+  {% assign default_quantity = first_pack.settings.quantity | default: 1 %}
+  {% assign one_time_total_price = base_price | times: default_quantity %}
+  {% assign form_id = 'product-form-' | append: section.id %}
+  {% assign default_bundle_title = first_pack.settings.title | default: '1 Bottle' %}
+  {% assign subscribe_enabled = section.settings.enable_subscribe_mode %}
+
+  <div class="page-width">
+    <div class="nuumi-calmicollar-hero">
+      <div class="nuumi-calmicollar-hero__media-column product__column-sticky">
+          <div class="nuumi-calmicollar-hero__media-shell product product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
+            {% render 'product-media-gallery',
+              variant_images: variant_images,
+              section: section,
+              hide_variants: true
+            %}
+          </div>
+          <div class="nuumi-calmicollar-hero__left-guarantee">
+            <div class="nuumi-calmicollar-hero__left-guarantee-badge">
+              {%- if section.settings.left_guarantee_image != blank -%}
+                {{ section.settings.left_guarantee_image | image_url: width: 240 | image_tag:
+                  loading: 'lazy',
+                  class: 'nuumi-calmicollar-hero__left-guarantee-image',
+                  widths: '96, 144, 192, 240'
+                }}
+              {%- else -%}
+                <span class="nuumi-calmicollar-hero__left-guarantee-fallback">30-Day</span>
+              {%- endif -%}
+            </div>
+            <div class="nuumi-calmicollar-hero__left-guarantee-copy">
+              <p class="nuumi-calmicollar-hero__left-guarantee-title">{{ section.settings.left_guarantee_title }}</p>
+              <p class="nuumi-calmicollar-hero__left-guarantee-text">{{ section.settings.left_guarantee_text }}</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="nuumi-calmicollar-hero__content-column">
+        <section id="ProductInfo-{{ section.id }}" class="nuumi-calmicollar-hero__panel">
+          <div class="nuumi-calmicollar-hero__intro">
+            {%- if section.settings.eyebrow != blank -%}
+              <p class="nuumi-calmicollar-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+            {%- endif -%}
+
+            <div class="nuumi-calmicollar-hero__badge-row">
+              {%- if section.settings.badge_primary != blank -%}
+                <span class="nuumi-calmicollar-hero__badge">{{ section.settings.badge_primary }}</span>
+              {%- endif -%}
+              {%- if section.settings.badge_secondary != blank -%}
+                <span class="nuumi-calmicollar-hero__badge nuumi-calmicollar-hero__badge--soft">{{ section.settings.badge_secondary }}</span>
+              {%- endif -%}
+            </div>
+
+            <h1 class="nuumi-calmicollar-hero__title">{{ section.settings.headline | default: product.title | escape }}</h1>
+
+            {%- if section.settings.subtitle != blank -%}
+              <p class="nuumi-calmicollar-hero__subtitle">{{ section.settings.subtitle }}</p>
+            {%- endif -%}
+
+            <div class="nuumi-calmicollar-hero__rating-row">
+              {% render 'nuumi-rating-stars', rating: section.settings.rating_value, count: section.settings.review_count, class: 'nuumi-calmicollar-hero__rating' %}
+              {%- if section.settings.rating_caption != blank -%}
+                <span class="nuumi-calmicollar-hero__rating-caption">{{ section.settings.rating_caption }}</span>
+              {%- endif -%}
+            </div>
+
+            {%- if section.settings.description != blank -%}
+              <div class="nuumi-calmicollar-hero__description rte">{{ section.settings.description }}</div>
+            {%- endif -%}
+          </div>
+
+          {%- assign support_blocks = section.blocks | where: 'type', 'support_point' -%}
+          {%- if support_blocks.size > 0 -%}
+            <div class="nuumi-calmicollar-hero__support-grid">
+              {%- for block in support_blocks -%}
+                <article class="nuumi-calmicollar-hero__support-card" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    <span class="nuumi-calmicollar-hero__support-media nuumi-calmicollar-hero__support-media--image">
+                      {{ block.settings.image | image_url: width: 96 | image_tag:
+                        loading: 'lazy',
+                        class: 'nuumi-calmicollar-hero__support-image',
+                        widths: '48, 72, 96'
+                      }}
+                    </span>
+                  {%- else -%}
+                    <span class="nuumi-calmicollar-hero__support-media nuumi-calmicollar-hero__support-media--icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+                  {%- endif -%}
+                  <div>
+                    <p class="nuumi-calmicollar-hero__support-title">{{ block.settings.title }}</p>
+                    {%- if block.settings.text != blank -%}
+                      <p class="nuumi-calmicollar-hero__support-text">{{ block.settings.text }}</p>
+                    {%- endif -%}
+                  </div>
+                </article>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
+            <div class="nuumi-calmicollar-hero__purchase-card">
+              <div class="nuumi-calmicollar-hero__mode-group">
+                <p class="nuumi-calmicollar-hero__purchase-label">{{ section.settings.purchase_mode_heading }}</p>
+                <div class="nuumi-calmicollar-hero__mode-grid">
+                  <label class="nuumi-calmicollar-hero__mode {% unless subscribe_enabled %}is-selected{% endunless %}" data-mode-card="one_time">
+                    <input
+                      type="radio"
+                      name="calmicollar_mode_{{ section.id }}"
+                      value="one_time"
+                      data-mode="one_time"
+                      {% unless subscribe_enabled %}checked{% endunless %}
+                    >
+                    <span class="nuumi-calmicollar-hero__mode-copy">
+                      <span class="nuumi-calmicollar-hero__mode-title">{{ section.settings.one_time_label }}</span>
+                      <span class="nuumi-calmicollar-hero__mode-text">{{ section.settings.one_time_mode_text }}</span>
+                    </span>
+                  </label>
+
+                  {%- if subscribe_enabled -%}
+                    <label class="nuumi-calmicollar-hero__mode is-selected" data-mode-card="subscribe">
+                      <input
+                        type="radio"
+                        name="calmicollar_mode_{{ section.id }}"
+                        value="subscribe"
+                        data-mode="subscribe"
+                        checked
+                      >
+                      <span class="nuumi-calmicollar-hero__mode-copy">
+                        <span class="nuumi-calmicollar-hero__mode-badge">{{ section.settings.subscribe_badge }}</span>
+                        <span class="nuumi-calmicollar-hero__mode-title">{{ section.settings.subscribe_label }}</span>
+                        <span class="nuumi-calmicollar-hero__mode-text">{{ section.settings.subscribe_note }}</span>
+                      </span>
+                    </label>
+                  {%- endif -%}
+                </div>
+              </div>
+
+              <div class="nuumi-calmicollar-hero__price-row">
+                <div>
+                  {%- if section.settings.price_label != blank -%}
+                  <p class="nuumi-calmicollar-hero__price-label">{{ section.settings.price_label }}</p>
+                {%- endif -%}
+                <p class="nuumi-calmicollar-hero__price" data-total-price>{{ one_time_total_price | money }}</p>
+              </div>
+              <div class="nuumi-calmicollar-hero__price-meta">
+                {%- if section.settings.one_time_badge != blank -%}
+                  <span class="nuumi-calmicollar-hero__price-chip" data-price-chip>{{ section.settings.one_time_badge }}</span>
+                {%- endif -%}
+                <p class="nuumi-calmicollar-hero__price-note" data-price-note>{{ section.settings.one_time_note }}</p>
+              </div>
+            </div>
+
+            {%- if pack_blocks.size > 0 -%}
+              <div class="nuumi-calmicollar-hero__packs">
+                <p class="nuumi-calmicollar-hero__packs-heading">{{ section.settings.pack_heading }}</p>
+                <div class="nuumi-calmicollar-hero__pack-grid">
+                  {%- for block in pack_blocks -%}
+                    {%- assign is_default = false -%}
+                    {%- if forloop.first -%}
+                      {%- assign is_default = true -%}
+                    {%- endif -%}
+                    <label class="nuumi-calmicollar-hero__pack {% if is_default %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+                      <input
+                        type="radio"
+                        name="calmicollar_pack_{{ section.id }}"
+                        value="{{ block.settings.quantity }}"
+                        data-qty="{{ block.settings.quantity }}"
+                        data-title="{{ block.settings.title | escape }}"
+                        data-discount="{{ block.settings.discount_percent | default: 0 }}"
+                        {% if is_default %}checked{% endif %}
+                      >
+                      {%- if block.settings.badge != blank -%}
+                        <span class="nuumi-calmicollar-hero__pack-badge">{{ block.settings.badge }}</span>
+                      {%- endif -%}
+                      <span class="nuumi-calmicollar-hero__pack-title">{{ block.settings.title }}</span>
+                      {%- if block.settings.subtitle != blank -%}
+                        <span class="nuumi-calmicollar-hero__pack-subtitle">{{ block.settings.subtitle }}</span>
+                      {%- endif -%}
+                      {%- if block.settings.note != blank -%}
+                        <span class="nuumi-calmicollar-hero__pack-note">{{ block.settings.note }}</span>
+                      {%- endif -%}
+                      <span class="nuumi-calmicollar-hero__pack-per" data-pack-per></span>
+                      <span class="nuumi-calmicollar-hero__pack-save" data-pack-save></span>
+                    </label>
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            <product-form class="product-form" data-section-id="{{ section.id }}">
+              <div class="product-form__error-message-wrapper" role="alert" hidden>
+                <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+                <span class="product-form__error-message"></span>
+              </div>
+
+              {%- form 'product', product, id: form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" name="id" value="{{ current_variant.id }}" class="product-variant-id">
+                <input type="hidden" name="quantity" value="{{ default_quantity }}" data-quantity-input>
+                <input type="hidden" name="properties[Purchase option]" value="{% if subscribe_enabled %}{{ section.settings.subscribe_label }}{% else %}{{ section.settings.one_time_label }}{% endif %}" data-purchase-option>
+                <input type="hidden" name="properties[Bundle]" value="{{ default_bundle_title }}" data-bundle-label>
+
+                <div class="nuumi-calmicollar-hero__cta-group">
+                  <button
+                    id="ProductSubmitButton-{{ section.id }}"
+                    type="submit"
+                    name="add"
+                    class="nuumi-button--gold nuumi-calmicollar-hero__cta product-form__submit"
+                    {% if current_variant.available == false %}disabled{% endif %}
+                  >
+                    <span data-atc-label>
+                      {%- if current_variant.available == false -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        {%- if subscribe_enabled -%}
+                          {{ section.settings.subscribe_cta_label }}
+                        {%- else -%}
+                          {{ section.settings.cta_label }}
+                        {%- endif -%}
+                      {%- endif -%}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+
+                  {%- if section.settings.one_time_cta_note != blank -%}
+                    <p class="nuumi-calmicollar-hero__cta-note" data-cta-note>{{ section.settings.one_time_cta_note }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endform -%}
+            </product-form>
+
+            <div class="nuumi-calmicollar-hero__micro-trust">
+              {%- if section.settings.shipping_note != blank -%}
+                <span>{{ section.settings.shipping_note }}</span>
+              {%- endif -%}
+              {%- if section.settings.guarantee_note != blank -%}
+                <span>{{ section.settings.guarantee_note }}</span>
+              {%- endif -%}
+              {%- if section.settings.payment_note != blank -%}
+                <span>{{ section.settings.payment_note }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</product-info>
+
+{%- if section.settings.enable_sticky_cta -%}
+  <div class="nuumi-sticky-cta nuumi-sticky-cta--calmicollar" data-sticky-cta>
+    <div class="nuumi-sticky-cta__inner page-width">
+      <div class="nuumi-sticky-cta__info">
+        <span class="nuumi-sticky-cta__title">{{ product.title }}</span>
+        <span class="nuumi-sticky-cta__price" data-sticky-price>{{ one_time_total_price | money }}</span>
+      </div>
+      <button type="button" class="nuumi-button--gold nuumi-sticky-cta__button" data-sticky-button>
+        {{ section.settings.sticky_button_label }}
+      </button>
+    </div>
+  </div>
+{%- endif -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sectionRoot = document.getElementById('MainProduct-{{ section.id }}');
+    if (!sectionRoot) return;
+
+    var basePrice = {{ base_price | json }};
+    var sectionSettings = {
+      subscribeEnabled: {{ section.settings.enable_subscribe_mode | json }},
+      subscribeDiscountPercent: {{ section.settings.subscribe_discount_percent | default: 0 | json }},
+      oneTimeLabel: {{ section.settings.one_time_label | json }},
+      oneTimeModeText: {{ section.settings.one_time_mode_text | json }},
+      oneTimeNote: {{ section.settings.one_time_note | json }},
+      oneTimeBadge: {{ section.settings.one_time_badge | json }},
+      ctaLabel: {{ section.settings.cta_label | json }},
+      stickyLabel: {{ section.settings.sticky_button_label | json }},
+      oneTimeCtaNote: {{ section.settings.one_time_cta_note | json }},
+      subscribeLabel: {{ section.settings.subscribe_label | json }},
+      subscribeBadge: {{ section.settings.subscribe_badge | json }},
+      subscribeNote: {{ section.settings.subscribe_note | json }},
+      subscribeCtaLabel: {{ section.settings.subscribe_cta_label | json }},
+      subscribeCtaNote: {{ section.settings.subscribe_cta_note | json }}
+    };
+
+    var priceEl = sectionRoot.querySelector('[data-total-price]');
+    var stickyPriceEl = document.querySelector('[data-sticky-price]');
+    var quantityInput = sectionRoot.querySelector('[data-quantity-input]');
+    var bundleInput = sectionRoot.querySelector('[data-bundle-label]');
+    var atcLabel = sectionRoot.querySelector('[data-atc-label]');
+    var ctaNote = sectionRoot.querySelector('[data-cta-note]');
+    var priceNote = sectionRoot.querySelector('[data-price-note]');
+    var priceChip = sectionRoot.querySelector('[data-price-chip]');
+    var packInputs = sectionRoot.querySelectorAll('input[name="calmicollar_pack_{{ section.id }}"]');
+    var modeInputs = sectionRoot.querySelectorAll('input[name="calmicollar_mode_{{ section.id }}"]');
+    var purchaseOptionInput = sectionRoot.querySelector('[data-purchase-option]');
+    var stickyCta = document.querySelector('[data-sticky-cta]');
+    var stickyButton = document.querySelector('[data-sticky-button]');
+    var submitButton = document.getElementById('ProductSubmitButton-{{ section.id }}');
+    var buyCard = sectionRoot.querySelector('.nuumi-calmicollar-hero__purchase-card');
+
+    function formatMoney(cents) {
+      if (!window.Shopify || typeof window.Shopify.formatMoney !== 'function') {
+        return '$' + (cents / 100).toFixed(2);
+      }
+      return window.Shopify.formatMoney(cents);
+    }
+
+    function getSelectedPack() {
+      var checked = sectionRoot.querySelector('input[name="calmicollar_pack_{{ section.id }}"]:checked');
+      return checked || packInputs[0];
+    }
+
+    function getSelectedMode() {
+      var checkedMode = sectionRoot.querySelector('input[name="calmicollar_mode_{{ section.id }}"]:checked');
+      return checkedMode ? checkedMode.value : 'one_time';
+    }
+
+    function updateModeCards(selectedMode) {
+      sectionRoot.querySelectorAll('[data-mode-card]').forEach(function(card) {
+        card.classList.remove('is-selected');
+      });
+
+      var active = sectionRoot.querySelector('[data-mode-card="' + selectedMode + '"]');
+      if (active) active.classList.add('is-selected');
+    }
+
+    function updateDisplay() {
+      var selectedPack = getSelectedPack();
+      var selectedMode = getSelectedMode();
+      var quantity = selectedPack ? parseInt(selectedPack.dataset.qty || '1', 10) : 1;
+      var packDiscount = selectedPack ? parseFloat(selectedPack.dataset.discount || '0') / 100 : 0;
+      var subscribeDiscount = selectedMode === 'subscribe' ? (parseFloat(sectionSettings.subscribeDiscountPercent || 0) / 100) : 0;
+      var baseTotal = Math.round(basePrice * quantity);
+      var afterPackDiscount = Math.round(baseTotal * (1 - packDiscount));
+      var total = Math.round(afterPackDiscount * (1 - subscribeDiscount));
+
+      updateModeCards(selectedMode);
+
+      if (selectedPack) {
+        sectionRoot.querySelectorAll('.nuumi-calmicollar-hero__pack').forEach(function(card) {
+          card.classList.remove('is-selected');
+        });
+        var selectedCard = selectedPack.closest('.nuumi-calmicollar-hero__pack');
+        if (selectedCard) selectedCard.classList.add('is-selected');
+      }
+
+      if (quantityInput) quantityInput.value = quantity;
+      if (purchaseOptionInput) {
+        purchaseOptionInput.value = selectedMode === 'subscribe' ? sectionSettings.subscribeLabel : sectionSettings.oneTimeLabel;
+      }
+      if (bundleInput && selectedPack) bundleInput.value = selectedPack.dataset.title || '';
+      if (priceEl) priceEl.textContent = formatMoney(total);
+      if (stickyPriceEl) stickyPriceEl.textContent = formatMoney(total);
+      if (atcLabel) {
+        atcLabel.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeCtaLabel : sectionSettings.ctaLabel;
+      }
+      if (priceNote) {
+        priceNote.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeNote : sectionSettings.oneTimeNote;
+      }
+      if (priceChip) {
+        priceChip.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeBadge : sectionSettings.oneTimeBadge;
+        priceChip.style.display = priceChip.textContent ? 'inline-flex' : 'none';
+      }
+      if (ctaNote) {
+        ctaNote.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeCtaNote : sectionSettings.oneTimeCtaNote;
+      }
+
+      if (stickyButton) {
+        stickyButton.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeCtaLabel : sectionSettings.stickyLabel;
+      }
+
+      packInputs.forEach(function(input) {
+        var card = input.closest('.nuumi-calmicollar-hero__pack');
+        if (!card) return;
+
+        var packQty = parseInt(input.dataset.qty || '1', 10);
+        var packLevelDiscount = parseFloat(input.dataset.discount || '0') / 100;
+        var packBaseTotal = Math.round(basePrice * packQty);
+        var packOneTime = Math.round(packBaseTotal * (1 - packLevelDiscount));
+        var packFinal = Math.round(packOneTime * (1 - subscribeDiscount));
+        var perBottle = Math.round(packFinal / Math.max(packQty, 1));
+        var savings = Math.max(packBaseTotal - packFinal, 0);
+
+        var perNode = card.querySelector('[data-pack-per]');
+        var saveNode = card.querySelector('[data-pack-save]');
+
+        if (perNode) perNode.textContent = formatMoney(perBottle) + '/bottle';
+        if (saveNode) {
+          saveNode.textContent = savings > 0 ? 'Save ' + formatMoney(savings) : '';
+          saveNode.style.display = savings > 0 ? 'inline-flex' : 'none';
+        }
+      });
+    }
+
+    packInputs.forEach(function(input) {
+      input.addEventListener('change', updateDisplay);
+    });
+
+    modeInputs.forEach(function(input) {
+      input.addEventListener('change', updateDisplay);
+    });
+
+    if (stickyButton && submitButton) {
+      stickyButton.addEventListener('click', function() {
+        submitButton.click();
+      });
+    }
+
+    if (stickyCta && buyCard) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+            stickyCta.classList.add('nuumi-sticky-cta--visible');
+          } else {
+            stickyCta.classList.remove('nuumi-sticky-cta--visible');
+          }
+        });
+      }, { threshold: 0 });
+
+      observer.observe(buyCard);
+    }
+
+    updateDisplay();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Nuumi CalmiCollar Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "checkbox", "id": "enable_sticky_cta", "label": "Enable mobile sticky CTA", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Comfort-first calm support for anxious dogs" },
+    { "type": "text", "id": "badge_primary", "label": "Primary badge", "default": "Vet Approved" },
+    { "type": "text", "id": "badge_secondary", "label": "Secondary badge", "default": "100% Drug-Free" },
+    { "type": "text", "id": "headline", "label": "Headline", "default": "Make Your Dog Stop Barking Non-Stop, Peeing Indoors, or Destroying Furniture When Left Alone." },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "The maternal secret that gives your dog safety in a collar. Provides 24/7 calming relief without turning your dog into a zombie." },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>CalmiCollar helps interrupt fence fighting, delivery-driver barking, and frantic jumping or nipping with a faster, lower-friction tool that is easy to keep nearby.</p>" },
+    { "type": "range", "id": "rating_value", "label": "Rating", "min": 0, "max": 5, "step": 0.1, "default": 4.8 },
+    { "type": "text", "id": "review_count", "label": "Review count", "default": "4,100+" },
+    { "type": "text", "id": "rating_caption", "label": "Rating caption", "default": "Calmer homes" },
+    { "type": "text", "id": "price_label", "label": "Price label", "default": "Choose your calming plan" },
+    { "type": "text", "id": "purchase_mode_heading", "label": "Purchase mode heading", "default": "Choose your bundle" },
+    { "type": "text", "id": "purchase_microcopy", "label": "Purchase microcopy", "default": "4,100+ transformed dog owners" },
+    { "type": "text", "id": "one_time_label", "label": "One-time label", "default": "One-Time Purchase" },
+    { "type": "text", "id": "one_time_mode_text", "label": "One-time mode text", "default": "Pay once, no subscription" },
+    { "type": "text", "id": "one_time_note", "label": "Price note", "default": "One-time purchase. No hidden fees." },
+    { "type": "text", "id": "one_time_badge", "label": "Price badge", "default": "One-Time Purchase" },
+    { "type": "checkbox", "id": "enable_subscribe_mode", "label": "Enable subscribe option", "default": false },
+    { "type": "range", "id": "subscribe_discount_percent", "label": "Subscribe discount (%)", "min": 0, "max": 40, "step": 1, "default": 20 },
+    { "type": "text", "id": "subscribe_label", "label": "Subscribe label", "default": "Subscribe & Save" },
+    { "type": "text", "id": "subscribe_badge", "label": "Subscribe badge", "default": "Save 20%" },
+    { "type": "text", "id": "subscribe_note", "label": "Subscribe note", "default": "Lower monthly cost. Skip or cancel anytime." },
+    { "type": "text", "id": "subscribe_cta_label", "label": "Subscribe CTA label", "default": "Claim Discount & Try Risk-Free" },
+    { "type": "text", "id": "subscribe_cta_note", "label": "Subscribe CTA note", "default": "Subscribe now to lock in savings." },
+    { "type": "text", "id": "pack_heading", "label": "Pack heading", "default": "Choose your bundle" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Add CalmiCollar to cart" },
+    { "type": "text", "id": "sticky_button_label", "label": "Sticky CTA label", "default": "Add to cart" },
+    { "type": "text", "id": "one_time_cta_note", "label": "CTA note", "default": "Designed for daily separation-anxiety support." },
+    { "type": "text", "id": "shipping_note", "label": "Shipping note", "default": "Fast US shipping" },
+    { "type": "text", "id": "guarantee_note", "label": "Guarantee note", "default": "30-day money-back guarantee" },
+    { "type": "text", "id": "payment_note", "label": "Payment note", "default": "Secure checkout with major payment methods" },
+    { "type": "header", "content": "Left Guarantee Block" },
+    { "type": "image_picker", "id": "left_guarantee_image", "label": "Guarantee badge image" },
+    { "type": "text", "id": "left_guarantee_title", "label": "Guarantee title", "default": "Try it worry-free for 30 days" },
+    { "type": "text", "id": "left_guarantee_text", "label": "Guarantee text", "default": "If CalmiCollar is not the right fit for your dog, we will refund your purchase. Simple as that." },
+    {
+      "type": "header",
+      "content": "Media Settings"
+    },
+    {
+      "type": "select",
+      "id": "gallery_layout",
+      "options": [
+        { "value": "stacked", "label": "Stacked" },
+        { "value": "thumbnail", "label": "Thumbnail" },
+        { "value": "thumbnail_slider", "label": "Thumbnail slider" }
+      ],
+      "default": "thumbnail_slider",
+      "label": "Desktop layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_thumbnails",
+      "options": [
+        { "value": "show", "label": "Show thumbnails" },
+        { "value": "hide", "label": "Hide thumbnails" }
+      ],
+      "default": "show",
+      "label": "Mobile thumbnails"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_variants",
+      "default": false,
+      "label": "Hide other variants' media after selecting a variant"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "default": false,
+      "label": "Enable video looping"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "support_point",
+      "name": "Support point",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image override"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "check_mark", "label": "Check Mark" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "star", "label": "Star" }
+          ],
+          "default": "science"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "Helps dogs settle faster" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Built for separation anxiety, pacing, destructive chewing, and stress-trigger barking." }
+      ]
+    },
+    {
+      "type": "pack_option",
+      "name": "Pack option",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "1x CalmiCollar" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Starter" },
+        { "type": "text", "id": "note", "label": "Note", "default": "Entry protocol" },
+        { "type": "text", "id": "badge", "label": "Badge", "default": "Featured" },
+        { "type": "range", "id": "discount_percent", "label": "Bundle discount (%)", "min": 0, "max": 60, "step": 1, "default": 0 },
+        { "type": "range", "id": "quantity", "label": "Quantity", "min": 1, "max": 6, "step": 1, "default": 1 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi CalmiCollar Hero",
+      "blocks": [
+        { "type": "support_point", "settings": { "icon": "science", "title": "Helps dogs settle faster", "text": "Built for separation anxiety, pacing, destructive chewing, and stress-trigger barking." } },
+        { "type": "support_point", "settings": { "icon": "shield", "title": "Drug-free calming support", "text": "A wearable calming collar that supports the routine without sedating your dog." } },
+        { "type": "support_point", "settings": { "icon": "heart", "title": "24/7 comfort signal", "text": "Uses pheromone cues associated with comfort, safety, and maternal reassurance." } },
+        { "type": "pack_option", "settings": { "title": "1x CalmiCollar", "subtitle": "Starter", "note": "Single-dog support", "discount_percent": 0, "quantity": 1 } },
+        { "type": "pack_option", "settings": { "title": "3x CalmiCollar", "subtitle": "Buy 2 Get 1 Free", "note": "Most popular calming plan", "badge": "Most Popular", "discount_percent": 33, "quantity": 3 } },
+        { "type": "pack_option", "settings": { "title": "5x CalmiCollar", "subtitle": "Buy 3 Get 2 Free", "note": "Best value calming plan", "badge": "Best Value", "discount_percent": 40, "quantity": 5 } }
+      ]
+    }
+  ]
+}
+{% endschema %}

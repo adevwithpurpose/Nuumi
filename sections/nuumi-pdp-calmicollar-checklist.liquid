@@ -1,0 +1,77 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pdp-mechanism nuumi-pdp-checklist section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pdp-mechanism__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="nuumi-pdp-mechanism__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="nuumi-pdp-mechanism__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="nuumi-pdp-mechanism__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pdp-mechanism__grid nuumi-pdp-checklist__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pdp-mechanism__card nuumi-pdp-checklist__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
+          <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CalmiCollar Checklist",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "What it helps stop" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "The daily symptoms CalmiCollar helps calm down." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A quick visual checklist of the separation-anxiety behaviors the collar is designed to reduce over time.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Checklist item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "check_mark", "label": "Check Mark" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "science", "label": "Science" },
+            { "value": "star", "label": "Star" }
+          ],
+          "default": "check_mark"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "Shrinks settling time" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Helps dogs come down faster after departure cues and routine changes.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CalmiCollar Checklist",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "check_mark", "title": "Shrinks settling time", "text": "<p>Helps dogs come down faster after departure cues and routine changes.</p>" } },
+        { "type": "item", "settings": { "icon": "heart", "title": "Reduces whining & barking", "text": "<p>Supports a calmer response when your dog realizes they are being left alone.</p>" } },
+        { "type": "item", "settings": { "icon": "shield", "title": "Enables training", "text": "<p>Creates a calmer starting point so your training cues are easier to absorb.</p>" } },
+        { "type": "item", "settings": { "icon": "science", "title": "Ends destructive chewing", "text": "<p>Helps reduce panic behaviors like chewing, scratching, and frantic searching.</p>" } },
+        { "type": "item", "settings": { "icon": "star", "title": "Eases separation anxiety", "text": "<p>Built for dogs who panic when being left alone, even for short routines.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
