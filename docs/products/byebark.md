@@ -11,6 +11,7 @@
 - `product_category`: Pet Device
 - `vendor`: Nuumipet
 - `template_target`: product.byebark.json
+- `design_system_base`: EnerCanis PDP spacing and type scale
 
 ## Commerce Core
 
@@ -55,6 +56,7 @@
   - what's in the box + bonus stack
   - 60-day guarantee block
   - FAQ accordion
+- `scale_rule`: Use EnerCanis full-page spacing, type scale, card padding, bundle-card rhythm, and section density as the baseline for ByeBark and future product-page clones.
 
 ## Section Content
 
