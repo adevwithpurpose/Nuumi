@@ -14,11 +14,11 @@
         <article class="nuumi-pdp-howto__card" {{ block.shopify_attributes }}>
           <div class="nuumi-pdp-howto__media">
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 700 | image_tag:
+              {{ block.settings.image | image_url: width: 1200 | image_tag:
                 loading: 'lazy',
                 class: 'nuumi-pdp-howto__image',
                 sizes: '(min-width: 990px) 33vw, 100vw',
-                widths: '240, 360, 500, 700'
+                widths: '240, 360, 500, 700, 900, 1200'
               }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-howto__image' }}

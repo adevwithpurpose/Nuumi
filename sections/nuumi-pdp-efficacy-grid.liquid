@@ -16,10 +16,11 @@
           <div class="nuumi-pdp-efficacy__card-top">
             {%- if block.settings.image != blank -%}
               <span class="nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--image">
-                {{ block.settings.image | image_url: width: 96 | image_tag:
+                {{ block.settings.image | image_url: width: 480 | image_tag:
                   loading: 'lazy',
                   class: 'nuumi-pdp-efficacy__image',
-                  widths: '48, 72, 96'
+                  sizes: '4.4rem',
+                  widths: '96, 144, 192, 288, 384, 480'
                 }}
               </span>
             {%- else -%}
