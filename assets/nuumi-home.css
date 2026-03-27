@@ -1572,13 +1572,22 @@ details[open] .nuumi-faq__answer {
 
 @media screen and (min-width: 990px) {
   .footer__content-top {
-    grid-template-columns: minmax(240px, 0.7fr) minmax(320px, 0.92fr) minmax(280px, 0.8fr);
-    gap: 3.6rem;
+    grid-template-columns: minmax(0, 1.08fr) minmax(28rem, 0.92fr);
+    gap: 4.4rem;
     align-items: start;
   }
 
   .footer__editorial {
-    display: contents;
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(28rem, 0.94fr);
+    gap: 3.6rem;
+    align-items: start;
+  }
+
+  .footer__navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2.4rem;
+    align-items: start;
   }
 
   .footer-block--editorial,
@@ -1591,13 +1600,8 @@ details[open] .nuumi-faq__answer {
   .footer-block--newsletter-shell {
     grid-column: 2;
     align-self: start;
-  }
-
-  .footer__navigation {
-    grid-column: 3;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3rem 2.4rem;
-    align-items: start;
+    width: min(100%, 36rem);
+    justify-self: start;
   }
 
   .footer-block__brand-info {
@@ -1605,14 +1609,14 @@ details[open] .nuumi-faq__answer {
   }
 
   .footer-block--newsletter-shell {
-    width: 100%;
+    max-width: 36rem;
     padding-top: 0;
     border-top: 0;
   }
 
   .footer__nuumi-heading {
     margin-bottom: 1.4rem;
-    max-width: 22rem;
+    max-width: 24rem;
   }
 
   .footer__navigation {
