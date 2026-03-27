@@ -39,7 +39,7 @@
       "settings": {
         "title": "Real support for the pet problems families deal with every day.",
         "subtitle": "Nuumipet brings together targeted essentials for gut health, calming, bark control, ear hygiene, and multi-need support in one cleaner, easier-to-trust routine.",
-        "image": "shopify://shop_images/Gemini_Generated_Image_bru0prbru0prbru0.webp",
+        "image": "shopify://shop_images/nuumipet-homepage-hero-lineup-v4-outpaint-wide.jpg",
         "button_label": "Shop the Essentials",
         "button_link": "shopify://collections/all"
       }
@@ -179,9 +179,12 @@
         "product_card_3": {
           "type": "product_card",
           "settings": {
-            "product": "nuumipet-core-wellness-bundle",
+            "product": "the-leash-walk-formula-nuumipet",
             "badge": "TRAINING + WELLNESS BUNDLE",
+            "title": "",
             "benefit": "A broader bundle for households that want support across multiple daily needs.",
+            "price": "",
+            "summary": "Lead with the problem it helps solve, what kind of support it offers, and why it feels easier to trust than a generic wellness product.",
             "rating": 0,
             "rating_count": 0,
             "button_label": "View Bundle",
