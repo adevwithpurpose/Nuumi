@@ -3,3 +3,17 @@
 /brief.md
 /docs/superpowers/*
 /config/settings_data.json.example
+/node_modules/*
+/.planning/*
+/assets/image_0_Photorea_20260326_211045.jpg
+/docs/logs/shopify-product-create-log.md
+/package-lock.json
+/patch_css.js
+/patch_featured_products.sh
+/patch_footer.js
+/patch_grid.sh
+/screenshot.png
+/tmp-byebark-product-create.graphql
+/tmp-byebark-product-create.variables.json
+/tmp-byebark-product-update.graphql
+/nul
