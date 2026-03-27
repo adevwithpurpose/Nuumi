@@ -273,47 +273,47 @@
         "logo_3": {
           "type": "logo",
           "settings": {
-            "label": "Bark Control"
+            "label": "Training"
           }
         },
         "logo_4": {
           "type": "logo",
           "settings": {
-            "label": "Ear Hygiene"
+            "label": "Longevity"
           }
         },
         "logo_5": {
           "type": "logo",
           "settings": {
-            "label": "Bundle Care"
+            "label": "Mind + Body"
           }
         },
         "stat_1": {
           "type": "stat",
           "settings": {
-            "value": "5",
-            "label": "Launch essentials in the lineup"
+            "value": "Gut Health",
+            "label": "Digestion, energy, and immunity from the inside."
           }
         },
         "stat_2": {
           "type": "stat",
           "settings": {
-            "value": "3",
-            "label": "Core care lanes covered"
+            "value": "Calming",
+            "label": "Lower the baseline stress wearing your dog down over time."
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "1",
-            "label": "Bundle for multi-need homes"
+            "value": "Training",
+            "label": "Tools to understand your dog and make daily life easier together."
           }
         },
         "stat_4": {
           "type": "stat",
           "settings": {
-            "value": "30-day",
-            "label": "Guarantee highlighted across the store"
+            "value": "Longevity",
+            "label": "Mind and body support so the good years last longer."
           }
         }
       },
@@ -329,9 +329,9 @@
         "stat_4"
       ],
       "settings": {
-        "logos_eyebrow": "What the lineup is built around",
-        "heading": "Five essentials, organized around the needs pet parents recognize fastest.",
-        "body": "<p>Instead of padding the catalog with lookalike products, Nuumipet keeps the range concentrated around digestion, calming, behavior, hygiene, and one bundle that brings the daily basics together.</p>",
+        "logos_eyebrow": "THE FULL LINEUP",
+        "heading": "What each category is built to do.",
+        "body": "<p>Four categories. Each one handles a different piece of your dog's long-term health — so you can start where the need is clearest and build from there.</p>",
         "image": "shopify://shop_images/nuumipet-homepage-hero-lineup-v1.jpg",
         "padding_top": 48,
         "padding_bottom": 96
