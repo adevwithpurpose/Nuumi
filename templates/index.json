@@ -173,18 +173,31 @@
             "rating": 0,
             "rating_count": 0,
             "button_label": "View ByeBark",
-            "link": "shopify://collections/all"
+            "link": "shopify://products/byebark"
+          }
+        },
+        "product_card_3": {
+          "type": "product_card",
+          "settings": {
+            "product": "nuumipet-core-wellness-bundle",
+            "badge": "TRAINING + WELLNESS BUNDLE",
+            "benefit": "A broader bundle for households that want support across multiple daily needs.",
+            "rating": 0,
+            "rating_count": 0,
+            "button_label": "View Bundle",
+            "link": "shopify://products/nuumipet-core-wellness-bundle"
           }
         }
       },
       "block_order": [
         "product_card_1",
-        "product_card_2"
+        "product_card_2",
+        "product_card_3"
       ],
       "settings": {
-        "eyebrow": "Start with two essentials",
-        "heading": "A focused routine beats a crowded shelf.",
-        "description": "<p>We lead with two of the clearest problem-solving essentials in the lineup so the homepage stays guided, calm, and easy to shop instead of dumping all five products at once.</p>",
+        "eyebrow": "NOT SURE WHERE TO START?",
+        "heading": "Three smart starting points, depending on what your dog needs first.",
+        "description": "<p>Choose the product that matches the clearest need right now — calming, gut health, or a broader training-and-wellness bundle — without having to decode the whole store first.</p>",
         "padding_top": 76,
         "padding_bottom": 96
       }

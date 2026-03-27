@@ -21,13 +21,10 @@
           {%- continue -%}
         {%- endif -%}
         {%- assign card_url = product_card.url -%}
-        {%- if block.settings.link != blank -%}
-          {%- assign card_url = block.settings.link -%}
-        {%- endif -%}
         {%- assign card_badge = block.settings.badge | default: product_card.metafields.custom.benefit.value -%}
-        {%- assign card_title = block.settings.title | default: product_card.title -%}
-        {%- assign card_price = block.settings.price -%}
-        {%- assign card_summary = block.settings.summary | default: product_card.description | strip_html | truncatewords: 18 -%}
+        {%- assign card_title = product_card.title -%}
+        {%- assign card_price = product_card.price | money -%}
+        {%- assign card_summary = product_card.description | strip_html | truncatewords: 14 -%}
         {%- assign rating_value = block.settings.rating -%}
         {%- assign rating_count_value = block.settings.rating_count -%}
         {%- if rating_value == blank or rating_value <= 0 -%}
@@ -83,7 +80,7 @@
             </div>
 
             <div class="nuumi-featured-products__action">
-              <p class="nuumi-featured-products__price">{%- if card_price != blank -%}{{ card_price | escape }}{%- else -%}{{ product_card.price | money }}{%- endif -%}</p>
+              <p class="nuumi-featured-products__price">{{ card_price }}</p>
 
               {%- if card_url != blank -%}
                 <a class="nuumi-button--gold nuumi-featured-products__cta" href="{{ card_url }}">
