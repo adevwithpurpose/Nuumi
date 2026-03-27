@@ -27,7 +27,7 @@
           {%- for block in section.blocks -%}
             {%- if block.type == 'bullet' -%}
               <li class="nuumi-home-hero__bullet" {{ block.shopify_attributes }}>
-                {% render 'nuumi-icons', icon: 'check_mark', class: 'nuumi-icon' %}
+                {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.custom_image, wrapper_class: 'nuumi-icon', icon_class: 'nuumi-icon', image_width: 48, image_sizes: '24px', image_widths: '24, 36, 48', alt: block.settings.text %}
                 <span>{{ block.settings.text | escape }}</span>
               </li>
             {%- endif -%}
@@ -54,13 +54,13 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Real support for the pet problems families deal with every day."
+      "default": "A simpler way to shop for the pet problems families deal with every day."
     },
     {
       "type": "text",
       "id": "subtitle",
       "label": "Subtitle",
-      "default": "Nuumipet brings together targeted essentials for gut health, calming, bark control, ear hygiene, and multi-need support in one cleaner, easier-to-trust routine."
+      "default": "Nuumipet organizes targeted essentials around gut health, calming, bark control, ear hygiene, and broader daily support so you can understand what each product does and what to reach for first."
     },
     {
       "type": "image_picker",
@@ -85,10 +85,46 @@
       "name": "Bullet",
       "settings": [
         {
+          "type": "select",
+          "id": "icon_source",
+          "label": "Icon Source",
+          "options": [
+            { "value": "icon", "label": "Theme Icon" },
+            { "value": "svg", "label": "Custom SVG" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "icon"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "check_mark", "label": "Check Mark" },
+            { "value": "science", "label": "Science" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "star", "label": "Star" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "paw", "label": "Paw" }
+          ],
+          "default": "check_mark"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg",
+          "label": "Custom SVG Markup"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image"
+        },
+        {
           "type": "text",
           "id": "text",
           "label": "Bullet text",
-          "default": "Gut, calm, bark, and hygiene support"
+          "default": "Start with the one issue you want to solve first"
         }
       ]
     }
@@ -97,6 +133,9 @@
     {
       "name": "Nuumi Home Hero",
       "blocks": [
+        {
+          "type": "bullet"
+        },
         {
           "type": "bullet"
         },

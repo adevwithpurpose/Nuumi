@@ -18,11 +18,9 @@
       {%- for block in section.blocks -%}
         <div class="nuumi-proof-grid__item" {{ block.shopify_attributes }}>
           <div class="nuumi-proof-grid__card">
-            {%- if block.settings.icon != 'none' -%}
-              <div class="nuumi-proof-grid__icon-wrapper">
-                {% render 'nuumi-icons', icon: block.settings.icon, class: 'nuumi-proof-grid__icon' %}
-              </div>
-            {%- endif -%}
+            <div class="nuumi-proof-grid__icon-wrapper">
+              {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.custom_image, wrapper_class: 'nuumi-proof-grid__icon', icon_class: 'nuumi-proof-grid__icon', image_width: 96, image_sizes: '48px', image_widths: '48, 72, 96', alt: block.settings.title %}
+            </div>
             
             <div class="nuumi-proof-grid__content">
               {%- if block.settings.title != blank -%}
@@ -54,13 +52,13 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Why the lineup feels easier to trust"
+      "default": "Why the homepage is built to feel calmer and easier to trust"
     },
     {
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p>Nuumipet is a focused set of formulas and tools built for the issues pet parents are already trying to solve at home.</p>"
+      "default": "<p>Nuumipet is a focused set of formulas and tools built for the issues pet parents are already trying to solve at home, with a simpler path from problem to product.</p>"
     },
     {
       "type": "range",
@@ -90,6 +88,17 @@
       "settings": [
         {
           "type": "select",
+          "id": "icon_source",
+          "label": "Icon Source",
+          "options": [
+            { "value": "icon", "label": "Theme Icon" },
+            { "value": "svg", "label": "Custom SVG" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "icon"
+        },
+        {
+          "type": "select",
           "id": "icon",
           "label": "Icon",
           "options": [
@@ -105,6 +114,16 @@
             { "value": "heart", "label": "Heart" }
           ],
           "default": "check_mark"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg",
+          "label": "Custom SVG Markup"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image"
         },
         {
           "type": "text",
@@ -129,24 +148,24 @@
           "type": "proof_item",
           "settings": {
             "icon": "science",
-            "title": "TARGETED SUPPORT",
-            "description": "Each product is built around a clear job, whether that is gut support, bark interruption, calming support, or ear hygiene."
+            "title": "START WITH THE PROBLEM",
+            "description": "The lineup is organized around the issues pet parents tend to notice first, so it is easier to choose a starting point without guessing."
           }
         },
         {
           "type": "proof_item",
           "settings": {
             "icon": "shield",
-            "title": "CLEANER CHOICES",
-            "description": "The lineup stays lean so shoppers can understand what each essential is for without sorting through wellness clutter."
+            "title": "LEANER CATALOG",
+            "description": "Instead of padding the store with lookalike products, Nuumipet keeps the range small enough that each essential can hold a clear job."
           }
         },
         {
           "type": "proof_item",
           "settings": {
             "icon": "return",
-            "title": "BUY WITH CONFIDENCE",
-            "description": "From daily digestive care to quick bark support, the routine stays practical, focused, and backed by a 30-day guarantee."
+            "title": "SHOP WITH MORE CLARITY",
+            "description": "The goal is not to overwhelm you with claims. It is to make the daily routine easier to understand, easier to shop, and easier to stick with."
           }
         }
       ]

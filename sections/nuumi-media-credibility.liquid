@@ -65,7 +65,18 @@
           }}
         {%- else -%}
           <div class="nuumi-media-credibility__image-placeholder">
-            {% render 'nuumi-icons', icon: 'heart', class: 'nuumi-media-credibility__placeholder-icon' %}
+            {% render 'nuumi-icon-media',
+              icon_source: section.settings.placeholder_icon_source,
+              icon: section.settings.placeholder_icon,
+              custom_svg: section.settings.placeholder_custom_svg,
+              image: section.settings.placeholder_image,
+              alt: section.settings.heading,
+              wrapper_class: 'nuumi-media-credibility__placeholder-media',
+              icon_class: 'nuumi-media-credibility__placeholder-icon',
+              image_width: 180,
+              image_sizes: '(min-width: 750px) 180px, 36vw',
+              image_widths: '90, 140, 180'
+            %}
           </div>
         {%- endif -%}
       </div>
@@ -99,6 +110,39 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "placeholder_icon_source",
+      "label": "Placeholder media source",
+      "options": [
+        { "value": "icon", "label": "Theme Icon" },
+        { "value": "svg", "label": "Custom SVG" },
+        { "value": "image", "label": "Image" }
+      ],
+      "default": "icon"
+    },
+    {
+      "type": "select",
+      "id": "placeholder_icon",
+      "label": "Placeholder icon",
+      "options": [
+        { "value": "heart", "label": "Heart" },
+        { "value": "paw", "label": "Paw" },
+        { "value": "shield", "label": "Shield" },
+        { "value": "star", "label": "Star" }
+      ],
+      "default": "heart"
+    },
+    {
+      "type": "textarea",
+      "id": "placeholder_custom_svg",
+      "label": "Placeholder custom SVG"
+    },
+    {
+      "type": "image_picker",
+      "id": "placeholder_image",
+      "label": "Placeholder image"
     },
     {
       "type": "range",

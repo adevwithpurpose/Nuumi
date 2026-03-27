@@ -27,7 +27,7 @@
               }}
             {%- else -%}
               <div class="nuumi-benefits-story__image-placeholder">
-                {% render 'nuumi-icons', icon: block.settings.icon, class: 'nuumi-benefits-story__placeholder-icon' %}
+                {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.custom_image, wrapper_class: 'nuumi-benefits-story__placeholder-icon-wrap', icon_class: 'nuumi-benefits-story__placeholder-icon', image_width: 96, image_sizes: '48px', image_widths: '48, 72, 96', alt: block.settings.title %}
               </div>
             {%- endif -%}
           </div>
@@ -56,19 +56,19 @@
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "How the lineup fits together"
+      "default": "How the system fits together"
     },
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Each product solves a different part of the everyday care routine."
+      "default": "The lineup is built so each product does one job clearly, then supports the whole routine together."
     },
     {
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p>The catalog stays intentionally small so each item can do a specific job well, from gut support and calming to bark control, hygiene, and bundled daily care.</p>"
+      "default": "<p>That is the system explanation behind the homepage: a smaller set of essentials, each mapped to a recognizable daily problem, so the store feels easier to understand than a crowded pet-wellness catalog.</p>"
     },
     {
       "type": "range",
@@ -103,6 +103,17 @@
         },
         {
           "type": "select",
+          "id": "icon_source",
+          "label": "Icon Source",
+          "options": [
+            { "value": "icon", "label": "Theme Icon" },
+            { "value": "svg", "label": "Custom SVG" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "icon"
+        },
+        {
+          "type": "select",
           "id": "icon",
           "label": "Fallback icon",
           "options": [
@@ -115,22 +126,32 @@
           "default": "science"
         },
         {
+          "type": "textarea",
+          "id": "custom_svg",
+          "label": "Custom SVG Markup"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image"
+        },
+        {
           "type": "text",
           "id": "eyebrow",
           "label": "Eyebrow",
-          "default": "Digestive care"
+          "default": "Digestive lane"
         },
         {
           "type": "text",
           "id": "title",
           "label": "Title",
-          "default": "EnerCanis leads with a clear gut-health job."
+          "default": "EnerCanis covers the gut-support lane with a clearer daily routine."
         },
         {
           "type": "textarea",
           "id": "text",
           "label": "Text",
-          "default": "It is built around L-Glutamine, Hydrolyzed Collagen, and prebiotic support to help soothe the gut and support the intestinal barrier."
+          "default": "For pets dealing with recurring digestive discomfort, it gives the lineup a dedicated first stop instead of burying gut support inside a generic wellness blend."
         }
       ]
     }
@@ -141,8 +162,8 @@
       "name": "Nuumi Benefits Story",
       "blocks": [
         { "type": "benefit" },
-        { "type": "benefit", "settings": { "icon": "shield", "eyebrow": "Behavior support", "title": "ByeBark and CalmiCollar cover two different stress patterns.", "text": "One helps interrupt barking in the moment, while the other supports calmer behavior for dogs that need more environmental reassurance." } },
-        { "type": "benefit", "settings": { "icon": "heart", "eyebrow": "Practical care", "title": "PawPoint and the bundle round out the daily routine.", "text": "Ear wipes make preventive hygiene easier, and the Core Wellness Bundle gives multi-need households one simpler place to start." } }
+        { "type": "benefit", "settings": { "icon": "shield", "eyebrow": "Behavior lanes", "title": "ByeBark and CalmiCollar solve different parts of behavior support.", "text": "One is for fast interruption in the moment. The other is for steadier calming support through the day. Together they explain the difference between immediate response and ongoing reassurance." } },
+        { "type": "benefit", "settings": { "icon": "heart", "eyebrow": "Routine completion", "title": "PawPoint and The Leash Walk Formula round out the system.", "text": "PawPoint covers practical ear hygiene, while The Leash Walk Formula gives households a broader step-by-step training path when they want support beyond a single product lane." } }
       ]
     }
   ]
