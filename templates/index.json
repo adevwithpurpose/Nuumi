@@ -149,7 +149,7 @@
         "product_card_1": {
           "type": "product_card",
           "settings": {
-            "product": "50-shades-of-fun",
+            "product": "enercanis-nuumipet",
             "badge": "Gut health support",
             "title": "EnerCanis Gut Health Supplement",
             "benefit": "Daily digestive support with a clearer ingredient story.",
@@ -164,7 +164,7 @@
         "product_card_2": {
           "type": "product_card",
           "settings": {
-            "product": "calmicollar-cat",
+            "product": "byebark",
             "badge": "Bark control tool",
             "title": "ByeBark Ultrasonic Device",
             "benefit": "Fast interruption for frantic barking without harm.",
@@ -324,7 +324,7 @@
         "logos_eyebrow": "What the lineup is built around",
         "heading": "Five essentials, organized around the needs pet parents recognize fastest.",
         "body": "<p>Instead of padding the catalog with lookalike products, Nuumipet keeps the range concentrated around digestion, calming, behavior, hygiene, and one bundle that brings the daily basics together.</p>",
-        "image": "shopify://shop_images/Gemini_Generated_Image_idnhx3idnhx3idnh.png",
+        "image": "shopify://shop_images/nuumipet-homepage-hero-lineup-v1.jpg",
         "padding_top": 48,
         "padding_bottom": 96
       }
