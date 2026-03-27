@@ -30,6 +30,11 @@
     assign lazy = 'lazy'
   endunless
 
+  assign is_nuumi_gallery = false
+  if section.type == 'nuumi-main-product' or section.type contains 'nuumi-pdp-'
+    assign is_nuumi_gallery = true
+  endif
+
   assign desktop_columns = 1
   if desktop_layout == 'columns' and media_count > 1
     assign desktop_columns = 2
@@ -53,6 +58,7 @@
   class="product-media-container media-type-{{ media.media_type }} media-fit-{{ media_fit }} global-media-settings gradient{% if constrain_to_viewport %} constrain-height{% endif %}"
   style="--ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
 >
+  {%- if is_nuumi_gallery -%}<div class="nuumi-product-media-stage">{%- endif -%}
   <modal-opener
     class="product__modal-opener product__modal-opener--{{ media.media_type }}"
     data-modal="#ProductModal-{{ modal_id }}"
@@ -169,4 +175,5 @@
       </deferred-media>
     {%- endif -%}
   {%- endif -%}
+  {%- if is_nuumi_gallery -%}</div>{%- endif -%}
 </div>
