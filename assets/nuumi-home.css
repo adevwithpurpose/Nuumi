@@ -1572,9 +1572,52 @@ details[open] .nuumi-faq__answer {
 
 @media screen and (min-width: 990px) {
   .footer__content-top {
-    grid-template-columns: minmax(340px, 1.06fr) minmax(0, 0.94fr);
-    gap: 5.6rem;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(320px, 0.92fr) minmax(280px, 0.8fr);
+    gap: 3.6rem;
     align-items: start;
+  }
+
+  .footer__editorial {
+    display: contents;
+  }
+
+  .footer-block--editorial,
+  .footer-block--brand-information,
+  .footer-block--text,
+  .footer-block--image {
+    grid-column: 1;
+  }
+
+  .footer-block--newsletter-shell {
+    grid-column: 2;
+    align-self: start;
+  }
+
+  .footer__navigation {
+    grid-column: 3;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2.4rem;
+    align-items: start;
+  }
+
+  .footer-block__brand-info {
+    gap: 1.2rem;
+  }
+
+  .footer-block--newsletter-shell {
+    width: 100%;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .footer__nuumi-heading {
+    margin-bottom: 1.4rem;
+    max-width: 22rem;
+  }
+
+  .footer__navigation {
+    gap: 3.2rem 2.4rem;
+    align-content: start;
   }
 }
 
@@ -1632,6 +1675,7 @@ details[open] .nuumi-faq__answer {
   font-size: 1.52rem !important;
   line-height: 1.72 !important;
   margin: 0 !important;
+  max-width: 24rem;
 }
 
 .footer-block__details-content p {
@@ -1652,10 +1696,10 @@ details[open] .nuumi-faq__answer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.4rem;
   width: min(100%, 42rem);
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 0;
+  border-top: 0;
 }
 
 .footer-block__newsletter {
@@ -1679,12 +1723,12 @@ details[open] .nuumi-faq__answer {
 .footer__nuumi-heading {
   color: #ffffff;
   font-family: var(--font-heading-family);
-  font-size: clamp(2.4rem, 2.9vw, 3.6rem);
+  font-size: clamp(1.95rem, 2vw, 2.7rem);
   font-weight: 500;
   line-height: 1.06;
   letter-spacing: -0.04em;
-  margin: 0 0 1.8rem;
-  max-width: 26rem;
+  margin: 0 0 1rem;
+  max-width: 17rem;
 }
 
 .footer__newsletter.newsletter-form {
@@ -1757,6 +1801,9 @@ details[open] .nuumi-faq__answer {
 @media screen and (max-width: 989px) {
   .footer-block--newsletter-shell {
     width: min(100%, 46rem);
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 }
 
