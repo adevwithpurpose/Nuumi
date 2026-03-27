@@ -10,25 +10,51 @@
     gap: 3rem;
 }
 
-.nuumi-pdp__media-wrapper .product__media-list {
+.nuumi-pdp__media-wrapper .product__media-list,
+.nuumi-byebark-hero__media-shell .product__media-list,
+.nuumi-calmicollar-hero__media-shell .product__media-list,
+.nuumi-pawpoint-hero__media-shell .product__media-list,
+.nuumi-leash-walk-hero__media-shell .product__media-list {
     margin-bottom: 0;
 }
 
-.nuumi-pdp__media-wrapper .product__media-item {
+.nuumi-pdp__media-wrapper .product__media-item,
+.nuumi-byebark-hero__media-shell .product__media-item,
+.nuumi-calmicollar-hero__media-shell .product__media-item,
+.nuumi-pawpoint-hero__media-shell .product__media-item,
+.nuumi-leash-walk-hero__media-shell .product__media-item {
     display: flex;
     align-items: stretch;
+    aspect-ratio: 1 / 1;
 }
 
-.nuumi-pdp__media-wrapper .product-media-container {
+.nuumi-pdp__media-wrapper .product-media-container,
+.nuumi-byebark-hero__media-shell .product-media-container,
+.nuumi-calmicollar-hero__media-shell .product-media-container,
+.nuumi-pawpoint-hero__media-shell .product-media-container,
+.nuumi-leash-walk-hero__media-shell .product-media-container {
     width: 100%;
+    height: 100%;
 }
 
-.nuumi-pdp__media-wrapper .product-media-container .media {
+.nuumi-pdp__media-wrapper .product-media-container .media,
+.nuumi-byebark-hero__media-shell .product-media-container .media,
+.nuumi-calmicollar-hero__media-shell .product-media-container .media,
+.nuumi-pawpoint-hero__media-shell .product-media-container .media,
+.nuumi-leash-walk-hero__media-shell .product-media-container .media {
     padding-top: 100%;
 }
 
 .nuumi-pdp__media-wrapper .product-media-container .media img,
-.nuumi-pdp__media-wrapper .product-media-container .deferred-media__poster img {
+.nuumi-pdp__media-wrapper .product-media-container .deferred-media__poster img,
+.nuumi-byebark-hero__media-shell .product-media-container .media img,
+.nuumi-byebark-hero__media-shell .product-media-container .deferred-media__poster img,
+.nuumi-calmicollar-hero__media-shell .product-media-container .media img,
+.nuumi-calmicollar-hero__media-shell .product-media-container .deferred-media__poster img,
+.nuumi-pawpoint-hero__media-shell .product-media-container .media img,
+.nuumi-pawpoint-hero__media-shell .product-media-container .deferred-media__poster img,
+.nuumi-leash-walk-hero__media-shell .product-media-container .media img,
+.nuumi-leash-walk-hero__media-shell .product-media-container .deferred-media__poster img {
     width: 100%;
     height: 100%;
     display: block;
