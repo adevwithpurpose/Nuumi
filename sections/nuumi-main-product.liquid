@@ -12,6 +12,7 @@
   {{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
@@ -19,9 +20,15 @@
   <div class="page-width">
     <div class="nuumi-pdp__grid">
       <!-- Media Gallery -->
-      <div class="nuumi-pdp__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images %}
-      </div>
+      {% render 'nuumi-hero-gallery',
+        variant_images: variant_images,
+        section: section,
+        shell_class: 'nuumi-pdp__media-wrapper',
+        media_column_class: '',
+        show_left_guarantee: false,
+        left_guarantee_class_prefix: 'nuumi-pdp',
+        hide_variants: section.settings.hide_variants
+      %}
 
       <!-- Product Info -->
       <div class="nuumi-pdp__info-wrapper">

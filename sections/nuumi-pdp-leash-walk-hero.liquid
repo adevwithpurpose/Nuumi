@@ -22,15 +22,15 @@
 
   <div class="page-width">
     <div class="nuumi-leash-walk-hero">
-      <div class="nuumi-leash-walk-hero__media-column product__column-sticky">
-        <div class="nuumi-leash-walk-hero__media-shell product product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
-          {% render 'product-media-gallery',
-            variant_images: variant_images,
-            section: section,
-            hide_variants: true
-          %}
-        </div>
-      </div>
+      {% render 'nuumi-hero-gallery',
+        variant_images: variant_images,
+        section: section,
+        shell_class: 'nuumi-leash-walk-hero__media-shell',
+        media_column_class: 'nuumi-leash-walk-hero__media-column',
+        show_left_guarantee: false,
+        left_guarantee_class_prefix: 'nuumi-leash-walk-hero',
+        hide_variants: true
+      %}
 
       <div class="nuumi-leash-walk-hero__content-column">
         <section id="ProductInfo-{{ section.id }}" class="nuumi-leash-walk-hero__panel">

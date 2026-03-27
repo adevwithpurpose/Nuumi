@@ -28,32 +28,16 @@
 
   <div class="page-width">
     <div class="nuumi-enercanis-hero">
-      <div class="nuumi-enercanis-hero__media-column product__column-sticky">
-          <div class="nuumi-enercanis-hero__media-shell product product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
-            {% render 'product-media-gallery',
-              variant_images: variant_images,
-              section: section,
-              hide_variants: true
-            %}
-          </div>
-          <div class="nuumi-enercanis-hero__left-guarantee">
-            <div class="nuumi-enercanis-hero__left-guarantee-badge">
-              {%- if section.settings.left_guarantee_image != blank -%}
-                {{ section.settings.left_guarantee_image | image_url: width: 240 | image_tag:
-                  loading: 'lazy',
-                  class: 'nuumi-enercanis-hero__left-guarantee-image',
-                  widths: '96, 144, 192, 240'
-                }}
-              {%- else -%}
-                <span class="nuumi-enercanis-hero__left-guarantee-fallback">90-Day</span>
-              {%- endif -%}
-            </div>
-            <div class="nuumi-enercanis-hero__left-guarantee-copy">
-              <p class="nuumi-enercanis-hero__left-guarantee-title">{{ section.settings.left_guarantee_title }}</p>
-              <p class="nuumi-enercanis-hero__left-guarantee-text">{{ section.settings.left_guarantee_text }}</p>
-            </div>
-          </div>
-      </div>
+      {% render 'nuumi-hero-gallery',
+        variant_images: variant_images,
+        section: section,
+        shell_class: 'nuumi-enercanis-hero__media-shell',
+        media_column_class: 'nuumi-enercanis-hero__media-column',
+        show_left_guarantee: true,
+        left_guarantee_class_prefix: 'nuumi-enercanis-hero',
+        fallback_guarantee_text: '90-Day',
+        hide_variants: true
+      %}
 
       <div class="nuumi-enercanis-hero__content-column">
         <section id="ProductInfo-{{ section.id }}" class="nuumi-enercanis-hero__panel">

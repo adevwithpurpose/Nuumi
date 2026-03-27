@@ -1,0 +1,38 @@
+{% liquid
+  assign shell_class = shell_class | default: 'nuumi-pdp__media-wrapper'
+  assign media_column_class = media_column_class | default: ''
+  assign show_left_guarantee = show_left_guarantee | default: false
+  assign left_guarantee_class_prefix = left_guarantee_class_prefix | default: 'nuumi-pdp'
+  assign hide_variants = hide_variants | default: true
+  assign fallback_guarantee_text = fallback_guarantee_text | default: '30-Day'
+%}
+
+<div class="{{ media_column_class }}{% if media_column_class != blank %} {% endif %}product__column-sticky">
+  <div class="{{ shell_class }} product product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
+    {% render 'product-media-gallery',
+      variant_images: variant_images,
+      section: section,
+      hide_variants: hide_variants
+    %}
+  </div>
+
+  {%- if show_left_guarantee -%}
+    <div class="{{ left_guarantee_class_prefix }}__left-guarantee">
+      <div class="{{ left_guarantee_class_prefix }}__left-guarantee-badge">
+        {%- if section.settings.left_guarantee_image != blank -%}
+          {{ section.settings.left_guarantee_image | image_url: width: 240 | image_tag:
+            loading: 'lazy',
+            class: left_guarantee_class_prefix | append: '__left-guarantee-image',
+            widths: '96, 144, 192, 240'
+          }}
+        {%- else -%}
+          <span class="{{ left_guarantee_class_prefix }}__left-guarantee-fallback">{{ fallback_guarantee_text }}</span>
+        {%- endif -%}
+      </div>
+      <div class="{{ left_guarantee_class_prefix }}__left-guarantee-copy">
+        <p class="{{ left_guarantee_class_prefix }}__left-guarantee-title">{{ section.settings.left_guarantee_title }}</p>
+        <p class="{{ left_guarantee_class_prefix }}__left-guarantee-text">{{ section.settings.left_guarantee_text }}</p>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
