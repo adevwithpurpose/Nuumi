@@ -94,7 +94,7 @@
             <div class="nuumi-byebark-hero__support-grid">
               {%- for block in support_blocks -%}
                 <article class="nuumi-byebark-hero__support-card" {{ block.shopify_attributes }}>
-                  {%- if block.settings.image != blank -%}
+                  {%- if block.settings.icon_source == 'image' and block.settings.image != blank -%}
                     <span class="nuumi-byebark-hero__support-media nuumi-byebark-hero__support-media--image">
                       {{ block.settings.image | image_url: width: 96 | image_tag:
                         loading: 'lazy',
@@ -103,7 +103,7 @@
                       }}
                     </span>
                   {%- else -%}
-                    <span class="nuumi-byebark-hero__support-media nuumi-byebark-hero__support-media--icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+                    {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.image, wrapper_class: 'nuumi-byebark-hero__support-media nuumi-byebark-hero__support-media--icon', icon_class: 'nuumi-byebark-hero__support-image', image_width: 96, image_sizes: '48px', image_widths: '48, 72, 96', alt: block.settings.title %}
                   {%- endif -%}
                   <div>
                     <p class="nuumi-byebark-hero__support-title">{{ block.settings.title }}</p>
@@ -528,6 +528,7 @@
       "name": "Support point",
       "limit": 6,
       "settings": [
+        { "type": "select", "id": "icon_source", "label": "Icon Source", "options": [{ "value": "icon", "label": "Theme Icon" }, { "value": "svg", "label": "Custom SVG" }, { "value": "image", "label": "Image" }], "default": "icon" },
         {
           "type": "image_picker",
           "id": "image",
@@ -547,6 +548,7 @@
           ],
           "default": "science"
         },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
         { "type": "text", "id": "title", "label": "Title", "default": "Interrupts barking fast" },
         { "type": "text", "id": "text", "label": "Text", "default": "Made for fence fighting, delivery alerts, and overstimulated moments at home." }
       ]

@@ -71,18 +71,18 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Comfort-first calm support for anxious dogs",
+        "eyebrow": "A calmer reset routine for dogs who spiral when you leave",
         "badge_primary": "Vet Approved",
         "badge_secondary": "100% Drug-Free",
-        "headline": "Make Your Dog Stop Barking Non-Stop, Peeing Indoors, or Destroying Furniture When Left Alone.",
-        "subtitle": "The maternal secret that gives your dog safety in a collar. Provides 24/7 calming relief without turning your dog into a zombie.",
-        "description": "<p>CalmiCollar uses pheromone technology to help dogs settle faster when being left alone triggers barking, indoor accidents, chewing, pacing, or destructive panic.</p>",
+        "headline": "Help your dog settle faster when being left alone triggers the panic spiral.",
+        "subtitle": "A pheromone-based calming collar designed to reinforce safety cues during the departure moments that set separation anxiety off.",
+        "description": "<p>CalmiCollar is best framed as a wearable calm-support layer for dogs whose barking, pacing, chewing, or indoor accidents begin when the brain shifts into survival mode.</p>",
         "rating_value": 4.8,
         "review_count": "4,100+",
         "rating_caption": "Calmer homes",
         "price_label": "Choose your calming plan",
         "purchase_mode_heading": "Choose your bundle",
-        "purchase_microcopy": "Trusted by anxious-dog households",
+        "purchase_microcopy": "Built for separation-anxiety routines",
         "one_time_label": "One-Time Purchase",
         "one_time_mode_text": "Pay once, no subscription",
         "one_time_note": "One-time purchase. No hidden fees.",
@@ -97,12 +97,12 @@
         "pack_heading": "Choose your bundle",
         "cta_label": "Add CalmiCollar to cart",
         "sticky_button_label": "Add to cart",
-        "one_time_cta_note": "Designed for daily separation-anxiety support.",
+        "one_time_cta_note": "Designed to support calmer separation-anxiety routines over time.",
         "shipping_note": "Fast US shipping",
         "guarantee_note": "30-day money-back guarantee",
         "payment_note": "Secure checkout with major payment methods",
         "left_guarantee_title": "Try it worry-free for 30 days",
-        "left_guarantee_text": "If CalmiCollar is not the right fit for your dog, we will refund your purchase. Simple as that.",
+        "left_guarantee_text": "If CalmiCollar is not the right fit for your dog's calm-support routine, we will refund your purchase. Simple as that.",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "show",
         "hide_variants": false,
@@ -116,32 +116,32 @@
           "type": "point",
           "settings": {
             "icon": "heart",
-            "title": "Prescription meds",
-            "text": "They can dull behavior, but they do not teach the nervous system how to feel safe when you leave."
+            "title": "Sedation is not the same as feeling safe",
+            "text": "Even when a dog seems quieter, that does not always mean the nervous system has actually reset out of panic when you leave."
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
             "icon": "shield",
-            "title": "Crating and cages",
-            "text": "Confinement can intensify panic when the dog already feels trapped and abandoned."
+            "title": "More confinement can intensify the alarm",
+            "text": "Crating or isolation can make some dogs feel even more trapped when the survival response is already firing."
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
             "icon": "science",
-            "title": "Leaving the TV on",
-            "text": "Background noise does not change the survival-mode signals firing in the brain."
+            "title": "Distraction is not a reset signal",
+            "text": "Background noise might fill the room, but it does not necessarily tell the brain that the separation event is safe."
           }
         },
         "point_4": {
           "type": "point",
           "settings": {
             "icon": "star",
-            "title": "Exhausting walks",
-            "text": "Physical tiredness does not always stop emotional panic, destructive chewing, or stress barking."
+            "title": "A tired dog can still be panicking",
+            "text": "Physical exhaustion does not always stop emotional panic, destructive chewing, or stress barking once the alarm response begins."
           }
         }
       },
@@ -153,11 +153,11 @@
       ],
       "settings": {
         "bg_color": "#f7fbfd",
-        "eyebrow": "Survival mode",
-        "title": "Your dog is not being bad. Their brain is stuck in survival mode.",
-        "text": "<p>Separation anxiety is not stubbornness. It is a full-body panic response. Barking, indoor accidents, pacing, and furniture destruction are the outward symptoms of a nervous system that feels unsafe the second you leave.</p>",
-        "analogy_title": "You do not need harsher discipline. You need a stronger safety signal.",
-        "analogy_text": "<p>CalmiCollar uses calming pheromone cues to signal safety, helping the nervous system shift out of panic so your dog can settle faster.</p>",
+        "eyebrow": "Survival-mode reset",
+        "title": "Separation anxiety starts as a nervous-system alarm, not a behavior problem.",
+        "text": "<p>When some dogs see keys, shoes, or the door close, the brain can shift straight into survival mode. Barking, pacing, indoor accidents, chewing, and frantic searching are often downstream signs of a dog that no longer feels safe being left alone.</p>",
+        "analogy_title": "The goal is to reset the alarm signal before panic takes over.",
+        "analogy_text": "<p>CalmiCollar is best framed as a wearable safety cue that helps the nervous system settle faster, so training and routine have a calmer starting point.</p>",
         "layout": "diagram_right"
       }
     },
@@ -168,16 +168,16 @@
           "type": "feature",
           "settings": {
             "icon": "science",
-            "title": "CAP",
-            "text": "<p>Tells the brain everything is fine here by helping block external fear signals.</p>"
+            "title": "CAP = turns down outside alarm cues",
+            "text": "<p>Helps reduce the intensity of external threat signals that can push departure moments into panic.</p>"
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "heart",
-            "title": "MAP",
-            "text": "<p>Mimics the mother dog's safety signal, calming internal stress and panic from the inside out.</p>"
+            "title": "MAP = reinforces the 'you're safe' cue",
+            "text": "<p>Mimics a maternal reassurance signal associated with settling, security, and calmer alone-time transitions.</p>"
           }
         }
       },
@@ -187,9 +187,9 @@
       ],
       "settings": {
         "bg_color": "#EAF7F7",
-        "eyebrow": "The Science of Pheromones",
-        "title": "Why NeuroEase Blend calms the brain before behavior spirals.",
-        "text": "<p>A dual-signal pheromone approach that reduces outside threat perception while increasing the feeling of maternal safety and calm.</p>"
+        "eyebrow": "How the reset cue works",
+        "title": "Why NeuroEase is built to turn the alarm down before the spiral builds.",
+        "text": "<p>The collar's role is not to knock a dog out. It is to create steadier safety cues so the nervous system can move from high alert toward a calmer baseline.</p>"
       }
     },
     "checklist": {
@@ -199,15 +199,15 @@
           "type": "item",
           "settings": {
             "icon": "check_mark",
-            "title": "Shrinks settling time",
-            "text": "<p>Helps your dog come down faster after departure cues and routine changes.</p>"
+            "title": "Faster recovery after departure cues",
+            "text": "<p>Supports shorter panic spikes after the shoes, keys, crate, or door routine begins.</p>"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
             "icon": "heart",
-            "title": "Reduces whining & barking",
+            "title": "Less barking, whining, and pacing",
             "text": "<p>Supports a calmer response when your dog realizes they are being left alone.</p>"
           }
         },
@@ -215,15 +215,15 @@
           "type": "item",
           "settings": {
             "icon": "shield",
-            "title": "Enables training",
-            "text": "<p>Creates a calmer starting point so your training cues are easier to absorb.</p>"
+            "title": "A calmer baseline for training",
+            "text": "<p>Creates a steadier starting point so gradual alone-time work and training cues are easier to absorb.</p>"
           }
         },
         "item_4": {
           "type": "item",
           "settings": {
             "icon": "science",
-            "title": "Ends destructive chewing",
+            "title": "Less destructive coping behavior",
             "text": "<p>Helps reduce panic behaviors like chewing, scratching, and frantic searching.</p>"
           }
         },
@@ -231,8 +231,8 @@
           "type": "item",
           "settings": {
             "icon": "star",
-            "title": "Eases separation anxiety",
-            "text": "<p>Built for dogs who panic when being left alone, even for short routines.</p>"
+            "title": "More realistic alone-time practice",
+            "text": "<p>Built for dogs who panic when being left alone, even during short routines, and need a calmer starting point.</p>"
           }
         }
       },
@@ -245,9 +245,53 @@
       ],
       "settings": {
         "bg_color": "#FFFFFF",
-        "eyebrow": "What it helps stop",
-        "title": "The daily symptoms CalmiCollar helps calm down.",
-        "text": "<p>A quick visual checklist of the separation-anxiety behaviors the collar is designed to reduce over time.</p>"
+        "eyebrow": "What the reset supports",
+        "title": "The day-to-day signs owners want to see as survival mode starts easing.",
+        "text": "<p>CalmiCollar is best positioned around calmer transitions: less immediate panic, faster settling, and a better starting point for training over time.</p>"
+      }
+    },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "Vet Approved"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "100% Drug-Free"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Up to 30 days per collar"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "Cut-to-fit design"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "bg_color": "#10243A",
+        "eyebrow": "Trust and routine fit",
+        "title": "Calm support designed to feel realistic in an everyday separation-anxiety routine."
       }
     },
     "guarantee": {
@@ -256,7 +300,7 @@
         "bg_color": "#10243a",
         "icon": "shield",
         "title": "30-Day Money-Back Guarantee",
-        "text": "<p>If CalmiCollar is not the right fit for your dog, we will refund your purchase. No hassles, no questions asked.</p>"
+        "text": "<p>If CalmiCollar is not the right fit for your dog's calm-support routine, we will refund your purchase. No hassles, no questions asked.</p>"
       }
     },
     "faq": {
@@ -294,7 +338,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Can I use it alongside training?",
-            "answer": "<p>Yes. It works best as a calm-support layer alongside routine, structure, and training practice.</p>"
+            "answer": "<p>Yes. It works best as a calm-support layer alongside routine, gradual alone-time practice, and training consistency.</p>"
           }
         }
       },
@@ -316,6 +360,7 @@
     "agitation",
     "mechanism",
     "checklist",
+    "transparency",
     "guarantee",
     "faq"
   ]

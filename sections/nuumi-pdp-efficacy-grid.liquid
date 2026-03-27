@@ -14,16 +14,28 @@
       {%- for block in section.blocks -%}
         <article class="nuumi-pdp-efficacy__card" {{ block.shopify_attributes }}>
           <div class="nuumi-pdp-efficacy__card-top">
-            {%- if block.settings.image != blank -%}
-              <span class="nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--image">
-                {{ block.settings.image | image_url: width: 96 | image_tag:
-                  loading: 'lazy',
-                  class: 'nuumi-pdp-efficacy__image',
-                  widths: '48, 72, 96'
-                }}
-              </span>
+            {%- if block.settings.icon_source == 'image' and block.settings.image != blank -%}
+              {% render 'nuumi-icon-media',
+                icon_source: block.settings.icon_source,
+                icon: block.settings.icon,
+                custom_svg: block.settings.custom_svg,
+                image: block.settings.image,
+                alt: block.settings.title,
+                wrapper_class: 'nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--image',
+                icon_class: 'nuumi-pdp-efficacy__image',
+                image_width: 96,
+                image_sizes: '96px',
+                image_widths: '48, 72, 96'
+              %}
             {%- else -%}
-              <span class="nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+              {% render 'nuumi-icon-media',
+                icon_source: block.settings.icon_source,
+                icon: block.settings.icon,
+                custom_svg: block.settings.custom_svg,
+                image: block.settings.image,
+                alt: block.settings.title,
+                wrapper_class: 'nuumi-pdp-efficacy__media nuumi-pdp-efficacy__media--icon'
+              %}
             {%- endif -%}
             {%- if block.settings.tag != blank -%}
               <span class="nuumi-pdp-efficacy__tag">{{ block.settings.tag }}</span>
@@ -57,6 +69,7 @@
       "name": "Ingredient",
       "limit": 12,
       "settings": [
+        { "type": "select", "id": "icon_source", "label": "Icon Source", "options": [{ "value": "icon", "label": "Theme Icon" }, { "value": "svg", "label": "Custom SVG" }, { "value": "image", "label": "Image" }], "default": "image" },
         {
           "type": "image_picker",
           "id": "image",
@@ -69,6 +82,7 @@
           "options": [{ "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "leaf", "label": "Leaf" }, { "value": "heart", "label": "Heart" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "star", "label": "Star" }],
           "default": "science"
         },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
         { "type": "text", "id": "tag", "label": "Tag", "default": "Core active" },
         { "type": "text", "id": "title", "label": "Ingredient", "default": "L-Glutamine" },
         { "type": "text", "id": "benefit", "label": "Benefit", "default": "Primary fuel for intestinal cells." },

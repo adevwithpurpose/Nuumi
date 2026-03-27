@@ -7,24 +7,24 @@
           "type": "support_point",
           "settings": {
             "icon": "check_mark",
-            "title": "Video course included",
-            "text": "A step-by-step leash-walk system you can start immediately."
+            "title": "Milestone-based video course",
+            "text": "A guided leash-walk roadmap you can start immediately instead of piecing random tips together."
           }
         },
         "support_2": {
           "type": "support_point",
           "settings": {
             "icon": "heart",
-            "title": "eBook included",
-            "text": "A companion guide that makes the process easy to follow and repeat."
+            "title": "Companion guide included",
+            "text": "An eBook that makes the walk progression easier to follow, repeat, and revisit between sessions."
           }
         },
         "support_3": {
           "type": "support_point",
           "settings": {
             "icon": "star",
-            "title": "3 bonuses included",
-            "text": "Three free resources that increase the perceived value and training depth."
+            "title": "3 roadmap-support bonuses",
+            "text": "Three extra resources that help you stay consistent when real-world walks get messy."
           }
         }
       },
@@ -35,19 +35,19 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Calm walks without the pulling",
+        "eyebrow": "A guided roadmap for calmer leash behavior",
         "badge_primary": "Instant Digital Access",
         "badge_secondary": "No Shipping Required",
-        "headline": "How To Stop Your Dog Pulling On The Leash In Less Than 7 Days.",
-        "subtitle": "Transform walks into relaxing moments. Make your dog walk beside you calmly and trust your judgment BEFORE reacting to a threat.",
-        "description": "<p>A step-by-step digital training system built to make your dog calmer, more responsive, and easier to guide on every walk.</p>",
+        "headline": "A guided leash-walk roadmap for dogs who pull, rush, and ignore the lead.",
+        "subtitle": "A digital training system that helps you build calmer walk habits step by step, so your dog is easier to guide before tension and reactivity take over.",
+        "description": "<p>The Leash Walk Formula is best framed as a milestone-based behavior roadmap: understand the pattern, install calmer walking habits, and build reliability across real-world walks.</p>",
         "price_label": "Today only",
         "compare_at_price_text": "$97",
         "price_badge": "Save $50",
         "price_note": "Instant digital delivery. No waiting.",
         "cta_label": "Get instant access now",
         "sticky_button_label": "Get instant access",
-        "cta_note": "Includes video course, eBook, and 3 free bonuses.",
+        "cta_note": "Includes video course, eBook, and 3 free bonuses arranged around a guided walk-training roadmap.",
         "shipping_note": "Instant digital access",
         "guarantee_note": "60-day money-back guarantee",
         "payment_note": "Secure checkout with major payment methods",
@@ -55,6 +55,89 @@
         "mobile_thumbnails": "show",
         "hide_variants": false,
         "enable_video_looping": false
+      }
+    },
+    "agitation": {
+      "type": "nuumi-pdp-agitation",
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "icon": "science",
+            "title": "Random leash tips rarely create a full behavior shift",
+            "text": "Most owners collect corrections, hacks, and gear advice, but without a progression the same pulling and walk tension keep resetting."
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "icon": "shield",
+            "title": "Better gear does not replace a roadmap",
+            "text": "Harnesses and leashes can help, but they do not automatically teach the dog how to stay calmer, slower, and more responsive beside you."
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "icon": "heart",
+            "title": "Inconsistent practice creates inconsistent walks",
+            "text": "If the next step is never clear, most routines break down the moment real-life distractions show up outside."
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ],
+      "settings": {
+        "bg_color": "#f7fbfd",
+        "eyebrow": "Why leash progress often stalls",
+        "title": "Most leash problems keep repeating because owners get isolated tips, not a training roadmap.",
+        "text": "<p>Pulling, rushing, and walk-time reactivity usually do not improve from random corrections or gear swaps alone. Without a clear progression, owners try fixes out of order and end up recreating the same chaotic walk again and again.</p>",
+        "analogy_title": "You do not need more force. You need a milestone path.",
+        "analogy_text": "<p>The Leash Walk Formula is best framed as a guided roadmap: understand the trigger pattern, install calmer walking habits, and then build reliability across real-world walks.</p>",
+        "layout": "diagram_right"
+      }
+    },
+    "timeline": {
+      "type": "nuumi-pdp-transformation-timeline",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "phase": "Day 1",
+            "title": "You see why the walk keeps unraveling",
+            "text": "The first milestone is clarity: understanding the pattern behind the pulling, tension, and reactive moments so training stops feeling random."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "phase": "Days 2-4",
+            "title": "You install the first calmer walk habits",
+            "text": "Once the structure is clearer, the program helps you practice the early behaviors that make walks feel slower, cleaner, and easier to guide."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "phase": "Days 5-7 and beyond",
+            "title": "The routine starts feeling more repeatable",
+            "text": "The longer goal is not a magic trick. It is a walk routine you can keep repeating so calmer behavior becomes easier to build on in real life."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "bg_color": "#eef7f9",
+        "eyebrow": "The milestone roadmap",
+        "title": "A guided walk-training progression instead of another pile of leash advice.",
+        "text": "<p>The Leash Walk Formula is strongest when it feels like a clear sequence: understand the pattern, practice the first corrective habits, and then keep building reliability across real-world walks.</p>"
       }
     },
     "what_you_get": {
@@ -65,7 +148,7 @@
           "settings": {
             "icon": "science",
             "title": "Video course",
-            "text": "<p>A step-by-step manual that is easy to understand and apply with dogs of all ages, breeds, temperaments, and sizes.</p>"
+            "text": "<p>The core roadmap that walks you through the leash-behavior progression in a simple, step-by-step way.</p>"
           }
         },
         "item_2": {
@@ -73,7 +156,7 @@
           "settings": {
             "icon": "check_mark",
             "title": "eBook companion",
-            "text": "<p>An easy reference guide that helps you apply the lessons outside the video sessions.</p>"
+            "text": "<p>An easy reference guide that helps you apply the milestones outside the video sessions.</p>"
           }
         },
         "item_3": {
@@ -81,7 +164,7 @@
           "settings": {
             "icon": "heart",
             "title": "Mobile-friendly lessons",
-            "text": "<p>Watch and learn from your phone, tablet, or computer whenever you have a few minutes free.</p>"
+            "text": "<p>Watch and learn from your phone, tablet, or computer whenever you need a quick refresher before the next walk.</p>"
           }
         }
       },
@@ -93,8 +176,8 @@
       "settings": {
         "bg_color": "#F7FBFD",
         "eyebrow": "What you get",
-        "title": "A digital training system that feels complete from day one.",
-        "text": "<p>Designed to transform walks into calm, structured moments with practical lessons you can start immediately.</p>"
+        "title": "A digital roadmap that feels usable from day one.",
+        "text": "<p>Everything inside is structured to help you move from chaotic walks toward a calmer, more repeatable routine.</p>"
       }
     },
     "bonuses": {
@@ -136,8 +219,8 @@
       "settings": {
         "bg_color": "#FFFFFF",
         "eyebrow": "Free bonuses",
-        "title": "Three extra bonuses that make the program feel complete.",
-        "text": "<p>Each bonus increases the perceived value of the program and deepens the walk-training system.</p>"
+        "title": "Three extra bonuses that support the roadmap when real life gets messy.",
+        "text": "<p>Each bonus helps reinforce the walk-training system without making the routine feel complicated.</p>"
       }
     },
     "authority": {
@@ -145,10 +228,54 @@
       "settings": {
         "bg_color": "#FFFFFF",
         "badge_text": "Instructor authority",
-        "heading": "Meet Cinzia, the trainer behind the course.",
-        "quote": "<p>With 13+ years of experience as a dog trainer, Cinzia teaches the small but powerful strategies that help your dog recognize you as the guide on every walk.</p>",
+        "heading": "Meet Cinzia, the trainer behind the roadmap.",
+        "quote": "<p>With 13+ years of experience as a dog trainer, Cinzia teaches the small but powerful progression that helps your dog recognize you as the guide on every walk.</p>",
         "name": "Cinzia",
         "credentials": "13+ years of dog-training experience"
+      }
+    },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Instant digital access"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "Step-by-step video course"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "eBook companion included"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "60-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "bg_color": "#10243A",
+        "eyebrow": "Trust and access",
+        "title": "Everything you need to start the routine the same day you buy."
       }
     },
     "guarantee": {
@@ -166,22 +293,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Is it possible to train a dog through a digital course?",
-            "answer": "<p>Yes. The course is built to break the process into clear, practical lessons you can apply step by step in real life.</p>"
+            "question": "Can a digital course really improve real-life walks?",
+            "answer": "<p>Yes. The course is built to break the process into clear, practical milestones you can apply step by step in real-life walks.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "I am short on time, how long will it take?",
-            "answer": "<p>The lessons are designed to be easy to follow and can be implemented in short training windows throughout the week.</p>"
+            "question": "I am short on time. Can I still follow the roadmap?",
+            "answer": "<p>Yes. The lessons are designed to be easy to follow and can be practiced in short training windows throughout the week.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
             "question": "Will it work for my adopted dog?",
-            "answer": "<p>Yes. The course is framed for dogs of different ages, backgrounds, breeds, and temperaments, including adopted dogs.</p>"
+            "answer": "<p>The course is framed for dogs of different ages, backgrounds, breeds, and temperaments, including adopted dogs. As with any training program, progress depends on consistency and the dog's starting point.</p>"
           }
         }
       },
@@ -198,9 +325,12 @@
   },
   "order": [
     "main",
+    "agitation",
+    "timeline",
     "what_you_get",
     "bonuses",
     "authority",
+    "transparency",
     "guarantee",
     "faq"
   ]

@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -17,8 +8,8 @@
           "settings": {
             "image": "shopify://shop_images/Untitled_Instagram_Post_1.png",
             "icon": "science",
-            "title": "Targets the gut lining directly",
-            "text": "Designed to feed and rebuild the damaged intestinal wall instead of just covering up the symptom of the week."
+            "title": "Built for barrier-repair support",
+            "text": "Positioned for dogs whose digestive flare patterns keep circling back when the gut routine never feels fully rebuilt."
           }
         },
         "support_2": {
@@ -26,8 +17,8 @@
           "settings": {
             "image": "shopify://shop_images/Untitled_Instagram_Post_4.png",
             "icon": "shield",
-            "title": "Built for chronic diarrhea and itching cycles",
-            "text": "Made for the dogs who have already cycled through premium food, probiotics, and temporary fixes without lasting relief."
+            "title": "Liquid format for daily consistency",
+            "text": "The liquid format is easier to keep up with during a longer repair window than another chew, topper, or stop-start powder routine."
           }
         },
         "support_3": {
@@ -35,16 +26,16 @@
           "settings": {
             "image": "shopify://shop_images/Untitled_Instagram_Post_2.png",
             "icon": "heart",
-            "title": "Structured for the full 8-12 week transformation",
-            "text": "The page is built to encourage a long enough protocol for the gut barrier, skin, and immune pattern to visibly shift."
+            "title": "Designed for the full protocol window",
+            "text": "Best framed as a steady daily routine for families evaluating support across a real 8-12 week window, not a one-time fix."
           }
         },
         "pack_1": {
           "type": "pack_option",
           "settings": {
             "title": "1 Bottle",
-            "subtitle": "30-day reset",
-            "note": "Best for a first trial",
+            "subtitle": "30-day opening phase",
+            "note": "Best for testing routine fit",
             "badge": "",
             "discount_percent": 0,
             "quantity": 1
@@ -55,7 +46,7 @@
           "settings": {
             "title": "3 Bottles",
             "subtitle": "90-day repair window",
-            "note": "Our recommended protocol",
+            "note": "Best for the full protocol",
             "badge": "Most Popular",
             "discount_percent": 18,
             "quantity": 3
@@ -65,8 +56,8 @@
           "type": "pack_option",
           "settings": {
             "title": "6 Bottles",
-            "subtitle": "180-day best value",
-            "note": "For the most stubborn chronic cases",
+            "subtitle": "180-day maintenance runway",
+            "note": "For longer-term routine support",
             "badge": "Best Value",
             "discount_percent": 28,
             "quantity": 6
@@ -83,39 +74,39 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Clinical gut-barrier support for dogs",
+        "eyebrow": "A steadier gut-support routine for chronic flare cycles",
         "badge_primary": "Pharmaceutical-Grade Ingredients",
         "badge_secondary": "Manufactured in the USA",
-        "headline": "Say Goodbye to Your Dog's Chronic Diarrhea, Itchy Skin, and Constant Vet Visits.",
-        "subtitle": "",
-        "description": "<p>The liquid gut-sealing system that helps repair microscopic tears in the intestinal wall for lasting, root-cause relief.</p>",
+        "headline": "A more serious daily gut-support protocol for dogs stuck in the flare-up cycle.",
+        "subtitle": "The liquid-format formula built around L-Glutamine, hydrolyzed collagen, and supportive botanicals for families trying to stay consistent through a real repair window.",
+        "description": "<p>EnerCanis is positioned as a daily gut-support protocol for dogs whose loose stool, skin flare patterns, or digestive fragility keep circling back when the routine never feels fully rebuilt.</p>",
         "rating_value": 4.8,
-        "review_count": "3,847",
-        "rating_caption": "Trusted by 27,000+ dog owners.",
+        "review_count": "",
+        "rating_caption": "Daily gut-support positioning",
         "price_label": "Choose your supply",
         "purchase_mode_heading": "Choose purchase option",
-        "purchase_microcopy": "",
+        "purchase_microcopy": "Best framed as a 90-day repair routine",
         "one_time_label": "One-Time Purchase",
         "one_time_mode_text": "Pay once, no subscription",
-        "one_time_note": "Risk-free trial supply.",
+        "one_time_note": "Best for testing routine fit.",
         "one_time_badge": "Best Trial",
         "enable_subscribe_mode": true,
         "subscribe_discount_percent": 20,
         "subscribe_label": "Subscribe & Save",
         "subscribe_badge": "Save 20%",
-        "subscribe_note": "Lower monthly cost. Skip or cancel anytime.",
-        "subscribe_cta_label": "Claim Discount & Try Risk-Free",
-        "subscribe_cta_note": "Subscribe now to lock in savings and keep your dog on protocol.",
-        "pack_heading": "Select Bundle",
-        "cta_label": "Start Your Dog's 90-Day Reset",
-        "sticky_button_label": "Start Your Dog's 90-Day Reset",
-        "one_time_cta_note": "90-Day Money Back Guarantee.",
+        "subscribe_note": "Lower monthly cost for a longer repair routine. Skip or cancel anytime.",
+        "subscribe_cta_label": "Start the repair routine",
+        "subscribe_cta_note": "Subscribe now to lock in savings and support a steadier 90-day gut routine.",
+        "pack_heading": "Choose your supply",
+        "cta_label": "Start Your Dog's 90-Day Repair Routine",
+        "sticky_button_label": "Start Your Dog's 90-Day Repair Routine",
+        "one_time_cta_note": "A lower-friction way to begin a more serious gut-support routine.",
         "shipping_note": "Fast US shipping",
-        "guarantee_note": "90-day worry-free guarantee",
-        "payment_note": "Secure checkout",
+        "guarantee_note": "Satisfaction support available",
+        "payment_note": "Secure checkout with major payment methods",
         "left_guarantee_image": "shopify://shop_images/1761414454286_1747422318739_1747343375411_NR_5_TryIt.png",
-        "left_guarantee_title": "Try it worry-free for 90 days",
-        "left_guarantee_text": "If your dog does not show visible improvement after the full supply, we will refund your purchase. Simple as that.",
+        "left_guarantee_title": "Try the repair routine worry-free for 90 days",
+        "left_guarantee_text": "A lower-friction way to start a more serious gut-support protocol, backed by practical satisfaction support.",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "show",
         "hide_variants": false,
@@ -129,8 +120,8 @@
           "type": "point",
           "settings": {
             "icon": "science",
-            "title": "Why symptoms keep bouncing back",
-            "text": "The lining stays irritated, so the triggers keep circulating long after the bowl has been changed."
+            "title": "Why the same symptoms keep resurfacing",
+            "text": "When the gut lining stays stressed, stool issues, skin flare patterns, and food sensitivity worries can keep reappearing even after short-lived improvement."
           }
         }
       },
@@ -139,11 +130,11 @@
       ],
       "settings": {
         "bg_color": "#f7fbfd",
-        "eyebrow": "Why the usual fixes keep failing",
-        "title": "Premium food and store-bought probiotics may calm the symptom, but they rarely repair the damaged gut barrier underneath it.",
-        "text": "<p>When the intestinal lining is damaged, it behaves like a torn screen door. Nutrients struggle to stay where they belong while toxins, allergens, and inflammatory waste keep leaking into the bloodstream. That is why the diarrhea, itching, and vet visits never really feel finished.</p>",
-        "analogy_title": "Think of it like a torn screen door.",
-        "analogy_text": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back into the house. EnerCanis is designed to help rebuild the screen instead of endlessly cleaning up the mess.</p>",
+        "eyebrow": "Why the flare-up cycle keeps restarting",
+        "title": "Short digestive fixes may help for a moment, but they rarely feel like a real repair protocol for dogs stuck in repeat flare patterns.",
+        "text": "<p>When the routine never feels fully rebuilt, families often keep rotating food changes, probiotics, toppers, and temporary add-ons without feeling like they have landed on a steadier long-term approach.</p>",
+        "analogy_title": "Think of it like patching leaks without rebuilding the lining.",
+        "analogy_text": "<p>You can keep rotating quick fixes, but the routine still feels fragile if the gut barrier never gets steadier support. EnerCanis is better framed as a daily repair protocol instead of another short-term digestive add-on.</p>",
         "image": "shopify://shop_images/Gemini_Generated_Image_ym5vrzym5vrzym5v.png",
         "layout": "diagram_right"
       }
@@ -155,24 +146,24 @@
           "type": "step",
           "settings": {
             "phase": "Days 5-7",
-            "title": "Firmer stools and reduced gas",
-            "text": "The earliest win is usually less digestive chaos at ground level: fewer urgent stool issues, less bloating, and less constant stomach noise."
+            "title": "The digestive routine feels less chaotic",
+            "text": "Early progress is often about fewer stop-start moments: easier daily dosing, less guesswork, and a routine that finally feels sustainable."
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
             "phase": "Weeks 2-4",
-            "title": "Skin improvements and reduced itching",
-            "text": "As the barrier settles down, many dogs start showing less scratching, less redness, and a calmer immune response overall."
+            "title": "Day-to-day comfort can start feeling steadier",
+            "text": "With consistent use, many families are looking for fewer swings in stool quality, meal recovery, and general digestive calm rather than dramatic overnight change."
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
             "phase": "Weeks 8-12",
-            "title": "A visible shift in chronic patterns",
-            "text": "By the full protocol window, the goal is that the old cycle of diarrhea, itching, and repeat vet visits no longer feels like your normal."
+            "title": "The full repair window becomes easier to evaluate",
+            "text": "By the longer protocol window, the goal is to judge EnerCanis as a serious long-term support layer instead of another short trial that never had enough time."
           }
         }
       },
@@ -183,9 +174,9 @@
       ],
       "settings": {
         "bg_color": "#eef7f9",
-        "eyebrow": "What improvement usually looks like",
-        "title": "A timeline built around visible, believable progress instead of miracle promises.",
-        "text": "<p>The protocol is strongest when it sets honest expectations: first the gut settles, then the skin and immune stress begin backing off, and finally the longer chronic patterns start losing momentum.</p>"
+        "eyebrow": "What a repair routine usually looks like",
+        "title": "A steadier 90-day timeline instead of another stop-start experiment.",
+        "text": "<p>The strongest promise here is progression: first the routine becomes easier to keep consistent, then day-to-day digestive comfort often feels steadier, and over the longer window families can judge whether the protocol deserves a permanent place in care.</p>"
       }
     },
     "how_to_use": {
@@ -214,8 +205,8 @@
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_cieny1cieny1cien_1.png",
             "step_label": "Step 3",
-            "title": "Stay consistent for 8-12 weeks",
-            "text": "Consistency is key. Most dogs show early signs first, then full chronic-pattern improvement over time."
+            "title": "Stay consistent through the full window",
+            "text": "Use it daily through the recommended routine window so you can evaluate steady support, not just a few early days."
           }
         }
       },
@@ -226,8 +217,8 @@
       ],
       "settings": {
         "bg_color": "#f2f8fc",
-        "title": "How To Use",
-        "text": "Follow these 3 simple daily steps to stay consistent and get the best barrier-repair outcome."
+        "title": "How to run the EnerCanis routine",
+        "text": "Three simple steps that make the 90-day repair window easier to follow."
       }
     },
     "efficacy_grid": {
@@ -383,8 +374,8 @@
       "settings": {
         "bg_color": "#ffffff",
         "eyebrow": "The 12-ingredient efficacy grid",
-        "title": "Every ingredient has a specific job in the barrier-repair chain.",
-        "text": "<p>EnerCanis is structured around barrier fuel, connective-tissue rebuilding, inflammatory control, and microbiome support so the protocol feels clinically coherent from first dose to full transformation window.</p>"
+        "title": "Every ingredient has a specific job in the daily-support formula.",
+        "text": "<p>EnerCanis is structured around barrier support, connective-tissue support, inflammatory balance, and microbiome support so the formula feels coherent from first dose through the longer routine window.</p>"
       }
     },
     "transparency": {
@@ -394,21 +385,21 @@
           "type": "item",
           "settings": {
             "icon": "leaf",
-            "text": "100% Vegan"
+            "text": "Pharmaceutical-Grade Ingredients"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
             "icon": "heart",
-            "text": "Keto-Friendly"
+            "text": "Liquid format for easy daily use"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
             "icon": "star",
-            "text": "BBB A+ Rating"
+            "text": "Manufactured in the USA"
           }
         },
         "item_4": {
@@ -422,14 +413,14 @@
           "type": "item",
           "settings": {
             "icon": "science",
-            "text": "No GMOs"
+            "text": "Supports gut-barrier health"
           }
         },
         "item_6": {
           "type": "item",
           "settings": {
             "icon": "check_mark",
-            "text": "BPA Free"
+            "text": "Designed for long-term digestive support"
           }
         },
         "item_7": {
@@ -452,95 +443,7 @@
       "settings": {
         "bg_color": "#10243a",
         "eyebrow": "Trust and transparency",
-        "title": "Everything a desperate pet parent wants to verify before buying."
-      }
-    },
-    "social_proof": {
-      "type": "nuumi-pdp-social-proof",
-      "blocks": {
-        "video_nq99Wa": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/ShoppingPaw.com_4.mp4",
-            "video_url": "",
-            "title": "Their coats are much shiner than before. Francoise M."
-          }
-        },
-        "video_QJdJVX": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/ShoppingPaw.com_3.mp4",
-            "video_url": "",
-            "title": "Within just 2 weeks Max's digestion completely improved and he's like a puppy again. Caitilin S."
-          }
-        },
-        "video_RqgQnT": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/ShoppingPaw.com_2.mp4",
-            "video_url": "",
-            "title": "Her digestion has definitely improved. Luana L."
-          }
-        },
-        "review_1": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "badge": "Verified Buyer",
-            "quote": "We tried prescription food, powders, and rotating probiotics. EnerCanis was the first thing that made his stool look normal and his skin stop flaring every few days.",
-            "highlight": "Visible change by week two.",
-            "name": "Melissa R.",
-            "meta": "English bulldog parent"
-          }
-        },
-        "review_2": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "badge": "Photo Review",
-            "quote": "The biggest difference was how quickly the gut chaos settled. Once that happened, the itching and redness also started improving instead of staying in a constant cycle.",
-            "highlight": "Less itching, better stools.",
-            "name": "Andre T.",
-            "meta": "Rescue mix parent"
-          }
-        },
-        "review_3": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "badge": "Most Helpful",
-            "quote": "The 3-bottle plan made the difference for us. One bottle was encouraging, but by the full supply window it really felt like his old chronic pattern had broken.",
-            "highlight": "3-bottle protocol felt worth it.",
-            "name": "Jasmine L.",
-            "meta": "Senior dog parent"
-          }
-        },
-        "review_6Pftrb": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "badge": "Verified Buyer",
-            "quote": "After months of messy stools and vet visits, EnerCanis was the first thing that actually made the pattern start calming down.",
-            "highlight": "Firmer stools in the first week.",
-            "name": "Melissa R.",
-            "meta": "French bulldog parent"
-          }
-        }
-      },
-      "block_order": [
-        "video_nq99Wa",
-        "video_QJdJVX",
-        "video_RqgQnT",
-        "review_1",
-        "review_2",
-        "review_3",
-        "review_6Pftrb"
-      ],
-      "settings": {
-        "bg_color": "#ffffff",
-        "eyebrow": "Real family proof",
-        "title": "The reviews all sound the same: finally, the stool settled and the itching started backing off.",
-        "text": "<p>These cards are written to feel like the relief pet parents are actually chasing: less mess, less scratching, and fewer desperate swings from one failed fix to the next.</p>"
+        "title": "The routine-fit details shoppers usually want to verify before they buy."
       }
     },
     "expert": {
@@ -561,64 +464,36 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Will EnerCanis work for my dog?",
-            "answer": "<p>EnerCanis addresses the root cause of chronic digestive, skin, and immune issues—damaged intestinal barrier. Our clinical observation showed 83% of dogs with chronic gut-related problems had meaningful improvement when used consistently for 3 months. With our 90-Day Guarantee, you can see results risk-free.</p>"
+            "question": "What is EnerCanis designed to support?",
+            "answer": "<p>EnerCanis is designed to support digestive comfort, gut-barrier health, and a healthier day-to-day gut routine.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>Most owners notice firmer stools and reduced gas in 5-7 days. Skin improvements show in weeks 2-4. Energy and vitality increase by weeks 4-6. Complete transformation of chronic patterns typically occurs in 8-12 weeks. Remember: we're healing years of damage, not masking symptoms overnight.</p>"
+            "question": "Why a liquid format?",
+            "answer": "<p>The liquid format is easy to use consistently and fits naturally into a daily routine.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Is EnerCanis safe?",
-            "answer": "<p>Absolutely. All ingredients are pharmaceutical-grade and naturally-derived with extensive safety profiles. L-Glutamine and Collagen are nutrients dogs produce naturally. PEA is found in common foods. Probiotic strains are specifically selected for canine gut environments. No harsh chemicals, artificial additives, or known allergens. If your dog takes medications or has health conditions, consult your vet before starting (as with any supplement).</p>"
+            "question": "How long should I use it?",
+            "answer": "<p>EnerCanis is best framed as a daily routine used consistently through the longer 8-12 week repair window, not as a one-time fix.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What if my dog won't eat it?",
-            "answer": "<p>The natural beef flavor is highly palatable—most dogs lick their bowls clean. For picky eaters, try mixing with a tablespoon of bone broth or warming the food slightly to enhance aroma. The liquid format ensures they get the full dose even if mixed into wet food or a small amount of high-value treat.</p>"
+            "question": "Is this a medication?",
+            "answer": "<p>No. EnerCanis is a wellness supplement designed for everyday routine support.</p>"
           }
         },
         "faq_5": {
           "type": "faq_item",
           "settings": {
-            "question": "How do I use EnerCanis?",
-            "answer": "<p>Simply add the recommended dose directly to your dog's food and mix. Use EnerCanis once daily. The dose depends on the size of your dog, but you will find clear instructions on the product label.</p>"
-          }
-        },
-        "faq_6": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How many bottles should I order?",
-            "answer": "<p>It is also depends on the size of your dog, but we do usually recommend the 3-bottle package because intestinal barrier needs consistent support. The 6-bottle package offers best value and ensures supply through complete healing plus maintenance phase. Many customers transition to Subscribe & Save after initial transformation.</p>"
-          }
-        },
-        "faq_7": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What if I accidentally give too much?",
-            "answer": "<p>EnerCanis has a wide safety margin. Occasional slight overdosing (like giving 3ml instead of 2ml) is harmless. If significantly overdosed, you might see temporary soft stool as the body adjusts. Simply reduce to normal dose the next day. If concerned, contact your vet.</p>"
-          }
-        },
-        "faq_8": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What happens if I'm not happy with results?",
-            "answer": "<p>While many customers are happy with their experience, we know that everybody is different. That’s why we offer a 90-day money-back guarantee. So, if your dog didn't show improvement, we'll refund your purchase as soon as possible, usually within 2-3 business days.</p>"
-          }
-        },
-        "faq_9": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Where are ingredients sourced?",
-            "answer": "<p>Manufactured in the USA from premium domestic and globally sourced ingredients. All suppliers meet pharmaceutical-grade quality standards and undergo third-party testing for purity and potency.</p>"
+            "question": "Can I follow the expert on Instagram?",
+            "answer": "<p>Yes. The expert section supports a merchant-editable Instagram profile link.</p>"
           }
         }
       },
@@ -627,11 +502,7 @@
         "faq_2",
         "faq_3",
         "faq_4",
-        "faq_5",
-        "faq_6",
-        "faq_7",
-        "faq_8",
-        "faq_9"
+        "faq_5"
       ],
       "settings": {
         "bg_color": "#f7fbfd",
@@ -643,8 +514,8 @@
       "settings": {
         "bg_color": "#10243a",
         "icon": "shield",
-        "title": "90-Day Worry-Free Transformation Guarantee",
-        "text": "<p>If your dog does not show visible improvement after the full supply, we will refund your purchase. Simple as that.</p>"
+        "title": "A more confident way to start a gut-support protocol",
+        "text": "<p>A lower-friction way to begin a more serious gut-support routine, backed by practical satisfaction support.</p>"
       }
     },
     "related-products": {
@@ -674,7 +545,6 @@
     "how_to_use",
     "efficacy_grid",
     "transparency",
-    "social_proof",
     "expert",
     "faq",
     "guarantee",

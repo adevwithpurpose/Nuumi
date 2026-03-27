@@ -3,9 +3,7 @@
 <div class="nuumi-guarantee section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
   <div class="page-width">
     <div class="nuumi-guarantee__container">
-      <div class="nuumi-guarantee__icon-wrapper">
-        {% render 'nuumi-icons', icon: section.settings.icon %}
-      </div>
+      {% render 'nuumi-icon-media', icon_source: section.settings.icon_source, icon: section.settings.icon, custom_svg: section.settings.custom_svg, image: section.settings.custom_image, wrapper_class: 'nuumi-guarantee__icon-wrapper', icon_class: 'nuumi-guarantee__icon', image_width: 112, image_sizes: '56px', image_widths: '56, 84, 112', alt: section.settings.title %}
       <div class="nuumi-guarantee__content">
         <h2 class="nuumi-guarantee__title">{{ section.settings.title }}</h2>
         <div class="nuumi-guarantee__text">{{ section.settings.text }}</div>
@@ -28,6 +26,17 @@
     },
     {
       "type": "select",
+      "id": "icon_source",
+      "label": "Icon Source",
+      "options": [
+        { "value": "icon", "label": "Theme Icon" },
+        { "value": "svg", "label": "Custom SVG" },
+        { "value": "image", "label": "Image" }
+      ],
+      "default": "icon"
+    },
+    {
+      "type": "select",
       "id": "icon",
       "label": "Icon",
       "options": [
@@ -42,6 +51,16 @@
         { "value": "heart", "label": "Heart" }
       ],
       "default": "shield"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_svg",
+      "label": "Custom SVG Markup"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image",
+      "label": "Custom Image"
     },
     {
       "type": "text",

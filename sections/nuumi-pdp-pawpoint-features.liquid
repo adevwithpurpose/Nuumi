@@ -17,7 +17,14 @@
     <div class="nuumi-pdp-mechanism__grid">
       {%- for block in section.blocks -%}
         <article class="nuumi-pdp-mechanism__card" {{ block.shopify_attributes }}>
-          <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          {% render 'nuumi-icon-media',
+            icon_source: block.settings.icon_source,
+            icon: block.settings.icon,
+            custom_svg: block.settings.custom_svg,
+            image: block.settings.image,
+            alt: block.settings.title,
+            wrapper_class: 'nuumi-pdp-mechanism__icon'
+          %}
           <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
           <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
         </article>
@@ -43,7 +50,10 @@
       "name": "Feature",
       "limit": 5,
       "settings": [
+        { "type": "select", "id": "icon_source", "label": "Icon Source", "options": [{ "value": "icon", "label": "Theme Icon" }, { "value": "svg", "label": "Custom SVG" }, { "value": "image", "label": "Image" }], "default": "icon" },
         { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "check_mark", "label": "Check Mark" }, { "value": "science", "label": "Science" }, { "value": "shield", "label": "Shield" }, { "value": "heart", "label": "Heart" }, { "value": "star", "label": "Star" }], "default": "check_mark" },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "title", "label": "Title", "default": "Finger-Control Precision" },
         { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>" }
       ]

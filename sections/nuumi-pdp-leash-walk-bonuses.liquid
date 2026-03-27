@@ -17,16 +17,28 @@
     <div class="nuumi-pdp-mechanism__grid">
       {%- for block in section.blocks -%}
         <article class="nuumi-pdp-mechanism__card" {{ block.shopify_attributes }}>
-          {%- if block.settings.image != blank -%}
-            <div class="nuumi-pdp-whats-included__image-wrapper">
-              {{ block.settings.image | image_url: width: 500 | image_tag:
-                loading: 'lazy',
-                class: 'nuumi-pdp-whats-included__image',
-                widths: '160, 240, 320, 500'
-              }}
-            </div>
+          {%- if block.settings.icon_source == 'image' and block.settings.image != blank -%}
+            {% render 'nuumi-icon-media',
+              icon_source: block.settings.icon_source,
+              icon: block.settings.icon,
+              custom_svg: block.settings.custom_svg,
+              image: block.settings.image,
+              alt: block.settings.title,
+              wrapper_class: 'nuumi-pdp-whats-included__image-wrapper',
+              icon_class: 'nuumi-pdp-whats-included__image',
+              image_width: 500,
+              image_sizes: '(min-width: 750px) 160px, 40vw',
+              image_widths: '160, 240, 320, 500'
+            %}
           {%- else -%}
-            <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+            {% render 'nuumi-icon-media',
+              icon_source: block.settings.icon_source,
+              icon: block.settings.icon,
+              custom_svg: block.settings.custom_svg,
+              image: block.settings.image,
+              alt: block.settings.title,
+              wrapper_class: 'nuumi-pdp-mechanism__icon'
+            %}
           {%- endif -%}
           <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
           <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
@@ -56,8 +68,10 @@
       "name": "Bonus",
       "limit": 3,
       "settings": [
+        { "type": "select", "id": "icon_source", "label": "Icon Source", "options": [{ "value": "icon", "label": "Theme Icon" }, { "value": "svg", "label": "Custom SVG" }, { "value": "image", "label": "Image" }], "default": "image" },
         { "type": "image_picker", "id": "image", "label": "Mockup image" },
         { "type": "select", "id": "icon", "label": "Fallback icon", "options": [{ "value": "star", "label": "Star" }, { "value": "check_mark", "label": "Check Mark" }, { "value": "science", "label": "Science" }], "default": "star" },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
         { "type": "text", "id": "title", "label": "Title", "default": "Bonus title" },
         { "type": "richtext", "id": "text", "label": "Description", "default": "<p>Bonus description.</p>" },
         { "type": "text", "id": "value_text", "label": "Value tag", "default": "Value: $27 - YOURS FREE" }

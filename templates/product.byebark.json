@@ -71,18 +71,18 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Modern bark control, without the harsh feel",
+        "eyebrow": "A calmer way to interrupt barking before the loop snowballs",
         "badge_primary": "Veterinary Reviewed",
         "badge_secondary": "100% Pain-Free",
-        "headline": "Stops The Bark In Seconds - And Breaks The Habit For Good In Just 3 Days!",
-        "subtitle": "Uses advanced 'Frequency-Shift™ Technology' to instantly capture attention and stop nuisance barking without getting your dog 'used to the sound'.",
-        "description": "<p>ByeBark helps interrupt fence fighting, delivery-driver barking, and frantic jumping or nipping with a faster, lower-friction tool that is easy to keep nearby.</p>",
+        "headline": "A faster way to interrupt barking before the whole loop takes over.",
+        "subtitle": "ByeBark uses a shifting ultrasonic cue to break the attention spiral in the moment, so you can redirect instead of yell, chase, or escalate.",
+        "description": "<p>ByeBark is best framed as an interruption tool for fence fighting, delivery-driver barking, door triggers, and overstimulated home moments where the same bark loop keeps repeating.</p>",
         "rating_value": 4.8,
         "review_count": "2,300+",
         "rating_caption": "Happy Customers",
         "price_label": "Choose your setup",
         "purchase_mode_heading": "Choose purchase option",
-        "purchase_microcopy": "2,300+ transformed dog owners",
+        "purchase_microcopy": "Built for repeated home-trigger interruption",
         "one_time_label": "One-Time Purchase",
         "one_time_mode_text": "Pay once, no subscription",
         "one_time_note": "One-time purchase. No hidden fees.",
@@ -97,12 +97,12 @@
         "pack_heading": "Choose your bundle",
         "cta_label": "Add ByeBark to cart",
         "sticky_button_label": "Add to cart",
-        "one_time_cta_note": "All bundles include 2 free digital bonuses ($194 value).",
+        "one_time_cta_note": "All bundles include 2 free digital bonuses built around the redirect routine.",
         "shipping_note": "Fast US shipping",
         "guarantee_note": "60-day quiet-home guarantee",
         "payment_note": "Secure checkout with major payment methods",
         "left_guarantee_title": "Try it worry-free for 60 days",
-        "left_guarantee_text": "If your dog does not show visible improvement, we will refund your purchase. Simple as that.",
+        "left_guarantee_text": "If ByeBark is not the right fit for your home-trigger routine, we will refund your purchase. Simple as that.",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "show",
         "hide_variants": false,
@@ -116,16 +116,16 @@
           "type": "point",
           "settings": {
             "icon": "science",
-            "title": "Why yelling and shock collars fail",
-            "text": "Yelling adds to the chaos, and shock collars create fear. Neither breaks the actual barking loop."
+            "title": "Why yelling and punishment backfire",
+            "text": "When the dog is already escalated, extra noise or harsh correction can feed the same arousal loop instead of ending it."
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
             "icon": "shield",
-            "title": "The flat-tone device problem",
-            "text": "Dogs quickly get used to single-frequency devices and start ignoring them."
+            "title": "Why single-tone gadgets stop working",
+            "text": "If the signal never changes, many dogs begin filtering it out right when you need interruption to stay reliable."
           }
         }
       },
@@ -135,11 +135,11 @@
       ],
       "settings": {
         "bg_color": "#f7fbfd",
-        "eyebrow": "The Barking Loop",
-        "title": "Why traditional methods keep failing to stop the noise.",
-        "text": "<p>When a dog is locked into a barking spiral, they aren't listening. Yelling just sounds like you're barking with them. Shock collars create anxiety that can make reactivity worse. And cheap flat-tone devices lose their effectiveness in days.</p>",
-        "analogy_title": "You need to break the pattern, not punish the dog.",
-        "analogy_text": "<p>ByeBark uses a shifting frequency that instantly captures their attention, pulling them out of the barking loop so you can redirect their behavior.</p>",
+        "eyebrow": "The interruption loop",
+        "title": "Most bark-control tools fail because they react after the spiral already owns the moment.",
+        "text": "<p>Doorbells, fence movement, hallway noise, or passing dogs can trigger the same sequence fast: alert, bark, owner reacts, dog gets more activated, then the whole loop repeats louder. Yelling adds energy, shock adds stress, and flat-tone devices often lose novelty.</p>",
+        "analogy_title": "You need to interrupt the loop early, not overpower it later.",
+        "analogy_text": "<p>ByeBark is best framed as an attention-break tool: use it at the start of the spiral, create a pause, then redirect before the barking momentum keeps building.</p>",
         "layout": "diagram_right"
       }
     },
@@ -150,8 +150,8 @@
           "type": "feature",
           "settings": {
             "icon": "science",
-            "title": "One-Button Precision",
-            "text": "<p>Instantly capture attention with a single press.</p>"
+            "title": "Fast one-button interruption",
+            "text": "<p>Lets you respond right as barking starts instead of fumbling through the escalation.</p>"
           }
         },
         "feat_2": {
@@ -159,23 +159,23 @@
           "settings": {
             "icon": "shield",
             "title": "Variable Ultrasound (30-40kHz)",
-            "text": "<p>Prevents your dog from getting used to the sound.</p>"
+            "text": "<p>The shifting cue helps the interrupt signal stay novel enough to keep working across repeated triggers.</p>"
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "heart",
-            "title": "USB-C Rechargeable",
-            "text": "<p>Fast charging for reliable daily use.</p>"
+            "title": "Rechargeable for repeated trigger zones",
+            "text": "<p>Keeps the device ready by the door, yard, or hallway where the bark loop usually begins.</p>"
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
             "icon": "star",
-            "title": "LED Flashlight",
-            "text": "<p>Added safety and visibility for evening walks.</p>"
+            "title": "Low-friction redirect support",
+            "text": "<p>The built-in light makes it easier to keep close and use during evening walks or outdoor trigger moments.</p>"
           }
         }
       },
@@ -187,9 +187,9 @@
       ],
       "settings": {
         "bg_color": "#EAF7F7",
-        "eyebrow": "BarkSense Technology",
-        "title": "How BarkSense Technology Works",
-        "text": "<p>A smarter way to interrupt the barking loop.</p>"
+        "eyebrow": "How the interruption routine works",
+        "title": "Built to catch the bark loop early and give you a reset window.",
+        "text": "<p>The job is simple: interrupt the first few beats of the pattern, hold attention long enough to redirect, and stay useful across repeated household triggers.</p>"
       }
     },
     "comparison": {
@@ -198,7 +198,7 @@
         "comp_1": {
           "type": "feature",
           "settings": {
-            "title": "100% Pain-Free",
+            "title": "Pain-free interruption",
             "others_has_feature": true,
             "third_has_feature": false
           }
@@ -206,7 +206,7 @@
         "comp_2": {
           "type": "feature",
           "settings": {
-            "title": "Frequency-Shift Technology",
+            "title": "Shifting cue to reduce tune-out",
             "others_has_feature": false,
             "third_has_feature": false
           }
@@ -214,7 +214,7 @@
         "comp_3": {
           "type": "feature",
           "settings": {
-            "title": "Precision Timing",
+            "title": "Made for the first-bark moment",
             "others_has_feature": false,
             "third_has_feature": false
           }
@@ -222,7 +222,7 @@
         "comp_4": {
           "type": "feature",
           "settings": {
-            "title": "60-Day Guarantee",
+            "title": "Fits home and walk triggers",
             "others_has_feature": false,
             "third_has_feature": false
           }
@@ -230,7 +230,7 @@
         "comp_5": {
           "type": "feature",
           "settings": {
-            "title": "Free Training Protocol",
+            "title": "Redirect-support bonuses included",
             "others_has_feature": false,
             "third_has_feature": false
           }
@@ -245,8 +245,8 @@
       ],
       "settings": {
         "bg_color": "#FFFFFF",
-        "subtitle": "ByeBark vs harsher approaches",
-        "title": "A calmer bark-control setup for everyday home triggers.",
+        "subtitle": "ByeBark vs reactive bark-control routines",
+        "title": "A simpler way to interrupt the loop without turning the moment into a fight.",
         "nuumi_name": "ByeBark",
         "others_name": "Other Brands",
         "third_name": "Shock Collars"
@@ -282,17 +282,25 @@
         "item_4": {
           "type": "item",
           "settings": {
-            "icon": "star",
-            "title": "Bonus: Training Guide",
-            "text": "<p>Digital protocol for best results.</p>"
+            "icon": "check_mark",
+            "title": "User Guide",
+            "text": "<p>Quick-start instructions for fitting ByeBark into the barking-trigger moments that happen most often at home.</p>"
           }
         },
         "item_5": {
           "type": "item",
           "settings": {
             "icon": "star",
-            "title": "Bonus: Behavior Masterclass",
-            "text": "<p>Expert video training series.</p>"
+            "title": "Bonus: The Silence-Locking Protocol",
+            "text": "<p>A digital guide for using ByeBark more consistently around the home.</p>"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "title": "Bonus: The Doorbell Dread Fix",
+            "text": "<p>A focused bonus for one of the most common household barking triggers.</p>"
           }
         }
       },
@@ -301,13 +309,58 @@
         "item_2",
         "item_3",
         "item_4",
-        "item_5"
+        "item_5",
+        "item_6"
       ],
       "settings": {
         "bg_color": "#F7FBFD",
         "eyebrow": "Everything you need",
-        "title": "What's in the box",
-        "text": "<p>Plus 2 free digital bonuses ($194 value) to help you get started.</p>"
+        "title": "What's in the box + bonus training support",
+        "text": "<p>Device essentials plus 2 free digital bonuses to help you use ByeBark more consistently at home.</p>"
+      }
+    },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "Pain-free ultrasonic support"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "Frequency-Shift Technology"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "User guide included"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "2 free digital bonuses"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "bg_color": "#10243A",
+        "eyebrow": "Trust and clarity",
+        "title": "A bark-control tool built for calmer interruption, not harsher routines."
       }
     },
     "guarantee": {
@@ -316,7 +369,7 @@
         "bg_color": "#10243a",
         "icon": "shield",
         "title": "60-Day Quiet-Home Guarantee",
-        "text": "<p>If your dog does not show visible improvement, we will refund your purchase. Simple as that.</p>"
+        "text": "<p>If your home and walks are not noticeably quieter, we will refund your purchase. No hassles, no questions asked.</p>"
       }
     },
     "faq": {
@@ -354,7 +407,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Is the sound painful for my dog?",
-            "answer": "<p>No, the ultrasonic sound is 100% pain-free. It is designed to be surprising and attention-grabbing, not painful.</p>"
+            "answer": "<p>No. The ultrasonic sound is designed to be surprising and attention-grabbing, not painful.</p>"
           }
         },
         "faq_6": {
@@ -375,7 +428,7 @@
           "type": "faq_item",
           "settings": {
             "question": "How long does it take to see results?",
-            "answer": "<p>Many owners see an immediate interruption in barking. With consistent use alongside our free training protocol, most dogs break the habit for good in just 3 days.</p>"
+            "answer": "<p>Many owners notice an immediate interruption in the moment. Longer habit change depends on consistency, trigger management, and how early you use it in the barking loop.</p>"
           }
         }
       },
@@ -401,6 +454,7 @@
     "mechanism",
     "comparison",
     "whats_included",
+    "transparency",
     "guarantee",
     "faq"
   ]

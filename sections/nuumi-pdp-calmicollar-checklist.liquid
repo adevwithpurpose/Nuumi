@@ -17,7 +17,7 @@
     <div class="nuumi-pdp-mechanism__grid nuumi-pdp-checklist__grid">
       {%- for block in section.blocks -%}
         <article class="nuumi-pdp-mechanism__card nuumi-pdp-checklist__card" {{ block.shopify_attributes }}>
-          <div class="nuumi-pdp-mechanism__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+          {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.custom_image, wrapper_class: 'nuumi-pdp-mechanism__icon', icon_class: 'nuumi-pdp-mechanism__icon', image_width: 96, image_sizes: '48px', image_widths: '48, 72, 96', alt: block.settings.title %}
           <h3 class="nuumi-pdp-mechanism__card-title">{{ block.settings.title }}</h3>
           <div class="nuumi-pdp-mechanism__card-text">{{ block.settings.text }}</div>
         </article>
@@ -45,6 +45,17 @@
       "settings": [
         {
           "type": "select",
+          "id": "icon_source",
+          "label": "Icon Source",
+          "options": [
+            { "value": "icon", "label": "Theme Icon" },
+            { "value": "svg", "label": "Custom SVG" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "icon"
+        },
+        {
+          "type": "select",
           "id": "icon",
           "label": "Icon",
           "options": [
@@ -56,6 +67,8 @@
           ],
           "default": "check_mark"
         },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
+        { "type": "image_picker", "id": "custom_image", "label": "Custom Image" },
         { "type": "text", "id": "title", "label": "Title", "default": "Shrinks settling time" },
         { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Helps dogs come down faster after departure cues and routine changes.</p>" }
       ]
@@ -65,11 +78,11 @@
     {
       "name": "CalmiCollar Checklist",
       "blocks": [
-        { "type": "item", "settings": { "icon": "check_mark", "title": "Shrinks settling time", "text": "<p>Helps dogs come down faster after departure cues and routine changes.</p>" } },
-        { "type": "item", "settings": { "icon": "heart", "title": "Reduces whining & barking", "text": "<p>Supports a calmer response when your dog realizes they are being left alone.</p>" } },
-        { "type": "item", "settings": { "icon": "shield", "title": "Enables training", "text": "<p>Creates a calmer starting point so your training cues are easier to absorb.</p>" } },
-        { "type": "item", "settings": { "icon": "science", "title": "Ends destructive chewing", "text": "<p>Helps reduce panic behaviors like chewing, scratching, and frantic searching.</p>" } },
-        { "type": "item", "settings": { "icon": "star", "title": "Eases separation anxiety", "text": "<p>Built for dogs who panic when being left alone, even for short routines.</p>" } }
+        { "type": "item", "settings": { "icon_source": "icon", "icon": "check_mark", "title": "Shrinks settling time", "text": "<p>Helps dogs come down faster after departure cues and routine changes.</p>" } },
+        { "type": "item", "settings": { "icon_source": "icon", "icon": "heart", "title": "Reduces whining & barking", "text": "<p>Supports a calmer response when your dog realizes they are being left alone.</p>" } },
+        { "type": "item", "settings": { "icon_source": "icon", "icon": "shield", "title": "Enables training", "text": "<p>Creates a calmer starting point so your training cues are easier to absorb.</p>" } },
+        { "type": "item", "settings": { "icon_source": "icon", "icon": "science", "title": "Ends destructive chewing", "text": "<p>Helps reduce panic behaviors like chewing, scratching, and frantic searching.</p>" } },
+        { "type": "item", "settings": { "icon_source": "icon", "icon": "star", "title": "Eases separation anxiety", "text": "<p>Built for dogs who panic when being left alone, even for short routines.</p>" } }
       ]
     }
   ]

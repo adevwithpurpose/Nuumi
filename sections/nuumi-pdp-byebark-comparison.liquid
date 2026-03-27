@@ -32,30 +32,50 @@
             <tr {{ block.shopify_attributes }}>
               <td class="nuumi-comparison__td-feature">{{ block.settings.title }}</td>
               <td class="nuumi-comparison__td-nuumi">
-                <div class="nuumi-comparison__check">
-                  {% render 'nuumi-icons', icon: 'check_mark' %}
-                </div>
+                {% render 'nuumi-icon-media',
+                  icon_source: section.settings.positive_icon_source,
+                  icon: section.settings.positive_icon,
+                  custom_svg: section.settings.positive_custom_svg,
+                  image: section.settings.positive_image,
+                  wrapper_class: 'nuumi-comparison__check'
+                %}
               </td>
               <td class="nuumi-comparison__td-others">
                 {%- if block.settings.others_has_feature -%}
-                  <div class="nuumi-comparison__check nuumi-comparison__check--muted">
-                    {% render 'nuumi-icons', icon: 'check_mark' %}
-                  </div>
+                  {% render 'nuumi-icon-media',
+                    icon_source: section.settings.positive_icon_source,
+                    icon: section.settings.positive_icon,
+                    custom_svg: section.settings.positive_custom_svg,
+                    image: section.settings.positive_image,
+                    wrapper_class: 'nuumi-comparison__check nuumi-comparison__check--muted'
+                  %}
                 {%- else -%}
-                  <div class="nuumi-comparison__cross">
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </div>
+                  {% render 'nuumi-icon-media',
+                    icon_source: section.settings.negative_icon_source,
+                    icon: section.settings.negative_icon,
+                    custom_svg: section.settings.negative_custom_svg,
+                    image: section.settings.negative_image,
+                    wrapper_class: 'nuumi-comparison__cross'
+                  %}
                 {%- endif -%}
               </td>
               <td class="nuumi-comparison__td-others">
                 {%- if block.settings.third_has_feature -%}
-                  <div class="nuumi-comparison__check nuumi-comparison__check--muted">
-                    {% render 'nuumi-icons', icon: 'check_mark' %}
-                  </div>
+                  {% render 'nuumi-icon-media',
+                    icon_source: section.settings.positive_icon_source,
+                    icon: section.settings.positive_icon,
+                    custom_svg: section.settings.positive_custom_svg,
+                    image: section.settings.positive_image,
+                    wrapper_class: 'nuumi-comparison__check nuumi-comparison__check--muted'
+                  %}
                 {%- else -%}
-                  <div class="nuumi-comparison__cross">
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </div>
+                  {% render 'nuumi-icon-media',
+                    icon_source: section.settings.negative_icon_source,
+                    icon: section.settings.negative_icon,
+                    custom_svg: section.settings.negative_custom_svg,
+                    image: section.settings.negative_image,
+                    wrapper_class: 'nuumi-comparison__cross'
+                  %}
                 {%- endif -%}
               </td>
             </tr>
@@ -112,6 +132,73 @@
       "id": "third_name",
       "label": "Third Column Name",
       "default": "Shock Collars"
+    },
+    {
+      "type": "select",
+      "id": "positive_icon_source",
+      "label": "Positive indicator source",
+      "options": [
+        { "value": "icon", "label": "Theme Icon" },
+        { "value": "svg", "label": "Custom SVG" },
+        { "value": "image", "label": "Image" }
+      ],
+      "default": "icon"
+    },
+    {
+      "type": "select",
+      "id": "positive_icon",
+      "label": "Positive indicator icon",
+      "options": [
+        { "value": "check_mark", "label": "Check Mark" },
+        { "value": "shield", "label": "Shield" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "star", "label": "Star" }
+      ],
+      "default": "check_mark"
+    },
+    {
+      "type": "textarea",
+      "id": "positive_custom_svg",
+      "label": "Positive indicator custom SVG"
+    },
+    {
+      "type": "image_picker",
+      "id": "positive_image",
+      "label": "Positive indicator image"
+    },
+    {
+      "type": "select",
+      "id": "negative_icon_source",
+      "label": "Negative indicator source",
+      "options": [
+        { "value": "icon", "label": "Theme Icon" },
+        { "value": "svg", "label": "Custom SVG" },
+        { "value": "image", "label": "Image" }
+      ],
+      "default": "svg"
+    },
+    {
+      "type": "select",
+      "id": "negative_icon",
+      "label": "Negative indicator icon",
+      "options": [
+        { "value": "shield", "label": "Shield" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "star", "label": "Star" },
+        { "value": "science", "label": "Science" }
+      ],
+      "default": "shield"
+    },
+    {
+      "type": "textarea",
+      "id": "negative_custom_svg",
+      "label": "Negative indicator custom SVG",
+      "default": "<svg viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13 1L1 13M1 1L13 13\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    {
+      "type": "image_picker",
+      "id": "negative_image",
+      "label": "Negative indicator image"
     }
   ],
   "blocks": [

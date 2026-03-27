@@ -31,7 +31,7 @@
             {%- for block in section.blocks -%}
               <div class="nuumi-story__benefit" {{ block.shopify_attributes }}>
                 <div class="nuumi-story__benefit-icon">
-                  {% render 'nuumi-icons', icon: block.settings.icon %}
+                  {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.custom_image, wrapper_class: 'nuumi-story__benefit-icon', icon_class: 'nuumi-story__benefit-icon', image_width: 72, image_sizes: '28px', image_widths: '28, 40, 56, 72', alt: block.settings.title %}
                 </div>
                 <div class="nuumi-story__benefit-text">
                   <h3 class="nuumi-story__benefit-title">{{ block.settings.title }}</h3>
@@ -106,6 +106,17 @@
       "settings": [
         {
           "type": "select",
+          "id": "icon_source",
+          "label": "Icon Source",
+          "options": [
+            { "value": "icon", "label": "Theme Icon" },
+            { "value": "svg", "label": "Custom SVG" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "icon"
+        },
+        {
+          "type": "select",
           "id": "icon",
           "label": "Icon",
           "options": [
@@ -121,6 +132,8 @@
           ],
           "default": "science"
         },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
+        { "type": "image_picker", "id": "custom_image", "label": "Custom Image" },
         {
           "type": "text",
           "id": "title",

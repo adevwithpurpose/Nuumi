@@ -17,12 +17,12 @@
     <div class="nuumi-pdp-whats-included__grid">
       {%- for block in section.blocks -%}
         <article class="nuumi-pdp-whats-included__card" {{ block.shopify_attributes }}>
-          {%- if block.settings.image != blank -%}
+          {%- if block.settings.icon_source == 'image' and block.settings.image != blank -%}
             <div class="nuumi-pdp-whats-included__image-wrapper">
               {{ block.settings.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'nuumi-pdp-whats-included__image' }}
             </div>
           {%- else -%}
-            <div class="nuumi-pdp-whats-included__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</div>
+            {% render 'nuumi-icon-media', icon_source: block.settings.icon_source, icon: block.settings.icon, custom_svg: block.settings.custom_svg, image: block.settings.image, wrapper_class: 'nuumi-pdp-whats-included__icon', icon_class: 'nuumi-pdp-whats-included__icon', image_width: 96, image_sizes: '48px', image_widths: '48, 72, 96', alt: block.settings.title %}
           {%- endif -%}
           <h3 class="nuumi-pdp-whats-included__card-title">{{ block.settings.title }}</h3>
           <div class="nuumi-pdp-whats-included__card-text">{{ block.settings.text }}</div>
@@ -50,9 +50,20 @@
       "limit": 6,
       "settings": [
         {
+          "type": "select",
+          "id": "icon_source",
+          "label": "Icon Source",
+          "options": [
+            { "value": "icon", "label": "Theme Icon" },
+            { "value": "svg", "label": "Custom SVG" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "icon"
+        },
+        {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "Custom Image"
         },
         {
           "type": "select",
@@ -68,6 +79,7 @@
           ],
           "default": "check_mark"
         },
+        { "type": "textarea", "id": "custom_svg", "label": "Custom SVG Markup" },
         { "type": "text", "id": "title", "label": "Title", "default": "ByeBark Device" },
         { "type": "richtext", "id": "text", "label": "Text", "default": "<p>The core ultrasonic training tool.</p>" }
       ]
