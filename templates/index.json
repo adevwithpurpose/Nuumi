@@ -15,19 +15,19 @@
         "bullet_1": {
           "type": "bullet",
           "settings": {
-            "text": "Gut, calm, bark, and hygiene support"
+            "text": "TRUSTED BY 20,000+ DOG OWNERS"
           }
         },
         "bullet_2": {
           "type": "bullet",
           "settings": {
-            "text": "Focused tools for common daily pet needs"
+            "text": "VETERINARIAN REVIEWED"
           }
         },
         "bullet_3": {
           "type": "bullet",
           "settings": {
-            "text": "A lean five-product routine, not a crowded catalog"
+            "text": "UP TO 60-DAY MONEY BACK GUARANTEE"
           }
         }
       },
@@ -37,11 +37,11 @@
         "bullet_3"
       ],
       "settings": {
-        "title": "Real support for the pet problems families deal with every day.",
-        "subtitle": "Nuumipet brings together targeted essentials for gut health, calming, bark control, ear hygiene, and multi-need support in one cleaner, easier-to-trust routine.",
+        "title": "More good years with your dog. That's what this is really about.",
+        "subtitle": "Every Nuumipet product is built around one goal — helping your dog live a longer, calmer, healthier life.",
         "image": "shopify://shop_images/nuumipet-homepage-hero-lineup-v4-outpaint-wide.jpg",
-        "button_label": "Shop the Essentials",
-        "button_link": "shopify://collections/all"
+        "button_label": "Shop the Lineup",
+        "button_link": "shopify://collections/all#MainContent"
       }
     },
     "nuumi_trust_strip": {
@@ -51,42 +51,35 @@
           "type": "trust_item",
           "settings": {
             "icon": "science",
-            "text": "TARGETED PET SUPPORT"
+            "text": "BUILT AROUND LONGEVITY"
           }
         },
         "item_2": {
           "type": "trust_item",
           "settings": {
-            "icon": "shield",
-            "text": "LEAN 5-PRODUCT LINEUP"
+            "icon": "leaf",
+            "text": "NATURAL INGREDIENTS, ALWAYS"
           }
         },
         "item_3": {
           "type": "trust_item",
           "settings": {
             "icon": "return",
-            "text": "30-DAY GUARANTEE"
+            "text": "UP TO 60-DAY GUARANTEE"
           }
         },
         "item_4": {
           "type": "trust_item",
           "settings": {
             "icon": "star",
-            "text": "TARGETED DAILY SUPPORT"
+            "text": "TRUSTED BY 20,000+ FAMILIES"
           }
         },
         "item_5": {
           "type": "trust_item",
           "settings": {
             "icon": "heart",
-            "text": "DIGESTION TO CALMING"
-          }
-        },
-        "item_6": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "science",
-            "text": "TOOLS AND FORMULAS"
+            "text": "MIND + BODY WELLNESS"
           }
         }
       },
@@ -95,8 +88,7 @@
         "item_2",
         "item_3",
         "item_4",
-        "item_5",
-        "item_6"
+        "item_5"
       ],
       "settings": {
         "speed": 31
@@ -109,24 +101,24 @@
           "type": "proof_item",
           "settings": {
             "icon": "science",
-            "title": "TARGETED SUPPORT",
-            "description": "Each product is built around a clear job, whether that is gut support, bark interruption, calming support, or ear hygiene."
+            "title": "MENTAL WELLNESS",
+            "description": "Nuumipet's calming and behavior products are designed to bring the baseline stress down so your dog can be more balanced, more settled, and healthier over time."
           }
         },
         "proof_2": {
           "type": "proof_item",
           "settings": {
-            "icon": "shield",
-            "title": "CLEANER CHOICES",
-            "description": "The lineup stays lean so shoppers can understand what each essential is for without sorting through filler-heavy wellness clutter."
+            "icon": "heart",
+            "title": "PHYSICAL WELLNESS",
+            "description": "A dog's gut health affects everything — energy, stress resilience, immune function, how they age. Nuumipet's physical wellness formulas support all of it from the inside."
           }
         },
         "proof_3": {
           "type": "proof_item",
           "settings": {
-            "icon": "return",
-            "title": "BUY WITH CONFIDENCE",
-            "description": "From daily digestive care to quick bark support, Nuumipet keeps the routine practical, focused, and backed by a 30-day guarantee."
+            "icon": "leaf",
+            "title": "NATURAL INGREDIENTS, ALWAYS",
+            "description": "Every formula is made with natural ingredients and nothing else. No fillers padding out the label, no proprietary blends hiding what's actually in there. You can read exactly what your dog is getting — and why it's there."
           }
         }
       },
@@ -136,9 +128,9 @@
         "proof_3"
       ],
       "settings": {
-        "eyebrow": "The Nuumipet standard",
-        "title": "Why the lineup feels easier to trust",
-        "description": "<p>Nuumipet is not trying to be everything at once. It is a focused set of formulas and tools built for the issues pet parents are already trying to solve at home.</p>",
+        "eyebrow": "THE NUUMIPET STANDARD",
+        "title": "Three pillars. One direction.",
+        "description": "<p>Everything in the Nuumipet lineup is built around mental wellness, physical wellness, and ingredient transparency — because longevity doesn't come from one product. It comes from covering the whole dog.</p>",
         "padding_top": 28,
         "padding_bottom": 76
       }
@@ -252,15 +244,15 @@
         "proof_point_3"
       ],
       "settings": {
-        "eyebrow": "A clearer product philosophy",
-        "heading": "Built for everyday pet issues, not generic wellness buzzwords.",
+        "eyebrow": "THE NUUMIPET PHILOSOPHY",
+        "heading": "We turn down more product ideas than we greenlight.",
         "image": "shopify://shop_images/leashwalk-slider-bonus-stack-v1-square.jpg",
-        "quote": "A strong pet-wellness routine should make it obvious what to reach for first, what each product is helping with, and how the pieces fit together at home.",
-        "name": "Why Nuumipet stays focused",
-        "role": "Targeted wellness essentials",
-        "body": "<p>That is why the range stays lean: EnerCanis for gut support, ByeBark for bark control, CalmiCollar for calming support, PawPoint for ear hygiene, and one bundle for homes that want broader coverage.</p>",
+        "quote": "If it doesn't move the needle on how long and how well your dog lives, it doesn't get made.",
+        "name": "The filter behind every product",
+        "role": "Why the lineup stays small on purpose",
+        "body": "<p>Most pet brands build a catalog first and figure out the mission later. We did the opposite. Longevity is the filter — and if a product idea doesn't pass it, we don't make it.</p>",
         "padding_top": 88,
-        "padding_bottom": 100
+        "padding_bottom": 48
       }
     },
     "nuumi_media_credibility": {
@@ -352,27 +344,27 @@
           "type": "benefit",
           "settings": {
             "icon": "science",
-            "eyebrow": "Digestive care",
-            "title": "EnerCanis leads with a clear gut-health job.",
-            "text": "It is built around L-Glutamine, Hydrolyzed Collagen, and prebiotic support to help soothe the gut and support the intestinal barrier."
+            "eyebrow": "CALM THE NERVOUS SYSTEM",
+            "title": "CalmiCollar works on the stress running underneath everything else.",
+            "text": "Pheromone technology lowers the baseline anxiety that makes dogs reactive, restless, and hard to reach."
           }
         },
         "benefit_2": {
           "type": "benefit",
           "settings": {
             "icon": "shield",
-            "eyebrow": "Behavior support",
-            "title": "ByeBark and CalmiCollar cover two different stress patterns.",
-            "text": "One helps interrupt barking in the moment, while the other supports calmer behavior for dogs that need more environmental reassurance."
+            "eyebrow": "BUILD THE CONNECTION",
+            "title": "Training is about how you and your dog learn to read each other.",
+            "text": "Nuumipet's training tools give you practical methods for the moments that matter most: walks, reactivity, daily routines. Your dog stops guessing. So do you. And a dog that genuinely understands you is calmer, safer, and easier to keep healthy long-term."
           }
         },
         "benefit_3": {
           "type": "benefit",
           "settings": {
             "icon": "heart",
-            "eyebrow": "Practical care",
-            "title": "PawPoint and the bundle round out the daily routine.",
-            "text": "Ear wipes make preventive hygiene easier, and the Core Wellness Bundle gives multi-need households one simpler place to start."
+            "eyebrow": "STRENGTHEN FROM THE INSIDE",
+            "title": "EnerCanis handles what calming alone can't touch.",
+            "text": "Gut health and stress are more connected in dogs than most owners realize — when digestion is off, anxiety gets worse, energy drops, and the body wears down faster. EnerCanis supports the internal system that keeps everything else running."
           }
         }
       },
@@ -382,9 +374,9 @@
         "benefit_3"
       ],
       "settings": {
-        "eyebrow": "How the lineup fits together",
-        "heading": "Each product solves a different part of the everyday care routine.",
-        "description": "<p>The catalog stays intentionally small so each item can do a specific job well, from gut support and calming to bark control, hygiene, and bundled daily care.</p>",
+        "eyebrow": "HOW THE LINEUP FITS TOGETHER",
+        "heading": "One product helps. The right combination changes the trajectory.",
+        "description": "<p>Each Nuumipet product handles a different piece of your dog's daily health. Here's how they connect — and why most owners end up using more than one.</p>",
         "padding_top": 88,
         "padding_bottom": 88
       }
@@ -395,34 +387,50 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "How do I know which Nuumipet product to start with?",
-            "answer": "<p>Start with the problem you are trying to solve first. EnerCanis supports gut health, ByeBark helps interrupt barking, CalmiCollar supports calmer behavior, PawPoint covers ear hygiene, and the bundle is the broadest option for multi-need homes.</p>"
+            "question": "Which product should I start with?",
+            "answer": "<p>Start with whatever's making your dog's life hardest right now. Anxiety or reactivity — start with CalmiCollar. Digestion, low energy, gut problems — start with EnerCanis.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use more than one product in the routine?",
-            "answer": "<p>Yes, many households will shop across more than one care lane. Because the lineup covers different needs, it is reasonable to pair essentials when your pet needs support in more than one area. If your pet is already under veterinary care or taking medications, check with your veterinarian first.</p>"
+            "question": "Can I use more than one product at the same time?",
+            "answer": "<p>Yes — and most owners end up doing exactly that. CalmiCollar handles the stress running underneath while the training tools work on the specific behaviors you're seeing day to day. EnerCanis can run alongside either of them since it's working on a completely different system. They're designed to cover different jobs, so there's no conflict.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "What is your return policy?",
-            "answer": "<p>Nuumipet highlights a 30-day guarantee so you can try the routine with more confidence. Check the store policy details at checkout or in the footer for the latest terms.</p>"
+            "question": "How quickly will I see results?",
+            "answer": "<p>Depends on the product. CalmiCollar typically shows changes within the first few days. EnerCanis works on gut health, so most owners notice a shift in energy and digestion within 2-3 weeks. Training tools depend on consistency — but owners who follow the methods usually see progress in the first week.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if it doesn't work for my dog?",
+            "answer": "<p>Every Nuumipet product comes with a money-back guarantee. If you don't see results, reach out and we'll take care of it. We'd rather you try it knowing the risk is on us than wonder whether it could have helped.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the ingredients safe for all breeds and ages?",
+            "answer": "<p>Yes. Every formula uses natural ingredients that are safe across breeds and life stages. But if your dog has a specific medical condition or is on medication, it’s always recommended to check with your vet first.</p>"
           }
         }
       },
       "block_order": [
         "faq_1",
         "faq_2",
-        "faq_3"
+        "faq_3",
+        "faq_4",
+        "faq_5"
       ],
       "settings": {
-        "eyebrow": "Before you choose",
-        "heading": "Helpful answers for a smaller, more focused product range.",
-        "description": "<p>The goal is to make choosing feel simpler: understand what each product does, how the lineup works together, and where to find policy details before you check out.</p>",
+        "eyebrow": "BEFORE YOU CHOOSE",
+        "heading": "Real questions, straight answers.",
+        "description": "<p>What each product does, how they work together, and what happens if you're not happy — answered before you check out.</p>",
         "padding_top": 64,
         "padding_bottom": 72
       }
