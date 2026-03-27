@@ -229,29 +229,17 @@ h1.nuumi-home-hero__title {
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
-  padding: 0.78rem 1.35rem;
+  padding: 0.65rem 1.25rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 20px rgba(3, 10, 19, 0.16);
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  opacity: 0.76;
 }
 
 .nuumi-trust-strip__icon {
   width: 2rem;
   height: 2rem;
-  color: rgba(247, 207, 120, 0.96);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.nuumi-trust-strip__icon svg,
-.nuumi-trust-strip__icon img {
-  width: 100%;
-  height: 100%;
-  display: block;
+  color: var(--nuumi-gold);
 }
 
 .nuumi-trust-strip__text {
@@ -388,18 +376,13 @@ h1.nuumi-home-hero__title {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #0f2231 !important;
+  color: var(--nuumi-gold) !important;
 }
 
 .nuumi-proof-grid__icon svg {
   width: 36px !important;
   height: 36px !important;
   display: block;
-}
-
-.nuumi-proof-grid__icon svg circle[fill='currentColor'],
-.nuumi-proof-grid__icon svg path[fill='currentColor'] {
-  color: #c7932b;
 }
 
 .nuumi-proof-grid__item-title {
@@ -1230,7 +1213,6 @@ h1.nuumi-home-hero__title {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #f6f7fb !important;
 }
 
 .nuumi-benefits-story__placeholder-icon-wrap svg,
@@ -1245,7 +1227,6 @@ h1.nuumi-home-hero__title {
   height: 32px !important;
   color: var(--nuumi-gold) !important;
 }
-
 
 .nuumi-benefits-story__card-eyebrow {
   color: var(--nuumi-gold) !important;
