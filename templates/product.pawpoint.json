@@ -474,64 +474,6 @@
         "text": "<p>PawPoint is not just another wipe. It is a finger-control system organized around precision, safety, and visible debris removal.</p>"
       }
     },
-    "features": {
-      "type": "nuumi-pdp-pawpoint-features",
-      "blocks": {
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "icon": "check_mark",
-            "title": "Finger-Control Precision",
-            "text": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>"
-          }
-        },
-        "feature_2": {
-          "type": "feature",
-          "settings": {
-            "icon": "heart",
-            "title": "See Instant Results",
-            "text": "<p>Lift away visible ear gunk so the clean feels obvious and satisfying.</p>"
-          }
-        },
-        "feature_3": {
-          "type": "feature",
-          "settings": {
-            "icon": "science",
-            "title": "pH-Balanced",
-            "text": "<p>Built for regular ear hygiene without the harsh feel of improvised cleaners.</p>"
-          }
-        },
-        "feature_4": {
-          "type": "feature",
-          "settings": {
-            "icon": "shield",
-            "title": "60-Second Clean",
-            "text": "<p>A faster recurring routine that fits easily into real life.</p>"
-          }
-        },
-        "feature_5": {
-          "type": "feature",
-          "settings": {
-            "icon": "star",
-            "title": "Lint-Free Micro-Texture",
-            "text": "<p>Designed to grab debris without leaving fuzz behind in the ear fold.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "feature_1",
-        "feature_2",
-        "feature_3",
-        "feature_4",
-        "feature_5"
-      ],
-      "settings": {
-        "bg_color": "#ffffff",
-        "eyebrow": "Why it is superior",
-        "title": "Why PawPoint outperforms wipes, drops, and cotton swabs.",
-        "text": "<p>A feature checklist built around precision, visible results, and a faster recurring routine.</p>"
-      }
-    },
     "transparency": {
       "type": "nuumi-pdp-transparency-banner",
       "blocks": {
@@ -576,6 +518,55 @@
         "title": "Safe ear care designed for recurring daily or weekly routines."
       }
     },
+    "features": {
+      "type": "nuumi-pdp-pawpoint-features",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Finger-Control Precision",
+            "text": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "science",
+            "title": "pH-Balanced",
+            "text": "<p>Built for regular ear hygiene without the harsh feel of improvised cleaners.</p>"
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "shield",
+            "title": "60-Second Clean",
+            "text": "<p>A faster recurring routine that fits easily into real life.</p>"
+          }
+        },
+        "feature_5": {
+          "type": "feature",
+          "settings": {
+            "icon": "star",
+            "title": "Lint-Free Micro-Texture",
+            "text": "<p>Designed to grab debris without leaving fuzz behind in the ear fold.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_3",
+        "feature_4",
+        "feature_5"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "Why it is superior",
+        "title": "Why PawPoint outperforms wipes, drops, and cotton swabs.",
+        "text": "<p>A feature checklist built around precision, visible results, and a faster recurring routine.</p>"
+      }
+    },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
@@ -610,8 +601,8 @@
     "comparison",
     "reviews",
     "efficacy_grid",
-    "features",
     "transparency",
+    "features",
     "guarantee",
     "final_cta"
   ]
