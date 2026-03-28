@@ -296,7 +296,7 @@
     };
 
     var priceEl = sectionRoot.querySelector('[data-total-price]');
-    var stickyPriceEl = document.querySelector('[data-sticky-price]');
+    var stickyPriceEl = document.querySelector('.nuumi-sticky-cta--calmicollar [data-sticky-price]');
     var quantityInput = sectionRoot.querySelector('[data-quantity-input]');
     var bundleInput = sectionRoot.querySelector('[data-bundle-label]');
     var atcLabel = sectionRoot.querySelector('[data-atc-label]');
@@ -307,8 +307,8 @@
     var packInputs = sectionRoot.querySelectorAll('input[name="calmicollar_pack_{{ section.id }}"]');
     var modeInputs = sectionRoot.querySelectorAll('input[name="calmicollar_mode_{{ section.id }}"]');
     var purchaseOptionInput = sectionRoot.querySelector('[data-purchase-option]');
-    var stickyCta = document.querySelector('[data-sticky-cta]');
-    var stickyButton = document.querySelector('[data-sticky-button]');
+    var stickyCta = document.querySelector('.nuumi-sticky-cta--calmicollar[data-sticky-cta]');
+    var stickyButton = stickyCta ? stickyCta.querySelector('[data-sticky-button]') : null;
     var submitButton = document.getElementById('ProductSubmitButton-{{ section.id }}');
     var buyCard = sectionRoot.querySelector('.nuumi-calmicollar-hero__purchase-card');
 
@@ -428,17 +428,20 @@
     }
 
     if (stickyCta && buyCard) {
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
-            stickyCta.classList.add('nuumi-sticky-cta--visible');
-          } else {
-            stickyCta.classList.remove('nuumi-sticky-cta--visible');
-          }
-        });
-      }, { threshold: 0 });
+      var syncStickyCta = function() {
+        var rect = buyCard.getBoundingClientRect();
+        var shouldShow = rect.bottom <= 0;
+        stickyCta.classList.toggle('nuumi-sticky-cta--visible', shouldShow);
+      };
+
+      var observer = new IntersectionObserver(function() {
+        syncStickyCta();
+      }, { threshold: [0, 1] });
 
       observer.observe(buyCard);
+      window.addEventListener('scroll', syncStickyCta, { passive: true });
+      window.addEventListener('resize', syncStickyCta);
+      syncStickyCta();
     }
 
     if (typeof subscribe === 'function' && typeof PUB_SUB_EVENTS !== 'undefined' && PUB_SUB_EVENTS.variantChange) {
