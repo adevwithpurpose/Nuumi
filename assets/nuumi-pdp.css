@@ -2669,6 +2669,21 @@
     transform: translateY(-1px);
 }
 
+.nuumi-enercanis-hero__mode.is-disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.nuumi-enercanis-hero__mode.is-disabled:hover {
+    transform: none;
+}
+
+.nuumi-enercanis-hero__mode.is-disabled input {
+    pointer-events: none;
+}
+
 .nuumi-enercanis-hero__mode-copy {
     display: grid;
     gap: 0.45rem;
@@ -4030,7 +4045,7 @@
 
 .nuumi-pdp-transparency__title {
     color: #ecf8ff;
-    max-width: 14ch;
+    max-width: 22ch;
     margin: 0 auto;
 }
 

@@ -118,22 +118,31 @@
                     </span>
                   </label>
 
-                  {%- if subscribe_enabled -%}
-                    <label class="nuumi-enercanis-hero__mode is-selected" data-mode-card="subscribe">
+                  <label
+                    class="nuumi-enercanis-hero__mode {% if subscribe_enabled %}is-selected{% else %}is-disabled{% endif %}"
+                    data-mode-card="subscribe"
+                    {% unless subscribe_enabled %}aria-disabled="true" title="Subscription option will be enabled after the subscription app is configured."{% endunless %}
+                  >
                       <input
                         type="radio"
                         name="enercanis_mode_{{ section.id }}"
                         value="subscribe"
                         data-mode="subscribe"
-                        checked
+                        {% if subscribe_enabled %}checked{% endif %}
+                        {% unless subscribe_enabled %}disabled{% endunless %}
                       >
                       <span class="nuumi-enercanis-hero__mode-copy">
                         <span class="nuumi-enercanis-hero__mode-badge">{{ section.settings.subscribe_badge }}</span>
                         <span class="nuumi-enercanis-hero__mode-title">{{ section.settings.subscribe_label }}</span>
-                        <span class="nuumi-enercanis-hero__mode-text">{{ section.settings.subscribe_note }}</span>
+                        <span class="nuumi-enercanis-hero__mode-text">
+                          {% if subscribe_enabled %}
+                            {{ section.settings.subscribe_note }}
+                          {% else %}
+                            Subscription option coming soon once the app is configured.
+                          {% endif %}
+                        </span>
                       </span>
-                    </label>
-                  {%- endif -%}
+                  </label>
                 </div>
               </div>
 

@@ -3,6 +3,7 @@
   assign media_column_class = media_column_class | default: ''
   assign show_left_guarantee = show_left_guarantee | default: false
   assign left_guarantee_class_prefix = left_guarantee_class_prefix | default: 'nuumi-pdp'
+  assign left_guarantee_image_class = left_guarantee_class_prefix | append: '__left-guarantee-image'
   assign hide_variants = hide_variants | default: true
   assign fallback_guarantee_text = fallback_guarantee_text | default: '30-Day'
 %}
@@ -22,7 +23,7 @@
         {%- if section.settings.left_guarantee_image != blank -%}
           {{ section.settings.left_guarantee_image | image_url: width: 240 | image_tag:
             loading: 'lazy',
-            class: left_guarantee_class_prefix | append: '__left-guarantee-image',
+            class: left_guarantee_image_class,
             widths: '96, 144, 192, 240'
           }}
         {%- else -%}
