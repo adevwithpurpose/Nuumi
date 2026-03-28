@@ -263,6 +263,55 @@
         "text": "<p>A quick visual checklist of the separation-anxiety behaviors the collar is designed to reduce over time.</p>"
       }
     },
+    "reviews": {
+      "type": "nuumi-pdp-pawpoint-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Verified Buyer",
+            "quote": "My rescue would panic when I grabbed my keys. CalmiCollar helped him settle much faster and the pacing reduced within days.",
+            "highlight": "Pacing and panic dropped quickly.",
+            "name": "Elena D.",
+            "meta": "Adopted dog parent"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Most Helpful",
+            "quote": "We used crate training, long walks, and music, but she still barked nonstop when left alone. This gave us a calmer baseline to train from.",
+            "highlight": "Calmer baseline for training routines.",
+            "name": "Francesca M.",
+            "meta": "Separation-anxiety case"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Photo Review",
+            "quote": "The house feels different now. Less whining, less destructive chewing, and she recovers faster when we leave.",
+            "highlight": "Home routine feels calmer and more stable.",
+            "name": "Luca R.",
+            "meta": "Multi-dog home"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "Real Results",
+        "title": "What Dog Parents Are Saying About CalmiCollar.",
+        "text": "Verified reviews from homes using CalmiCollar for separation-anxiety support."
+      }
+    },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
@@ -329,6 +378,7 @@
     "agitation",
     "mechanism",
     "checklist",
+    "reviews",
     "guarantee",
     "faq"
   ]

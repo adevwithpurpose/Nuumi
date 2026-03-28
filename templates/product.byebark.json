@@ -265,6 +265,55 @@
         "third_name": "Shock Collars"
       }
     },
+    "reviews": {
+      "type": "nuumi-pdp-pawpoint-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Verified Buyer",
+            "quote": "My dog used to explode at every delivery knock. With ByeBark and consistent timing, the barking loop finally became manageable.",
+            "highlight": "Delivery-trigger barking dropped fast.",
+            "name": "Marco L.",
+            "meta": "Verified Buyer"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Most Helpful",
+            "quote": "I wanted something pain-free and practical. ByeBark gave us a cleaner way to interrupt barking without adding stress.",
+            "highlight": "A calmer, no-shock routine.",
+            "name": "Sophie T.",
+            "meta": "Multi-dog household"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Home Use",
+            "quote": "The frequency-shift pattern made a big difference compared to old single-tone devices we tried before.",
+            "highlight": "Did not get tuned out like old tools.",
+            "name": "Daniel P.",
+            "meta": "Apartment dog parent"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "Real Results",
+        "title": "What Dog Parents Are Saying About ByeBark.",
+        "text": "Verified reviews from households using ByeBark in daily barking triggers."
+      }
+    },
     "whats_included": {
       "type": "nuumi-pdp-byebark-whats-included",
       "blocks": {
@@ -395,6 +444,7 @@
     "agitation",
     "mechanism",
     "comparison",
+    "reviews",
     "whats_included",
     "faq"
   ]
