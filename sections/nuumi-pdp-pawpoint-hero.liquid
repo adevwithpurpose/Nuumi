@@ -18,12 +18,18 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   {% assign current_variant = product.selected_or_first_available_variant %}
   {% assign base_price = current_variant.price | default: product.price %}
+  {% assign base_compare_at_price = current_variant.compare_at_price | default: product.compare_at_price %}
+  {% assign has_compare_at_price = false %}
+  {% if base_compare_at_price and base_compare_at_price > base_price %}
+    {% assign has_compare_at_price = true %}
+  {% endif %}
   {% assign pack_blocks = section.blocks | where: 'type', 'pack_option' %}
   {% assign support_blocks = section.blocks | where: 'type', 'support_point' %}
   {% assign first_pack = pack_blocks | first %}
   {% assign default_quantity = first_pack.settings.quantity | default: 1 %}
   {% assign default_bundle_title = first_pack.settings.title | default: '1 Pack' %}
   {% assign one_time_total_price = base_price | times: default_quantity %}
+  {% assign one_time_compare_total_price = base_compare_at_price | times: default_quantity %}
   {% assign form_id = 'product-form-' | append: section.id %}
   {% assign subscribe_enabled = false %}
 
@@ -145,6 +151,11 @@
                 <p class="nuumi-pawpoint-hero__price" data-total-price>{{ one_time_total_price | money }}</p>
               </div>
               <div class="nuumi-pawpoint-hero__price-meta">
+                {%- if has_compare_at_price -%}
+                  <p class="nuumi-pawpoint-hero__compare-at" data-compare-price>{{ one_time_compare_total_price | money }}</p>
+                {%- else -%}
+                  <p class="nuumi-pawpoint-hero__compare-at" data-compare-price style="display:none"></p>
+                {%- endif -%}
                 <span class="nuumi-pawpoint-hero__price-chip" data-price-chip>{{ section.settings.one_time_badge }}</span>
                 <p class="nuumi-pawpoint-hero__price-note" data-price-note>{{ section.settings.one_time_note }}</p>
               </div>
@@ -260,6 +271,7 @@
     if (!sectionRoot) return;
 
     var basePrice = {{ base_price | json }};
+    var baseCompareAtPrice = {{ base_compare_at_price | default: 0 | json }};
     var sectionSettings = {
       subscribeDiscountPercent: {{ section.settings.subscribe_discount_percent | default: 0 | json }},
       oneTimeLabel: {{ section.settings.one_time_label | json }},
@@ -282,6 +294,7 @@
     var atcLabel = sectionRoot.querySelector('[data-atc-label]');
     var ctaNote = sectionRoot.querySelector('[data-cta-note]');
     var priceNote = sectionRoot.querySelector('[data-price-note]');
+    var comparePriceEl = sectionRoot.querySelector('[data-compare-price]');
     var priceChip = sectionRoot.querySelector('[data-price-chip]');
     var packInputs = sectionRoot.querySelectorAll('input[name="pawpoint_pack_{{ section.id }}"]');
     var modeInputs = sectionRoot.querySelectorAll('input[name="pawpoint_mode_{{ section.id }}"]');
@@ -322,8 +335,10 @@
       var packDiscount = selectedPack ? parseFloat(selectedPack.dataset.discount || '0') / 100 : 0;
       var subscribeDiscount = selectedMode === 'subscribe' ? (parseFloat(sectionSettings.subscribeDiscountPercent || 0) / 100) : 0;
       var baseTotal = Math.round(basePrice * quantity);
+      var compareBaseTotal = Math.round(baseCompareAtPrice * quantity);
       var afterPackDiscount = Math.round(baseTotal * (1 - packDiscount));
       var total = Math.round(afterPackDiscount * (1 - subscribeDiscount));
+      var compareTotal = Math.round(compareBaseTotal * (1 - packDiscount));
 
       updateModeCards(selectedMode);
 
@@ -342,6 +357,11 @@
       if (stickyPriceEl) stickyPriceEl.textContent = formatMoney(total);
       if (atcLabel) atcLabel.textContent = sectionSettings.ctaLabel;
       if (priceNote) priceNote.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeNote : sectionSettings.oneTimeNote;
+      if (comparePriceEl) {
+        var shouldShowCompare = baseCompareAtPrice > basePrice && compareTotal > total;
+        comparePriceEl.textContent = shouldShowCompare ? formatMoney(compareTotal) : '';
+        comparePriceEl.style.display = shouldShowCompare ? 'block' : 'none';
+      }
       if (priceChip) {
         priceChip.textContent = selectedMode === 'subscribe' ? sectionSettings.subscribeBadge : sectionSettings.oneTimeBadge;
         priceChip.style.display = priceChip.textContent ? 'inline-flex' : 'inline-flex';

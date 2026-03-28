@@ -191,7 +191,7 @@
       "clear_all": "Rimuovi tutto",
       "from": "Da",
       "filter_and_sort": "Filtra e ordina",
-      "filter_by_label": "Filtra:",
+      "filter_by_label": "Filter:",
       "filter_button": "Filtra",
       "filters_selected": {
         "one": "{{ count }} selezionata",
@@ -211,7 +211,7 @@
       },
       "reset": "Ripristina",
       "sort_button": "Ordina",
-      "sort_by_label": "Ordina per:",
+      "sort_by_label": "Sort by:",
       "to": "A",
       "clear_filter": "Rimuovi filtri",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtri selezionati)",

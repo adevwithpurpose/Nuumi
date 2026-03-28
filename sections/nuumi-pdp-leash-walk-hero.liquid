@@ -18,6 +18,11 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   {% assign current_variant = product.selected_or_first_available_variant %}
   {% assign base_price = current_variant.price | default: product.price %}
+  {% assign base_compare_at_price = current_variant.compare_at_price | default: product.compare_at_price %}
+  {% assign has_compare_at_price = false %}
+  {% if base_compare_at_price and base_compare_at_price > base_price %}
+    {% assign has_compare_at_price = true %}
+  {% endif %}
   {% assign form_id = 'product-form-' | append: section.id %}
 
   <div class="page-width">
@@ -64,8 +69,12 @@
               <div>
                 <p class="nuumi-leash-walk-hero__price-label">{{ section.settings.price_label }}</p>
                 <div class="nuumi-leash-walk-hero__price-stack">
-                  <span class="nuumi-leash-walk-hero__compare-at">{{ section.settings.compare_at_price_text }}</span>
-                  <p class="nuumi-leash-walk-hero__price">{{ base_price | money }}</p>
+                  {%- if has_compare_at_price -%}
+                    <span class="nuumi-leash-walk-hero__compare-at" data-compare-price>{{ base_compare_at_price | money }}</span>
+                  {%- else -%}
+                    <span class="nuumi-leash-walk-hero__compare-at" data-compare-price style="display:none"></span>
+                  {%- endif -%}
+                  <p class="nuumi-leash-walk-hero__price" data-total-price>{{ base_price | money }}</p>
                 </div>
               </div>
               <div class="nuumi-leash-walk-hero__price-meta">
@@ -148,7 +157,7 @@
     <div class="nuumi-sticky-cta__inner page-width">
       <div class="nuumi-sticky-cta__info">
         <span class="nuumi-sticky-cta__title">{{ product.title }}</span>
-        <span class="nuumi-sticky-cta__price">{{ base_price | money }}</span>
+        <span class="nuumi-sticky-cta__price" data-sticky-price>{{ base_price | money }}</span>
       </div>
       <button type="button" class="nuumi-button--gold nuumi-sticky-cta__button" data-sticky-button>
         {{ section.settings.sticky_button_label }}
@@ -161,10 +170,34 @@
   document.addEventListener('DOMContentLoaded', function() {
     var sectionRoot = document.getElementById('MainProduct-{{ section.id }}');
     if (!sectionRoot) return;
+    var basePrice = {{ base_price | json }};
+    var baseCompareAtPrice = {{ base_compare_at_price | default: 0 | json }};
+    var priceEl = sectionRoot.querySelector('[data-total-price]');
+    var comparePriceEl = sectionRoot.querySelector('[data-compare-price]');
+    var stickyPriceEl = document.querySelector('[data-sticky-price]');
     var stickyCta = document.querySelector('[data-sticky-cta]');
     var stickyButton = document.querySelector('[data-sticky-button]');
     var submitButton = document.getElementById('ProductSubmitButton-{{ section.id }}');
     var buyCard = sectionRoot.querySelector('.nuumi-leash-walk-hero__purchase-card');
+
+    function formatMoney(cents) {
+      if (!window.Shopify || typeof window.Shopify.formatMoney !== 'function') {
+        return '$' + (cents / 100).toFixed(2);
+      }
+      return window.Shopify.formatMoney(cents);
+    }
+
+    if (priceEl) {
+      priceEl.textContent = formatMoney(basePrice);
+    }
+    if (stickyPriceEl) {
+      stickyPriceEl.textContent = formatMoney(basePrice);
+    }
+    if (comparePriceEl) {
+      var shouldShowCompare = baseCompareAtPrice > basePrice;
+      comparePriceEl.textContent = shouldShowCompare ? formatMoney(baseCompareAtPrice) : '';
+      comparePriceEl.style.display = shouldShowCompare ? 'inline' : 'none';
+    }
 
     if (stickyButton && submitButton) {
       stickyButton.addEventListener('click', function() {

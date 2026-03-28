@@ -2714,6 +2714,18 @@
     line-height: 1.4;
 }
 
+.nuumi-enercanis-hero__compare-at,
+.nuumi-byebark-hero__compare-at,
+.nuumi-calmicollar-hero__compare-at,
+.nuumi-pawpoint-hero__compare-at {
+    margin: 0;
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
 .nuumi-enercanis-hero__purchase-label,
 .nuumi-enercanis-hero__packs-heading {
     margin: 0 0 0.75rem;

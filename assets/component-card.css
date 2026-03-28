@@ -276,6 +276,10 @@
   justify-self: flex-start;
 }
 
+.card__badge .badge {
+  color: #ffffff;
+}
+
 .card__badge.top {
   align-self: flex-start;
   grid-row-start: 1;
