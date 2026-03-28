@@ -709,12 +709,16 @@
     color: var(--nuumi-deep-blue);
     font-size: 1.45rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .nuumi-byebark-hero__mode {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     gap: 1rem;
     padding: 1.25rem 1.3rem;
     border-radius: 1.7rem;
@@ -5810,13 +5814,17 @@
     color: var(--nuumi-deep-blue);
     font-size: 1.45rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .nuumi-calmicollar-hero__mode {
     min-height: 100%;
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     gap: 1rem;
     padding: 1.25rem 1.3rem;
     border-radius: 1.7rem;
@@ -6769,13 +6777,17 @@
     color: var(--nuumi-deep-blue);
     font-size: 1.45rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .nuumi-pawpoint-hero__mode {
     min-height: 100%;
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     gap: 1rem;
     padding: 1.25rem 1.3rem;
     border-radius: 1.7rem;
@@ -7717,12 +7729,16 @@
     color: var(--nuumi-deep-blue);
     font-size: 1.45rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .nuumi-leash-walk-hero__mode {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     gap: 1rem;
     padding: 1.25rem 1.3rem;
     border-radius: 1.7rem;
