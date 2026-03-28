@@ -144,6 +144,8 @@
         "text": "<p>When the intestinal lining is damaged, it behaves like a torn screen door. Nutrients struggle to stay where they belong while toxins, allergens, and inflammatory waste keep leaking into the bloodstream. That is why the diarrhea, itching, and vet visits never really feel finished.</p>",
         "analogy_title": "Think of it like a torn screen door.",
         "analogy_text": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back into the house. EnerCanis is designed to help rebuild the screen instead of endlessly cleaning up the mess.</p>",
+        "media_video_url": "",
+        "video_aspect_ratio": "ratio-4-3",
         "image": "shopify://shop_images/Gemini_Generated_Image_ym5vrzym5vrzym5v.png",
         "layout": "diagram_right"
       }
@@ -194,7 +196,8 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_idnhx3idnhx3idnh.png",
+            "video_url": "",
+            "image": "shopify://shop_images/enercanis-slider-serving-context-v1-square.jpg",
             "step_label": "Step 1",
             "title": "Add to food once daily",
             "text": "Add the recommended dose of EnerCanis directly into your dog's meal once per day."
@@ -203,6 +206,7 @@
         "step_2": {
           "type": "step",
           "settings": {
+            "video_url": "",
             "image": "shopify://shop_images/Gemini_Generated_Image_cieny1cieny1cien.png",
             "step_label": "Step 2",
             "title": "Mix thoroughly",
@@ -212,7 +216,8 @@
         "step_3": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_cieny1cieny1cien_1.png",
+            "video": "shopify://files/videos/ShoppingPaw.com.mp4",
+            "video_url": "",
             "step_label": "Step 3",
             "title": "Stay consistent for 8-12 weeks",
             "text": "Consistency is key. Most dogs show early signs first, then full chronic-pattern improvement over time."
