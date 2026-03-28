@@ -441,19 +441,17 @@
     }
 
     if (stickyCta && sectionRoot) {
+      var stickyThreshold = sectionRoot.offsetTop + Math.min(220, sectionRoot.offsetHeight * 0.35);
       var syncStickyCta = function() {
-        var rect = sectionRoot.getBoundingClientRect();
-        var shouldShow = rect.top <= 0;
+        var shouldShow = window.scrollY >= stickyThreshold;
         stickyCta.classList.toggle('nuumi-sticky-cta--visible', shouldShow);
       };
 
-      var observer = new IntersectionObserver(function() {
-        syncStickyCta();
-      }, { threshold: [0, 1] });
-
-      observer.observe(sectionRoot);
       window.addEventListener('scroll', syncStickyCta, { passive: true });
-      window.addEventListener('resize', syncStickyCta);
+      window.addEventListener('resize', function() {
+        stickyThreshold = sectionRoot.offsetTop + Math.min(220, sectionRoot.offsetHeight * 0.35);
+        syncStickyCta();
+      });
       syncStickyCta();
     }
 

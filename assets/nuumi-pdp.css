@@ -1536,7 +1536,7 @@
     border-top: 1px solid rgba(16, 36, 58, 0.08);
     box-shadow: 0 -10px 24px rgba(16, 36, 58, 0.14);
     padding: 1.2rem 0;
-    z-index: 102;
+    z-index: 9999;
     transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -8989,4 +8989,89 @@
     font-family: var(--font-body-family);
     font-size: 1.2rem;
     color: #9ca3af;
+}
+
+@media screen and (max-width: 749px) {
+    .nuumi-byebark-hero__media-shell,
+    .nuumi-byebark-hero__panel,
+    .nuumi-pawpoint-hero__media-shell,
+    .nuumi-pawpoint-hero__panel,
+    .nuumi-calmicollar-hero__media-shell,
+    .nuumi-calmicollar-hero__panel,
+    .nuumi-leash-walk-hero__media-shell,
+    .nuumi-leash-walk-hero__panel {
+        border-radius: 2.2rem;
+    }
+
+    .nuumi-byebark-hero__panel,
+    .nuumi-byebark-hero__purchase-card,
+    .nuumi-pawpoint-hero__panel,
+    .nuumi-pawpoint-hero__purchase-card,
+    .nuumi-calmicollar-hero__panel,
+    .nuumi-calmicollar-hero__purchase-card,
+    .nuumi-leash-walk-hero__panel,
+    .nuumi-leash-walk-hero__purchase-card {
+        padding: 1.6rem;
+    }
+
+    .nuumi-byebark-hero__title,
+    .nuumi-pawpoint-hero__title,
+    .nuumi-calmicollar-hero__title,
+    .nuumi-leash-walk-hero__title {
+        max-width: none;
+        font-size: clamp(2rem, 6vw, 2.7rem);
+    }
+
+    .nuumi-byebark-hero__subtitle,
+    .nuumi-byebark-hero__description,
+    .nuumi-byebark-hero__price-note,
+    .nuumi-pawpoint-hero__subtitle,
+    .nuumi-pawpoint-hero__description,
+    .nuumi-pawpoint-hero__price-note,
+    .nuumi-calmicollar-hero__subtitle,
+    .nuumi-calmicollar-hero__description,
+    .nuumi-calmicollar-hero__price-note,
+    .nuumi-leash-walk-hero__subtitle,
+    .nuumi-leash-walk-hero__description,
+    .nuumi-leash-walk-hero__price-note {
+        max-width: none;
+    }
+
+    .nuumi-byebark-hero__price,
+    .nuumi-pawpoint-hero__price,
+    .nuumi-calmicollar-hero__price,
+    .nuumi-leash-walk-hero__price {
+        font-size: 2.8rem;
+    }
+
+    .nuumi-byebark-hero__price-row,
+    .nuumi-pawpoint-hero__price-row,
+    .nuumi-calmicollar-hero__price-row,
+    .nuumi-leash-walk-hero__price-row {
+        flex-direction: column;
+    }
+
+    .nuumi-byebark-hero__price-meta,
+    .nuumi-pawpoint-hero__price-meta,
+    .nuumi-calmicollar-hero__price-meta,
+    .nuumi-leash-walk-hero__price-meta {
+        justify-items: start;
+    }
+
+    .nuumi-byebark-hero__mode-grid,
+    .nuumi-byebark-hero__pack-grid,
+    .nuumi-pawpoint-hero__mode-grid,
+    .nuumi-pawpoint-hero__pack-grid,
+    .nuumi-calmicollar-hero__mode-grid,
+    .nuumi-calmicollar-hero__pack-grid,
+    .nuumi-leash-walk-hero__mode-grid,
+    .nuumi-leash-walk-hero__pack-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nuumi-sticky-cta {
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
