@@ -66,19 +66,51 @@
         "pivot_text": "That's exactly what PawPoint was designed to fix."
       }
     },
-    "how_to": {
-      "type": "nuumi-pdp-pawpoint-howto",
+    "agitation": {
+      "type": "nuumi-pdp-agitation",
       "blocks": {
-        "step_1": { "type": "step", "settings": { "icon": "paw", "title": "Wrap your finger", "text": "Slip the PawPoint wipe over your index finger for full control." } },
-        "step_2": { "type": "step", "settings": { "icon": "check_mark", "title": "Wipe the hidden folds", "text": "Gently reach into the ear fold and wipe away gunk, odor, and buildup." } },
-        "step_3": { "type": "step", "settings": { "icon": "heart", "title": "Done in seconds", "text": "Dispose and move on. No mess, no dripping, no rinse needed." } }
+        "point_1": { "type": "point", "settings": { "icon": "shield", "title": "Cotton swabs", "text": "They often push debris deeper instead of removing what is stuck in the hidden folds." } },
+        "point_2": { "type": "point", "settings": { "icon": "science", "title": "Liquid drops", "text": "They can pool at the bottom while missing the sticky debris clinging to the ear canal walls." } },
+        "point_3": { "type": "point", "settings": { "icon": "heart", "title": "Regular wipes", "text": "They slide across the surface instead of wrapping with your finger and reaching the curves where the gunk hides." } }
+      },
+      "block_order": ["point_1","point_2","point_3"],
+      "settings": {
+        "bg_color": "#f7fbfd",
+        "eyebrow": "Why ear problems return",
+        "title": "Current tools do not fail. They just cannot reach the real target.",
+        "text": "<p>A dog's ear canal is shaped very differently from a human ear. The hidden folds and deeper curves are exactly where debris, wax, and irritation-prone buildup collect. Most tools simply cannot clean those areas properly.</p>",
+        "analogy_title": "You need better control, not a harsher cleaner.",
+        "analogy_text": "<p>PawPoint wraps around your finger so you can feel the curves, guide the wipe with precision, and clean the areas generic tools usually miss.</p>",
+        "layout": "diagram_right"
+      }
+    },
+    "timeline": {
+      "type": "nuumi-pdp-transformation-timeline",
+      "blocks": {
+        "step_1": { "type": "step", "settings": { "phase": "Day 1", "title": "Visible debris removal", "text": "The first use lifts away the visible gunk sitting in the folds, providing immediate relief from surface irritation." } },
+        "step_2": { "type": "step", "settings": { "phase": "Week 1", "title": "Reduced scratching", "text": "Consistency in cleaning the deeper curves helps keep the environment stable, reducing the urge to scratch and shake." } },
+        "step_3": { "type": "step", "settings": { "phase": "Weeks 2-4", "title": "Maintenance routine established", "text": "Once the initial buildup is gone, the routine shifts to maintenance, keeping the ears clean and clear long-term." } }
       },
       "block_order": ["step_1","step_2","step_3"],
       "settings": {
-        "bg_color": "#F9FAFB",
-        "eyebrow": "How to use",
-        "title": "Three Steps to Healthier Ears",
-        "text": "A quick daily routine that takes less than a minute."
+        "bg_color": "#eef7f9",
+        "eyebrow": "Visible ear-care progress",
+        "title": "A timeline built around better control and visible results.",
+        "text": "<p>Ear hygiene is about consistency and precision. First you lift the visible debris, then you settle the immediate irritation, and finally you maintain a clear environment with regular finger-control cleaning.</p>"
+      }
+    },
+    "how_to": {
+      "type": "nuumi-pdp-how-to-use",
+      "blocks": {
+        "step_1": { "type": "step", "settings": { "step_label": "Step 1", "title": "Slip on your finger", "text": "Slide the wipe over your index finger so you control pressure and direction more precisely." } },
+        "step_2": { "type": "step", "settings": { "step_label": "Step 2", "title": "Feel the ear's curves", "text": "Use your finger to follow the natural folds and curves where buildup usually hides." } },
+        "step_3": { "type": "step", "settings": { "step_label": "Step 3", "title": "Wipe with gentle pressure", "text": "Lift away visible debris with controlled, gentle motion instead of poking or flooding the ear." } }
+      },
+      "block_order": ["step_1","step_2","step_3"],
+      "settings": {
+        "bg_color": "#F2F8FC",
+        "title": "How to use PawPoint",
+        "text": "A 3-step routine built around control, visibility, and a cleaner ear-care habit."
       }
     },
     "comparison": {
@@ -113,6 +145,21 @@
         "eyebrow": "Real Results",
         "title": "What Dog Parents Are Saying About PawPoint.",
         "text": "Verified reviews from dog parents who made the switch."
+      }
+    },
+    "efficacy_grid": {
+      "type": "nuumi-pdp-efficacy-grid",
+      "blocks": {
+        "feature_1": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Precision", "title": "Finger-Fit Design", "benefit": "Unmatched control.", "text": "Allows you to feel the curves and guide the wipe exactly where the debris collects." } },
+        "feature_2": { "type": "ingredient", "settings": { "icon": "science", "tag": "Hygiene", "title": "pH-Balanced Solution", "benefit": "Safe for regular use.", "text": "Gentle on the sensitive skin of the ear canal while lifting away sticky ear gunk." } },
+        "feature_3": { "type": "ingredient", "settings": { "icon": "heart", "tag": "Texture", "title": "Micro-Textured Wipe", "benefit": "Lifts instead of slides.", "text": "Designed to grab onto and remove debris instead of just sliding it across the surface." } }
+      },
+      "block_order": ["feature_1","feature_2","feature_3"],
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "Why PawPoint outperforms",
+        "title": "Every feature is designed for better control where it matters.",
+        "text": "<p>PawPoint is not just another wipe. It is a finger-control system organized around precision, safety, and visible debris removal.</p>"
       }
     },
     "features": {
@@ -176,5 +223,18 @@
       }
     }
   },
-  "order": ["main","problem","how_to","comparison","reviews","features","transparency","guarantee","final_cta"]
+  "order": [
+    "main",
+    "problem",
+    "agitation",
+    "timeline",
+    "how_to",
+    "comparison",
+    "reviews",
+    "efficacy_grid",
+    "features",
+    "transparency",
+    "guarantee",
+    "final_cta"
+  ]
 }
