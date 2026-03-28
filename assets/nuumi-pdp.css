@@ -4376,6 +4376,14 @@
     object-position: center;
 }
 
+.nuumi-pdp-howto__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    display: block;
+}
+
 .nuumi-pdp-howto__meta {
     display: inline-flex;
     margin-bottom: 0.4rem;
@@ -8231,16 +8239,46 @@
 }
 
 /* =============================================
-   PawPoint Comparison — reuses nuumi-comparison__* classes
+   PawPoint Comparison — compact, brand-color tick
    ============================================= */
 .nuumi-pawpoint-comparison {
-    padding: 6.4rem 0;
+    padding: 4.8rem 0;
 }
 
 @media screen and (min-width: 750px) {
     .nuumi-pawpoint-comparison {
-        padding: 9.6rem 0;
+        padding: 6.4rem 0;
     }
+}
+
+.nuumi-pawpoint-comparison .nuumi-comparison__check {
+    background-color: var(--nuumi-gold);
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.nuumi-pawpoint-comparison .nuumi-comparison__check svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.nuumi-pawpoint-comparison .nuumi-comparison__td-feature {
+    font-size: 1.45rem;
+}
+
+.nuumi-pawpoint-comparison .nuumi-comparison__th-feature,
+.nuumi-pawpoint-comparison .nuumi-comparison__td-feature {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+}
+
+.nuumi-pawpoint-comparison .nuumi-comparison__table th,
+.nuumi-pawpoint-comparison .nuumi-comparison__table td {
+    padding: 1.4rem 1.2rem;
+}
+
+.nuumi-pawpoint-comparison .nuumi-comparison__table-wrapper {
+    border-radius: 1.6rem;
 }
 
 /* =============================================
@@ -8584,12 +8622,12 @@
    PawPoint Final CTA Section
    ============================================= */
 .nuumi-pawpoint-final-cta {
-    padding: 6.4rem 0;
+    padding: 4rem 0;
 }
 
 @media screen and (min-width: 750px) {
     .nuumi-pawpoint-final-cta {
-        padding: 9.6rem 0;
+        padding: 6rem 0;
     }
 }
 
@@ -8598,14 +8636,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
-    max-width: 60rem;
+    gap: 1.2rem;
+    max-width: 54rem;
     margin: 0 auto;
 }
 
 .nuumi-pawpoint-final-cta__eyebrow {
     font-family: var(--font-body-family);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -8614,7 +8652,7 @@
 
 .nuumi-pawpoint-final-cta__title {
     font-family: var(--font-heading-family);
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     color: var(--nuumi-deep-blue);
     margin: 0;
     line-height: 1.2;
@@ -8622,51 +8660,51 @@
 
 @media screen and (min-width: 750px) {
     .nuumi-pawpoint-final-cta__title {
-        font-size: 4.8rem;
+        font-size: 3.2rem;
     }
 }
 
 .nuumi-pawpoint-final-cta__subtitle {
     font-family: var(--font-body-family);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #6b7280;
     margin: 0;
-    line-height: 1.6;
-    max-width: 48rem;
+    line-height: 1.5;
+    max-width: 44rem;
 }
 
 .nuumi-pawpoint-final-cta__media {
     width: 100%;
-    max-width: 50rem;
+    max-width: 40rem;
 }
 
 .nuumi-pawpoint-final-cta__media-image {
     width: 100%;
     height: auto;
-    border-radius: 1.6rem;
+    border-radius: 1.2rem;
 }
 
 .nuumi-pawpoint-final-cta__trust {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.4rem;
-    margin-top: 1.6rem;
+    gap: 1.6rem;
+    margin-top: 0.8rem;
 }
 
 .nuumi-pawpoint-final-cta__trust-item {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.5rem;
     font-family: var(--font-body-family);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--nuumi-deep-blue);
 }
 
 .nuumi-pawpoint-final-cta__trust-item svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     color: var(--nuumi-gold);
     flex-shrink: 0;
 }
