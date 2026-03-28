@@ -66,6 +66,89 @@
         "enable_video_looping": false
       }
     },
+    "agitation": {
+      "type": "nuumi-pdp-agitation",
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "icon": "thumbs_down",
+            "title": "Typical leash advice fails under real pressure",
+            "text": "Most dogs can follow commands in calm spaces, but they relapse once real-world triggers appear."
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "icon": "science",
+            "title": "The formula breaks the pull-reward loop",
+            "text": "The program is built around interruption, redirection, and consistent reinforcement that scales in daily walks."
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Simple structure you can repeat daily",
+            "text": "Short, practical sessions reduce overwhelm and make progress visible in the first week."
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ],
+      "settings": {
+        "bg_color": "#f7fbfd",
+        "eyebrow": "Why most plans stall",
+        "title": "Leash pulling is usually a pattern loop, not just a discipline issue.",
+        "text": "<p>The Leash Walk Formula is designed to rebuild your dog's walking pattern step by step, so progress survives outside controlled practice.</p>",
+        "analogy_title": "Think of it like replacing autopilot.",
+        "analogy_text": "<p>Old pulling behavior runs on a reflex loop. This system replaces that loop with repeatable cues your dog can follow in motion.</p>",
+        "image": "shopify://shop_images/Gemini_Generated_Image_kqq4n3kqq4n3kqq4.png"
+      }
+    },
+    "timeline": {
+      "type": "nuumi-pdp-transformation-timeline",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "phase": "Days 1-3",
+            "title": "Attention and response improve",
+            "text": "Your dog starts checking in more often and reacting faster to guidance cues."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "phase": "Days 4-7",
+            "title": "Pulling intensity starts to drop",
+            "text": "Trigger moments become easier to interrupt and your walk rhythm becomes more manageable."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "phase": "Weeks 2-4",
+            "title": "Calmer, repeatable walking habits",
+            "text": "The training pattern feels more automatic for both of you, with less tension and fewer resets."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "bg_color": "#eef7f9",
+        "eyebrow": "What improvement usually looks like",
+        "title": "A realistic timeline for calmer leash walks.",
+        "text": "<p>This program is built for visible progress in days, with stronger walking habits formed over the following weeks.</p>"
+      }
+    },
     "what_you_get": {
       "type": "nuumi-pdp-byebark-mechanism",
       "blocks": {
@@ -160,6 +243,91 @@
         "credentials": "13+ years of dog-training experience"
       }
     },
+    "social_proof": {
+      "type": "nuumi-pdp-social-proof",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Verified Buyer",
+            "quote": "Within a few days, my dog stopped dragging me at every corner. The steps were simple and actually doable.",
+            "highlight": "Less pulling in the first week.",
+            "name": "Elisa M.",
+            "meta": "Golden retriever parent"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Most Helpful",
+            "quote": "I tried random YouTube tips before, but this felt like a real system. Walks are calmer and I feel in control again.",
+            "highlight": "Structured training beats random tips.",
+            "name": "Riccardo L.",
+            "meta": "Rescue dog owner"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Home Use",
+            "quote": "The mobile format made it easy to stay consistent. My dog now checks in instead of lunging ahead.",
+            "highlight": "Consistency became easy on mobile.",
+            "name": "Giulia S.",
+            "meta": "Apartment dog parent"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "Real Results",
+        "title": "What Dog Parents Say About The Leash Walk Formula.",
+        "text": "<p>Feedback from families who wanted calmer, safer daily walks without complicated training plans.</p>"
+      }
+    },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Instant Digital Access"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "Secure Checkout"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "60-Day Money-Back Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "settings": {
+        "bg_color": "#10243a",
+        "eyebrow": "Trust and transparency",
+        "title": "Everything you need before you start training."
+      }
+    },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
@@ -207,9 +375,13 @@
   },
   "order": [
     "main",
+    "agitation",
+    "timeline",
     "what_you_get",
     "bonuses",
     "authority",
+    "social_proof",
+    "transparency",
     "guarantee",
     "faq"
   ]

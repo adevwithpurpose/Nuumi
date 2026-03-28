@@ -27,7 +27,7 @@
           {%- for block in section.blocks -%}
             {%- if block.type == 'bullet' -%}
               <li class="nuumi-home-hero__bullet" {{ block.shopify_attributes }}>
-                {% render 'nuumi-icons', icon: 'check_mark', class: 'nuumi-icon' %}
+                {% render 'nuumi-icons', icon: 'check_circle', class: 'nuumi-icon' %}
                 <span>{{ block.settings.text | escape }}</span>
               </li>
             {%- endif -%}

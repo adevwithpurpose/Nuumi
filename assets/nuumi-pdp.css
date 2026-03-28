@@ -1508,9 +1508,11 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #ffffff;
-    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
-    padding: 1.6rem 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(16, 36, 58, 0.08);
+    box-shadow: 0 -10px 24px rgba(16, 36, 58, 0.14);
+    padding: 1.2rem 0;
     z-index: 102;
     transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1551,7 +1553,9 @@
 }
 
 .nuumi-sticky-cta__button {
-    padding: 1.2rem 2.4rem;
+    padding: 1.05rem 2rem;
+    border-radius: 999px;
+    min-height: 4.2rem;
     white-space: nowrap;
 }
 
@@ -2270,6 +2274,9 @@
     .nuumi-calmicollar-hero__media-column.product__column-sticky,
     .nuumi-leash-walk-hero__media-column.product__column-sticky {
         align-self: start;
+        position: sticky;
+        top: 4rem;
+        z-index: 2;
     }
 
     .nuumi-enercanis-hero__media-column.product__column-sticky .nuumi-enercanis-hero__media-shell,
