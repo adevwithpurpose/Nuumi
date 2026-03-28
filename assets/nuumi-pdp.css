@@ -2674,6 +2674,7 @@
     filter: grayscale(1);
     cursor: not-allowed;
     box-shadow: none;
+    pointer-events: none;
 }
 
 .nuumi-enercanis-hero__mode.is-disabled:hover {
@@ -2682,6 +2683,12 @@
 
 .nuumi-enercanis-hero__mode.is-disabled input {
     pointer-events: none;
+}
+
+.nuumi-enercanis-hero__mode-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
 }
 
 .nuumi-enercanis-hero__mode-copy {

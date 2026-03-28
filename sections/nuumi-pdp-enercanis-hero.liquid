@@ -142,6 +142,9 @@
                           {% endif %}
                         </span>
                       </span>
+                      {% unless subscribe_enabled %}
+                        <span class="nuumi-enercanis-hero__mode-overlay" aria-hidden="true"></span>
+                      {% endunless %}
                   </label>
                 </div>
               </div>
