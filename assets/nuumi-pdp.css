@@ -916,8 +916,31 @@
 
 .nuumi-byebark-hero__mode {
     min-height: 100%;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+    gap: 0.35rem;
     padding: 1rem 1.05rem;
     border-radius: 1.5rem;
+}
+
+.nuumi-byebark-hero__mode-copy {
+    gap: 0.45rem;
+}
+
+.nuumi-byebark-hero__mode-badge {
+    position: absolute;
+    top: -0.7rem;
+    right: 1rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    background: var(--nuumi-gold);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .nuumi-byebark-hero__mode-title {
