@@ -6549,9 +6549,8 @@
 .nuumi-pawpoint-hero__price-note {
     margin: 0;
     color: #64748b;
-    font-size: 1.08rem;
-    line-height: 1.35;
-    text-align: right;
+    font-size: 1.12rem;
+    line-height: 1.4;
 }
 
 .nuumi-pawpoint-hero__packs-heading {
@@ -6579,10 +6578,6 @@
 .nuumi-pawpoint-hero__pack-grid {
     display: grid;
     gap: 0.65rem;
-}
-
-.nuumi-pawpoint-hero__pack-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .nuumi-pawpoint-hero__mode,
@@ -6633,59 +6628,80 @@
 .nuumi-pawpoint-hero__mode-text,
 .nuumi-pawpoint-hero__pack-subtitle,
 .nuumi-pawpoint-hero__pack-note {
-    color: #5b7383;
+    color: #64748b;
     font-size: 1.08rem;
     line-height: 1.35;
 }
 
-.nuumi-pawpoint-hero__mode-badge,
-.nuumi-pawpoint-hero__price-chip,
-.nuumi-pawpoint-hero__pack-save {
+.nuumi-pawpoint-hero__price-chip {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: fit-content;
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
-    background: rgba(15, 118, 110, 0.1);
-    color: #0f766e;
+    background: var(--nuumi-gold);
+    color: #ffffff;
     font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
+.nuumi-pawpoint-hero__pack-per {
+    color: #0f766e;
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.nuumi-pawpoint-hero__pack-save {
+    display: inline-flex;
+    justify-self: start;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(15, 118, 110, 0.12);
+    color: #0f766e;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.nuumi-pawpoint-hero__mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nuumi-pawpoint-hero__mode-badge,
 .nuumi-pawpoint-hero__pack-badge {
     position: absolute;
-    top: -0.8rem;
+    top: -0.7rem;
     right: 1rem;
-    padding: 0.32rem 0.7rem;
+    padding: 0.3rem 0.65rem;
     border-radius: 999px;
     background: var(--nuumi-gold);
     color: #ffffff;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
 
+.nuumi-pawpoint-hero__pack-badge {
+    display: inline-flex;
+}
+
 .nuumi-pawpoint-hero__cta-note,
-.nuumi-pawpoint-hero__payment-note,
-.nuumi-pawpoint-hero__pack-per {
+.nuumi-pawpoint-hero__payment-note {
     color: #64748b;
-    font-size: 1.08rem;
-    line-height: 1.34;
+    font-size: 1.12rem;
+    line-height: 1.4;
 }
 
 .nuumi-pawpoint-hero__cta-group {
     display: grid;
-    gap: 0.8rem;
+    gap: 0.55rem;
 }
 
 .nuumi-pawpoint-hero__cta {
     width: 100%;
     justify-content: center;
-    min-height: 5.8rem;
+    min-height: 4.8rem;
 }
 
 .nuumi-pawpoint-hero__cta-note,
@@ -6696,11 +6712,11 @@
 .nuumi-pawpoint-hero__micro-trust {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem 1.2rem;
-    padding-top: 1.2rem;
+    gap: 0.6rem 0.9rem;
+    padding-top: 0.9rem;
     border-top: 1px solid rgba(16, 36, 58, 0.08);
     color: #0f766e;
-    font-size: 1.25rem;
+    font-size: 1.08rem;
     font-weight: 700;
 }
 
@@ -6987,9 +7003,13 @@
 }
 
 @media screen and (max-width: 749px) {
-    .nuumi-pawpoint-hero__panel,
     .nuumi-pawpoint-hero__purchase-card {
         padding: 1.6rem;
+    }
+
+    .nuumi-pawpoint-hero__mode-grid,
+    .nuumi-pawpoint-hero__pack-grid {
+        grid-template-columns: 1fr;
     }
 
     .nuumi-pawpoint-hero__title {
@@ -7028,10 +7048,6 @@
         font-size: 1.18rem;
     }
 
-    .nuumi-pawpoint-hero__mode-grid {
-        grid-template-columns: 1fr;
-    }
-
     .nuumi-pawpoint-hero__price-row {
         flex-direction: column;
     }
@@ -7046,8 +7062,14 @@
         grid-template-columns: 1fr;
     }
 
+    .nuumi-pawpoint-hero__pack-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
     .nuumi-pawpoint-hero__mode-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
     }
 
     .nuumi-pawpoint-hero__left-guarantee {
@@ -8198,7 +8220,6 @@
     font-family: var(--font-heading-family);
     font-size: 3.2rem;
     color: var(--nuumi-deep-blue);
-    margin: 0;
     line-height: 1.2;
     max-width: 70rem;
     margin: 0 auto;
