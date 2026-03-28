@@ -402,7 +402,7 @@
     if (stickyCta && buyCard) {
       var syncStickyCta = function() {
         var rect = buyCard.getBoundingClientRect();
-        var shouldShow = rect.bottom <= 0;
+        var shouldShow = rect.top <= 0;
         stickyCta.classList.toggle('nuumi-sticky-cta--visible', shouldShow);
       };
 
@@ -516,3 +516,4 @@
   ]
 }
 {% endschema %}
+
