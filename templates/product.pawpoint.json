@@ -80,12 +80,12 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Did You Know Up To 70% Of Dogs Develop Ear Problems?",
+        "eyebrow": "70% Of Dogs Develop Ear Problems?",
         "badge_primary": "Veterinary Developed",
         "badge_secondary": "pH-Balanced Formula",
         "headline": "Stop the 3AM Ear Scratching and Head Shaking for Good.",
-        "subtitle": "The finger-fit wipe that reaches the hidden folds of your dog's ear where traditional Q-tips and liquid drops can't go.",
-        "description": "<p>PawPoint gives you finger-control precision so you can wipe hidden folds, lift away visible gunk, and clean the areas bulky tools often miss.</p>",
+        "subtitle": "",
+        "description": "<p>The finger-fit wipe that reaches the hidden folds of your dog's ear where traditional Q-tips and liquid drops can't go.</p>",
         "rating_value": 4.8,
         "review_count": "3,200+",
         "rating_caption": "Cleaner ears",
@@ -107,6 +107,7 @@
         "shipping_note": "Fast US shipping",
         "guarantee_note": "30-day money-back guarantee",
         "payment_note": "Secure checkout with major payment methods",
+        "left_guarantee_image": "shopify://shop_images/1766687098624_guarantee_30d.webp",
         "left_guarantee_title": "Try it worry-free for 30 days",
         "left_guarantee_text": "If PawPoint is not the right fit for your ear-care routine, we will refund your purchase. Simple as that.",
         "gallery_layout": "thumbnail_slider",
@@ -275,6 +276,7 @@
         "step_1": {
           "type": "step",
           "settings": {
+            "video_url": "",
             "image": "shopify://shop_images/pawpoint-slider-dog-ear-cleaning-v1-square.jpg",
             "step_label": "Step 1",
             "title": "Slip on your finger",
@@ -284,6 +286,7 @@
         "step_2": {
           "type": "step",
           "settings": {
+            "video_url": "",
             "image": "shopify://shop_images/pawpoint-slider-cat-ear-cleaning-v1-square.jpg",
             "step_label": "Step 2",
             "title": "Feel the ear's curves",
@@ -293,6 +296,8 @@
         "step_3": {
           "type": "step",
           "settings": {
+            "video": "shopify://files/videos/d84f1933e6d240059ae87328021a489a.mp4",
+            "video_url": "",
             "step_label": "Step 3",
             "title": "Wipe with gentle pressure",
             "text": "Lift away visible debris with controlled, gentle motion instead of poking or flooding the ear."
