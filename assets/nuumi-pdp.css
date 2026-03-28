@@ -2404,6 +2404,15 @@
     color: #0f766e;
 }
 
+.nuumi-enercanis-hero__product-name {
+    margin: 0;
+    color: rgba(16, 36, 58, 0.68);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
 .nuumi-enercanis-hero__title {
     margin: 0;
     color: var(--nuumi-deep-blue);

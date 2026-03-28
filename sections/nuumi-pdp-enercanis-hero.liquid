@@ -24,7 +24,7 @@
   {% assign one_time_total_price = base_price | times: default_quantity %}
   {% assign form_id = 'product-form-' | append: section.id %}
   {% assign default_bundle_title = first_pack.settings.title | default: '1 Bottle' %}
-  {% assign subscribe_enabled = section.settings.enable_subscribe_mode %}
+  {% assign subscribe_enabled = false %}
 
   <div class="page-width">
     <div class="nuumi-enercanis-hero">
@@ -55,6 +55,7 @@
               {%- endif -%}
             </div>
 
+            <p class="nuumi-enercanis-hero__product-name">{{ product.title | escape }}</p>
             <h1 class="nuumi-enercanis-hero__title">{{ section.settings.headline | default: product.title | escape }}</h1>
 
             {%- if section.settings.subtitle != blank -%}
