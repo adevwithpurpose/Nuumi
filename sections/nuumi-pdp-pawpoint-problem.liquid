@@ -1,0 +1,127 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pawpoint-problem section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pawpoint-problem__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="nuumi-pawpoint-problem__eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+      <h2 class="nuumi-pawpoint-problem__title">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="nuumi-pawpoint-problem__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pawpoint-problem__card" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="nuumi-pawpoint-problem__image-wrap">
+              {{ block.settings.image | image_url: width: 400 | image_tag:
+                loading: 'lazy',
+                class: 'nuumi-pawpoint-problem__image',
+                widths: '200, 300, 400'
+              }}
+            </div>
+          {%- else -%}
+            <div class="nuumi-pawpoint-problem__icon-wrap">
+              <span class="nuumi-pawpoint-problem__icon">{% render 'nuumi-icons', icon: block.settings.icon %}</span>
+            </div>
+          {%- endif -%}
+          <div class="nuumi-pawpoint-problem__card-body">
+            <h3 class="nuumi-pawpoint-problem__card-title">{{ block.settings.title }}</h3>
+            {%- if block.settings.text != blank -%}
+              <p class="nuumi-pawpoint-problem__card-text">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </div>
+          <div class="nuumi-pawpoint-problem__thumbs-down">
+            {% render 'nuumi-icons', icon: 'thumbs_down' %}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.media_image != blank or section.settings.media_video != blank or section.settings.media_video_url != blank -%}
+      <div class="nuumi-pawpoint-problem__media">
+        {%- if section.settings.media_image != blank -%}
+          {{ section.settings.media_image | image_url: width: 1200 | image_tag:
+            loading: 'lazy',
+            class: 'nuumi-pawpoint-problem__media-image',
+            widths: '600, 900, 1200'
+          }}
+        {%- elsif section.settings.media_video != blank -%}
+          {{ section.settings.media_video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: 'nuumi-pawpoint-problem__media-video', preload: 'metadata' }}
+        {%- elsif section.settings.media_video_url != blank -%}
+          {%- if section.settings.media_video_url.type == 'youtube' -%}
+            {%- assign video_id = section.settings.media_video_url.id -%}
+            <iframe
+              class="nuumi-pawpoint-problem__media-video"
+              src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&rel=0&modestbranding=1"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+              title="{{ section.settings.media_title }}"
+              loading="lazy"
+            ></iframe>
+          {%- else -%}
+            {%- assign video_id = section.settings.media_video_url.id -%}
+            <iframe
+              class="nuumi-pawpoint-problem__media-video"
+              src="https://player.vimeo.com/video/{{ video_id }}?title=0&byline=0&portrait=0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+              title="{{ section.settings.media_title }}"
+              loading="lazy"
+            ></iframe>
+          {%- endif -%}
+        {%- endif -%}
+        {%- if section.settings.media_title != blank -%}
+          <p class="nuumi-pawpoint-problem__media-title">{{ section.settings.media_title }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="nuumi-pawpoint-problem__pivot">
+      <p class="nuumi-pawpoint-problem__pivot-text">{{ section.settings.pivot_text }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PawPoint Problem",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Problem With Ear Care" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "You've Probably Tried These Solutions — But They Still Can't Reach The Problem." },
+    { "type": "image_picker", "id": "media_image", "label": "Media — Image (optional)" },
+    { "type": "video", "id": "media_video", "label": "Media — Shopify Video (optional)" },
+    { "type": "video_url", "id": "media_video_url", "accept": ["youtube", "vimeo"], "label": "Media — External Video URL (optional)" },
+    { "type": "text", "id": "media_title", "label": "Media Title / Caption" },
+    { "type": "text", "id": "pivot_text", "label": "Pivot Text", "default": "That's exactly what PawPoint was designed to fix." }
+  ],
+  "blocks": [
+    {
+      "type": "problem_item",
+      "name": "Problem Item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Custom Image (optional)" },
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "cotton_swab", "label": "Cotton Swab" }, { "value": "drops", "label": "Liquid Drops" }, { "value": "wipe", "label": "Regular Wipe" }, { "value": "alcohol", "label": "Alcohol Cleaner" }, { "value": "groomer", "label": "Groomer Visit" }, { "value": "home_remedy", "label": "Home Remedy" }], "default": "cotton_swab" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Cotton Swabs" },
+        { "type": "text", "id": "text", "label": "Why It Falls Short", "default": "Pushes debris further in and offers no grip on hidden folds." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PawPoint Problem",
+      "blocks": [
+        { "type": "problem_item", "settings": { "icon": "cotton_swab", "title": "Cotton Swabs", "text": "Pushes debris further in and offers no grip on hidden folds." } },
+        { "type": "problem_item", "settings": { "icon": "drops", "title": "Liquid Drops", "text": "Drip and slide — can't control where the formula ends up inside the ear." } },
+        { "type": "problem_item", "settings": { "icon": "wipe", "title": "Regular Wipes", "text": "Too flat to reach the vertical hidden folds where odor and gunk build up." } },
+        { "type": "problem_item", "settings": { "icon": "alcohol", "title": "Alcohol Cleaners", "text": "Sting on contact and disrupt the ear's natural pH balance with repeated use." } },
+        { "type": "problem_item", "settings": { "icon": "groomer", "title": "Groomer Cleanings", "text": "Expensive and infrequent — problems build up again long before the next appointment." } },
+        { "type": "problem_item", "settings": { "icon": "home_remedy", "title": "Home Remedies", "text": "Vinegar-water mixes and olive oil lack precision and can irritate the ear canal." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

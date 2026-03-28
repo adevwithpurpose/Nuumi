@@ -35,4 +35,33 @@
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="{{ class }}" aria-hidden="true" focusable="false">
       <path fill="currentColor" fill-rule="evenodd" d="M10 5.24 8.515 3.773a4.433 4.433 0 0 0-6.21 0 4.293 4.293 0 0 0 0 6.128L10 17.495l7.695-7.593a4.293 4.293 0 0 0 0-6.128 4.433 4.433 0 0 0-6.21 0zm.765-2.177c2.113-2.084 5.538-2.084 7.65 0a5.29 5.29 0 0 1 0 7.55l-7.695 7.593a1.03 1.03 0 0 1-1.44 0l-7.696-7.594a5.29 5.29 0 0 1 0-7.549C3.697.98 7.122.98 9.234 3.063l.766.755z"/>
     </svg>
+  {%- when 'thumbs_down' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M11.25 1.25a.75.75 0 0 1 .75.75v11.5a1.5 1.5 0 0 1-1.5 1.5H5.75a.75.75 0 0 1 0-1.5h4.75v-11A.75.75 0 0 1 11.25 1.25M4.75 6.25a.75.75 0 0 0-1.5 0v8a.75.75 0 0 0 1.5 0zm0 0"/>
+    </svg>
+  {%- when 'cotton_swab' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M19.5 2.5a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zm0 2h-15v15h15z"/>
+      <path fill="currentColor" d="M7 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2M17 18a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+    </svg>
+  {%- when 'drops' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 2C12 2 5 10 5 15a7 7 0 1 0 14 0c0-5-7-13-7-13m0 18a5 5 0 0 1-5-5c0-3.5 5-9 5-9s5 5.5 5 9a5 5 0 0 1-5 5z"/>
+    </svg>
+  {%- when 'wipe' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M4 4h16v4H4zM4 10h16v10H4z"/>
+    </svg>
+  {%- when 'alcohol' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M9 2v5.5L5 12v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8l-4-4.5V2zm2 0v6.06L14.94 12H9.06z"/>
+    </svg>
+  {%- when 'groomer' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m5 9h-4V7h4zm6 0h-4V7h4zM6 13H4v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6h-2v6H6v-6z"/>
+    </svg>
+  {%- when 'home_remedy' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="{{ class }}" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 2L4 7v13h16V7zm-2 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4m-4 8H6v-2h2zm8 0h-2v-2h2zm2-6H8V7h8z"/>
+    </svg>
 {%- endcase -%}

@@ -8229,3 +8229,444 @@
 .nuumi-sticky-cta--leash-walk {
     background: rgba(16, 36, 58, 0.94);
 }
+
+/* =============================================
+   PawPoint Comparison — reuses nuumi-comparison__* classes
+   ============================================= */
+.nuumi-pawpoint-comparison {
+    padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-comparison {
+        padding: 9.6rem 0;
+    }
+}
+
+/* =============================================
+   PawPoint Problem Section
+   ============================================= */
+.nuumi-pawpoint-problem {
+    padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-problem {
+        padding: 9.6rem 0;
+    }
+}
+
+.nuumi-pawpoint-problem__header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.nuumi-pawpoint-problem__eyebrow {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--nuumi-gold);
+}
+
+.nuumi-pawpoint-problem__title {
+    font-family: var(--font-heading-family);
+    font-size: 3.2rem;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+    line-height: 1.2;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-problem__title {
+        font-size: 4.2rem;
+    }
+}
+
+.nuumi-pawpoint-problem__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.6rem;
+    max-width: 90rem;
+    margin: 0 auto 4rem;
+}
+
+@media screen and (min-width: 560px) {
+    .nuumi-pawpoint-problem__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .nuumi-pawpoint-problem__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.nuumi-pawpoint-problem__card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    border: 1px solid rgba(16, 36, 58, 0.07);
+    box-shadow: 0 4px 16px rgba(16, 36, 58, 0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    overflow: hidden;
+}
+
+.nuumi-pawpoint-problem__icon-wrap {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+    background: rgba(220, 38, 38, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc2626;
+    flex-shrink: 0;
+}
+
+.nuumi-pawpoint-problem__icon-wrap svg {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.nuumi-pawpoint-problem__image-wrap {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.nuumi-pawpoint-problem__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nuumi-pawpoint-problem__card-body {
+    flex: 1;
+}
+
+.nuumi-pawpoint-problem__card-title {
+    font-family: var(--font-heading-family);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--nuumi-deep-blue);
+    margin: 0 0 0.6rem;
+}
+
+.nuumi-pawpoint-problem__card-text {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.nuumi-pawpoint-problem__thumbs-down {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, 0.08);
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nuumi-pawpoint-problem__thumbs-down svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.nuumi-pawpoint-problem__media {
+    max-width: 70rem;
+    margin: 0 auto 3.2rem;
+    text-align: center;
+}
+
+.nuumi-pawpoint-problem__media-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.6rem;
+    box-shadow: 0 8px 24px rgba(16, 36, 58, 0.1);
+}
+
+.nuumi-pawpoint-problem__media-video {
+    width: 100%;
+    max-width: 70rem;
+    height: 40rem;
+    border-radius: 1.6rem;
+    border: none;
+}
+
+.nuumi-pawpoint-problem__media-title {
+    margin: 1.2rem 0 0;
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    color: #6b7280;
+}
+
+.nuumi-pawpoint-problem__pivot {
+    text-align: center;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.nuumi-pawpoint-problem__pivot-text {
+    font-family: var(--font-heading-family);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+}
+
+/* =============================================
+   PawPoint How-To Section
+   ============================================= */
+.nuumi-pawpoint-howto {
+    padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-howto {
+        padding: 9.6rem 0;
+    }
+}
+
+.nuumi-pawpoint-howto__header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.nuumi-pawpoint-howto__eyebrow {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--nuumi-gold);
+}
+
+.nuumi-pawpoint-howto__title {
+    font-family: var(--font-heading-family);
+    font-size: 3.2rem;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-howto__title {
+        font-size: 4.2rem;
+    }
+}
+
+.nuumi-pawpoint-howto__text {
+    font-family: var(--font-body-family);
+    font-size: 1.6rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.nuumi-pawpoint-howto__steps {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.4rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 560px) {
+    .nuumi-pawpoint-howto__steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.nuumi-pawpoint-howto__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2.4rem 2rem;
+    background: #ffffff;
+    border-radius: 2rem;
+    border: 1px solid rgba(16, 36, 58, 0.07);
+    box-shadow: 0 4px 16px rgba(16, 36, 58, 0.05);
+}
+
+.nuumi-pawpoint-howto__icon-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nuumi-pawpoint-howto__step-number {
+    font-family: var(--font-heading-family);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--nuumi-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nuumi-pawpoint-howto__icon svg {
+    width: 4rem;
+    height: 4rem;
+    color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pawpoint-howto__media-wrap {
+    width: 100%;
+    max-width: 28rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.nuumi-pawpoint-howto__media-wrap--video {
+    aspect-ratio: 16 / 9;
+}
+
+.nuumi-pawpoint-howto__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.nuumi-pawpoint-howto__video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.nuumi-pawpoint-howto__step-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.nuumi-pawpoint-howto__step-title {
+    font-family: var(--font-heading-family);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+}
+
+.nuumi-pawpoint-howto__step-text {
+    font-family: var(--font-body-family);
+    font-size: 1.5rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* =============================================
+   PawPoint Final CTA Section
+   ============================================= */
+.nuumi-pawpoint-final-cta {
+    padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-final-cta {
+        padding: 9.6rem 0;
+    }
+}
+
+.nuumi-pawpoint-final-cta__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.nuumi-pawpoint-final-cta__eyebrow {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--nuumi-gold);
+}
+
+.nuumi-pawpoint-final-cta__title {
+    font-family: var(--font-heading-family);
+    font-size: 3.2rem;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-final-cta__title {
+        font-size: 4.8rem;
+    }
+}
+
+.nuumi-pawpoint-final-cta__subtitle {
+    font-family: var(--font-body-family);
+    font-size: 1.6rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 48rem;
+}
+
+.nuumi-pawpoint-final-cta__media {
+    width: 100%;
+    max-width: 50rem;
+}
+
+.nuumi-pawpoint-final-cta__media-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1.6rem;
+}
+
+.nuumi-pawpoint-final-cta__trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.4rem;
+    margin-top: 1.6rem;
+}
+
+.nuumi-pawpoint-final-cta__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pawpoint-final-cta__trust-item svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--nuumi-gold);
+    flex-shrink: 0;
+}
