@@ -4384,6 +4384,17 @@
     display: block;
 }
 
+.nuumi-pdp-howto__image-wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.nuumi-pdp-howto__image-wrap--below {
+    margin-top: 0.8rem;
+    border-radius: 0.8rem;
+}
+
 .nuumi-pdp-howto__meta {
     display: inline-flex;
     margin-bottom: 0.4rem;

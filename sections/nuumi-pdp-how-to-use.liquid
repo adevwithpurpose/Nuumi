@@ -21,14 +21,17 @@
               {%- else -%}
                 <iframe class="nuumi-pdp-howto__video" src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?title=0&byline=0&portrait=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="{{ block.settings.title }}" loading="lazy"></iframe>
               {%- endif -%}
-            {%- elsif block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 1200 | image_tag:
-                loading: 'lazy',
-                class: 'nuumi-pdp-howto__image',
-                sizes: '(min-width: 990px) 33vw, 100vw',
-                widths: '240, 360, 500, 700, 900, 1200'
-              }}
-            {%- else -%}
+            {%- endif -%}
+            {%- if block.settings.image != blank -%}
+              <div class="nuumi-pdp-howto__image-wrap{% if block.settings.video != blank or block.settings.video_url != blank %} nuumi-pdp-howto__image-wrap--below{% endif %}">
+                {{ block.settings.image | image_url: width: 1200 | image_tag:
+                  loading: 'lazy',
+                  class: 'nuumi-pdp-howto__image',
+                  sizes: '(min-width: 990px) 33vw, 100vw',
+                  widths: '240, 360, 500, 700, 900, 1200'
+                }}
+              </div>
+            {%- elsif block.settings.video == blank and block.settings.video_url == blank -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg nuumi-pdp-howto__image' }}
             {%- endif -%}
           </div>
@@ -59,8 +62,9 @@
       "name": "Step",
       "limit": 4,
       "settings": [
-        { "type": "video", "id": "video", "label": "Step video (replaces image)" },
-        { "type": "video_url", "id": "video_url", "accept": ["youtube", "vimeo"], "label": "Or external video URL (YouTube/Vimeo)" },
+        { "type": "video", "id": "video", "label": "Step video (shown above image if both set)" },
+        { "type": "video_url", "id": "video_url", "accept": ["youtube", "vimeo"], "label": "Or external video URL" },
+        { "type": "image_picker", "id": "image", "label": "Step image (shown below video if both set)" },
         { "type": "text", "id": "step_label", "label": "Step label", "default": "Step 1" },
         { "type": "text", "id": "title", "label": "Title", "default": "Measure the correct dose" },
         { "type": "textarea", "id": "text", "label": "Text", "default": "Add the recommended daily amount based on your dog's weight using the label guide." }
