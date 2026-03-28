@@ -338,6 +338,15 @@
     color: #0f766e;
 }
 
+.nuumi-byebark-hero__product-name {
+    margin: 0;
+    color: rgba(16, 36, 58, 0.68);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
 .nuumi-byebark-hero__title {
     margin: 0;
     color: var(--nuumi-deep-blue);
@@ -725,6 +734,24 @@
     background: #ffffff;
     box-shadow: 0 14px 30px rgba(15, 118, 110, 0.1);
     transform: translateY(-1px);
+}
+
+.nuumi-byebark-hero__mode.is-disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.nuumi-byebark-hero__mode.is-disabled:hover {
+    transform: none;
+}
+
+.nuumi-byebark-hero__mode-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
 }
 
 .nuumi-byebark-hero__mode-copy {
@@ -5395,6 +5422,15 @@
     color: #0f766e;
 }
 
+.nuumi-calmicollar-hero__product-name {
+    margin: 0;
+    color: rgba(16, 36, 58, 0.68);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
 .nuumi-calmicollar-hero__title {
     margin: 0;
     color: var(--nuumi-deep-blue);
@@ -5782,6 +5818,24 @@
     background: #ffffff;
     box-shadow: 0 14px 30px rgba(15, 118, 110, 0.1);
     transform: translateY(-1px);
+}
+
+.nuumi-calmicollar-hero__mode.is-disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.nuumi-calmicollar-hero__mode.is-disabled:hover {
+    transform: none;
+}
+
+.nuumi-calmicollar-hero__mode-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
 }
 
 .nuumi-calmicollar-hero__mode-copy {
@@ -6317,6 +6371,15 @@
     color: #0f766e;
 }
 
+.nuumi-pawpoint-hero__product-name {
+    margin: 0;
+    color: rgba(16, 36, 58, 0.68);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
 .nuumi-pawpoint-hero__title {
     margin: 0;
     color: var(--nuumi-deep-blue);
@@ -6704,6 +6767,24 @@
     background: #ffffff;
     box-shadow: 0 14px 30px rgba(15, 118, 110, 0.1);
     transform: translateY(-1px);
+}
+
+.nuumi-pawpoint-hero__mode.is-disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.nuumi-pawpoint-hero__mode.is-disabled:hover {
+    transform: none;
+}
+
+.nuumi-pawpoint-hero__mode-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
 }
 
 .nuumi-pawpoint-hero__mode-copy {

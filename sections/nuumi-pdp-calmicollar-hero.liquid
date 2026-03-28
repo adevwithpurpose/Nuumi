@@ -24,7 +24,7 @@
   {% assign one_time_total_price = base_price | times: default_quantity %}
   {% assign form_id = 'product-form-' | append: section.id %}
   {% assign default_bundle_title = first_pack.settings.title | default: '1 Bottle' %}
-  {% assign subscribe_enabled = section.settings.enable_subscribe_mode %}
+  {% assign subscribe_enabled = false %}
 
   <div class="page-width">
     <div class="nuumi-calmicollar-hero">
@@ -55,6 +55,7 @@
               {%- endif -%}
             </div>
 
+            <p class="nuumi-calmicollar-hero__product-name">{{ product.title | escape }}</p>
             <h1 class="nuumi-calmicollar-hero__title">{{ section.settings.headline | default: product.title | escape }}</h1>
 
             {%- if section.settings.subtitle != blank -%}
@@ -118,22 +119,21 @@
                     </span>
                   </label>
 
-                  {%- if subscribe_enabled -%}
-                    <label class="nuumi-calmicollar-hero__mode is-selected" data-mode-card="subscribe">
+                  <label class="nuumi-calmicollar-hero__mode is-disabled" data-mode-card="subscribe" aria-disabled="true" title="Subscription option will be enabled after the subscription app is configured.">
                       <input
                         type="radio"
                         name="calmicollar_mode_{{ section.id }}"
                         value="subscribe"
                         data-mode="subscribe"
-                        checked
+                        disabled
                       >
                       <span class="nuumi-calmicollar-hero__mode-copy">
                         <span class="nuumi-calmicollar-hero__mode-badge">{{ section.settings.subscribe_badge }}</span>
                         <span class="nuumi-calmicollar-hero__mode-title">{{ section.settings.subscribe_label }}</span>
-                        <span class="nuumi-calmicollar-hero__mode-text">{{ section.settings.subscribe_note }}</span>
+                        <span class="nuumi-calmicollar-hero__mode-text">Subscription option coming soon once the app is configured.</span>
                       </span>
+                      <span class="nuumi-calmicollar-hero__mode-overlay" aria-hidden="true"></span>
                     </label>
-                  {%- endif -%}
                 </div>
               </div>
 
