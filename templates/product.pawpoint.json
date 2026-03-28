@@ -1,16 +1,83 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "nuumi-pdp-pawpoint-hero",
       "blocks": {
-        "benefit_1": { "type": "support_point", "settings": { "icon": "shield", "title": "Finger-control precision", "text": "Designed to help you clean hidden folds with better control than loose wipes or bulky tools." } },
-        "benefit_2": { "type": "support_point", "settings": { "icon": "science", "title": "Reaches hidden folds", "text": "Built to reach the areas that cotton swabs, drops, and flat wipes often miss." } },
-        "benefit_3": { "type": "support_point", "settings": { "icon": "heart", "title": "Recurring ear-care support", "text": "A lower-friction routine for homes that need regular maintenance instead of occasional emergency cleaning." } },
-        "pack_1": { "type": "pack_option", "settings": { "title": "1 Pack", "subtitle": "Starter", "note": "Single-pack trial", "badge": "", "discount_percent": 0, "quantity": 1 } },
-        "pack_2": { "type": "pack_option", "settings": { "title": "3 Packs", "subtitle": "Most Popular", "note": "Ongoing ear care", "badge": "Most Popular", "discount_percent": 18, "quantity": 3 } },
-        "pack_3": { "type": "pack_option", "settings": { "title": "5 Packs", "subtitle": "Best Value", "note": "Long-term maintenance", "badge": "Best Value", "discount_percent": 28, "quantity": 5 } }
+        "benefit_1": {
+          "type": "support_point",
+          "settings": {
+            "icon": "shield",
+            "title": "Finger-control precision",
+            "text": "Designed to help you clean hidden folds with better control than loose wipes or bulky tools."
+          }
+        },
+        "benefit_2": {
+          "type": "support_point",
+          "settings": {
+            "icon": "science",
+            "title": "Reaches hidden folds",
+            "text": "Built to reach the areas that cotton swabs, drops, and flat wipes often miss."
+          }
+        },
+        "benefit_3": {
+          "type": "support_point",
+          "settings": {
+            "icon": "heart",
+            "title": "Recurring ear-care support",
+            "text": "A lower-friction routine for homes that need regular maintenance instead of occasional emergency cleaning."
+          }
+        },
+        "pack_1": {
+          "type": "pack_option",
+          "settings": {
+            "title": "1 Pack",
+            "subtitle": "Starter",
+            "note": "Single-pack trial",
+            "badge": "",
+            "discount_percent": 0,
+            "quantity": 1
+          }
+        },
+        "pack_2": {
+          "type": "pack_option",
+          "settings": {
+            "title": "3 Packs",
+            "subtitle": "Most Popular",
+            "note": "Ongoing ear care",
+            "badge": "Most Popular",
+            "discount_percent": 18,
+            "quantity": 3
+          }
+        },
+        "pack_3": {
+          "type": "pack_option",
+          "settings": {
+            "title": "5 Packs",
+            "subtitle": "Best Value",
+            "note": "Long-term maintenance",
+            "badge": "Best Value",
+            "discount_percent": 28,
+            "quantity": 5
+          }
+        }
       },
-      "block_order": ["benefit_1","benefit_2","benefit_3","pack_1","pack_2","pack_3"],
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "pack_1",
+        "pack_2",
+        "pack_3"
+      ],
       "settings": {
         "enable_sticky_cta": true,
         "eyebrow": "Did You Know Up To 70% Of Dogs Develop Ear Problems?",
@@ -48,32 +115,39 @@
         "enable_video_looping": false
       }
     },
-    "problem": {
-      "type": "nuumi-pdp-pawpoint-problem",
-      "blocks": {
-        "item_1": { "type": "problem_item", "settings": { "icon": "cotton_swab", "title": "Cotton Swabs", "text": "Pushes debris further in and offers no grip on hidden folds." } },
-        "item_2": { "type": "problem_item", "settings": { "icon": "drops", "title": "Liquid Drops", "text": "Drip and slide — can't control where the formula ends up inside the ear." } },
-        "item_3": { "type": "problem_item", "settings": { "icon": "wipe", "title": "Regular Wipes", "text": "Too flat to reach the vertical hidden folds where odor and gunk build up." } },
-        "item_4": { "type": "problem_item", "settings": { "icon": "alcohol", "title": "Alcohol Cleaners", "text": "Sting on contact and disrupt the ear's natural pH balance with repeated use." } },
-        "item_5": { "type": "problem_item", "settings": { "icon": "groomer", "title": "Groomer Cleanings", "text": "Expensive and infrequent — problems build up again long before the next appointment." } },
-        "item_6": { "type": "problem_item", "settings": { "icon": "home_remedy", "title": "Home Remedies", "text": "Vinegar-water mixes and olive oil lack precision and can irritate the ear canal." } }
-      },
-      "block_order": ["item_1","item_2","item_3","item_4","item_5","item_6"],
-      "settings": {
-        "bg_color": "#ffffff",
-        "eyebrow": "The Problem With Ear Care",
-        "title": "You've Probably Tried These Solutions — But They Still Can't Reach The Problem.",
-        "pivot_text": "That's exactly what PawPoint was designed to fix."
-      }
-    },
     "agitation": {
       "type": "nuumi-pdp-agitation",
       "blocks": {
-        "point_1": { "type": "point", "settings": { "icon": "shield", "title": "Cotton swabs", "text": "They often push debris deeper instead of removing what is stuck in the hidden folds." } },
-        "point_2": { "type": "point", "settings": { "icon": "science", "title": "Liquid drops", "text": "They can pool at the bottom while missing the sticky debris clinging to the ear canal walls." } },
-        "point_3": { "type": "point", "settings": { "icon": "heart", "title": "Regular wipes", "text": "They slide across the surface instead of wrapping with your finger and reaching the curves where the gunk hides." } }
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "icon": "shield",
+            "title": "Cotton swabs",
+            "text": "They often push debris deeper instead of removing what is stuck in the hidden folds."
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "icon": "science",
+            "title": "Liquid drops",
+            "text": "They can pool at the bottom while missing the sticky debris clinging to the ear canal walls."
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "icon": "heart",
+            "title": "Regular wipes",
+            "text": "They slide across the surface instead of wrapping with your finger and reaching the curves where the gunk hides."
+          }
+        }
       },
-      "block_order": ["point_1","point_2","point_3"],
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3"
+      ],
       "settings": {
         "bg_color": "#f7fbfd",
         "eyebrow": "Why ear problems return",
@@ -81,17 +155,113 @@
         "text": "<p>A dog's ear canal is shaped very differently from a human ear. The hidden folds and deeper curves are exactly where debris, wax, and irritation-prone buildup collect. Most tools simply cannot clean those areas properly.</p>",
         "analogy_title": "You need better control, not a harsher cleaner.",
         "analogy_text": "<p>PawPoint wraps around your finger so you can feel the curves, guide the wipe with precision, and clean the areas generic tools usually miss.</p>",
+        "image": "shopify://shop_images/pawpoint-agitation-stacked-nanobanana-1.jpg",
         "layout": "diagram_right"
+      }
+    },
+    "problem": {
+      "type": "nuumi-pdp-pawpoint-problem",
+      "blocks": {
+        "item_1": {
+          "type": "problem_item",
+          "settings": {
+            "icon": "cotton_swab",
+            "title": "Cotton Swabs",
+            "text": "Pushes debris further in and offers no grip on hidden folds."
+          }
+        },
+        "item_2": {
+          "type": "problem_item",
+          "settings": {
+            "icon": "drops",
+            "title": "Liquid Drops",
+            "text": "Drip and slide — can't control where the formula ends up inside the ear."
+          }
+        },
+        "item_3": {
+          "type": "problem_item",
+          "settings": {
+            "icon": "wipe",
+            "title": "Regular Wipes",
+            "text": "Too flat to reach the vertical hidden folds where odor and gunk build up."
+          }
+        },
+        "item_4": {
+          "type": "problem_item",
+          "settings": {
+            "icon": "alcohol",
+            "title": "Alcohol Cleaners",
+            "text": "Sting on contact and disrupt the ear's natural pH balance with repeated use."
+          }
+        },
+        "item_5": {
+          "type": "problem_item",
+          "settings": {
+            "icon": "groomer",
+            "title": "Groomer Cleanings",
+            "text": "Expensive and infrequent — problems build up again long before the next appointment."
+          }
+        },
+        "item_6": {
+          "type": "problem_item",
+          "settings": {
+            "icon": "home_remedy",
+            "title": "Home Remedies",
+            "text": "Vinegar-water mixes and olive oil lack precision and can irritate the ear canal."
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "eyebrow": "The Problem With Ear Care",
+        "title": "You've Probably Tried These Solutions — But They Still Can't Reach The Problem.",
+        "media_video_url": "",
+        "media_title": "",
+        "pivot_text": "That's exactly what PawPoint was designed to fix."
       }
     },
     "timeline": {
       "type": "nuumi-pdp-transformation-timeline",
       "blocks": {
-        "step_1": { "type": "step", "settings": { "phase": "Day 1", "title": "Visible debris removal", "text": "The first use lifts away the visible gunk sitting in the folds, providing immediate relief from surface irritation." } },
-        "step_2": { "type": "step", "settings": { "phase": "Week 1", "title": "Reduced scratching", "text": "Consistency in cleaning the deeper curves helps keep the environment stable, reducing the urge to scratch and shake." } },
-        "step_3": { "type": "step", "settings": { "phase": "Weeks 2-4", "title": "Maintenance routine established", "text": "Once the initial buildup is gone, the routine shifts to maintenance, keeping the ears clean and clear long-term." } }
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "phase": "Day 1",
+            "title": "Visible debris removal",
+            "text": "The first use lifts away the visible gunk sitting in the folds, providing immediate relief from surface irritation."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "phase": "Week 1",
+            "title": "Reduced scratching",
+            "text": "Consistency in cleaning the deeper curves helps keep the environment stable, reducing the urge to scratch and shake."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "phase": "Weeks 2-4",
+            "title": "Maintenance routine established",
+            "text": "Once the initial buildup is gone, the routine shifts to maintenance, keeping the ears clean and clear long-term."
+          }
+        }
       },
-      "block_order": ["step_1","step_2","step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
         "bg_color": "#eef7f9",
         "eyebrow": "Visible ear-care progress",
@@ -102,13 +272,40 @@
     "how_to": {
       "type": "nuumi-pdp-how-to-use",
       "blocks": {
-        "step_1": { "type": "step", "settings": { "step_label": "Step 1", "title": "Slip on your finger", "text": "Slide the wipe over your index finger so you control pressure and direction more precisely." } },
-        "step_2": { "type": "step", "settings": { "step_label": "Step 2", "title": "Feel the ear's curves", "text": "Use your finger to follow the natural folds and curves where buildup usually hides." } },
-        "step_3": { "type": "step", "settings": { "step_label": "Step 3", "title": "Wipe with gentle pressure", "text": "Lift away visible debris with controlled, gentle motion instead of poking or flooding the ear." } }
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/pawpoint-slider-dog-ear-cleaning-v1-square.jpg",
+            "step_label": "Step 1",
+            "title": "Slip on your finger",
+            "text": "Slide the wipe over your index finger so you control pressure and direction more precisely."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/pawpoint-slider-cat-ear-cleaning-v1-square.jpg",
+            "step_label": "Step 2",
+            "title": "Feel the ear's curves",
+            "text": "Use your finger to follow the natural folds and curves where buildup usually hides."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 3",
+            "title": "Wipe with gentle pressure",
+            "text": "Lift away visible debris with controlled, gentle motion instead of poking or flooding the ear."
+          }
+        }
       },
-      "block_order": ["step_1","step_2","step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
-        "bg_color": "#F2F8FC",
+        "bg_color": "#f2f8fc",
         "title": "How to use PawPoint",
         "text": "A 3-step routine built around control, visibility, and a cleaner ear-care habit."
       }
@@ -116,17 +313,67 @@
     "comparison": {
       "type": "nuumi-pdp-pawpoint-comparison",
       "blocks": {
-        "feat_1": { "type": "feature", "settings": { "title": "Reaches hidden ear folds", "others_has_feature": false } },
-        "feat_2": { "type": "feature", "settings": { "title": "Finger-control precision", "others_has_feature": false } },
-        "feat_3": { "type": "feature", "settings": { "title": "pH-balanced formula", "others_has_feature": false } },
-        "feat_4": { "type": "feature", "settings": { "title": "No mess or dripping", "others_has_feature": false } },
-        "feat_5": { "type": "feature", "settings": { "title": "Lint-free micro-texture", "others_has_feature": false } },
-        "feat_6": { "type": "feature", "settings": { "title": "60-second application", "others_has_feature": false } },
-        "feat_7": { "type": "feature", "settings": { "title": "Safe for regular use", "others_has_feature": false } }
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Reaches hidden ear folds",
+            "others_has_feature": false
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "title": "Finger-control precision",
+            "others_has_feature": false
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "title": "pH-balanced formula",
+            "others_has_feature": false
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "title": "No mess or dripping",
+            "others_has_feature": false
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "title": "Lint-free micro-texture",
+            "others_has_feature": false
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "title": "60-second application",
+            "others_has_feature": false
+          }
+        },
+        "feat_7": {
+          "type": "feature",
+          "settings": {
+            "title": "Safe for regular use",
+            "others_has_feature": false
+          }
+        }
       },
-      "block_order": ["feat_1","feat_2","feat_3","feat_4","feat_5","feat_6","feat_7"],
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6",
+        "feat_7"
+      ],
       "settings": {
-        "bg_color": "#F9FAFB",
+        "bg_color": "#f9fafb",
         "subtitle": "The Clear Winner",
         "title": "PawPoint vs. The Rest",
         "others_name": "Other Solutions"
@@ -135,11 +382,45 @@
     "reviews": {
       "type": "nuumi-pdp-pawpoint-reviews",
       "blocks": {
-        "review_1": { "type": "review", "settings": { "rating": 5, "badge": "Verified Buyer", "quote": "My lab mix used to shake his head constantly. After a week of PawPoint, the head shaking slowed down noticeably. No more 3AM episodes.", "highlight": "Head shaking reduced within a week.", "name": "Kate D.", "meta": "Labrador parent" } },
-        "review_2": { "type": "review", "settings": { "rating": 5, "badge": "Photo Review", "quote": "I have a beagle with the floppiest ears you have ever seen. Q-tips never worked — they just pushed the gunk deeper. PawPoint reaches the fold properly for the first time.", "highlight": "Finally reaches the ear fold properly.", "name": "Valery S.", "meta": "Beagle parent" } },
-        "review_3": { "type": "review", "settings": { "rating": 5, "badge": "Most Helpful", "quote": "The odor was the first thing I noticed. After two weeks of daily PawPoint use, the smell is completely gone. My groomer even commented on how clean his ears were.", "highlight": "Odor gone after two weeks.", "name": "Robert B.", "meta": "French bulldog parent" } }
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Verified Buyer",
+            "quote": "My lab mix used to shake his head constantly. After a week of PawPoint, the head shaking slowed down noticeably. No more 3AM episodes.",
+            "highlight": "Head shaking reduced within a week.",
+            "name": "Kate D.",
+            "meta": "Labrador parent"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Photo Review",
+            "quote": "I have a beagle with the floppiest ears you have ever seen. Q-tips never worked — they just pushed the gunk deeper. PawPoint reaches the fold properly for the first time.",
+            "highlight": "Finally reaches the ear fold properly.",
+            "name": "Valery S.",
+            "meta": "Beagle parent"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "badge": "Most Helpful",
+            "quote": "The odor was the first thing I noticed. After two weeks of daily PawPoint use, the smell is completely gone. My groomer even commented on how clean his ears were.",
+            "highlight": "Odor gone after two weeks.",
+            "name": "Robert B.",
+            "meta": "French bulldog parent"
+          }
+        }
       },
-      "block_order": ["review_1","review_2","review_3"],
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
       "settings": {
         "bg_color": "#ffffff",
         "eyebrow": "Real Results",
@@ -150,11 +431,42 @@
     "efficacy_grid": {
       "type": "nuumi-pdp-efficacy-grid",
       "blocks": {
-        "feature_1": { "type": "ingredient", "settings": { "icon": "shield", "tag": "Precision", "title": "Finger-Fit Design", "benefit": "Unmatched control.", "text": "Allows you to feel the curves and guide the wipe exactly where the debris collects." } },
-        "feature_2": { "type": "ingredient", "settings": { "icon": "science", "tag": "Hygiene", "title": "pH-Balanced Solution", "benefit": "Safe for regular use.", "text": "Gentle on the sensitive skin of the ear canal while lifting away sticky ear gunk." } },
-        "feature_3": { "type": "ingredient", "settings": { "icon": "heart", "tag": "Texture", "title": "Micro-Textured Wipe", "benefit": "Lifts instead of slides.", "text": "Designed to grab onto and remove debris instead of just sliding it across the surface." } }
+        "feature_1": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "shield",
+            "tag": "Precision",
+            "title": "Finger-Fit Design",
+            "benefit": "Unmatched control.",
+            "text": "Allows you to feel the curves and guide the wipe exactly where the debris collects."
+          }
+        },
+        "feature_2": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "science",
+            "tag": "Hygiene",
+            "title": "pH-Balanced Solution",
+            "benefit": "Safe for regular use.",
+            "text": "Gentle on the sensitive skin of the ear canal while lifting away sticky ear gunk."
+          }
+        },
+        "feature_3": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "heart",
+            "tag": "Texture",
+            "title": "Micro-Textured Wipe",
+            "benefit": "Lifts instead of slides.",
+            "text": "Designed to grab onto and remove debris instead of just sliding it across the surface."
+          }
+        }
       },
-      "block_order": ["feature_1","feature_2","feature_3"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
       "settings": {
         "bg_color": "#ffffff",
         "eyebrow": "Why PawPoint outperforms",
@@ -165,15 +477,56 @@
     "features": {
       "type": "nuumi-pdp-pawpoint-features",
       "blocks": {
-        "feature_1": { "type": "feature", "settings": { "icon": "check_mark", "title": "Finger-Control Precision", "text": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>" } },
-        "feature_2": { "type": "feature", "settings": { "icon": "heart", "title": "See Instant Results", "text": "<p>Lift away visible ear gunk so the clean feels obvious and satisfying.</p>" } },
-        "feature_3": { "type": "feature", "settings": { "icon": "science", "title": "pH-Balanced", "text": "<p>Built for regular ear hygiene without the harsh feel of improvised cleaners.</p>" } },
-        "feature_4": { "type": "feature", "settings": { "icon": "shield", "title": "60-Second Clean", "text": "<p>A faster recurring routine that fits easily into real life.</p>" } },
-        "feature_5": { "type": "feature", "settings": { "icon": "star", "title": "Lint-Free Micro-Texture", "text": "<p>Designed to grab debris without leaving fuzz behind in the ear fold.</p>" } }
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Finger-Control Precision",
+            "text": "<p>Control pressure and direction better than loose wipes or awkward tools.</p>"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "heart",
+            "title": "See Instant Results",
+            "text": "<p>Lift away visible ear gunk so the clean feels obvious and satisfying.</p>"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "science",
+            "title": "pH-Balanced",
+            "text": "<p>Built for regular ear hygiene without the harsh feel of improvised cleaners.</p>"
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "shield",
+            "title": "60-Second Clean",
+            "text": "<p>A faster recurring routine that fits easily into real life.</p>"
+          }
+        },
+        "feature_5": {
+          "type": "feature",
+          "settings": {
+            "icon": "star",
+            "title": "Lint-Free Micro-Texture",
+            "text": "<p>Designed to grab debris without leaving fuzz behind in the ear fold.</p>"
+          }
+        }
       },
-      "block_order": ["feature_1","feature_2","feature_3","feature_4","feature_5"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5"
+      ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "eyebrow": "Why it is superior",
         "title": "Why PawPoint outperforms wipes, drops, and cotton swabs.",
         "text": "<p>A feature checklist built around precision, visible results, and a faster recurring routine.</p>"
@@ -182,12 +535,41 @@
     "transparency": {
       "type": "nuumi-pdp-transparency-banner",
       "blocks": {
-        "item_1": { "type": "item", "settings": { "icon": "shield", "text": "Veterinary Developed" } },
-        "item_2": { "type": "item", "settings": { "icon": "heart", "text": "pH-Balanced" } },
-        "item_3": { "type": "item", "settings": { "icon": "science", "text": "Lint-Free" } },
-        "item_4": { "type": "item", "settings": { "icon": "check_mark", "text": "Alcohol-Free" } }
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "Veterinary Developed"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "pH-Balanced"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "Lint-Free"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Alcohol-Free"
+          }
+        }
       },
-      "block_order": ["item_1","item_2","item_3","item_4"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
       "settings": {
         "bg_color": "#10243a",
         "eyebrow": "Trust and hygiene",
@@ -196,10 +578,8 @@
     },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
-      "blocks": {},
-      "block_order": [],
       "settings": {
-        "bg_color": "#10243A",
+        "bg_color": "#10243a",
         "icon": "shield",
         "title": "30-Day Money-Back Guarantee",
         "text": "<p>If PawPoint is not the right fit for your ear-care routine, we will refund your purchase. No hassles, no questions asked.</p>"
@@ -207,10 +587,8 @@
     },
     "final_cta": {
       "type": "nuumi-pdp-pawpoint-final-cta",
-      "blocks": {},
-      "block_order": [],
       "settings": {
-        "bg_color": "#F9FAFB",
+        "bg_color": "#f9fafb",
         "eyebrow": "Start today",
         "title": "Give Your Dog's Ears the Care They Actually Need.",
         "subtitle": "Join thousands of pet parents who finally stopped the head shaking and ear scratching for good.",
@@ -225,8 +603,8 @@
   },
   "order": [
     "main",
-    "problem",
     "agitation",
+    "problem",
     "timeline",
     "how_to",
     "comparison",
