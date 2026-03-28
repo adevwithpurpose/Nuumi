@@ -456,6 +456,17 @@
       observer.observe(buyCard);
     }
 
+    if (typeof subscribe === 'function' && typeof PUB_SUB_EVENTS !== 'undefined' && PUB_SUB_EVENTS.variantChange) {
+      subscribe(PUB_SUB_EVENTS.variantChange, function(event) {
+        var payload = event && event.data ? event.data : null;
+        if (!payload || payload.sectionId !== '{{ section.id }}' || !payload.variant) return;
+
+        basePrice = payload.variant.price || basePrice;
+        baseCompareAtPrice = payload.variant.compare_at_price || 0;
+        updateDisplay();
+      });
+    }
+
     updateDisplay();
   });
 </script>
