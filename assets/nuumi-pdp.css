@@ -2269,6 +2269,14 @@
     .nuumi-byebark-hero__media-column.product__column-sticky,
     .nuumi-calmicollar-hero__media-column.product__column-sticky,
     .nuumi-leash-walk-hero__media-column.product__column-sticky {
+        align-self: start;
+    }
+
+    .nuumi-enercanis-hero__media-column.product__column-sticky .nuumi-enercanis-hero__media-shell,
+    .nuumi-pawpoint-hero__media-column.product__column-sticky .nuumi-pawpoint-hero__media-shell,
+    .nuumi-byebark-hero__media-column.product__column-sticky .nuumi-byebark-hero__media-shell,
+    .nuumi-calmicollar-hero__media-column.product__column-sticky .nuumi-calmicollar-hero__media-shell,
+    .nuumi-leash-walk-hero__media-column.product__column-sticky .nuumi-leash-walk-hero__media-shell {
         position: sticky;
         top: 4rem;
         z-index: 2;
