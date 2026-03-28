@@ -106,7 +106,10 @@
         "text": "<p>The Leash Walk Formula is designed to rebuild your dog's walking pattern step by step, so progress survives outside controlled practice.</p>",
         "analogy_title": "Think of it like replacing autopilot.",
         "analogy_text": "<p>Old pulling behavior runs on a reflex loop. This system replaces that loop with repeatable cues your dog can follow in motion.</p>",
-        "image": "shopify://shop_images/Gemini_Generated_Image_kqq4n3kqq4n3kqq4.png"
+        "media_video_url": "",
+        "video_aspect_ratio": "ratio-4-3",
+        "image": "shopify://shop_images/leashwalk-slider-bonus-stack-v1-square.jpg",
+        "layout": "diagram_right"
       }
     },
     "timeline": {
@@ -236,6 +239,7 @@
       "type": "nuumi-pdp-leash-walk-authority",
       "settings": {
         "bg_color": "#ffffff",
+        "image": "shopify://shop_images/leashwalk-slider-trainer-authority-v1-square.jpg",
         "badge_text": "Instructor authority",
         "heading": "Meet Cinzia, the trainer behind the course.",
         "quote": "<p>With 13+ years of experience as a dog trainer, Cinzia teaches the small but powerful strategies that help your dog recognize you as the guide on every walk.</p>",
@@ -295,6 +299,13 @@
     "transparency": {
       "type": "nuumi-pdp-transparency-banner",
       "blocks": {
+        "item_JUeBET": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "3rd Party Lab Tested"
+          }
+        },
         "item_1": {
           "type": "item",
           "settings": {
@@ -318,6 +329,7 @@
         }
       },
       "block_order": [
+        "item_JUeBET",
         "item_1",
         "item_2",
         "item_3"
