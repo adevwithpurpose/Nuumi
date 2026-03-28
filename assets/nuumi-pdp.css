@@ -1582,12 +1582,6 @@
     white-space: nowrap;
 }
 
-@media screen and (min-width: 750px) {
-    .nuumi-sticky-cta {
-        display: none;
-    }
-}
-
 /* Trust Strip */
 .nuumi-trust-strip {
     padding: 2.4rem 0;
