@@ -35,13 +35,13 @@
         {%- assign agitation_video_class = 'nuumi-pdp-agitation__video ' | append: agitation_video_ratio -%}
         <div class="nuumi-pdp-agitation__diagram-card">
           {%- if section.settings.media_video != blank -%}
-            {{ section.settings.media_video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: agitation_video_class, preload: 'metadata' }}
+            {{ section.settings.media_video | video_tag: controls: true, autoplay: true, loop: true, muted: true, playsinline: true, class: agitation_video_class, preload: 'metadata' }}
           {%- elsif section.settings.media_video_url != blank -%}
             {%- if section.settings.media_video_url.type == 'youtube' -%}
               {%- assign agitation_video_id = section.settings.media_video_url.id -%}
               <iframe
                 class="nuumi-pdp-agitation__video {{ agitation_video_ratio }}"
-                src="https://www.youtube.com/embed/{{ agitation_video_id }}?enablejsapi=1&rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/{{ agitation_video_id }}?enablejsapi=1&rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playsinline=1&playlist={{ agitation_video_id }}"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowfullscreen
                 title="{{ section.settings.title | escape }}"
@@ -51,7 +51,7 @@
               {%- assign agitation_video_id = section.settings.media_video_url.id -%}
               <iframe
                 class="nuumi-pdp-agitation__video {{ agitation_video_ratio }}"
-                src="https://player.vimeo.com/video/{{ agitation_video_id }}?title=0&byline=0&portrait=0"
+                src="https://player.vimeo.com/video/{{ agitation_video_id }}?title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&background=1"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowfullscreen
                 title="{{ section.settings.title | escape }}"
