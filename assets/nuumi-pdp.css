@@ -7072,6 +7072,38 @@
         gap: 0.8rem;
     }
 
+    .nuumi-pawpoint-hero__mode {
+        text-align: center;
+        align-content: center;
+    }
+
+    .nuumi-pawpoint-hero__pack {
+        padding: 1.2rem;
+        min-height: 11rem;
+        text-align: center;
+        align-content: center;
+    }
+
+    .nuumi-pawpoint-hero__pack-title {
+        font-size: 1.4rem;
+    }
+
+    .nuumi-pawpoint-hero__pack-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .nuumi-pawpoint-hero__pack-note {
+        font-size: 1rem;
+    }
+
+    .nuumi-pawpoint-hero__pack-per {
+        font-size: 1rem;
+    }
+
+    .nuumi-pawpoint-hero__pack-save {
+        font-size: 0.88rem;
+    }
+
     .nuumi-pawpoint-hero__left-guarantee {
         grid-template-columns: 7.2rem 1fr;
     }
