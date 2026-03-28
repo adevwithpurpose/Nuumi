@@ -3059,6 +3059,15 @@
     border-radius: 2.2rem;
 }
 
+.nuumi-pdp-agitation__video {
+    width: 100%;
+    display: block;
+    border: 0;
+    border-radius: 2.2rem;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
 .nuumi-pdp-agitation__diagram-shell {
     display: grid;
     gap: 1.8rem;

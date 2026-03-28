@@ -32,7 +32,31 @@
 
       <div class="nuumi-pdp-agitation__visual">
         <div class="nuumi-pdp-agitation__diagram-card">
-          {%- if section.settings.image != blank -%}
+          {%- if section.settings.media_video != blank -%}
+            {{ section.settings.media_video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: 'nuumi-pdp-agitation__video', preload: 'metadata' }}
+          {%- elsif section.settings.media_video_url != blank -%}
+            {%- if section.settings.media_video_url.type == 'youtube' -%}
+              {%- assign agitation_video_id = section.settings.media_video_url.id -%}
+              <iframe
+                class="nuumi-pdp-agitation__video"
+                src="https://www.youtube.com/embed/{{ agitation_video_id }}?enablejsapi=1&rel=0&modestbranding=1"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+                title="{{ section.settings.title | escape }}"
+                loading="lazy"
+              ></iframe>
+            {%- else -%}
+              {%- assign agitation_video_id = section.settings.media_video_url.id -%}
+              <iframe
+                class="nuumi-pdp-agitation__video"
+                src="https://player.vimeo.com/video/{{ agitation_video_id }}?title=0&byline=0&portrait=0"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+                title="{{ section.settings.title | escape }}"
+                loading="lazy"
+              ></iframe>
+            {%- endif -%}
+          {%- elsif section.settings.image != blank -%}
             {{ section.settings.image | image_url: width: 1200 | image_tag:
               loading: 'lazy',
               class: 'nuumi-pdp-agitation__image',
@@ -76,6 +100,8 @@
     { "type": "richtext", "id": "text", "label": "Text", "default": "<p>When the intestinal lining gets damaged, it behaves like a torn screen door: nutrients have a harder time staying in, while irritants and toxins keep leaking through into the bloodstream. That is why diarrhea, itching, and immune flare-ups tend to keep circling back.</p>" },
     { "type": "text", "id": "analogy_title", "label": "Analogy title", "default": "Think of it like a torn screen door." },
     { "type": "richtext", "id": "analogy_text", "label": "Analogy text", "default": "<p>You can keep sweeping the floor every day, but if the screen itself is ripped, debris will keep blowing back inside. EnerCanis is structured to help rebuild the screen instead of endlessly cleaning up the mess.</p>" },
+    { "type": "video", "id": "media_video", "label": "Media — Shopify hosted video" },
+    { "type": "video_url", "id": "media_video_url", "accept": ["youtube", "vimeo"], "label": "Media — External video URL" },
     { "type": "image_picker", "id": "image", "label": "Diagram image" },
     { "type": "select", "id": "layout", "label": "Desktop layout", "options": [{ "value": "diagram_right", "label": "Diagram right" }, { "value": "diagram_left", "label": "Diagram left" }], "default": "diagram_right" }
   ],
