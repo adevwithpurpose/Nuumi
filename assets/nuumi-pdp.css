@@ -906,10 +906,12 @@
 }
 
 .nuumi-byebark-hero__mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.8rem;
 }
 
 .nuumi-byebark-hero__mode {
+    min-height: 100%;
     padding: 1rem 1.05rem;
     border-radius: 1.5rem;
 }
@@ -932,7 +934,14 @@
 }
 
 .nuumi-byebark-hero__price-row {
+    align-items: flex-start;
     gap: 1rem;
+}
+
+.nuumi-byebark-hero__price-meta {
+    display: grid;
+    justify-items: end;
+    gap: 0.35rem;
 }
 
 .nuumi-byebark-hero__price-label {
@@ -5784,6 +5793,7 @@
 }
 
 .nuumi-calmicollar-hero__mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     display: grid;
     gap: 1rem;
 }
@@ -5796,6 +5806,7 @@
 }
 
 .nuumi-calmicollar-hero__mode {
+    min-height: 100%;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -6016,7 +6027,14 @@
 }
 
 .nuumi-calmicollar-hero__price-row {
+    align-items: flex-start;
     gap: 1rem;
+}
+
+.nuumi-calmicollar-hero__price-meta {
+    display: grid;
+    justify-items: end;
+    gap: 0.35rem;
 }
 
 .nuumi-calmicollar-hero__price-label {
@@ -6733,6 +6751,7 @@
 }
 
 .nuumi-pawpoint-hero__mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     display: grid;
     gap: 1rem;
 }
@@ -6745,6 +6764,7 @@
 }
 
 .nuumi-pawpoint-hero__mode {
+    min-height: 100%;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -6965,7 +6985,14 @@
 }
 
 .nuumi-pawpoint-hero__price-row {
+    align-items: flex-start;
     gap: 1rem;
+}
+
+.nuumi-pawpoint-hero__price-meta {
+    display: grid;
+    justify-items: end;
+    gap: 0.35rem;
 }
 
 .nuumi-pawpoint-hero__price-label {
@@ -7087,6 +7114,18 @@
 
     .nuumi-pawpoint-hero__left-guarantee-text {
         font-size: 1.18rem;
+    }
+
+    .nuumi-pawpoint-hero__mode-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nuumi-pawpoint-hero__price-row {
+        flex-direction: column;
+    }
+
+    .nuumi-pawpoint-hero__price-meta {
+        justify-items: start;
     }
 }
 
