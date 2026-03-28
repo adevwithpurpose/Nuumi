@@ -86,7 +86,7 @@ This file can be re-written at any time. Please do not update this file directly
             {% unless collection_image == blank %}
                 {% if image != blank %}
                     <{{ element_key }}-image class="{{ prefix_class }}image {{ prefix_class }}collection-card__image" data-image-loading style="--{{ element_key }}-aspect-ratio: {{ ratio | default: 1 }}">
-                        <img src="{{ image }}" loading="lazy" width="{{ image_width }}" height="{{ image_height }}" />
+                        <img src="{{ image }}" loading="lazy" width="{{ image_width }}" height="{{ image_height }}" alt="{{ collection.title | escape }}" />
                     </{{ element_key }}-image>
                 {% else %}
                     <{{ element_key }}-image class="{{ prefix_class }}image {{ prefix_class }}collection-card__image" data-image-loading style="--{{ element_key }}-aspect-ratio: {{ ratio | default: 1 }}">
@@ -100,7 +100,7 @@ This file can be re-written at any time. Please do not update this file directly
                             {{ collection_image | image_url }} {{ collection_image.width }}w"
                             src="{{ collection_image | image_url: width: 533 }}"
                             sizes="(min-width: 1200px) 360px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                            alt="{{ collection_image.alt | default: product.title | escape }}"
+                            alt="{{ collection_image.alt | default: collection.title | escape }}"
                             class="motion-reduce"
                             loading="lazy"
                             width="533"

@@ -1,5 +1,3 @@
-{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
-
 <div class="nuumi-story section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
   <div class="page-width">
     <div class="nuumi-story__grid {% if section.settings.layout == 'text_first' %}nuumi-story__grid--reverse{% endif %}">

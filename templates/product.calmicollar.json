@@ -271,10 +271,10 @@
           "settings": {
             "rating": 5,
             "badge": "Verified Buyer",
-            "quote": "My rescue would panic when I grabbed my keys. CalmiCollar helped him settle much faster and the pacing reduced within days.",
-            "highlight": "Pacing and panic dropped quickly.",
+            "quote": "Ha smesso di andare in panico quasi subito. Prima camminava avanti e indietro e ansimava ogni volta che prendevo le chiavi; con CalmiCollar si è calmata più in fretta.",
+            "highlight": "Panico da separazione ridotto rapidamente.",
             "name": "Elena D.",
-            "meta": "Adopted dog parent"
+            "meta": "Acquirente verificato"
           }
         },
         "review_2": {
@@ -282,10 +282,10 @@
           "settings": {
             "rating": 5,
             "badge": "Most Helpful",
-            "quote": "We used crate training, long walks, and music, but she still barked nonstop when left alone. This gave us a calmer baseline to train from.",
-            "highlight": "Calmer baseline for training routines.",
-            "name": "Francesca M.",
-            "meta": "Separation-anxiety case"
+            "quote": "Non fidarti solo della nostra parola: la nostra cagnolina abbaiava senza sosta quando restava sola. Con il collare abbiamo visto una routine molto più gestibile.",
+            "highlight": "Routine di casa più calma e stabile.",
+            "name": "Giulia R.",
+            "meta": "Recensione cliente"
           }
         },
         "review_3": {
@@ -293,10 +293,10 @@
           "settings": {
             "rating": 5,
             "badge": "Photo Review",
-            "quote": "The house feels different now. Less whining, less destructive chewing, and she recovers faster when we leave.",
-            "highlight": "Home routine feels calmer and more stable.",
-            "name": "Luca R.",
-            "meta": "Multi-dog home"
+            "quote": "Il SEGRETO MATERNO che dona sicurezza al cane in un collare: meno pianti, meno agitazione e recupero più rapido quando usciamo.",
+            "highlight": "Meno agitazione quando restiamo fuori casa.",
+            "name": "Martina P.",
+            "meta": "Famiglia con cane ansioso"
           }
         }
       },
@@ -309,7 +309,7 @@
         "bg_color": "#ffffff",
         "eyebrow": "Real Results",
         "title": "What Dog Parents Are Saying About CalmiCollar.",
-        "text": "Verified reviews from homes using CalmiCollar for separation-anxiety support."
+        "text": "Customer testimonials aligned with the original CalmiCollar separation-anxiety messaging."
       }
     },
     "guarantee": {

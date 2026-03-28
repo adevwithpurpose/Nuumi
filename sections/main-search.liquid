@@ -66,9 +66,9 @@
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+      <h1 class="center">
         {%- if search.performed -%}
-          {{- 'templates.search.title' | t -}}
+          {{- 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count -}}
         {%- else -%}
           {{- 'general.search.search' | t -}}
         {%- endif -%}

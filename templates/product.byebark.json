@@ -273,9 +273,9 @@
           "settings": {
             "rating": 5,
             "badge": "Verified Buyer",
-            "quote": "My dog used to explode at every delivery knock. With ByeBark and consistent timing, the barking loop finally became manageable.",
-            "highlight": "Delivery-trigger barking dropped fast.",
-            "name": "Marco L.",
+            "quote": "Struggling with incessant barking and doorbell dread was our daily routine. ByeBark's Frequency-Shift technology interrupted the barking loop almost immediately.",
+            "highlight": "Stops the barking loop fast.",
+            "name": "Mirko I.",
             "meta": "Verified Buyer"
           }
         },
@@ -284,10 +284,10 @@
           "settings": {
             "rating": 5,
             "badge": "Most Helpful",
-            "quote": "I wanted something pain-free and practical. ByeBark gave us a cleaner way to interrupt barking without adding stress.",
-            "highlight": "A calmer, no-shock routine.",
-            "name": "Sophie T.",
-            "meta": "Multi-dog household"
+            "quote": "We wanted a pain-free method that still worked. This gave instant relief from stress and noise complaints without shouting or harsh tools.",
+            "highlight": "Instant relief from noise complaints.",
+            "name": "Francesca D.",
+            "meta": "Apartment household"
           }
         },
         "review_3": {
@@ -295,10 +295,10 @@
           "settings": {
             "rating": 5,
             "badge": "Home Use",
-            "quote": "The frequency-shift pattern made a big difference compared to old single-tone devices we tried before.",
-            "highlight": "Did not get tuned out like old tools.",
-            "name": "Daniel P.",
-            "meta": "Apartment dog parent"
+            "quote": "Unlike flat-tone devices our dog ignored, the shifting frequency kept his attention and helped us redirect behavior consistently.",
+            "highlight": "Did not get ignored like single-tone devices.",
+            "name": "Laura S.",
+            "meta": "Family with reactive dog"
           }
         }
       },
@@ -311,7 +311,7 @@
         "bg_color": "#ffffff",
         "eyebrow": "Real Results",
         "title": "What Dog Parents Are Saying About ByeBark.",
-        "text": "Verified reviews from households using ByeBark in daily barking triggers."
+        "text": "Verified reviews from households using ByeBark for doorbell dread, fence barking, and daily trigger control."
       }
     },
     "whats_included": {
