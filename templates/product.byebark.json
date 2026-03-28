@@ -152,6 +152,7 @@
         "analogy_text": "<p>ByeBark uses a shifting frequency that instantly captures their attention, pulling them out of the barking loop so you can redirect their behavior.</p>",
         "media_video": "shopify://files/videos/7ff9d324a05144578f340cd3ae37ebc7.mp4",
         "media_video_url": "",
+        "video_aspect_ratio": "ratio-1-1",
         "layout": "diagram_right"
       }
     },
