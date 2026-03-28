@@ -32,9 +32,10 @@
 
       <div class="nuumi-pdp-agitation__visual">
         {%- assign agitation_video_ratio = section.settings.video_aspect_ratio | default: 'ratio-16-9' -%}
+        {%- assign agitation_video_class = 'nuumi-pdp-agitation__video ' | append: agitation_video_ratio -%}
         <div class="nuumi-pdp-agitation__diagram-card">
           {%- if section.settings.media_video != blank -%}
-            {{ section.settings.media_video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: 'nuumi-pdp-agitation__video ' | append: agitation_video_ratio, preload: 'metadata' }}
+            {{ section.settings.media_video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: agitation_video_class, preload: 'metadata' }}
           {%- elsif section.settings.media_video_url != blank -%}
             {%- if section.settings.media_video_url.type == 'youtube' -%}
               {%- assign agitation_video_id = section.settings.media_video_url.id -%}
