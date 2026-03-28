@@ -6865,8 +6865,7 @@
 }
 
 .nuumi-pawpoint-hero__mode-badge,
-.nuumi-pawpoint-hero__price-chip,
-.nuumi-pawpoint-hero__pack-save {
+.nuumi-pawpoint-hero__price-chip {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -6879,6 +6878,17 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+.nuumi-pawpoint-hero__pack-save {
+    display: inline-flex;
+    justify-self: start;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(15, 118, 110, 0.12);
+    color: #0f766e;
+    font-size: 0.95rem;
+    font-weight: 700;
 }
 
 .nuumi-pawpoint-hero__pack-per {

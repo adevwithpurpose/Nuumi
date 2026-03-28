@@ -14,10 +14,10 @@
         <article class="nuumi-pdp-howto__card" {{ block.shopify_attributes }}>
           <div class="nuumi-pdp-howto__media">
             {%- if block.settings.video != blank -%}
-              {{ block.settings.video | video_tag: controls: true, autoplay: false, loop: false, muted: false, class: 'nuumi-pdp-howto__video', preload: 'metadata' }}
+              {{ block.settings.video | video_tag: controls: true, autoplay: true, loop: true, muted: true, class: 'nuumi-pdp-howto__video', preload: 'metadata' }}
             {%- elsif block.settings.video_url != blank -%}
               {%- if block.settings.video_url.type == 'youtube' -%}
-                <iframe class="nuumi-pdp-howto__video" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?enablejsapi=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="{{ block.settings.title }}" loading="lazy"></iframe>
+                <iframe class="nuumi-pdp-howto__video" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?enablejsapi=1&rel=0&modestbranding=1&autoplay=1&mute=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="{{ block.settings.title }}" loading="lazy"></iframe>
               {%- else -%}
                 <iframe class="nuumi-pdp-howto__video" src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?title=0&byline=0&portrait=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="{{ block.settings.title }}" loading="lazy"></iframe>
               {%- endif -%}
