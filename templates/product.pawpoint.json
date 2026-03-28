@@ -433,6 +433,50 @@
         "text": "Verified reviews from dog parents who made the switch."
       }
     },
+    "transparency": {
+      "type": "nuumi-pdp-transparency-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "text": "Veterinary Developed"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "heart",
+            "text": "pH-Balanced"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "science",
+            "text": "Lint-Free"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Alcohol-Free"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "bg_color": "#10243a",
+        "eyebrow": "Trust and hygiene",
+        "title": "Safe ear care designed for recurring daily or weekly routines."
+      }
+    },
     "efficacy_grid": {
       "type": "nuumi-pdp-efficacy-grid",
       "blocks": {
@@ -479,50 +523,6 @@
         "text": "<p>PawPoint is not just another wipe. It is a finger-control system organized around precision, safety, and visible debris removal.</p>"
       }
     },
-    "transparency": {
-      "type": "nuumi-pdp-transparency-banner",
-      "blocks": {
-        "item_1": {
-          "type": "item",
-          "settings": {
-            "icon": "shield",
-            "text": "Veterinary Developed"
-          }
-        },
-        "item_2": {
-          "type": "item",
-          "settings": {
-            "icon": "heart",
-            "text": "pH-Balanced"
-          }
-        },
-        "item_3": {
-          "type": "item",
-          "settings": {
-            "icon": "science",
-            "text": "Lint-Free"
-          }
-        },
-        "item_4": {
-          "type": "item",
-          "settings": {
-            "icon": "check_mark",
-            "text": "Alcohol-Free"
-          }
-        }
-      },
-      "block_order": [
-        "item_1",
-        "item_2",
-        "item_3",
-        "item_4"
-      ],
-      "settings": {
-        "bg_color": "#10243a",
-        "eyebrow": "Trust and hygiene",
-        "title": "Safe ear care designed for recurring daily or weekly routines."
-      }
-    },
     "features": {
       "type": "nuumi-pdp-pawpoint-features",
       "blocks": {
@@ -565,6 +565,7 @@
         "feature_4",
         "feature_5"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#ffffff",
         "eyebrow": "Why it is superior",
@@ -605,8 +606,8 @@
     "how_to",
     "comparison",
     "reviews",
-    "efficacy_grid",
     "transparency",
+    "efficacy_grid",
     "features",
     "guarantee",
     "final_cta"
