@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -39,7 +48,7 @@
         "badge_primary": "Instant Digital Access",
         "badge_secondary": "No Shipping Required",
         "headline": "How To Stop Your Dog Pulling On The Leash In Less Than 7 Days.",
-        "subtitle": "Transform walks into relaxing moments. Make your dog walk beside you calmly and trust your judgment BEFORE reacting to a threat.",
+        "subtitle": "",
         "description": "<p>A step-by-step digital training system built to make your dog calmer, more responsive, and easier to guide on every walk.</p>",
         "price_label": "Today only",
         "compare_at_price_text": "$97",
@@ -91,7 +100,7 @@
         "item_3"
       ],
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "eyebrow": "What you get",
         "title": "A digital training system that feels complete from day one.",
         "text": "<p>Designed to transform walks into calm, structured moments with practical lessons you can start immediately.</p>"
@@ -134,7 +143,7 @@
         "bonus_3"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "eyebrow": "Free bonuses",
         "title": "Three extra bonuses that make the program feel complete.",
         "text": "<p>Each bonus increases the perceived value of the program and deepens the walk-training system.</p>"
@@ -143,7 +152,7 @@
     "authority": {
       "type": "nuumi-pdp-leash-walk-authority",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "badge_text": "Instructor authority",
         "heading": "Meet Cinzia, the trainer behind the course.",
         "quote": "<p>With 13+ years of experience as a dog trainer, Cinzia teaches the small but powerful strategies that help your dog recognize you as the guide on every walk.</p>",
@@ -154,7 +163,7 @@
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
       "settings": {
-        "bg_color": "#10243A",
+        "bg_color": "#10243a",
         "icon": "shield",
         "title": "60-Day Money-Back Guarantee",
         "text": "<p>If the course is not the right fit for you and your dog, we will refund your purchase. No hassles, no questions asked.</p>"
@@ -191,7 +200,7 @@
         "faq_3"
       ],
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "title": "Frequently asked questions"
       }
     }
