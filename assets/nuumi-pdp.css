@@ -961,6 +961,7 @@
 }
 
 .nuumi-byebark-hero__pack-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
 }
 
@@ -6054,6 +6055,7 @@
 }
 
 .nuumi-calmicollar-hero__pack-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
 }
 
@@ -7012,6 +7014,7 @@
 }
 
 .nuumi-pawpoint-hero__pack-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
 }
 
@@ -7933,6 +7936,7 @@
 }
 
 .nuumi-leash-walk-hero__pack-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
 }
 
