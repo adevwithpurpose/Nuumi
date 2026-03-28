@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -71,11 +80,11 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Modern bark control, without the harsh feel",
+        "eyebrow": "Modern bark control",
         "badge_primary": "Veterinary Reviewed",
         "badge_secondary": "100% Pain-Free",
         "headline": "Stops The Bark In Seconds - And Breaks The Habit For Good In Just 3 Days!",
-        "subtitle": "Uses advanced 'Frequency-Shift™ Technology' to instantly capture attention and stop nuisance barking without getting your dog 'used to the sound'.",
+        "subtitle": "",
         "description": "<p>ByeBark helps interrupt fence fighting, delivery-driver barking, and frantic jumping or nipping with a faster, lower-friction tool that is easy to keep nearby.</p>",
         "rating_value": 4.8,
         "review_count": "2,300+",
@@ -97,10 +106,11 @@
         "pack_heading": "Choose your bundle",
         "cta_label": "Add ByeBark to cart",
         "sticky_button_label": "Add to cart",
-        "one_time_cta_note": "All bundles include 2 free digital bonuses ($194 value).",
+        "one_time_cta_note": "60-day quiet-home guarantee",
         "shipping_note": "Fast US shipping",
-        "guarantee_note": "60-day quiet-home guarantee",
-        "payment_note": "Secure checkout with major payment methods",
+        "guarantee_note": "",
+        "payment_note": "Secure checkout",
+        "left_guarantee_image": "shopify://shop_images/1761414454286_1747422318739_1747343375411_NR_5_TryIt.png",
         "left_guarantee_title": "Try it worry-free for 60 days",
         "left_guarantee_text": "If your dog does not show visible improvement, we will refund your purchase. Simple as that.",
         "gallery_layout": "thumbnail_slider",
@@ -186,7 +196,7 @@
         "feat_4"
       ],
       "settings": {
-        "bg_color": "#EAF7F7",
+        "bg_color": "#eaf7f7",
         "eyebrow": "BarkSense Technology",
         "title": "How BarkSense Technology Works",
         "text": "<p>A smarter way to interrupt the barking loop.</p>"
@@ -244,7 +254,7 @@
         "comp_5"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "subtitle": "ByeBark vs harsher approaches",
         "title": "A calmer bark-control setup for everyday home triggers.",
         "nuumi_name": "ByeBark",
@@ -304,7 +314,7 @@
         "item_5"
       ],
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "eyebrow": "Everything you need",
         "title": "What's in the box",
         "text": "<p>Plus 2 free digital bonuses ($194 value) to help you get started.</p>"
