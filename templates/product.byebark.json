@@ -296,37 +296,19 @@
             "title": "Bonus: Training Guide",
             "text": "<p>Digital protocol for best results.</p>"
           }
-        },
-        "item_5": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "title": "Bonus: Behavior Masterclass",
-            "text": "<p>Expert video training series.</p>"
-          }
         }
       },
       "block_order": [
         "item_1",
         "item_2",
         "item_3",
-        "item_4",
-        "item_5"
+        "item_4"
       ],
       "settings": {
         "bg_color": "#f7fbfd",
         "eyebrow": "Everything you need",
         "title": "What's in the box",
         "text": "<p>Plus 2 free digital bonuses ($194 value) to help you get started.</p>"
-      }
-    },
-    "guarantee": {
-      "type": "nuumi-pdp-guarantee",
-      "settings": {
-        "bg_color": "#10243a",
-        "icon": "shield",
-        "title": "60-Day Quiet-Home Guarantee",
-        "text": "<p>If your dog does not show visible improvement, we will refund your purchase. Simple as that.</p>"
       }
     },
     "faq": {
@@ -411,7 +393,6 @@
     "mechanism",
     "comparison",
     "whats_included",
-    "guarantee",
     "faq"
   ]
 }
