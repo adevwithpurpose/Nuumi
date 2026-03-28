@@ -1,0 +1,77 @@
+{{ 'nuumi-pdp.css' | asset_url | stylesheet_tag }}
+
+<div class="nuumi-pawpoint-reviews section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="nuumi-pawpoint-reviews__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="nuumi-pawpoint-reviews__eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+      <h2 class="nuumi-pawpoint-reviews__title">{{ section.settings.title }}</h2>
+      {%- if section.settings.text != blank -%}
+        <p class="nuumi-pawpoint-reviews__text">{{ section.settings.text }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="nuumi-pawpoint-reviews__grid">
+      {%- for block in section.blocks -%}
+        <article class="nuumi-pawpoint-reviews__card" {{ block.shopify_attributes }}>
+          <div class="nuumi-pawpoint-reviews__card-top">
+            {% render 'nuumi-rating-stars', rating: block.settings.rating, count: blank, class: 'nuumi-pawpoint-reviews__stars' %}
+            {%- if block.settings.badge != blank -%}
+              <span class="nuumi-pawpoint-reviews__badge">{{ block.settings.badge }}</span>
+            {%- endif -%}
+          </div>
+          <blockquote class="nuumi-pawpoint-reviews__quote">{{ block.settings.quote }}</blockquote>
+          {%- if block.settings.highlight != blank -%}
+            <p class="nuumi-pawpoint-reviews__highlight">{{ block.settings.highlight }}</p>
+          {%- endif -%}
+          <div class="nuumi-pawpoint-reviews__author">
+            <span class="nuumi-pawpoint-reviews__name">{{ block.settings.name }}</span>
+            {%- if block.settings.meta != blank -%}
+              <span class="nuumi-pawpoint-reviews__meta">{{ block.settings.meta }}</span>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nuumi PawPoint Reviews",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#F9FAFB" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Real Results" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "What Dog Parents Are Saying About PawPoint." },
+    { "type": "text", "id": "text", "label": "Subtext", "default": "Verified reviews from dog parents who made the switch." }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 4,
+      "settings": [
+        { "type": "range", "id": "rating", "label": "Rating", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "text", "id": "badge", "label": "Badge", "default": "Verified Buyer" },
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "My lab mix used to shake his head constantly. After a week of PawPoint, the head shaking slowed down noticeably. No more 3AM episodes." },
+        { "type": "text", "id": "highlight", "label": "Highlight", "default": "Head shaking reduced within a week." },
+        { "type": "text", "id": "name", "label": "Name", "default": "Kate D." },
+        { "type": "text", "id": "meta", "label": "Meta", "default": "Labrador parent" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuumi PawPoint Reviews",
+      "blocks": [
+        { "type": "review", "settings": { "rating": 5, "badge": "Verified Buyer", "quote": "My lab mix used to shake his head constantly. After a week of PawPoint, the head shaking slowed down noticeably. No more 3AM episodes.", "highlight": "Head shaking reduced within a week.", "name": "Kate D.", "meta": "Labrador parent" } },
+        { "type": "review", "settings": { "rating": 5, "badge": "Photo Review", "quote": "I have a beagle with the floppiest ears you have ever seen. Q-tips never worked — they just pushed the gunk deeper. PawPoint reaches the fold properly for the first time.", "highlight": "Finally reaches the ear fold properly.", "name": "Valery S.", "meta": "Beagle parent" } },
+        { "type": "review", "settings": { "rating": 5, "badge": "Most Helpful", "quote": "The odor was the first thing I noticed. After two weeks of daily PawPoint use, the smell is completely gone. My groomer even commented on how clean his ears were.", "highlight": "Odor gone after two weeks.", "name": "Robert B.", "meta": "French bulldog parent" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -8670,3 +8670,154 @@
     color: var(--nuumi-gold);
     flex-shrink: 0;
 }
+
+/* =============================================
+   PawPoint Reviews Section
+   ============================================= */
+.nuumi-pawpoint-reviews {
+    padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-reviews {
+        padding: 9.6rem 0;
+    }
+}
+
+.nuumi-pawpoint-reviews__header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.nuumi-pawpoint-reviews__eyebrow {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--nuumi-gold);
+}
+
+.nuumi-pawpoint-reviews__title {
+    font-family: var(--font-heading-family);
+    font-size: 3.2rem;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+    .nuumi-pawpoint-reviews__title {
+        font-size: 4.2rem;
+    }
+}
+
+.nuumi-pawpoint-reviews__text {
+    font-family: var(--font-body-family);
+    font-size: 1.6rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.nuumi-pawpoint-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 560px) {
+    .nuumi-pawpoint-reviews__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .nuumi-pawpoint-reviews__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.nuumi-pawpoint-reviews__card {
+    background: #ffffff;
+    border-radius: 2rem;
+    border: 1px solid rgba(16, 36, 58, 0.07);
+    box-shadow: 0 4px 16px rgba(16, 36, 58, 0.05);
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.nuumi-pawpoint-reviews__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nuumi-pawpoint-reviews__stars {
+    display: flex;
+    gap: 0.2rem;
+    color: var(--nuumi-gold);
+}
+
+.nuumi-pawpoint-reviews__badge {
+    font-family: var(--font-body-family);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--nuumi-deep-blue);
+    background: rgba(30, 58, 138, 0.06);
+    border-radius: 100px;
+    padding: 0.3rem 1rem;
+    white-space: nowrap;
+}
+
+.nuumi-pawpoint-reviews__quote {
+    font-family: var(--font-body-family);
+    font-size: 1.5rem;
+    color: var(--nuumi-deep-blue);
+    margin: 0;
+    line-height: 1.6;
+    flex: 1;
+    font-style: normal;
+}
+
+.nuumi-pawpoint-reviews__highlight {
+    font-family: var(--font-body-family);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--nuumi-gold);
+    margin: 0;
+    padding: 0.6rem 1rem;
+    background: rgba(201, 169, 110, 0.1);
+    border-radius: 0.8rem;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.nuumi-pawpoint-reviews__author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: auto;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(16, 36, 58, 0.07);
+}
+
+.nuumi-pawpoint-reviews__name {
+    font-family: var(--font-body-family);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--nuumi-deep-blue);
+}
+
+.nuumi-pawpoint-reviews__meta {
+    font-family: var(--font-body-family);
+    font-size: 1.2rem;
+    color: #9ca3af;
+}
