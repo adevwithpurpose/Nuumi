@@ -2263,10 +2263,16 @@
     align-items: start;
 }
 
-.nuumi-enercanis-hero__media-column.product__column-sticky {
-    position: sticky;
-    top: 4rem;
-    z-index: 2;
+@media screen and (min-width: 990px) {
+    .nuumi-enercanis-hero__media-column.product__column-sticky,
+    .nuumi-pawpoint-hero__media-column.product__column-sticky,
+    .nuumi-byebark-hero__media-column.product__column-sticky,
+    .nuumi-calmicollar-hero__media-column.product__column-sticky,
+    .nuumi-leash-walk-hero__media-column.product__column-sticky {
+        position: sticky;
+        top: 4rem;
+        z-index: 2;
+    }
 }
 
 .nuumi-enercanis-hero__media-shell {
@@ -3066,6 +3072,14 @@
     border-radius: 2.2rem;
     aspect-ratio: 16 / 9;
     background: #000;
+}
+
+.nuumi-pdp-agitation__video.ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.nuumi-pdp-agitation__video.ratio-1-1 {
+    aspect-ratio: 1 / 1;
 }
 
 .nuumi-pdp-agitation__diagram-shell {
