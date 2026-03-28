@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -71,11 +80,11 @@
       ],
       "settings": {
         "enable_sticky_cta": true,
-        "eyebrow": "Comfort-first calm support for anxious dogs",
+        "eyebrow": "Calm support for anxious dogs",
         "badge_primary": "Vet Approved",
         "badge_secondary": "100% Drug-Free",
         "headline": "Make Your Dog Stop Barking Non-Stop, Peeing Indoors, or Destroying Furniture When Left Alone.",
-        "subtitle": "The maternal secret that gives your dog safety in a collar. Provides 24/7 calming relief without turning your dog into a zombie.",
+        "subtitle": "",
         "description": "<p>CalmiCollar uses pheromone technology to help dogs settle faster when being left alone triggers barking, indoor accidents, chewing, pacing, or destructive panic.</p>",
         "rating_value": 4.8,
         "review_count": "4,100+",
@@ -97,10 +106,11 @@
         "pack_heading": "Choose your bundle",
         "cta_label": "Add CalmiCollar to cart",
         "sticky_button_label": "Add to cart",
-        "one_time_cta_note": "Designed for daily separation-anxiety support.",
+        "one_time_cta_note": "30-day money-back guarantee",
         "shipping_note": "Fast US shipping",
-        "guarantee_note": "30-day money-back guarantee",
+        "guarantee_note": "",
         "payment_note": "Secure checkout with major payment methods",
+        "left_guarantee_image": "shopify://shop_images/1766687098624_guarantee_30d.webp",
         "left_guarantee_title": "Try it worry-free for 30 days",
         "left_guarantee_text": "If CalmiCollar is not the right fit for your dog, we will refund your purchase. Simple as that.",
         "gallery_layout": "thumbnail_slider",
@@ -186,7 +196,7 @@
         "feat_2"
       ],
       "settings": {
-        "bg_color": "#EAF7F7",
+        "bg_color": "#eaf7f7",
         "eyebrow": "The Science of Pheromones",
         "title": "Why NeuroEase Blend calms the brain before behavior spirals.",
         "text": "<p>A dual-signal pheromone approach that reduces outside threat perception while increasing the feeling of maternal safety and calm.</p>"
@@ -244,7 +254,7 @@
         "item_5"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "eyebrow": "What it helps stop",
         "title": "The daily symptoms CalmiCollar helps calm down.",
         "text": "<p>A quick visual checklist of the separation-anxiety behaviors the collar is designed to reduce over time.</p>"
@@ -306,7 +316,7 @@
         "faq_5"
       ],
       "settings": {
-        "bg_color": "#F7FBFD",
+        "bg_color": "#f7fbfd",
         "title": "Frequently asked questions"
       }
     }
