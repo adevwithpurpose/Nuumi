@@ -399,9 +399,9 @@
       });
     }
 
-    if (stickyCta && buyCard) {
+    if (stickyCta && sectionRoot) {
       var syncStickyCta = function() {
-        var rect = buyCard.getBoundingClientRect();
+        var rect = sectionRoot.getBoundingClientRect();
         var shouldShow = rect.top <= 0;
         stickyCta.classList.toggle('nuumi-sticky-cta--visible', shouldShow);
       };
@@ -410,7 +410,7 @@
         syncStickyCta();
       }, { threshold: [0, 1] });
 
-      observer.observe(buyCard);
+      observer.observe(sectionRoot);
       window.addEventListener('scroll', syncStickyCta, { passive: true });
       window.addEventListener('resize', syncStickyCta);
       syncStickyCta();
