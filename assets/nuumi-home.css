@@ -155,8 +155,9 @@ h1.nuumi-home-hero__title {
 
 @media screen and (max-width: 768px) {
   .nuumi-home-hero {
-    min-height: 64rem;
+    min-height: 58rem;
     align-items: center;
+    padding-bottom: 3.2rem;
   }
 
   .nuumi-home-hero__content {
