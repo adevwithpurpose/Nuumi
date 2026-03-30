@@ -155,25 +155,61 @@ h1.nuumi-home-hero__title {
 
 @media screen and (max-width: 768px) {
   .nuumi-home-hero {
-    min-height: 72rem;
+    min-height: 64rem;
     align-items: flex-end;
   }
 
   .nuumi-home-hero__content {
     max-width: 1180px !important;
-    padding: 0 2rem !important;
-    gap: 1.5rem;
+    padding: 0 1.8rem !important;
+    gap: 1.2rem;
   }
 
   .nuumi-home-hero__panel {
     max-width: 100%;
-    padding: 2.6rem 0 2.2rem;
+    padding: 2rem 0 1.8rem;
     border-radius: 0;
-    gap: 1.4rem;
+    gap: 1.1rem;
+  }
+
+  h1.nuumi-home-hero__title {
+    font-size: clamp(2.9rem, 8.4vw, 4.2rem) !important;
+    line-height: 0.96 !important;
+    max-width: 9ch;
+  }
+
+  .nuumi-home-hero__subtitle {
+    font-size: 1.15rem !important;
+    line-height: 1.45 !important;
+    max-width: 31rem;
+  }
+
+  .nuumi-home-hero__bullets {
+    gap: 0.65rem;
+  }
+
+  .nuumi-home-hero__bullet {
+    gap: 0.75rem;
+    font-size: 1.08rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nuumi-home-hero__bullet .nuumi-icon {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+
+  .nuumi-home-hero__cta {
+    margin-top: 0.8rem;
+  }
+
+  .nuumi-home-hero a.nuumi-button--gold {
+    padding: 1.3rem 2.4rem !important;
+    font-size: 1.22rem !important;
   }
 
   .nuumi-home-hero__image-container::after {
-    background: linear-gradient(0deg, rgba(10, 18, 34, 0.9) 0%, rgba(10, 18, 34, 0.55) 42%, rgba(10, 18, 34, 0) 100%);
+    background: linear-gradient(0deg, rgba(10, 18, 34, 0.92) 0%, rgba(10, 18, 34, 0.66) 38%, rgba(10, 18, 34, 0.12) 68%, rgba(10, 18, 34, 0) 100%);
   }
 }
 
