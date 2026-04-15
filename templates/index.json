@@ -165,22 +165,7 @@
             "summary": "Pharmaceutical-grade L-Glutamine and Hydrolyzed Collagen with bioactive peptides designed to soothe the gut and support the intestinal barrier.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View EnerCanis",
-            "link": ""
-          }
-        },
-        "product_card_2": {
-          "type": "product_card",
-          "settings": {
-            "product": "calmicollar-dog",
-            "badge": "Clinically Proven Calming",
-            "title": "",
-            "benefit": "Pheromone technology that lowers baseline anxiety naturally.",
-            "price": "",
-            "summary": "Canine Appeasing Pheromones help dogs feel safe and shift their brain out of survival mode — alleviating separation anxiety and destructive behavior without sedation.",
-            "rating": 0,
-            "rating_count": 0,
-            "button_label": "View CalmiCollar",
+            "button_label": "",
             "link": ""
           }
         },
@@ -196,6 +181,21 @@
             "rating": 0,
             "rating_count": 0,
             "button_label": "View Leash Walk",
+            "link": ""
+          }
+        },
+        "product_card_YWpyg3": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-four-leaf-dog-training",
+            "badge": "Training",
+            "title": "",
+            "benefit": "Practical methods for the walks and routines that matter most.",
+            "price": "",
+            "summary": "A complete training program that gives you practical methods for reactivity, daily routines, and the moments that matter most on every walk.",
+            "rating": 0,
+            "rating_count": 0,
+            "button_label": "",
             "link": ""
           }
         },
@@ -233,8 +233,8 @@
       "block_order": [
         "product_card_1",
         "product_card_3cybnB",
-        "product_card_2",
         "product_card_3",
+        "product_card_YWpyg3",
         "product_card_4",
         "product_card_5"
       ],
