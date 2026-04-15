@@ -138,37 +138,38 @@
     "nuumi_featured_products": {
       "type": "nuumi-featured-products",
       "blocks": {
-        "product_card_1": {
+        "product_card_3": {
           "type": "product_card",
           "settings": {
             "product": "enercanis",
-            "badge": "Gut Health Support",
+            "image": "shopify://shop_images/enercanis-slider-serving-context-v1-square.jpg",
+            "badge": "Wellness",
             "title": "",
-            "benefit": "Daily digestive support with a clearer ingredient story.",
+            "benefit": "Practical methods for the walks and routines that matter most.",
             "price": "",
-            "summary": "Pharmaceutical-grade L-Glutamine and Hydrolyzed Collagen with bioactive peptides designed to soothe the gut and support the intestinal barrier.",
+            "summary": "A complete training program that gives you practical methods for reactivity, daily routines, and the moments that matter most on every walk.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View EnerCanis",
+            "button_label": "View Leash Walk",
             "link": ""
           }
         },
-        "product_card_2": {
+        "product_card_Fkm3Ep": {
           "type": "product_card",
           "settings": {
-            "product": "calmicollar-dog",
-            "badge": "Clinically Proven Calming",
+            "product": "calmicollar",
+            "badge": "Wellness",
             "title": "",
-            "benefit": "Pheromone technology that lowers baseline anxiety naturally.",
+            "benefit": "Practical methods for the walks and routines that matter most.",
             "price": "",
-            "summary": "Canine Appeasing Pheromones help dogs feel safe and shift their brain out of survival mode — alleviating separation anxiety and destructive behavior without sedation.",
+            "summary": "A complete training program that gives you practical methods for reactivity, daily routines, and the moments that matter most on every walk.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View CalmiCollar",
+            "button_label": "View Leash Walk",
             "link": ""
           }
         },
-        "product_card_3": {
+        "product_card_F9GGAP": {
           "type": "product_card",
           "settings": {
             "product": "the-leash-walk-formula",
@@ -215,9 +216,9 @@
         }
       },
       "block_order": [
-        "product_card_1",
-        "product_card_2",
         "product_card_3",
+        "product_card_Fkm3Ep",
+        "product_card_F9GGAP",
         "product_card_4",
         "product_card_5"
       ],
