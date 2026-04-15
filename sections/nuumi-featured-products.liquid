@@ -15,7 +15,7 @@
     </div>
 
     <div class="nuumi-featured-products__grid">
-      {%- for block in section.blocks limit: 3 -%}
+      {%- for block in section.blocks -%}
         {%- assign product_card = block.settings.product -%}
         {%- if product_card == blank -%}
           {%- continue -%}
@@ -212,7 +212,7 @@
       ]
     }
   ],
-  "max_blocks": 3,
+  "max_blocks": 6,
   "presets": [
     {
       "name": "Nuumi Featured Products",

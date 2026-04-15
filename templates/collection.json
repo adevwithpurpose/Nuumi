@@ -9,17 +9,15 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "nuumi-collection-grid",
       "settings": {
-        "products_per_page": 16,
-        "columns_desktop": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_filtering": true,
-        "enable_sorting": true,
-        "columns_mobile": "2",
+        "heading": "",
+        "description": "",
+        "excluded_product_handles": "shipping-protection,50-shades-of-fun,nuumipet-vip,one-on-one-dog-training-call",
+        "excluded_tags": "",
+        "excluded_product_types": "",
+        "products_per_page": 12,
+        "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
