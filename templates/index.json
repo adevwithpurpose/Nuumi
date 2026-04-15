@@ -142,7 +142,23 @@
           "type": "product_card",
           "settings": {
             "product": "enercanis",
+            "image": "shopify://shop_images/enercanis-slider-serving-context-v1-square.jpg",
             "badge": "Gut Health Support",
+            "title": "",
+            "benefit": "Daily digestive support with a clearer ingredient story.",
+            "price": "",
+            "summary": "Pharmaceutical-grade L-Glutamine and Hydrolyzed Collagen with bioactive peptides designed to soothe the gut and support the intestinal barrier.",
+            "rating": 0,
+            "rating_count": 0,
+            "button_label": "View EnerCanis",
+            "link": ""
+          }
+        },
+        "product_card_3cybnB": {
+          "type": "product_card",
+          "settings": {
+            "product": "calmicollar",
+            "badge": "Wellness",
             "title": "",
             "benefit": "Daily digestive support with a clearer ingredient story.",
             "price": "",
@@ -216,6 +232,7 @@
       },
       "block_order": [
         "product_card_1",
+        "product_card_3cybnB",
         "product_card_2",
         "product_card_3",
         "product_card_4",
