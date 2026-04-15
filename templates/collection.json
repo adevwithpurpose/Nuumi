@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -9,15 +18,21 @@
       }
     },
     "product-grid": {
-      "type": "nuumi-collection-grid",
+      "type": "main-collection-product-grid",
       "settings": {
-        "heading": "",
-        "description": "",
-        "excluded_product_handles": "shipping-protection,50-shades-of-fun,nuumipet-vip,one-on-one-dog-training-call",
-        "excluded_tags": "",
-        "excluded_product_types": "",
-        "products_per_page": 12,
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
