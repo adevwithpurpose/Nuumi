@@ -15,7 +15,11 @@
         "title": {
           "type": "title",
           "settings": {
-            "subtitle": "Veterinarian Formulated"
+            "subtitle": "Veterinarian Formulated",
+            "eyebrow": "Daily support for modern pet routines",
+            "badge_primary": "Best Seller",
+            "badge_secondary": "Premium Support",
+            "description": "<p>Built for pet parents who want a more intentional routine with clearer benefits and easier daily use.</p>"
           }
         },
         "price": {
@@ -24,6 +28,7 @@
         },
         "bullets": {
           "type": "bullets",
+          "disabled": true,
           "settings": {
             "bullet_1": "Clinically proven ingredients",
             "bullet_2": "Made in the USA",
@@ -33,14 +38,26 @@
         "quantity_packs": {
           "type": "quantity_packs",
           "settings": {
-            "heading": "Choose your supply"
+            "heading": "Choose your supply",
+            "pack_1_title": "1 Pack",
+            "pack_1_subtitle": "30 Day Supply",
+            "pack_2_title": "3 Packs",
+            "pack_2_subtitle": "90 Day Supply",
+            "pack_2_badge": "Most Popular",
+            "pack_3_title": "6 Packs",
+            "pack_3_subtitle": "180 Day Supply"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_guarantee": true,
-            "guarantee_text": "90-Day Money Back Guarantee"
+            "guarantee_text": "90-Day Money Back Guarantee",
+            "button_label": "Add to Cart",
+            "cta_note": "Built for a simple, repeatable daily routine.",
+            "shipping_note": "Fast US shipping",
+            "guarantee_note": "Satisfaction support available",
+            "payment_note": "Secure checkout with major payment methods"
           }
         }
       },
@@ -52,7 +69,14 @@
         "buy_buttons"
       ],
       "settings": {
-        "enable_sticky_cta": true
+        "enable_sticky_cta": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "enable_video_looping": false,
+        "hide_variants": false
       }
     },
     "trust_strip": {
@@ -94,13 +118,14 @@
         "item_4"
       ],
       "settings": {
-        "bg_color": "#F9FAFB"
+        "bg_color": "#f9fafb"
       }
     },
     "guarantee": {
       "type": "nuumi-pdp-guarantee",
+      "disabled": true,
       "settings": {
-        "bg_color": "#1E3A8A",
+        "bg_color": "#1e3a8a",
         "icon": "shield",
         "title": "Our 90-Day Promise",
         "text": "<p>If you or your pet aren't 100% satisfied with the results, we'll refund your purchase. No questions asked.</p>"
@@ -139,8 +164,9 @@
         "benefit_2",
         "benefit_3"
       ],
+      "disabled": true,
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "layout": "image_first",
         "subtitle": "The Nuumi Difference",
         "title": "Formulated for real results.",
@@ -193,8 +219,9 @@
         "feature_4",
         "feature_5"
       ],
+      "disabled": true,
       "settings": {
-        "bg_color": "#F9FAFB",
+        "bg_color": "#f9fafb",
         "subtitle": "Why Choose Us",
         "title": "The Nuumi Standard",
         "nuumi_name": "Nuumi",
@@ -203,12 +230,14 @@
     },
     "expert": {
       "type": "nuumi-pdp-expert",
+      "disabled": true,
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "badge_text": "Veterinarian Approved",
         "quote": "Nuumi represents a new standard in pet care. The clinical doses of active ingredients provide real, measurable results for joint health and mobility.",
         "name": "Dr. Sarah Jenkins",
-        "credentials": "DVM, Chief Veterinary Officer"
+        "credentials": "DVM, Chief Veterinary Officer",
+        "instagram_url": "https://www.instagram.com/dr.sara_ranocchi_/"
       }
     },
     "faq": {
@@ -241,8 +270,9 @@
         "faq_2",
         "faq_3"
       ],
+      "disabled": true,
       "settings": {
-        "bg_color": "#F9FAFB",
+        "bg_color": "#f9fafb",
         "title": "Frequently Asked Questions"
       }
     },
@@ -251,10 +281,12 @@
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
