@@ -15,57 +15,33 @@
         "title": {
           "type": "title",
           "settings": {
-            "subtitle": "Veterinarian Formulated",
-            "eyebrow": "Daily support for modern pet routines",
-            "badge_primary": "Best Seller",
-            "badge_secondary": "Premium Support",
-            "description": "<p>Built for pet parents who want a more intentional routine with clearer benefits and easier daily use.</p>"
+            "subtitle": "",
+            "eyebrow": "",
+            "badge_primary": "",
+            "badge_secondary": "",
+            "description": ""
           }
         },
         "price": {
           "type": "price",
           "settings": {}
         },
-        "bullets": {
-          "type": "bullets",
-          "disabled": true,
-          "settings": {
-            "bullet_1": "Clinically proven ingredients",
-            "bullet_2": "Made in the USA",
-            "bullet_3": "100% Satisfaction Guarantee"
-          }
-        },
-        "quantity_packs": {
-          "type": "quantity_packs",
-          "settings": {
-            "heading": "Choose your supply",
-            "pack_1_title": "1 Pack",
-            "pack_1_subtitle": "30 Day Supply",
-            "pack_2_title": "3 Packs",
-            "pack_2_subtitle": "90 Day Supply",
-            "pack_2_badge": "Most Popular",
-            "pack_3_title": "6 Packs",
-            "pack_3_subtitle": "180 Day Supply"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_guarantee": true,
-            "guarantee_text": "90-Day Money Back Guarantee",
+            "show_guarantee": false,
+            "guarantee_text": "",
             "button_label": "Add to Cart",
-            "cta_note": "Built for a simple, repeatable daily routine.",
-            "shipping_note": "Fast US shipping",
-            "guarantee_note": "Satisfaction support available",
-            "payment_note": "Secure checkout with major payment methods"
+            "cta_note": "",
+            "shipping_note": "",
+            "guarantee_note": "",
+            "payment_note": ""
           }
         }
       },
       "block_order": [
         "title",
         "price",
-        "bullets",
-        "quantity_packs",
         "buy_buttons"
       ],
       "settings": {
@@ -77,203 +53,6 @@
         "mobile_thumbnails": "hide",
         "enable_video_looping": false,
         "hide_variants": false
-      }
-    },
-    "trust_strip": {
-      "type": "nuumi-pdp-trust-strip",
-      "blocks": {
-        "item_1": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "truck",
-            "text": "Free US Shipping"
-          }
-        },
-        "item_2": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "science",
-            "text": "Vet Formulated"
-          }
-        },
-        "item_3": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "shield",
-            "text": "90-Day Guarantee"
-          }
-        },
-        "item_4": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "leaf",
-            "text": "All Natural"
-          }
-        }
-      },
-      "block_order": [
-        "item_1",
-        "item_2",
-        "item_3",
-        "item_4"
-      ],
-      "settings": {
-        "bg_color": "#f9fafb"
-      }
-    },
-    "guarantee": {
-      "type": "nuumi-pdp-guarantee",
-      "disabled": true,
-      "settings": {
-        "bg_color": "#1e3a8a",
-        "icon": "shield",
-        "title": "Our 90-Day Promise",
-        "text": "<p>If you or your pet aren't 100% satisfied with the results, we'll refund your purchase. No questions asked.</p>"
-      }
-    },
-    "story": {
-      "type": "nuumi-pdp-story",
-      "blocks": {
-        "benefit_1": {
-          "type": "benefit",
-          "settings": {
-            "icon": "science",
-            "title": "Clinically Studied",
-            "text": "<p>Backed by science and formulated by leading veterinarians.</p>"
-          }
-        },
-        "benefit_2": {
-          "type": "benefit",
-          "settings": {
-            "icon": "leaf",
-            "title": "100% Natural",
-            "text": "<p>No artificial fillers, preservatives, or synthetic colors.</p>"
-          }
-        },
-        "benefit_3": {
-          "type": "benefit",
-          "settings": {
-            "icon": "heart",
-            "title": "Picky Eater Approved",
-            "text": "<p>Delicious natural flavor that dogs actually love to eat.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_1",
-        "benefit_2",
-        "benefit_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "bg_color": "#ffffff",
-        "layout": "image_first",
-        "subtitle": "The Nuumi Difference",
-        "title": "Formulated for real results.",
-        "text": "<p>We believe your pet deserves the same quality of care as the rest of your family. That's why we use clinically proven ingredients at their effective doses.</p>"
-      }
-    },
-    "comparison": {
-      "type": "nuumi-pdp-comparison",
-      "blocks": {
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "title": "Veterinarian Formulated",
-            "others_has_feature": false
-          }
-        },
-        "feature_2": {
-          "type": "feature",
-          "settings": {
-            "title": "Clinically Proven Ingredients",
-            "others_has_feature": false
-          }
-        },
-        "feature_3": {
-          "type": "feature",
-          "settings": {
-            "title": "No Artificial Fillers",
-            "others_has_feature": false
-          }
-        },
-        "feature_4": {
-          "type": "feature",
-          "settings": {
-            "title": "Made in the USA",
-            "others_has_feature": true
-          }
-        },
-        "feature_5": {
-          "type": "feature",
-          "settings": {
-            "title": "90-Day Guarantee",
-            "others_has_feature": false
-          }
-        }
-      },
-      "block_order": [
-        "feature_1",
-        "feature_2",
-        "feature_3",
-        "feature_4",
-        "feature_5"
-      ],
-      "disabled": true,
-      "settings": {
-        "bg_color": "#f9fafb",
-        "subtitle": "Why Choose Us",
-        "title": "The Nuumi Standard",
-        "nuumi_name": "Nuumi",
-        "others_name": "Other Brands"
-      }
-    },
-    "expert": {
-      "type": "nuumi-pdp-expert",
-      "disabled": true,
-      "settings": {
-        "bg_color": "#ffffff",
-        "badge_text": "Veterinarian Approved",
-        "quote": "Nuumi represents a new standard in pet care. The clinical doses of active ingredients provide real, measurable results for joint health and mobility.",
-        "name": "Dr. Sarah Jenkins",
-        "credentials": "DVM, Chief Veterinary Officer",
-        "instagram_url": "https://www.instagram.com/dr.sara_ranocchi_/"
-      }
-    },
-    "faq": {
-      "type": "nuumi-pdp-faq",
-      "blocks": {
-        "faq_1": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How long until I see results?",
-            "answer": "<p>Most pet parents notice a difference in their dog's mobility and energy levels within 3-4 weeks of consistent daily use.</p>"
-          }
-        },
-        "faq_2": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is this safe for puppies?",
-            "answer": "<p>Yes, our formula is safe for dogs of all ages, breeds, and sizes. For puppies under 12 weeks, we recommend consulting your veterinarian.</p>"
-          }
-        },
-        "faq_3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Do I need to refrigerate it?",
-            "answer": "<p>No refrigeration is required. Store in a cool, dry place away from direct sunlight.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "bg_color": "#f9fafb",
-        "title": "Frequently Asked Questions"
       }
     },
     "related-products": {
@@ -297,12 +76,6 @@
   },
   "order": [
     "main",
-    "trust_strip",
-    "guarantee",
-    "story",
-    "comparison",
-    "expert",
-    "faq",
     "related-products"
   ]
 }

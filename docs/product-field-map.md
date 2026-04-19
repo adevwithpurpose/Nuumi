@@ -84,9 +84,16 @@ This file defines the local source-of-truth schema used before product data is p
 Use product metafields for structured product-specific content where it reduces template duplication:
 
 - `custom.subtitle`
+- `custom.hero_eyebrow`
 - `custom.badge_primary`
 - `custom.badge_secondary`
+- `custom.hero_description`
 - `custom.hero_bullets`
+- `custom.cta_label`
+- `custom.cta_note`
+- `custom.shipping_note`
+- `custom.guarantee_note`
+- `custom.payment_note`
 - `custom.trust_strip_items`
 - `custom.feature_grid_items`
 - `custom.story_benefits`
@@ -94,6 +101,31 @@ Use product metafields for structured product-specific content where it reduces 
 - `custom.expert_quote`
 - `custom.product_faq`
 - `custom.guarantee_copy`
+
+## Default PDP Metafields In Use
+
+The default `templates/product.json` is now intentionally minimal. It supports these product metafields in `sections/nuumi-main-product.liquid`:
+
+- `custom.hero_eyebrow`
+- `custom.eyebrow`
+- `custom.subtitle`
+- `product.metafields.descriptors.subtitle`
+- `custom.badge_primary`
+- `custom.badge_secondary`
+- `custom.hero_description`
+- `custom.hero_bullets`
+- `custom.cta_label`
+- `custom.cta_note`
+- `custom.shipping_note`
+- `custom.guarantee_note`
+- `custom.payment_note`
+- `custom.guarantee_copy`
+
+Fallback rules:
+
+- core commerce data still comes from Shopify product data: title, media, price, variants, availability
+- if a supported metafield is blank, the default PDP falls back to the block setting when present
+- if both are blank, the related UI stays hidden instead of rendering generic placeholder copy
 
 ## Binary Acceptance Targets
 

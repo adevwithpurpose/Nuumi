@@ -39,25 +39,31 @@
             {%- case block.type -%}
               {%- when 'title' -%}
                 <div class="nuumi-pdp__title-block" {{ block.shopify_attributes }}>
-                  {%- if block.settings.eyebrow != blank -%}
-                    <p class="nuumi-pdp__eyebrow">{{ block.settings.eyebrow }}</p>
+                  {% assign hero_eyebrow = product.metafields.custom.hero_eyebrow.value | default: product.metafields.custom.eyebrow.value | default: block.settings.eyebrow %}
+                  {% assign hero_badge_primary = product.metafields.custom.badge_primary.value | default: block.settings.badge_primary %}
+                  {% assign hero_badge_secondary = product.metafields.custom.badge_secondary.value | default: block.settings.badge_secondary %}
+                  {% assign hero_subtitle = product.metafields.custom.subtitle.value | default: product.metafields.descriptors.subtitle.value | default: block.settings.subtitle %}
+                  {% assign hero_description = product.metafields.custom.hero_description.value | default: product.description | default: block.settings.description %}
+
+                  {%- if hero_eyebrow != blank -%}
+                    <p class="nuumi-pdp__eyebrow">{{ hero_eyebrow }}</p>
                   {%- endif -%}
-                  {%- if block.settings.badge_primary != blank or block.settings.badge_secondary != blank -%}
+                  {%- if hero_badge_primary != blank or hero_badge_secondary != blank -%}
                     <div class="nuumi-pdp__badges">
-                      {%- if block.settings.badge_primary != blank -%}
-                        <span class="nuumi-pdp__badge nuumi-pdp__badge--primary">{{ block.settings.badge_primary }}</span>
+                      {%- if hero_badge_primary != blank -%}
+                        <span class="nuumi-pdp__badge nuumi-pdp__badge--primary">{{ hero_badge_primary }}</span>
                       {%- endif -%}
-                      {%- if block.settings.badge_secondary != blank -%}
-                        <span class="nuumi-pdp__badge nuumi-pdp__badge--secondary">{{ block.settings.badge_secondary }}</span>
+                      {%- if hero_badge_secondary != blank -%}
+                        <span class="nuumi-pdp__badge nuumi-pdp__badge--secondary">{{ hero_badge_secondary }}</span>
                       {%- endif -%}
                     </div>
                   {%- endif -%}
                   <h1 class="nuumi-pdp__title">{{ product.title | escape }}</h1>
-                  {%- if block.settings.subtitle != blank -%}
-                    <p class="nuumi-pdp__subtitle">{{ block.settings.subtitle }}</p>
+                  {%- if hero_subtitle != blank -%}
+                    <p class="nuumi-pdp__subtitle">{{ hero_subtitle }}</p>
                   {%- endif -%}
-                  {%- if block.settings.description != blank -%}
-                    <div class="nuumi-pdp__description rte">{{ block.settings.description }}</div>
+                  {%- if hero_description != blank -%}
+                    <div class="nuumi-pdp__description rte">{{ hero_description }}</div>
                   {%- endif -%}
                 </div>
 
@@ -67,26 +73,41 @@
                 </div>
 
               {%- when 'bullets' -%}
-                <ul class="nuumi-pdp__bullets" {{ block.shopify_attributes }}>
-                  {%- if block.settings.bullet_1 != blank -%}
-                    <li>
-                      <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
-                      {{ block.settings.bullet_1 }}
-                    </li>
-                  {%- endif -%}
-                  {%- if block.settings.bullet_2 != blank -%}
-                    <li>
-                      <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
-                      {{ block.settings.bullet_2 }}
-                    </li>
-                  {%- endif -%}
-                  {%- if block.settings.bullet_3 != blank -%}
-                    <li>
-                      <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
-                      {{ block.settings.bullet_3 }}
-                    </li>
-                  {%- endif -%}
-                </ul>
+                {% assign hero_bullets = product.metafields.custom.hero_bullets.value %}
+                {% assign fallback_bullets = block.settings.bullet_1 | append: block.settings.bullet_2 | append: block.settings.bullet_3 %}
+                {%- if hero_bullets != blank or fallback_bullets != blank -%}
+                  <ul class="nuumi-pdp__bullets" {{ block.shopify_attributes }}>
+                    {%- if hero_bullets != blank -%}
+                      {%- for bullet in hero_bullets -%}
+                        {%- if bullet != blank -%}
+                          <li>
+                            <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                            {{ bullet }}
+                          </li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- else -%}
+                      {%- if block.settings.bullet_1 != blank -%}
+                        <li>
+                          <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                          {{ block.settings.bullet_1 }}
+                        </li>
+                      {%- endif -%}
+                      {%- if block.settings.bullet_2 != blank -%}
+                        <li>
+                          <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                          {{ block.settings.bullet_2 }}
+                        </li>
+                      {%- endif -%}
+                      {%- if block.settings.bullet_3 != blank -%}
+                        <li>
+                          <span class="nuumi-pdp__bullet-icon">{% render 'nuumi-icons', icon: 'check_mark' %}</span>
+                          {{ block.settings.bullet_3 }}
+                        </li>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </ul>
+                {%- endif -%}
 
               {%- when 'quantity_packs' -%}
                 <div class="nuumi-pdp__quantity-packs" {{ block.shopify_attributes }}>
@@ -122,7 +143,14 @@
                 </div>
 
               {%- when 'buy_buttons' -%}
-                <div class="nuumi-pdp__buy-buttons" {{ block.shopify_attributes }}>
+                {% assign cta_label = product.metafields.custom.cta_label.value | default: block.settings.button_label %}
+                {% assign guarantee_text = product.metafields.custom.guarantee_copy.value | default: block.settings.guarantee_text %}
+                {% assign cta_note = product.metafields.custom.cta_note.value | default: block.settings.cta_note %}
+                {% assign shipping_note = product.metafields.custom.shipping_note.value | default: block.settings.shipping_note %}
+                {% assign guarantee_note = product.metafields.custom.guarantee_note.value | default: block.settings.guarantee_note %}
+                {% assign payment_note = product.metafields.custom.payment_note.value | default: block.settings.payment_note %}
+
+                <div id="nuumi-buy-box" class="nuumi-pdp__buy-buttons" {{ block.shopify_attributes }}>
                   <product-form class="product-form" data-section-id="{{ section.id }}">
                     <div class="product-form__error-message-wrapper" role="alert" hidden>
                       <span class="svg-wrapper">
@@ -140,13 +168,13 @@
                           class="nuumi-button--gold product-form__submit button--full-width"
                           {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                         >
-                          <span>
-                            {%- if product.selected_or_first_available_variant.available == false -%}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- else -%}
-                              {{ block.settings.button_label }} — {{ product.price | money }}
-                            {%- endif -%}
-                          </span>
+                            <span>
+                              {%- if product.selected_or_first_available_variant.available == false -%}
+                                {{ 'products.product.sold_out' | t }}
+                              {%- else -%}
+                                {{ cta_label }} — {{ product.price | money }}
+                              {%- endif -%}
+                            </span>
                           {%- render 'loading-spinner' -%}
                         </button>
                       </div>
@@ -154,30 +182,30 @@
                   </product-form>
                 </div>
                 
-                {%- if block.settings.show_guarantee -%}
+                {%- if block.settings.show_guarantee and guarantee_text != blank -%}
                   <div class="nuumi-pdp__guarantee">
                     <span class="nuumi-pdp__guarantee-icon">{% render 'nuumi-icons', icon: 'shield' %}</span>
-                    <span>{{ block.settings.guarantee_text }}</span>
+                    <span>{{ guarantee_text }}</span>
                   </div>
                 {%- endif -%}
 
-                {%- if block.settings.cta_note != blank -%}
-                  <p class="nuumi-pdp__cta-note">{{ block.settings.cta_note }}</p>
+                {%- if cta_note != blank -%}
+                  <p class="nuumi-pdp__cta-note">{{ cta_note }}</p>
                 {%- endif -%}
 
-                {%- if block.settings.shipping_note != blank or block.settings.guarantee_note != blank -%}
+                {%- if shipping_note != blank or guarantee_note != blank -%}
                   <div class="nuumi-pdp__micro-trust">
-                    {%- if block.settings.shipping_note != blank -%}
-                      <span>{{ block.settings.shipping_note }}</span>
+                    {%- if shipping_note != blank -%}
+                      <span>{{ shipping_note }}</span>
                     {%- endif -%}
-                    {%- if block.settings.guarantee_note != blank -%}
-                      <span>{{ block.settings.guarantee_note }}</span>
+                    {%- if guarantee_note != blank -%}
+                      <span>{{ guarantee_note }}</span>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
 
-                {%- if block.settings.payment_note != blank -%}
-                  <p class="nuumi-pdp__payment-note">{{ block.settings.payment_note }}</p>
+                {%- if payment_note != blank -%}
+                  <p class="nuumi-pdp__payment-note">{{ payment_note }}</p>
                 {%- endif -%}
 
             {%- endcase -%}

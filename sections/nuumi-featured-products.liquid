@@ -1,6 +1,6 @@
 {{ 'nuumi-home.css' | asset_url | stylesheet_tag }}
 
-<section class="nuumi-featured-products section-{{ section.id }}-padding">
+<section id="nuumi-featured-products" class="nuumi-featured-products section-{{ section.id }}-padding">
   <div class="page-width">
     <div class="nuumi-featured-products__header">
       {%- if section.settings.eyebrow != blank -%}
@@ -20,11 +20,13 @@
         {%- if product_card == blank -%}
           {%- continue -%}
         {%- endif -%}
-        {%- assign card_url = product_card.url -%}
+        {%- assign card_base_url = block.settings.link | default: product_card.url -%}
+        {%- assign card_url = card_base_url | append: '#nuumi-buy-box' -%}
         {%- assign card_badge = block.settings.badge | default: product_card.metafields.custom.benefit.value -%}
         {%- assign card_title = product_card.title -%}
         {%- assign card_price = product_card.price | money -%}
         {%- assign card_summary = product_card.description | strip_html | truncatewords: 14 -%}
+        {%- assign card_is_sold_out = block.settings.homepage_sold_out -%}
         {%- assign rating_value = block.settings.rating -%}
         {%- assign rating_count_value = block.settings.rating_count -%}
         {%- if rating_value == blank or rating_value <= 0 -%}
@@ -84,7 +86,11 @@
             <div class="nuumi-featured-products__action">
               <p class="nuumi-featured-products__price">{{ card_price }}</p>
 
-              {%- if card_url != blank -%}
+              {%- if card_is_sold_out -%}
+                <span class="nuumi-button--gold nuumi-featured-products__cta nuumi-featured-products__cta--disabled" aria-disabled="true">
+                  SOLD OUT
+                </span>
+              {%- elsif card_url != blank -%}
                 <a class="nuumi-button--gold nuumi-featured-products__cta" href="{{ card_url }}">
                   {{ block.settings.button_label | default: 'Shop now' | escape }}
                 </a>
@@ -203,6 +209,12 @@
           "id": "button_label",
           "label": "Button label",
           "default": "View product"
+        },
+        {
+          "type": "checkbox",
+          "id": "homepage_sold_out",
+          "label": "Show SOLD OUT on homepage",
+          "default": false
         },
         {
           "type": "url",
