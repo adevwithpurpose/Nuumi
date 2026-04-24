@@ -18,7 +18,7 @@
           "type": "text",
           "settings": {
             "heading": "Nuumipet",
-            "subtext": "<p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Use only as directed. The information provided herein is intended for your general knowledge only and is not intended to be, nor is it, medical advice or a substitute for medical advice.</p>"
+            "subtext": "<p><strong>MEDICAL & HEALTH DISCLAIMER:</strong>The information and other content provided in this page are not intended and should not be construed as veterinary medical advice. If your dog is showing signs of aggression or extreme distress, consult a professional trainer or vet.If your dog has a medical concern, you should consult with your vet. Never disregard professional medical advice or delay in seeking it because of something that have read on this page or in any linked materials. If you think your dog may have a medical emergency, call your vet or emergency services immediately.<br/><br/>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Use only as directed. The information provided herein is intended for your general knowledge only and is not intended to be, nor is it, medical advice or a substitute for medical advice.</p>"
           }
         },
         "links-1": {
@@ -41,6 +41,7 @@
         "links-1",
         "links-2"
       ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
