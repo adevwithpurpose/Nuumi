@@ -506,22 +506,3 @@
     }
   }
 }
-@media screen and (min-width: 990px) {
-  footer .footer__blocks-wrapper {
-    display: grid !important;
-    grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr) minmax(220px, 1fr) !important;
-    column-gap: 70px !important;
-    align-items: start !important;
-  }
-
-  footer .footer__blocks-wrapper > .footer-block,
-  footer .footer__blocks-wrapper > .footer-block.grid__item {
-    width: 100% !important;
-    max-width: none !important;
-    flex: none !important;
-  }
-
-footer .footer__blocks-wrapper > .footer-block:first-child {
-  max-width: none !important;
-}
-  }
