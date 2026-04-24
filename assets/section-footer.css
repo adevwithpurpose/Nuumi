@@ -521,7 +521,7 @@
     flex: none !important;
   }
 
-  footer .footer__blocks-wrapper > .footer-block:first-child {
-    max-width: 650px !important;
-  }
+footer .footer__blocks-wrapper > .footer-block:first-child {
+  max-width: none !important;
 }
+  }
