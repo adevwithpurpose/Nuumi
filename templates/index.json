@@ -151,7 +151,7 @@
             "rating": 0,
             "rating_count": 0,
             "button_label": "View EnerCanis",
-            "homepage_sold_out": true,
+            "homepage_sold_out": false,
             "link": ""
           }
         },
@@ -199,7 +199,7 @@
             "rating": 0,
             "rating_count": 0,
             "button_label": "",
-            "homepage_sold_out": true,
+            "homepage_sold_out": false,
             "link": ""
           }
         },
@@ -215,7 +215,7 @@
             "rating": 0,
             "rating_count": 0,
             "button_label": "View WonderLeash",
-            "homepage_sold_out": true,
+            "homepage_sold_out": false,
             "link": ""
           }
         },
@@ -231,7 +231,7 @@
             "rating": 0,
             "rating_count": 0,
             "button_label": "View WonderWalk",
-            "homepage_sold_out": true,
+            "homepage_sold_out": false,
             "link": ""
           }
         }
