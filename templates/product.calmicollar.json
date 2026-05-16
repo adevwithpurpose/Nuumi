@@ -292,7 +292,7 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "badge": "Photo Review",
+            "badge": "",
             "quote": "“We bought this because our dog gets really anxious when we go out. She still has her moments, but there’s less whining and she seems to recover faster after we leave. It’s been a nice little support for our routine.”",
             "highlight": "Less whining when we’re away.",
             "name": "Megan P.",
