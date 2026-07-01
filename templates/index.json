@@ -15,19 +15,19 @@
         "bullet_1": {
           "type": "bullet",
           "settings": {
-            "text": "TRUSTED BY THOUSANDS OF DOG OWNERS"
+            "text": "Trusted by thousands of dog owners"
           }
         },
         "bullet_2": {
           "type": "bullet",
           "settings": {
-            "text": "VETERINARIAN REVIEWED"
+            "text": "Formulated by vets, backed by research"
           }
         },
         "bullet_3": {
           "type": "bullet",
           "settings": {
-            "text": "UP TO 60-DAY MONEY BACK GUARANTEE"
+            "text": "Up to 90-day money-back guarantee"
           }
         }
       },
@@ -37,8 +37,8 @@
         "bullet_3"
       ],
       "settings": {
-        "title": "More good years with your dog. That's what this is really about.",
-        "subtitle": "Every Nuumipet product is built around one goal — helping your dog live a longer, calmer, healthier life.",
+        "title": "Help your dog feel better, and live more good years.",
+        "subtitle": "Every NuumiPet product is built by vets and nutritionists to support one thing: a calmer, healthier dog who stays by your side longer. No guesswork. Just simple, science-backed care you can trust.",
         "image": "shopify://shop_images/nuumipet-homepage-hero-lineup-v4-outpaint-wide.jpg",
         "button_label": "Shop the Lineup",
         "button_link": "#nuumi-featured-products"
@@ -51,35 +51,35 @@
           "type": "trust_item",
           "settings": {
             "icon": "science",
-            "text": "BUILT AROUND LONGEVITY"
+            "text": "Backed by science"
           }
         },
         "item_2": {
           "type": "trust_item",
           "settings": {
             "icon": "leaf",
-            "text": "NATURAL INGREDIENTS, ALWAYS"
+            "text": "Natural ingredients, always"
           }
         },
         "item_3": {
           "type": "trust_item",
           "settings": {
             "icon": "return",
-            "text": "UP TO 60-DAY GUARANTEE"
+            "text": "Up to 90-day guarantee"
           }
         },
         "item_4": {
           "type": "trust_item",
           "settings": {
             "icon": "star",
-            "text": "TRUSTED BY THOUSANDS OF FAMILIES"
+            "text": "Trusted by thousands of families"
           }
         },
         "item_5": {
           "type": "trust_item",
           "settings": {
             "icon": "heart",
-            "text": "MIND + BODY WELLNESS"
+            "text": "Vet & nutritionist formulated"
           }
         }
       },
@@ -101,24 +101,24 @@
           "type": "proof_item",
           "settings": {
             "icon": "paw",
-            "title": "MENTAL WELLNESS",
-            "description": "Nuumipet's calming and behavior products are designed to bring the baseline stress down so your dog can be more balanced, more settled, and healthier over time."
+            "title": "A Calmer Mind",
+            "description": "When a dog is anxious, their whole body pays for it. Our calming products gently lower that everyday stress, so your dog feels safe, settles faster, and is easier to live with."
           }
         },
         "proof_2": {
           "type": "proof_item",
           "settings": {
             "icon": "heart",
-            "title": "PHYSICAL WELLNESS",
-            "description": "A dog's gut health affects everything — energy, stress resilience, immune function, how they age. Nuumipet's physical wellness formulas support all of it from the inside."
+            "title": "A Healthier Body",
+            "description": "So much of a dog's health begins in the gut - their energy, their coat, even how well they handle stress. Our wellness formulas support the body from the inside, where it matters most."
           }
         },
         "proof_3": {
           "type": "proof_item",
           "settings": {
             "icon": "leaf",
-            "title": "NATURAL INGREDIENTS, ALWAYS",
-            "description": "Every formula is made with natural ingredients and nothing else. No fillers padding out the label, no proprietary blends hiding what's actually in there. You can read exactly what your dog is getting — and why it's there."
+            "title": "Ingredients You Can Trust",
+            "description": "Every formula is made with natural ingredients and nothing you don't need. No cheap fillers. No hidden blends. You can see exactly what your dog is getting, and why it's there."
           }
         }
       },
@@ -128,9 +128,9 @@
         "proof_3"
       ],
       "settings": {
-        "eyebrow": "THE NUUMIPET STANDARD",
-        "title": "Three pillars. One direction.",
-        "description": "<p>Everything in the Nuumipet lineup is built around mental wellness, physical wellness, and ingredient transparency — because longevity doesn't come from one product. It comes from covering the whole dog.</p>",
+        "eyebrow": "WHAT WE STAND FOR",
+        "title": "Real science. Simple care. A healthier dog.",
+        "description": "<p>We don't make products to fill shelves. We make them to solve the things that quietly wear a dog down over the years - stress, a troubled tummy, and the daily aches of getting older. Every formula starts with research and ends with ingredients you can actually read and understand.</p>",
         "padding_top": 28,
         "padding_bottom": 76
       }
@@ -141,32 +141,33 @@
         "product_card_1": {
           "type": "product_card",
           "settings": {
-            "product": "enercanis",
-            "image": "shopify://shop_images/enercanis-slider-serving-context-v1-square.jpg",
-            "badge": "Gut Health Support",
-            "title": "",
-            "benefit": "Daily digestive support with a clearer ingredient story.",
-            "price": "",
-            "summary": "Pharmaceutical-grade L-Glutamine and Hydrolyzed Collagen with bioactive peptides designed to soothe the gut and support the intestinal barrier.",
+            "product": "calmicollar",
+            "image": "shopify://shop_images/calmicollar-slider-detail-material-v2-square.jpg",
+            "badge": "For the anxious dog",
+            "title": "CalmiCollar",
+            "benefit": "Helps your dog feel safe and calm, even when you're not home.",
+            "price": "$49",
+            "summary": "Helps your dog feel safe and calm, even when you're not home.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View EnerCanis",
-            "homepage_sold_out": true,
+            "button_label": "Shop Now",
+            "homepage_sold_out": false,
             "link": ""
           }
         },
         "product_card_3cybnB": {
           "type": "product_card",
           "settings": {
-            "product": "calmicollar",
-            "badge": "Wellness",
-            "title": "",
-            "benefit": "Daily digestive support with a clearer ingredient story.",
-            "price": "",
-            "summary": "Pharmaceutical-grade L-Glutamine and Hydrolyzed Collagen with bioactive peptides designed to soothe the gut and support the intestinal barrier.",
+            "product": "enercanis",
+            "image": "shopify://shop_images/enercanis-slider-serving-context-v1-square.jpg",
+            "badge": "For gut health",
+            "title": "Enercanis",
+            "benefit": "One daily dropper for firmer stool, better digestion, and steady energy.",
+            "price": "$88",
+            "summary": "One daily dropper for firmer stool, better digestion, and steady energy.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "",
+            "button_label": "Shop Now",
             "homepage_sold_out": false,
             "link": ""
           }
@@ -175,14 +176,14 @@
           "type": "product_card",
           "settings": {
             "product": "the-leash-walk-formula",
-            "badge": "Training + Wellness",
-            "title": "",
-            "benefit": "Practical methods for the walks and routines that matter most.",
-            "price": "",
-            "summary": "A complete training program that gives you practical methods for reactivity, daily routines, and the moments that matter most on every walk.",
+            "badge": "For training and calm",
+            "title": "The Leash Walk Formula",
+            "benefit": "Makes walks easier for both of you.",
+            "price": "$67",
+            "summary": "Makes walks easier for both of you.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View Leash Walk",
+            "button_label": "Shop Now",
             "homepage_sold_out": false,
             "link": ""
           }
@@ -191,15 +192,15 @@
           "type": "product_card",
           "settings": {
             "product": "the-four-leaf-dog-training",
-            "badge": "Training",
-            "title": "",
-            "benefit": "Practical methods for the walks and routines that matter most.",
-            "price": "",
-            "summary": "A complete training program that gives you practical methods for reactivity, daily routines, and the moments that matter most on every walk.",
+            "badge": "For better behavior",
+            "title": "The Four-Leaf Dog Training",
+            "benefit": "A simple way to understand your dog and make daily life easier.",
+            "price": "$127",
+            "summary": "A simple way to understand your dog and make daily life easier.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "",
-            "homepage_sold_out": true,
+            "button_label": "Shop Now",
+            "homepage_sold_out": false,
             "link": ""
           }
         },
@@ -207,15 +208,15 @@
           "type": "product_card",
           "settings": {
             "product": "wonderleash",
-            "badge": "Walk Essentials",
-            "title": "",
-            "benefit": "A better leash for better walks.",
-            "price": "",
-            "summary": "Designed to make every walk smoother — comfortable grip, durable build, and the control you need when it matters.",
+            "badge": "For everyday walks",
+            "title": "WonderLeash",
+            "benefit": "A walk essential built for comfort and control.",
+            "price": "$29",
+            "summary": "A walk essential built for comfort and control.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View WonderLeash",
-            "homepage_sold_out": true,
+            "button_label": "Shop Now",
+            "homepage_sold_out": false,
             "link": ""
           }
         },
@@ -223,15 +224,15 @@
           "type": "product_card",
           "settings": {
             "product": "wonderwalk",
-            "badge": "Walk + Train",
-            "title": "",
-            "benefit": "Training support built into your daily walk.",
-            "price": "",
-            "summary": "Combines walking essentials with structured training guidance so every outing reinforces the behavior you want.",
+            "badge": "For walks and training together",
+            "title": "WonderWalk",
+            "benefit": "For walks and training together.",
+            "price": "$54",
+            "summary": "For walks and training together.",
             "rating": 0,
             "rating_count": 0,
-            "button_label": "View WonderWalk",
-            "homepage_sold_out": true,
+            "button_label": "Shop Now",
+            "homepage_sold_out": false,
             "link": ""
           }
         }
@@ -245,9 +246,9 @@
         "product_card_5"
       ],
       "settings": {
-        "eyebrow": "THE LINEUP",
-        "heading": "Every product has one job. Pick the one your dog needs right now.",
-        "description": "<p>Gut health, calming, training, or walk essentials — each product is built around a specific need so you can start where it matters most.</p>",
+        "eyebrow": "SHOP BY NEED",
+        "heading": "Every product has one job. Start with what your dog needs most.",
+        "description": "<p>Calming, gut health, training, or walks - each one is made to solve a specific problem, so you know exactly where to begin.</p>",
         "padding_top": 76,
         "padding_bottom": 96
       }
@@ -299,14 +300,61 @@
         "proof_point_3"
       ],
       "settings": {
-        "eyebrow": "THE NUUMIPET PHILOSOPHY",
-        "heading": "We turn down more product ideas than we greenlight.",
+        "eyebrow": "WHY WE'RE DIFFERENT",
+        "heading": "We say no to far more products than we ever make.",
         "image": "shopify://shop_images/leashwalk-slider-bonus-stack-v1-square.jpg",
-        "quote": "If it doesn't move the needle on how long and how well your dog lives, it doesn't get made.",
+        "quote": "If it doesn't help your dog live a longer, healthier, calmer life - we don't make it.",
         "name": "The filter behind every product",
         "role": "Why the lineup stays small on purpose",
-        "body": "<p>Most pet brands build a catalog first and figure out the mission later. We did the opposite. Longevity is the filter — and if a product idea doesn't pass it, we don't make it.</p>",
+        "body": "<p>Most pet brands build a big catalog first and find a reason for it later. We do the opposite. Every idea has to pass one test: does it genuinely help your dog feel better and live better? If the answer isn't a clear yes, it doesn't get made. That's why our lineup stays small - and why you can trust every product on it.</p>",
         "padding_top": 88,
+        "padding_bottom": 76
+      }
+    },
+    "nuumi_our_science": {
+      "type": "nuumi-media-credibility",
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "value": "Vet & nutritionist formulated",
+            "label": "Every product"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "Natural ingredients",
+            "label": "No artificial fillers"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "Thousands",
+            "label": "Happy dog owners"
+          }
+        },
+        "stat_4": {
+          "type": "stat",
+          "settings": {
+            "value": "Up to 90-day",
+            "label": "Money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "stat_1",
+        "stat_2",
+        "stat_3",
+        "stat_4"
+      ],
+      "settings": {
+        "logos_eyebrow": "",
+        "heading": "Just the science. No hype.",
+        "body": "<p>We don't make big, dramatic promises. We make honest products, formulated with vets and nutritionists, and we back them up.</p>",
+        "image": "",
+        "padding_top": 40,
         "padding_bottom": 76
       }
     },
@@ -346,29 +394,29 @@
         "stat_1": {
           "type": "stat",
           "settings": {
-            "value": "Gut Health",
-            "label": "Digestion, energy, and immunity from the inside."
+            "value": "Calming",
+            "label": "Lower the everyday stress that wears your dog down."
           }
         },
         "stat_2": {
           "type": "stat",
           "settings": {
-            "value": "Calming",
-            "label": "Lower the baseline stress wearing your dog down over time."
+            "value": "Gut Health",
+            "label": "Better digestion, more energy, and steady wellness from the inside."
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
             "value": "Training",
-            "label": "Tools to understand your dog and make daily life easier together."
+            "label": "Simple tools to understand your dog and make daily life easier."
           }
         },
         "stat_4": {
           "type": "stat",
           "settings": {
             "value": "Longevity",
-            "label": "Mind and body support so the good years last longer."
+            "label": "Mind-and-body support so the good years last longer."
           }
         }
       },
@@ -385,8 +433,8 @@
       ],
       "settings": {
         "logos_eyebrow": "THE FULL LINEUP",
-        "heading": "What each category is built to do.",
-        "body": "<p>Four categories. Each one handles a different piece of your dog's long-term health — so you can start where the need is clearest and build from there.</p>",
+        "heading": "Four areas of care. Each one covers a different part of your dog's health.",
+        "body": "<p>Start where the need is clearest, and build from there.</p>",
         "image": "shopify://shop_images/nuumipet-homepage-hero-lineup-v1.jpg",
         "padding_top": 48,
         "padding_bottom": 96
@@ -400,9 +448,9 @@
           "settings": {
             "image": "shopify://shop_images/calmicollar-slider-detail-material-v2-square.jpg",
             "icon": "science",
-            "eyebrow": "CALM THE NERVOUS SYSTEM",
-            "title": "CalmiCollar works on the stress running underneath everything else.",
-            "text": "Pheromone technology lowers the baseline anxiety that makes dogs reactive, restless, and hard to reach."
+            "eyebrow": "Calm the nervous system",
+            "title": "CalmiCollar works on the stress sitting underneath everything else.",
+            "text": "It uses the same natural calming signal a mother dog gives her puppies, kept right at nose level, to ease the anxiety that makes dogs restless and hard to settle."
           }
         },
         "benefit_2": {
@@ -410,9 +458,9 @@
           "settings": {
             "image": "shopify://shop_images/leashwalk-slider-course-cover-v1-square.jpg",
             "icon": "shield",
-            "eyebrow": "BUILD THE CONNECTION",
-            "title": "Training is about how you and your dog learn to read each other.",
-            "text": "Nuumipet's training tools give you practical methods for the moments that matter most: walks, reactivity, daily routines. Your dog stops guessing. So do you. And a dog that genuinely understands you is calmer, safer, and easier to keep healthy long-term."
+            "eyebrow": "Build the bond",
+            "title": "Our training tools help you and your dog finally understand each other.",
+            "text": "They help on walks, around triggers, and in everyday routines. A dog that understands you is a calmer, safer, happier dog."
           }
         },
         "benefit_3": {
@@ -420,9 +468,9 @@
           "settings": {
             "image": "shopify://shop_images/enercanis-slider-clean-supporting-packshot-v1-square.jpg",
             "icon": "heart",
-            "eyebrow": "STRENGTHEN FROM THE INSIDE",
-            "title": "EnerCanis handles what calming alone can't touch.",
-            "text": "Gut health and stress are more connected in dogs than most owners realize — when digestion is off, anxiety gets worse, energy drops, and the body wears down faster. EnerCanis supports the internal system that keeps everything else running."
+            "eyebrow": "Strengthen from the inside",
+            "title": "Enercanis handles what calming can't reach.",
+            "text": "A dog's gut affects almost everything - energy, mood, even how they handle stress. When digestion is off, everything gets harder. Enercanis supports the system that keeps the whole body running."
           }
         }
       },
@@ -433,8 +481,8 @@
       ],
       "settings": {
         "eyebrow": "HOW THE LINEUP FITS TOGETHER",
-        "heading": "One product helps. The right combination changes the trajectory.",
-        "description": "<p>Each Nuumipet product handles a different piece of your dog's daily health. Here's how they connect — and why most owners end up using more than one.</p>",
+        "heading": "One product helps. The right combination changes everything.",
+        "description": "<p>Each NuumiPet product handles a different part of your dog's day-to-day health. Here's how they work together - and why most owners end up using more than one.</p>",
         "padding_top": 88,
         "padding_bottom": 88
       }
@@ -446,35 +494,35 @@
           "type": "faq_item",
           "settings": {
             "question": "Which product should I start with?",
-            "answer": "<p>Start with whatever's making your dog's life hardest right now. Anxiety or reactivity — start with CalmiCollar. Digestion, low energy, gut problems — start with EnerCanis.</p>"
+            "answer": "<p>Start with whatever is making your dog's life hardest right now. If it's anxiety or restlessness, begin with CalmiCollar. If it's digestion, low energy, or tummy trouble, begin with Enercanis.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use more than one product at the same time?",
-            "answer": "<p>Yes — and most owners end up doing exactly that. CalmiCollar handles the stress running underneath while the training tools work on the specific behaviors you're seeing day to day. EnerCanis can run alongside either of them since it's working on a completely different system. They're designed to cover different jobs, so there's no conflict.</p>"
+            "question": "Can I use more than one at the same time?",
+            "answer": "<p>Yes - and most owners do. CalmiCollar works on stress, the training tools work on behavior, and Enercanis works on the gut. They each do a different job, so there's no conflict.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
             "question": "How quickly will I see results?",
-            "answer": "<p>Depends on the product. CalmiCollar typically shows changes within the first few days. EnerCanis works on gut health, so most owners notice a shift in energy and digestion within 2-3 weeks. Training tools depend on consistency — but owners who follow the methods usually see progress in the first week.</p>"
+            "answer": "<p>It depends on the product. With CalmiCollar, many owners notice a change in the first few days. Enercanis works on the gut, so most see a difference in energy and digestion within 2-3 weeks. Training results depend on staying consistent, but most owners see progress in the first week.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
             "question": "What if it doesn't work for my dog?",
-            "answer": "<p>Every Nuumipet product comes with a money-back guarantee. If you don't see results, reach out and we'll take care of it. We'd rather you try it knowing the risk is on us than wonder whether it could have helped.</p>"
+            "answer": "<p>Every NuumiPet product comes with a money-back guarantee. If you don't see a difference, just reach out and we'll make it right. We'd rather you try it knowing the risk is on us.</p>"
           }
         },
         "faq_5": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the ingredients safe for all breeds and ages?",
-            "answer": "<p>Yes. Every formula uses natural ingredients that are safe across breeds and life stages. But if your dog has a specific medical condition or is on medication, it’s always recommended to check with your vet first.</p>"
+            "question": "Are the ingredients safe for all ages and breeds?",
+            "answer": "<p>Yes. Every formula uses natural ingredients that are safe across breeds and life stages. If your dog has a medical condition or takes medication, it's always best to check with your vet first.</p>"
           }
         }
       },
@@ -487,10 +535,21 @@
       ],
       "settings": {
         "eyebrow": "BEFORE YOU CHOOSE",
-        "heading": "Real questions, straight answers.",
-        "description": "<p>What each product does, how they work together, and what happens if you're not happy — answered before you check out.</p>",
+        "heading": "Real questions. Straight answers.",
+        "description": "",
         "padding_top": 64,
         "padding_bottom": 72
+      }
+    },
+    "nuumi_closing_cta": {
+      "type": "nuumi-closing-cta",
+      "settings": {
+        "heading": "Give your dog more good years.",
+        "subheading": "<p>Start with the one thing your dog needs most today. Backed by science, and by our money-back guarantee.</p>",
+        "button_label": "Shop the Lineup",
+        "button_link": "#nuumi-featured-products",
+        "padding_top": 24,
+        "padding_bottom": 80
       }
     }
   },
@@ -500,8 +559,10 @@
     "nuumi_proof_grid",
     "nuumi_featured_products",
     "nuumi_expert_spotlight",
+    "nuumi_our_science",
     "nuumi_media_credibility",
     "nuumi_benefits_story",
-    "nuumi_faq"
+    "nuumi_faq",
+    "nuumi_closing_cta"
   ]
 }

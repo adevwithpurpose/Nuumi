@@ -2,7 +2,15 @@
 
 <section class="nuumi-media-credibility section-{{ section.id }}-padding">
   <div class="page-width">
-    {%- if section.blocks.size > 0 -%}
+    {%- assign has_logos = false -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'logo' -%}
+        {%- assign has_logos = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if has_logos -%}
       <div class="nuumi-media-credibility__logos-wrap">
         {%- if section.settings.logos_eyebrow != blank -%}
           <p class="nuumi-media-credibility__logos-eyebrow">{{ section.settings.logos_eyebrow | escape }}</p>
@@ -29,7 +37,7 @@
       </div>
     {%- endif -%}
 
-    <div class="nuumi-media-credibility__panel">
+    <div class="nuumi-media-credibility__panel{% if section.settings.image == blank %} nuumi-media-credibility__panel--no-media{% endif %}">
       <div class="nuumi-media-credibility__content">
         {%- if section.settings.heading != blank -%}
           <h2 class="nuumi-media-credibility__heading">{{ section.settings.heading | escape }}</h2>
@@ -55,20 +63,16 @@
         </div>
       </div>
 
+      {%- if section.settings.image != blank -%}
       <div class="nuumi-media-credibility__media">
-        {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 1400 | image_tag:
-            class: 'nuumi-media-credibility__image',
-            loading: 'lazy',
-            widths: '500, 700, 900, 1200, 1400',
-            alt: section.settings.heading | escape
-          }}
-        {%- else -%}
-          <div class="nuumi-media-credibility__image-placeholder">
-            {% render 'nuumi-icons', icon: 'heart', class: 'nuumi-media-credibility__placeholder-icon' %}
-          </div>
-        {%- endif -%}
+        {{ section.settings.image | image_url: width: 1400 | image_tag:
+          class: 'nuumi-media-credibility__image',
+          loading: 'lazy',
+          widths: '500, 700, 900, 1200, 1400',
+          alt: section.settings.heading | escape
+        }}
       </div>
+      {%- endif -%}
     </div>
   </div>
 </section>

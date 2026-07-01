@@ -23,9 +23,12 @@
         {%- assign card_base_url = block.settings.link | default: product_card.url -%}
         {%- assign card_url = card_base_url | append: '#nuumi-buy-box' -%}
         {%- assign card_badge = block.settings.badge | default: product_card.metafields.custom.benefit.value -%}
-        {%- assign card_title = product_card.title -%}
-        {%- assign card_price = product_card.price | money -%}
-        {%- assign card_summary = product_card.description | strip_html | truncatewords: 14 -%}
+        {%- assign card_title = block.settings.title | default: product_card.title -%}
+        {%- assign card_price = block.settings.price -%}
+        {%- if card_price == blank -%}
+          {%- assign card_price = product_card.price | money -%}
+        {%- endif -%}
+        {%- assign card_summary = block.settings.summary | default: product_card.description | strip_html | truncatewords: 22 -%}
         {%- assign card_is_sold_out = block.settings.homepage_sold_out -%}
         {%- assign rating_value = block.settings.rating -%}
         {%- assign rating_count_value = block.settings.rating_count -%}
