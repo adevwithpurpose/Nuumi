@@ -271,10 +271,10 @@
           "settings": {
             "rating": 5,
             "badge": "Verified Buyer",
-            "quote": "Ha smesso di andare in panico quasi subito. Prima camminava avanti e indietro e ansimava ogni volta che prendevo le chiavi; con CalmiCollar si è calmata più in fretta.",
-            "highlight": "Panico da separazione ridotto rapidamente.",
-            "name": "Elena D.",
-            "meta": "Acquirente verificato"
+            "quote": "“I honestly didn’t expect it to work that fast. My dog usually starts pacing and panting as soon as I grab my keys. Since using CalmiCollar, she still notices when I’m leaving, but she settles down much quicker.”",
+            "highlight": "She calms down faster when I leave.",
+            "name": "Sarah M.",
+            "meta": ""
           }
         },
         "review_2": {
@@ -282,21 +282,21 @@
           "settings": {
             "rating": 5,
             "badge": "Most Helpful",
-            "quote": "Non fidarti solo della nostra parola: la nostra cagnolina abbaiava senza sosta quando restava sola. Con il collare abbiamo visto una routine molto più gestibile.",
-            "highlight": "Routine di casa più calma e stabile.",
-            "name": "Giulia R.",
-            "meta": "Recensione cliente"
+            "quote": "“Our dog used to bark a lot when she was home alone, and it was becoming stressful for everyone. After a few days with the collar, the house felt a lot calmer. She’s not magically perfect, but the difference is definitely noticeable.”",
+            "highlight": "Home feels calmer now.",
+            "name": "Jessica R.",
+            "meta": ""
           }
         },
         "review_3": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "badge": "Photo Review",
-            "quote": "Il SEGRETO MATERNO che dona sicurezza al cane in un collare: meno pianti, meno agitazione e recupero più rapido quando usciamo.",
-            "highlight": "Meno agitazione quando restiamo fuori casa.",
-            "name": "Martina P.",
-            "meta": "Famiglia con cane ansioso"
+            "badge": "",
+            "quote": "“We bought this because our dog gets really anxious when we go out. She still has her moments, but there’s less whining and she seems to recover faster after we leave. It’s been a nice little support for our routine.”",
+            "highlight": "Less whining when we’re away.",
+            "name": "Megan P.",
+            "meta": ""
           }
         }
       },

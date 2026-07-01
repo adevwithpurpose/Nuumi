@@ -27,7 +27,7 @@
   {% assign one_time_total_price = base_price | times: default_quantity %}
   {% assign one_time_compare_total_price = base_compare_at_price | times: default_quantity %}
   {% assign form_id = 'product-form-' | append: section.id %}
-  {% assign default_bundle_title = first_pack.settings.title | default: '1 Bottle' %}
+  {% assign default_bundle_title = first_pack.settings.title | default: '1 Collar' %}
   {% assign subscribe_enabled = false %}
 
   <div class="page-width">
@@ -405,7 +405,7 @@
         var perNode = card.querySelector('[data-pack-per]');
         var saveNode = card.querySelector('[data-pack-save]');
 
-        if (perNode) perNode.textContent = formatMoney(perBottle) + '/bottle';
+        if (perNode) perNode.textContent = formatMoney(perBottle) + '/collar';
         if (saveNode) {
           saveNode.textContent = savings > 0 ? 'Save ' + formatMoney(savings) : '';
           saveNode.style.display = savings > 0 ? 'inline-flex' : 'none';
