@@ -49,6 +49,26 @@
   -%}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
+        {%- assign has_disclaimer = false -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'disclaimer' and block.settings.text != blank -%}
+            {%- assign has_disclaimer = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if has_disclaimer -%}
+          <div class="footer__disclaimer-row page-width" role="note" aria-label="Medical and health disclaimer">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'disclaimer' and block.settings.text != blank -%}
+                <div class="footer__disclaimer" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
         <div class="footer__editorial{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
           {%- for block in section.blocks -%}
             {%- if block.type == 'brand_information' or block.type == 'text' or block.type == 'image' -%}
@@ -325,6 +345,19 @@
             }
           ],
           "default": "center"
+        }
+      ]
+    },
+    {
+      "type": "disclaimer",
+      "name": "Disclaimer",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Disclaimer text",
+          "default": "<p><strong>Medical &amp; health disclaimer:</strong> The information and other content provided in this page are not intended and should not be construed as veterinary medical advice. Always consult your veterinarian for medical concerns about your dog.</p>"
         }
       ]
     }
