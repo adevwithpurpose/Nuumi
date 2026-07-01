@@ -1766,10 +1766,13 @@ details[open] .nuumi-faq__answer {
   display: grid !important;
   grid-template-columns: 1fr;
   gap: 4.8rem;
-  padding-bottom: 5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 3.2rem;
   position: relative;
   z-index: 1;
+}
+
+.footer__content-top:has(+ .footer__disclaimer-row) {
+  border-bottom: 0;
 }
 
 @media screen and (min-width: 990px) {

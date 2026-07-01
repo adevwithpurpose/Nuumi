@@ -49,26 +49,6 @@
   -%}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
-        {%- assign has_disclaimer = false -%}
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'disclaimer' and block.settings.text != blank -%}
-            {%- assign has_disclaimer = true -%}
-            {%- break -%}
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- if has_disclaimer -%}
-          <div class="footer__disclaimer-row page-width" role="note" aria-label="Medical and health disclaimer">
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'disclaimer' and block.settings.text != blank -%}
-                <div class="footer__disclaimer" {{ block.shopify_attributes }}>
-                  {{ block.settings.text }}
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
-        {%- endif -%}
-
         <div class="footer__editorial{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
           {%- for block in section.blocks -%}
             {%- if block.type == 'brand_information' or block.type == 'text' or block.type == 'image' -%}
@@ -176,6 +156,28 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
+  {%- endif -%}
+
+  {%- assign has_disclaimer = false -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'disclaimer' and block.settings.text != blank -%}
+      {%- assign has_disclaimer = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if has_disclaimer -%}
+    <div class="footer__disclaimer-row" role="note" aria-label="Medical and health disclaimer">
+      <div class="page-width">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'disclaimer' and block.settings.text != blank -%}
+            <div class="footer__disclaimer" {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
   {%- endif -%}
 
   <div
