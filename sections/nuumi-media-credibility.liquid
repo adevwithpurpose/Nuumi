@@ -51,12 +51,28 @@
           {%- for block in section.blocks -%}
             {%- if block.type == 'stat' -%}
               <div class="nuumi-media-credibility__stat" role="listitem" {{ block.shopify_attributes }}>
-                {%- if block.settings.value != blank -%}
-                  <p class="nuumi-media-credibility__stat-value">{{ block.settings.value | escape }}</p>
+                {%- if block.settings.icon != blank and block.settings.icon != 'none' -%}
+                  <span class="nuumi-media-credibility__stat-icon" aria-hidden="true">
+                    {%- case block.settings.icon -%}
+                      {%- when 'vet' -%}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M6 4v6a4 4 0 0 0 8 0V4"/><path d="M4 4h2"/><path d="M14 4h2"/><path d="M10 14v3a4 4 0 0 0 4 4"/><circle cx="18" cy="18" r="2"/></svg>
+                      {%- when 'leaf' -%}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M5 19c10 0 14-7 14-14 0 0-7 1-11 5-3 3-3 7-3 9z"/><path d="M5 19c2-4 5-7 9-9"/></svg>
+                      {%- when 'family' -%}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><path d="M3 21c0-3 2-5 4-5s4 2 4 5"/><path d="M13 21c0-3 2-5 4-5s4 2 4 5"/></svg>
+                      {%- when 'shield' -%}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                    {%- endcase -%}
+                  </span>
                 {%- endif -%}
-                {%- if block.settings.label != blank -%}
-                  <p class="nuumi-media-credibility__stat-label">{{ block.settings.label | escape }}</p>
-                {%- endif -%}
+                <div class="nuumi-media-credibility__stat-text">
+                  {%- if block.settings.value != blank -%}
+                    <p class="nuumi-media-credibility__stat-value">{{ block.settings.value | escape }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.label != blank -%}
+                    <p class="nuumi-media-credibility__stat-label">{{ block.settings.label | escape }}</p>
+                  {%- endif -%}
+                </div>
               </div>
             {%- endif -%}
           {%- endfor -%}
@@ -149,6 +165,19 @@
       "name": "Stat",
       "limit": 4,
       "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "vet", "label": "Vet / Formulated" },
+            { "value": "leaf", "label": "Leaf / Natural" },
+            { "value": "family", "label": "Family / Customers" },
+            { "value": "shield", "label": "Shield / Guarantee" }
+          ],
+          "default": "none"
+        },
         {
           "type": "text",
           "id": "value",

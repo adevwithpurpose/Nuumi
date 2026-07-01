@@ -317,6 +317,7 @@
         "stat_1": {
           "type": "stat",
           "settings": {
+            "icon": "vet",
             "value": "Vet & nutritionist formulated",
             "label": "Every product"
           }
@@ -324,6 +325,7 @@
         "stat_2": {
           "type": "stat",
           "settings": {
+            "icon": "leaf",
             "value": "Natural ingredients",
             "label": "No artificial fillers"
           }
@@ -331,6 +333,7 @@
         "stat_3": {
           "type": "stat",
           "settings": {
+            "icon": "family",
             "value": "Thousands",
             "label": "Happy dog owners"
           }
@@ -338,6 +341,7 @@
         "stat_4": {
           "type": "stat",
           "settings": {
+            "icon": "shield",
             "value": "Up to 90-day",
             "label": "Money-back guarantee"
           }
