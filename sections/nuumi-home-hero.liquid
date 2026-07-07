@@ -1,5 +1,11 @@
 {{ 'nuumi-home.css' | asset_url | stylesheet_tag }}
-
+<style>
+@media screen and (max-width: 767px) {
+  .nuumi-home-hero__image {
+    object-position: 71% 100%;
+  }
+}
+</style>
 <section class="nuumi-home-hero">
   {%- if section.settings.image != blank -%}
     <div class="nuumi-home-hero__image-container">
