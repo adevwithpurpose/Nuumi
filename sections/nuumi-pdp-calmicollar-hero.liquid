@@ -211,14 +211,7 @@
                 <input type="hidden" name="properties[Bundle]" value="{{ default_bundle_title }}" data-bundle-label>
 
                 <div class="nuumi-calmicollar-hero__cta-group">
-                  Product inventory:
-{{ product.first_available_variant.inventory_quantity }}<br>
-
-Current inventory:
-{{ current_variant.inventory_quantity }}<br>
-
-Selected first available:
-{{ product.first_available_variant.id }}<br>
+                  
                   <button
                     id="ProductSubmitButton-{{ section.id }}"
                     type="submit"
