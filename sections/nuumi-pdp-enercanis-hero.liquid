@@ -224,6 +224,32 @@
                 <input type="hidden" name="properties[Bundle]" value="{{ default_bundle_title }}" data-bundle-label>
 
                 <div class="nuumi-enercanis-hero__cta-group">
+
+                  <div class="inventory-confirmation-box" style="padding: 15px; border: 1px solid #ddd; margin: 10px 0;">
+  <h3>Inventory Status for: {{ current_variant.title }}</h3>
+  
+  <ul>
+    {% comment %} Check if Shopify is tracking quantity for this item {% endcomment %}
+    <li><strong>Inventory Policy:</strong> {{ current_variant.inventory_policy | capitalize }} (Whether it sells out or allows pre-orders)</li>
+    
+    {% comment %} Show the actual inventory quantity {% endcomment %}
+    <li><strong>Current Stock Quantity:</strong> {{ current_variant.inventory_quantity }} units</li>
+    
+    <li>
+      <strong>Status:</strong>
+      {% if current_variant.inventory_quantity <= 0 %}
+        {% if current_variant.inventory_policy == 'continue' %}
+          <span style="color: orange;">Out of stock physically, but allowing Pre-orders.</span>
+        {% else %}
+          <span style="color: red;">Sold Out / Cannot Purchase.</span>
+        {% endif %}
+      {% else %}
+        <span style="color: green;">In Stock and Available.</span>
+      {% endif %}
+    </li>
+  </ul>
+</div>
+
                   <button
                     id="ProductSubmitButton-{{ section.id }}"
                     type="submit"
