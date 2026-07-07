@@ -212,13 +212,13 @@
 
                 <div class="nuumi-calmicollar-hero__cta-group">
                   Product inventory:
-{{ product.first_available_variant.inventory_quantity }}
+{{ product.first_available_variant.inventory_quantity }}<br>
 
 Current inventory:
-{{ current_variant.inventory_quantity }}
+{{ current_variant.inventory_quantity }}<br>
 
 Selected first available:
-{{ product.first_available_variant.id }}
+{{ product.first_available_variant.id }}<br>
                   <button
                     id="ProductSubmitButton-{{ section.id }}"
                     type="submit"
