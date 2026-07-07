@@ -217,6 +217,7 @@
                     type="submit"
                     name="add"
                     class="nuumi-button--gold nuumi-calmicollar-hero__cta product-form__submit"
+                    {% if current_variant.available == false %}disabled{% endif %}
                   >
                     <span data-atc-label>
                       {%- if current_variant.available == false -%}
