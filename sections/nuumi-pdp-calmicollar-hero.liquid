@@ -218,11 +218,6 @@
                     class="nuumi-button--gold nuumi-calmicollar-hero__cta product-form__submit"
                     {% if current_variant.available == false %}disabled{% endif %}
                   >
-                    {{ current_variant.title }}<br>
-                    {{ current_variant.available }}<br>
-                    {{ current_variant.inventory_policy }}<br>
-                    {{ current_variant.inventory_quantity }}
-                    <br>
                     <span data-atc-label>
                       {%- if current_variant.available == false -%}
                         {{ 'products.product.sold_out' | t }}
